@@ -1,0 +1,86 @@
+body {
+	border: 0px;
+	margin: 0px;
+	background-image: url("/img/main_bg_w.png");
+	background-position: 50% 10px;
+	text-align: center;
+}
+#content_section {
+	display: block;
+	width: 800px;
+	background-color: #ebebeb;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 800px;
+}
+#logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display: inline-block;
+	height: 210px;
+	width: 470px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.arrow {
+	background-image: url("/games/arrowdefense/img/arrowdefense.png");
+}
+.wow {
+	background-image: url("/projects/wowarmory/img/wow_armory_logo.png");
+}
+.tfg {
+	background-image: url("/projects/tfg/img/tfg_logo2.png");
+}
+.virus {
+	background-image: url("/games/virus/img/virus_logo.png");
+}
+#back {
+	height: 180px;
+	width: 180px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-image: url("/img/back.png");
+	cursor: pointer;
+}
+#description {
+	width: 95%;
+	text-align: left;
+	padding: 20px;
+	color: #464646;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+.title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #3468b6;
+}
+iframe, .mid {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+}
+.gray {
+	color: gray;
+}
+.red {
+	color: red;
+}
+.yellow {
+	color: yellow;
+}
+.blue {
+	color: cyan;
+}
+.purple {
+	color: purple;
+}
+.green {
+	color: green;
+}

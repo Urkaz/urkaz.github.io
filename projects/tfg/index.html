@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<meta name="copyright" content="Fran S�nchez Rodrigo">
+	<link href='/styles/stylesections.css' rel='stylesheet' type='text/css'>
+	<title>Final Degree Project</title>
+</head>
+<body>
+<div id="content_section">
+	<div id="logo" class="tfg"></div>
+	<div id="description">
+	<span class="title">Information</span><br>
+	Platform: PC<br>
+	<a href="/downloads/FDP_Memory_-_Fran_Sanchez.pdf">Download Technical Memory [PDF]</a><br>
+	<a href="/downloads/FDP_Presentation_-_Fran_Sanchez.pdf">Download Presentation (Spanish) [PDF]</a><br>
+	<a target="_blank" href="https://gitlab.com/groups/UJI_TFG">GitLab Repository</a><br>
+	<br>
+	<span class="title">Multiplayer environment (Summary)</span><br>
+	This document the technical proposal for the implementation of a multiplayer environment of a Shooter video game.<br><br>
+	Will proceed with the creation of a database and implementing a server application that will communicates with the game client (made with Unity3d). In addition, the necessary infrastructure for the management and creation of user accounts will be created through a website. The video game will use the mechanics and other elements developed by other partners. The database will be created with PostgreSQL and the server with a C# console application.<br><br>
+	In addition to the multiplayer system and their game modes, a maze generator will be created, that will take part on the design of one of the maps that will be used in the matches.<br><br>
+	To evaluate the proper functioning of the game and the infrastructure, tests will be done with multiple, simultaneous, clients.<br><br>
+	You should fill the cells of the board with the help of the numbers at the top and left sides to discover a hidden picture.<br>
+	<br>
+	<span class="title">Project context</span><br>
+	- Database: stores user accounts and game statistics.<br>
+	- Webpage: allows the users to create new accounts and manage the existent ones.<br>
+	- Server app: bridge between the clients and the database. Everything that a client needs from the database should be asked to the server.<br>
+	- Game Launcher: a simple application that helps to maintain the final game client up to date.<br>
+	- Game Client: video game demo created with Unity3D that uses the other developed tools in addition to UNet to create a multiplayer mode.<br>
+	<br>
+	<span class="title">Tools used</span><br>
+	- PostgreSQL and pgAdmin III<br>
+	- Visual Studio Community 2015 (C#)<br>
+	- Unity3D<br>
+	- Ccheck memory chapter 3 section 5 for more.<br>
+	<br>
+	<span class="title">Video</span><br>
+	<iframe width="480" height="360" src="https://www.youtube.com/embed/r0-RrxxNSZk" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+<a href="/projects"><div id="back"></div></a>
+</body>
+</html>
