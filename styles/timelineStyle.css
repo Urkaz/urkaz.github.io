@@ -61,7 +61,7 @@
 	border:1px solid #17191B;
 	left:5px;
   }
-  
+
   .timeline-section{
 	padding-left:35px;
 	display:block;
@@ -126,7 +126,7 @@
   
   .box-title{
 	padding:5px 15px;
-	border-bottom: 1px solid #17191B;
+	/*border-bottom: 1px solid #17191B;*/
   }
   
   .box-title i{
@@ -150,7 +150,7 @@
   
   .box-footer{
    padding:5px 15px;
-	border-top: 1px solid #17191B;
+	/*border-top: 1px solid #17191B;*/
 	background-color:#444950;
 	text-align:right;
 	font-style:italic;

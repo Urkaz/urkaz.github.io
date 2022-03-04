@@ -38,8 +38,13 @@
 					<div class="description">
 						<!-- Timeline -->
 						<div class="container">
+							Toggle Categories:&nbsp;&nbsp;
+							<button type="button" class="btn btn-sm btn-warning" data-toggle="collapse" data-target=".collapsableJobs" aria-expanded="true" aria-controls="collapsableJobs">Jobs</button>
+							<button type="button" class="btn btn-sm btn-info" data-toggle="collapse" data-target=".collapsableEducation" aria-expanded="true" aria-controls="collapsableEducation">Education</button>
+							<button type="button" class="btn btn-sm btn-success" data-toggle="collapse" data-target=".collapsableGames" aria-expanded="true" aria-controls="collapsableGames">Games</button>
+							<button type="button" class="btn btn-sm btn-danger" data-toggle="collapse" data-target=".collapsableProjects" aria-expanded="true" aria-controls="collapsableProjects">Projects</button>
+							<button type="button" class="btn btn-sm btn-light" data-toggle="collapse" data-target=".collapsableOther" aria-expanded="true" aria-controls="collapsableOther">Other</button>
 							<div class="timeline">
-
 								<!-- 2021 -->
 								<div class="timeline-month">2021<span>5 Entries</span></div>
 								<div class="timeline-section">
@@ -50,11 +55,11 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Started
+													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Started ⇌ Catness Game Studios
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableJobs show">
                                                     <div class="algn-center">
-														<div class="tile catness scalable"><div class="overlay">Programmer <> Catness Game Studios</div></div>
+														<div class="tile catness scalable"><div class="overlay">Programmer ⇌ Catness Game Studios</div></div>
 													</div>
 													<div class="box-item"><strong>Job</strong>: Programmer</div>
 													<div class="box-item"><strong>Company</strong>: Catness Game Studios</div>
@@ -80,9 +85,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Ronin-Hood Sisters
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center">
 														<a href="/games/roninhoodsisters"><div class="tile ronin-hood-sisters scalable"><div class="overlay">Ronin-Hood Sisters</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableRHS" aria-expanded="false" aria-controls="collapsableRHS">Toggle Details</button></div>
@@ -104,9 +109,9 @@
 										<div class="col-sm-6">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-graduation-cap text-success" aria-hidden="true"></i>Education Finished
+													<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Education Finished ⇌ M.A. in Video Game Programming
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableEducation show">
 													<div class="algn-center">
 														<div class="tile utad scalable"><div class="overlay">M.A. in Video Game Programming</div></div>
 													</div>
@@ -136,9 +141,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Unity Zombie Killer
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center">
 														<a target="blank" href="https://urkaz.itch.io/unity-zombie-killer"><div class="tile zombiekiller scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Unity Zombie Killer</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableZombieKiller" aria-expanded="false" aria-controls="collapsableZombieKiller">Toggle Details</button></div>
@@ -167,9 +172,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Medieval Floor
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center">
 														<a target="blank" href="https://urkaz.itch.io/medievalfloor"><div class="tile medievalfloor scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Medieval Floor</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableMedieval" aria-expanded="false" aria-controls="collapsableMedieval">Toggle Details</button></div>
@@ -201,11 +206,11 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-briefcase text-danger" aria-hidden="true"></i>Job Ended
+													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Ended ⇌ Lollipop Robot
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableJobs show">
 													<div class="algn-center">
-														<div class="tile lollipoprobot scalable"><div class="overlay">QA Technician <> Lollipop Robot</div></div>
+														<div class="tile lollipoprobot scalable"><div class="overlay">QA Technician ⇌ Lollipop Robot</div></div>
 													</div>
 													<div class="box-item"><strong>Job</strong>: QA Technician</div>
 													<div class="box-item"><strong>Company</strong>: Lollipop Robot</div>
@@ -285,9 +290,9 @@
 										<div class="col-sm-6">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Education Started
+													<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Education Started ⇌ M.A. in Video Game Programming
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableEducation show">
 													<div class="box-item"><strong>Title</strong>: Master's Degree in Video Game Programming</div>
 													<div class="box-item"><strong>University</strong>: U-Tad (Madrid)</div>
 												</div>
@@ -304,9 +309,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-code text-success" aria-hidden="true"></i>Personal Project Released
+													<i class="fa-solid fa-code text-danger" aria-hidden="true"></i>Personal Project Released ⇌ Urkaz Moon Tools
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableProjects show">
 													<div class="algn-center">
 														<a target="blank" href="https://www.curseforge.com/minecraft/mc-mods/urkaz-moon-tools"><div class="tile moontools scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Urkaz Moon Tools</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableMoonTools" aria-expanded="false" aria-controls="collapsableMoonTools">Toggle Details</button></div>
@@ -336,9 +341,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Pengüin
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center"><a target="blank" href="https://urkaz.itch.io/penguin"><div class="tile penguin scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Pengüin</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsablePenguin" aria-expanded="false" aria-controls="collapsablePenguin">Toggle Details</button></div>
 													<div class="collapse" id="collapsablePenguin" >
@@ -369,11 +374,11 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Started
+													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Started ⇌ Lollipop Robot
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableJobs show">
                                                     <div class="algn-center">
-														<div class="tile lollipoprobot scalable"><div class="overlay">QA Technician <> Lollipop Robot</div></div>
+														<div class="tile lollipoprobot scalable"><div class="overlay">QA Technician ⇌ Lollipop Robot</div></div>
 													</div>
 													<div class="box-item"><strong>Job</strong>: QA Technician</div>
 													<div class="box-item"><strong>Company</strong>: Lollipop Robot</div>
@@ -384,9 +389,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-code text-success" aria-hidden="true"></i>Personal Project Released
+													<i class="fa-solid fa-code text-danger" aria-hidden="true"></i>Personal Project Released ⇌ Item Name Localized
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableProjects show">
 													<div class="algn-center">
 														<a target="blank" href="https://www.curseforge.com/wow/addons/item-name-localized"><div class="tile item-name-loc scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Item Name Localized</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableItemName" aria-expanded="false" aria-controls="collapsableItemName">Toggle Details</button></div>
@@ -413,10 +418,10 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-briefcase text-danger" aria-hidden="true"></i>Job Internship Ended
+													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Internship Ended ⇌ Lollipop Robot
 												</div>
-												<div class="box-content">
-													<div class="box-item"><strong>Job</strong>: QA Technician</div>
+												<div class="box-content collapsableJobs show">
+													<div class="box-item"><strong>Job</strong>: QA Technician Internship</div>
 													<div class="box-item"><strong>Company</strong>: Lollipop Robot</div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableQAIntern" aria-expanded="false" aria-controls="collapsableQAIntern">Toggle Details</button></div>
 													<div class="collapse" id="collapsableQAIntern" >
@@ -442,9 +447,9 @@
 										<div class="col-sm-6">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-graduation-cap text-success" aria-hidden="true"></i>Graduation
+													<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Graduation ⇌ B.A. in Video game Design and Development
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableEducation show">
 													<div class="algn-center">
 														<div class="tile uji scalable"><div class="overlay">B.A. in Video game Design and Development</div></div></div>
 													<div class="box-item"><strong>Title</strong>: Bachelor's Degree in Video game Design and Development</div>
@@ -464,10 +469,10 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Internship Started
+													<i class="fa-solid fa-briefcase text-warning" aria-hidden="true"></i>Job Internship Started ⇌ Lollipop Robot
 												</div>
-												<div class="box-content">
-													<div class="box-item"><strong>Job</strong>: QA Technician (Internship)</div>
+												<div class="box-content collapsableJobs show">
+													<div class="box-item"><strong>Job</strong>: QA Technician Internship</div>
 													<div class="box-item"><strong>Company</strong>: Lollipop Robot</div>
 												</div>
 												<div class="box-footer"></div>
@@ -483,9 +488,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Purramid
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center"><a target="blank" href="https://globalgamejam.org/2016/games/purramid"><div class="tile purramid scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Purramid</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsablePurramid" aria-expanded="false" aria-controls="collapsablePurramid">Toggle Details</button></div>
 													<div class="collapse" id="collapsablePurramid" >
@@ -516,9 +521,9 @@
 										<div class="col-sm-5">
 											<div class="timeline-box">
 												<div class="box-title">
-													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released
+													<i class="fa-solid fa-gamepad text-success" aria-hidden="true"></i>Game Released ⇌ Griddle
 												</div>
-												<div class="box-content">
+												<div class="box-content collapsableGames show">
 													<div class="algn-center">
 														<a target="blank" href="https://urkaz.itch.io/griddle"><div class="tile griddle scalable"><div class="overlay"><i class="fa-solid fa-up-right-from-square"></i>&nbsp;&nbsp;Griddle</div></div></a></div>
 													<div class="algn-center"><button type="button" class="btn btn-sm btn-dark" data-toggle="collapse" data-target="#collapsableGriddle" aria-expanded="false" aria-controls="collapsableGriddle">Toggle Details</button></div>
@@ -550,9 +555,9 @@
 										<div class="col-sm-6">
 										<div class="timeline-box">
 											<div class="box-title">
-												<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Education Started
+												<i class="fa-solid fa-graduation-cap text-info" aria-hidden="true"></i>Education Started ⇌  B.A. in Video game Design and Development
 											</div>
-											<div class="box-content">
+											<div class="box-content collapsableEducation show">
 												<div class="box-item"><strong>Title</strong>: Bachelor's Degree in Video game Design and Development</div>
 												<div class="box-item"><strong>University</strong>: Jaume I (Castellón)</div>
 											</div>
@@ -572,9 +577,9 @@
 										<div class="col-sm-6">
 										<div class="timeline-box">
 											<div class="box-title">
-												<i class="fa-solid fa-cake-candles text-success" aria-hidden="true"></i>I was born!
+												<i class="fa-solid fa-cake-candles text-light" aria-hidden="true"></i>I was born!
 											</div>
-											<div class="box-content">
+											<div class="box-content collapsableOther show">
 												<div class="box-item"><strong>Name</strong>: Francesc Sánchez Rodrigo</div>
 												<div class="box-item"><strong>Birthplace</strong>: Valencia, Spain</div>
 											</div>
@@ -640,7 +645,7 @@
 				<a href="/timeline">
 					<i class="menu-item fa fa-timeline fa-fw selected" aria-hidden="true"></i>
 					<span class="nav-text">
-						//TIMELINE
+						//EXPERIENCE TIMELINE
 					</span>
 				</a>
 			</li>
