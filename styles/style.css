@@ -388,4 +388,7 @@ nav.main-menu li.active>a {
 .tile.catness {
 	background-image: url("/img/tiles/catness_tile.png");
 }
+.tile.unused-node-cleaner {
+	background-image: url("/img/tiles/unusednodes_tile.png");
+}
 /* END TILES */
