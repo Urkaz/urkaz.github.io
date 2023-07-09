@@ -1,15 +1,9 @@
 ///////////////////////////////////////////////////////////////
 //////////////////////////WINDOW HANDLES
 ///////////////////////////////////////////////////////////////
-var mouseDown = 0;
-var lastMousePos = [];
 var created = false;
 
 window.addEventListener("resize", Resize);
-window.addEventListener('mousedown', Update, false);
-window.addEventListener('mousemove', setMousePos, false);
-document.body.onmousedown = function(evt) { if(evt.button == 0)mouseDown = 1; }
-document.body.onmouseup = function(evt) { if(evt.button == 0)mouseDown = 0; }
 window.onload = Resize;
 setInterval(Update, 20);
 
@@ -66,13 +60,6 @@ function Update(e)
     ///////////////////////////////////////////////////////////////
     //////////////////////////UPDATE
     ///////////////////////////////////////////////////////////////
-    var pos = null;
-    if(mouseDown > 0)
-    {
-        pos = getMousePos(canvas, e);
-    }
-    
-    
     for(i = 0; i < numPoints; i++)
     {
         var direction = Math.random();
@@ -85,16 +72,7 @@ function Update(e)
             pointsVelocities[i][1] += speed;
         else if(direction < 0.8)
             pointsVelocities[i][1] -= speed;
-        
-        //Mouse Attract
-        if(pos)
-        {
-            if(pointsArray[i][0] >= pos.x)pointsVelocities[i][0] -= speed/clickMoveInvPower;
-            if(pointsArray[i][0] <= pos.x)pointsVelocities[i][0] += speed/clickMoveInvPower;
-            if(pointsArray[i][1] >= pos.y)pointsVelocities[i][1] -= speed/clickMoveInvPower;
-            if(pointsArray[i][1] <= pos.y)pointsVelocities[i][1] += speed/clickMoveInvPower;
-        }
-        
+
         //Wall Bounce
         if(pointsArray[i][0] >= canvas.width)
         {
@@ -220,26 +198,4 @@ function drawLineBetweenPoints(ctx, pointOne, pointTwo, opacity)
     ctx.stroke()
     
     ctx.globalAlpha = 1;
-}
-
-function setMousePos(evt)
-{
-    if(evt)
-    {
-        lastMousePos = [evt.clientX, evt.clientY];
-    }
-}
-
-function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
-    
-    if(evt)
-    {
-        lastMousePos = [evt.clientX, evt.clientY];
-    }
-    
-    return {
-        x: (lastMousePos[0] - rect.left) / (rect.right - rect.left) * canvas.width,
-        y: (lastMousePos[1] - rect.top) / (rect.bottom - rect.top) * canvas.height
-    };
 }
