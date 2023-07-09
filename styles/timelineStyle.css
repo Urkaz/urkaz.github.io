@@ -155,4 +155,33 @@
 	text-align:right;
 	font-style:italic;
   }
-  
+  .box-item .project{
+	background-color:#dc3545
+  }
+  .box-footer .project{
+	background-color:#dc3545
+  }
+  .box-item .other{
+	background-color:#6c757d
+  }
+  .box-footer .other{
+	background-color:#6c757d
+  }
+  .box-item .games{
+	background-color:#28a745
+  }
+  .box-footer .games{
+	background-color:#28a745
+  }
+  .box-item .education{
+	background-color:#138496
+  }
+  .box-footer .education{
+	background-color:#138496
+  }
+  .box-item .jobs{
+	background-color:#e0a800
+  }
+  .box-footer .jobs{
+	background-color:#e0a800
+  }
