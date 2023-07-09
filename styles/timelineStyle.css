@@ -155,33 +155,33 @@
 	text-align:right;
 	font-style:italic;
   }
-  .box-item .project{
+  .box-title.project{
 	background-color:#dc3545
   }
-  .box-footer .project{
+  .box-footer.project{
 	background-color:#dc3545
   }
-  .box-item .other{
+  .box-title.other{
 	background-color:#6c757d
   }
-  .box-footer .other{
+  .box-footer.other{
 	background-color:#6c757d
   }
-  .box-item .games{
+  .box-title.games{
 	background-color:#28a745
   }
-  .box-footer .games{
+  .box-footer.games{
 	background-color:#28a745
   }
-  .box-item .education{
+  .box-title.education{
 	background-color:#138496
   }
-  .box-footer .education{
+  .box-footer.education{
 	background-color:#138496
   }
-  .box-item .jobs{
+  .box-title.jobs{
 	background-color:#e0a800
   }
-  .box-footer .jobs{
+  .box-footer.jobs{
 	background-color:#e0a800
   }
