@@ -281,6 +281,7 @@ nav.main-menu li.active>a {
 	width: 100%;
 }
 .tile {
+    vertical-align: middle;
 	width: 367px;
 	font-family: 'Staatliches';
 	display: inline-block;
@@ -347,6 +348,10 @@ nav.main-menu li.active>a {
     height: 100%;
     width: 100%;
 }
+.tile a {
+    color: white;
+}
+
 .tile:hover .overlay{
 	background-color: rgba(0, 0, 0, 0.4);
 
