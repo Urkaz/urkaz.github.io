@@ -394,4 +394,16 @@ nav.main-menu li.active>a {
 .tile.quantum-fields {
 	background-image: url("/img/tiles/quantum-fields_tile.png");
 }
+.tile.xuan-yuan {
+	background-image: url("/img/tiles/xuan-yuan_tile.png");
+}
+.tile.togges {
+	background-image: url("/img/tiles/togges_tile.png");
+}
+.tile.hell-pie {
+	background-image: url("/img/tiles/hell-pie_tile.png");
+}
+.tile.firegirl {
+	background-image: url("/img/tiles/firegirl_tile.png");
+}
 /* END TILES */
