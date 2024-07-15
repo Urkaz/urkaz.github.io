@@ -392,6 +392,9 @@ nav.main-menu li.active>a {
 .tile.lollipoprobot {
 	background-image: url("/img/tiles/lollipoprobot_tile.png");
 }
+.tile.lollipoprobot2 {
+	background-image: url("/img/tiles/lollipoprobot2_tile.png");
+}
 .tile.catness {
 	background-image: url("/img/tiles/catness_tile.png");
 }
