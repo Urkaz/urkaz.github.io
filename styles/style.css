@@ -53,6 +53,29 @@ body {
     -webkit-transform: scale(1.05,1.05);
     transform: scale(1.05,1.05);
 }
+
+.scalable .scalablesmall{
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    -moz-transform: scale(0.95,0.95);
+    -webkit-transform: scale(0.95,0.95);
+    transform: scale(0.95,0.95);
+}
+.scalable:hover .scalablesmall{
+	-webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+
+	-moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+}
 /* END ANIMATIONS */
 
 /* MENU */
@@ -265,7 +288,7 @@ nav.main-menu li.active>a {
     border-style: solid;
 	border-color: #1d1d1d;
 	box-shadow: 3px 3px #1d1d1d;
-	height: 60px;
+	height: 70px;
 	margin-bottom: 5px;
 	margin-right: 5px;
 	cursor: pointer;
@@ -274,7 +297,7 @@ nav.main-menu li.active>a {
 	color: white;
 	font-size: 23px;
 	font-weight: bold;
-	line-height: 60px;
+	line-height: 70px;
 
 	--stroke-color: black;
   	--stroke-width: 2px;
