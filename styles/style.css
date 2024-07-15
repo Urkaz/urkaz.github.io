@@ -338,9 +338,9 @@ nav.main-menu li.active>a {
     -webkit-transform: scale(1,1);
     transform: scale(1,1);
 }
-.tile .overlay .logo{
+.tile .overlay .gamelogo{
 	object-fit: contain;
-	width: 100%;
+	width: 70%;
 	height: 100%;
 }
 
