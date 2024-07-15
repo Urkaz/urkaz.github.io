@@ -391,4 +391,7 @@ nav.main-menu li.active>a {
 .tile.unused-node-cleaner {
 	background-image: url("/img/tiles/unusednodes_tile.png");
 }
+.tile.quantum-fields {
+	background-image: url("/img/tiles/quantumfields_tile.png");
+}
 /* END TILES */
