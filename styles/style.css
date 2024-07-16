@@ -486,4 +486,28 @@ nav.main-menu li.active>a {
 .tile.radicalrabbit {
 	background-image: url("/img/tiles/radicalrabbit_tile.png");
 }
+.tile.sor4 {
+	background-image: url("/img/tiles/sor4_tile.png");
+}
+.tile.jumpstep {
+	background-image: url("/img/tiles/jumpstep_tile.png");
+}
+.tile.frontiers {
+	background-image: url("/img/tiles/frontiers_tile.png");
+}
+.tile.oddmar {
+	background-image: url("/img/tiles/oddmar_tile.png");
+}
+.tile.hole {
+	background-image: url("/img/tiles/hole_tile.png");
+}
+.tile.fight {
+	background-image: url("/img/tiles/fight_tile.png");
+}
+.tile.aurion {
+	background-image: url("/img/tiles/aurion_tile.png");
+}
+.tile.dos2 {
+	background-image: url("/img/tiles/dos2_tile.png");
+}
 /* END TILES */
