@@ -444,4 +444,22 @@ nav.main-menu li.active>a {
 .tile.firegirl {
 	background-image: url("/img/tiles/firegirl_tile.png");
 }
+.tile.braid {
+	background-image: url("/img/tiles/braid_tile.png");
+}
+.tile.youtubersomg {
+	background-image: url("/img/tiles/youtubersomg_tile.png");
+}
+.tile.youtubers2 {
+	background-image: url("/img/tiles/youtubers2_tile.png");
+}
+.tile.animalroyale {
+	background-image: url("/img/tiles/animalroyale_tile.png");
+}
+.tile.battlebrothers {
+	background-image: url("/img/tiles/battlebrothers_tile.png");
+}
+.tile.starbound {
+	background-image: url("/img/tiles/starbound_tile.png");
+}
 /* END TILES */
