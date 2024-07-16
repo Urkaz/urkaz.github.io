@@ -462,4 +462,28 @@ nav.main-menu li.active>a {
 .tile.starbound {
 	background-image: url("/img/tiles/starbound_tile.png");
 }
+.tile.outofspace {
+	background-image: url("/img/tiles/outofspace_tile.png");
+}
+.tile.rebelgalaxy {
+	background-image: url("/img/tiles/rebelgalaxy_tile.png");
+}
+.tile.esports {
+	background-image: url("/img/tiles/esports_tile.png");
+}
+.tile.spelunky2 {
+	background-image: url("/img/tiles/spelunky2_tile.png");
+}
+.tile.hammerwatch {
+	background-image: url("/img/tiles/hammerwatch_tile.png");
+}
+.tile.hoh {
+	background-image: url("/img/tiles/hoh_tile.png");
+}
+.tile.pushyandpully {
+	background-image: url("/img/tiles/pushyandpully_tile.png");
+}
+.tile.radicalrabbit {
+	background-image: url("/img/tiles/radicalrabbit_tile.png");
+}
 /* END TILES */
