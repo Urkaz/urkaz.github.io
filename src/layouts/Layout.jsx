@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import Preloader from "../components/Preloader";
 
+import "./js/background.js"
+
 export default function Layout() {
     const siteName = "Fran Sánchez Rodrigo";
 
@@ -14,6 +16,7 @@ export default function Layout() {
         <>
             <Header>{siteName}</Header>
             <main className="main">
+                <canvas id="background" width="100%" height="100%"></canvas>
                 <Outlet />
             </main>
             <ScrollToTop/>

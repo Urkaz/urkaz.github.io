@@ -6,7 +6,10 @@ export default function Navbar() {
       <>
         <NavMenu>
           <NavItem to="/" activeStyle>Home</NavItem>
-          <NavItem to="/about" activeStyle>A very long name long long long name</NavItem>
+          <NavItem to="/experience" activeStyle>Experience</NavItem>
+          <NavItem to="/projects" activeStyle>Personal Projects</NavItem>
+          <NavItem to="/games" activeStyle>Games</NavItem>
+          <NavItem to="/contact" activeStyle>Contact</NavItem>
         </NavMenu>
       </>
   );

@@ -8,11 +8,10 @@ export default function Footer({ children }) {
             <div className="container">
                 <h3 className="sitename">{children}</h3>
                 <div className="social-links d-flex justify-content-center">
-                    <a href=""><i className="bi bi-twitter-x"></i></a>
-                    <a href=""><i className="bi bi-facebook"></i></a>
-                    <a href=""><i className="bi bi-instagram"></i></a>
-                    <a href=""><i className="bi bi-skype"></i></a>
                     <a href=""><i className="bi bi-linkedin"></i></a>
+                    <a href=""><i className="bi bi-github"></i></a>
+                    <a href=""><i className="bi bi-cup-hot-fill"></i></a>
+                    <a href=""><i className="bi bi-envelope-fill"></i></a>
                 </div>
                 <div className="container">
                     <div className="credits">
