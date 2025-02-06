@@ -1,7 +1,5 @@
 import React from "react";
 
-import './Home.css'
-
 const Home = () => {
     var diff_ms = new Date().getTime() - new Date("February 12, 1994").getTime();    //Future date - current date
     var age_dt = new Date(diff_ms);
@@ -20,7 +18,7 @@ const Home = () => {
                 </div>
                 <p className="sub-title">More about me</p>
                 <div className="description">
-                <p>I'm {age} years old, and a video game enthusiast and a passionate programmer that loves new technologies. DigiDestinied, Pokémon trainer and D&D game master.</p>
+                    <p>I'm {age} years old, and a video game enthusiast and a passionate programmer that loves new technologies. DigiDestinied, Pokémon trainer and D&D game master.</p>
                 </div>
                 <div className="social-links">
                     <a href="#"><i className="bi bi-linkedin"></i></a>

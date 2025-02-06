@@ -3,28 +3,24 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  Route
+  Route,
+
 } from "react-router-dom";
 
-import Layout from "./layouts/Layout";
-import Home from "./pages/Home";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
-import Games from "./pages/Games";
-import Contact from "./pages/Contact";
+import Sections from "./Sections.jsx"
 
-const router = createBrowserRouter(
+const generateRoutes = (routes) =>
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="experience" element={<Experience />} />
-      <Route path="projects" element={<Projects />} />
-      <Route path="games" element={<Games />} />
-      <Route path="contact" element={<Contact />} />
-    </Route>
-  )
-);
+    routes.map(({ path, element, children }, index) => (
+      <Route key={index} path={path} element={element}>
+        {children?.map(({ path, element, index }, subIndex) => (
+          <Route key={subIndex} path={path} index={index} element={element} />
+        ))}
+      </Route>
+    ))
+  );
 
+const router = createBrowserRouter(generateRoutes(Sections));
 
 function App() {
   return <RouterProvider router={router} />;

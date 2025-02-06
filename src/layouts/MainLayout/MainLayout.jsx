@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 
-import "./css/Layout.css";
+import "./scss/MainLayout.scss";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import Preloader from "../components/Preloader";
+import Header from "../../components/Header.jsx";
+import Footer from "../../components/Footer.jsx";
+import ScrollToTop from "../../components/ScrollToTop.jsx";
+import Preloader from "../../components/Preloader.jsx";
 
 import "./js/background.js"
 
@@ -19,10 +19,9 @@ export default function Layout() {
                 <canvas id="background" width="100%" height="100%"></canvas>
                 <Outlet />
             </main>
-            <ScrollToTop/>
-            <Preloader/>
+            <ScrollToTop />
+            <Preloader />
             <Footer>{siteName}</Footer>
         </>
-      );
-    }
-    
+    );
+}

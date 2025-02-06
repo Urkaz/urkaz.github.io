@@ -1,0 +1,14 @@
+// out: ../css/MainLayout.css
+
+@import "./_variables.scss";
+
+@import "./layout/_general.scss";
+@import "./layout/_header.scss";
+@import "./layout/_navmenu.scss";
+@import "./layout/_footer.scss";
+@import "./layout/_preloader.scss";
+@import "./layout/_scrolltop.scss";
+@import "./layout/_aos.scss";
+@import "./layout/_page-titles.scss";
+
+@import './_sections.scss';

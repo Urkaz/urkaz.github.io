@@ -1,16 +1,26 @@
 import React from "react";
 import { NavMenu, NavItem } from "./NavbarElements";
 
+import Sections from "../Sections.jsx"
+
 export default function Navbar() {
-    return (
-      <>
-        <NavMenu>
-          <NavItem to="/" activeStyle>Home</NavItem>
-          <NavItem to="/experience" activeStyle>Experience</NavItem>
-          <NavItem to="/projects" activeStyle>Personal Projects</NavItem>
-          <NavItem to="/games" activeStyle>Games</NavItem>
-          <NavItem to="/contact" activeStyle>Contact</NavItem>
-        </NavMenu>
-      </>
+
+  const renderNavItems = (sections) => {
+    return sections.flatMap(({ children }) =>
+      children.filter(section => section.path)
+        .map(({ path, sectionName }, index) => (
+          <NavItem key={index} to={path} activeStyle>{sectionName}</NavItem>
+        ))
+    );
+  };
+
+
+  return (
+    <>
+      <NavMenu>
+        <NavItem to="/" activeStyle>Home</NavItem>
+        {renderNavItems(Sections)}
+      </NavMenu>
+    </>
   );
 }
