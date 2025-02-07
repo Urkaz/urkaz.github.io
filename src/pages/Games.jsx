@@ -4,16 +4,21 @@ import IsotopeGrid from "../components/Isotope.jsx";
 
 import { GameFilterList, GamesList, cleanText } from "../misc/GamesList.jsx"
 
-const GridGame = ({ category, name, tag, nologo = false }) => {
+const GridGame = ({ category, name, tag, nologo = false, platforms }) => {
     return <>
         <div className={`col-lg-4 col-md-6 grid-item ${category.map(cat => `category-${cat}`).join(" ")}`}>
             <a target="blank" href="https://catnessgames.com/games/xuan-yuan-sword-7/">
                 <div className={`portfolio-content h-100 ${cleanText(name)}`}>
                     <div className="portfolio-overlay">
                         {nologo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name}/> }
-                        <div className="portfolio-info">
-                            <h4>{tag}</h4>
-                        </div>
+                    </div>
+                    <div className="portfolio-info">
+                        <h4 className="floating-left">{tag}</h4>
+                        <h4 className="floating-right miniplatforms">
+                            {platforms?.map((item) => (
+                                <img src={`/img/games/platforms/system_mini_${item}.png`} />
+                            ))}
+                        </h4>
                     </div>
                 </div>
             </a>
