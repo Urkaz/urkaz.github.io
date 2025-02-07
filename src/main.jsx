@@ -1,15 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import 'aos/dist/aos.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'aos/dist/aos.css'
 import 'glightbox/dist/css/glightbox.css'
 
 import AOS from 'aos';
 AOS.init();
 
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'glightbox/dist/js/glightbox.min.js';
 
 import App from './App.jsx'

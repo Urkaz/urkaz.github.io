@@ -1,14 +1,14 @@
 // out: ../css/MainLayout.css
 
-@import "./_variables.scss";
+@use "_variables.scss";
 
-@import "./layout/_general.scss";
-@import "./layout/_header.scss";
-@import "./layout/_navmenu.scss";
-@import "./layout/_footer.scss";
-@import "./layout/_preloader.scss";
-@import "./layout/_scrolltop.scss";
-@import "./layout/_aos.scss";
-@import "./layout/_page-titles.scss";
+@use "layout/_general.scss";
+@use "layout/_header.scss";
+@use "layout/_navmenu.scss";
+@use "layout/_footer.scss";
+@use "layout/_preloader.scss";
+@use "layout/_scrolltop.scss";
+@use "layout/_aos.scss";
+@use "layout/_page-titles.scss";
 
-@import './_sections.scss';
+@use '_sections.scss';

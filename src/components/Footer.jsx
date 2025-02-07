@@ -15,6 +15,7 @@ export default function Footer({ children }) {
                     </div>
                     <div className="container">
                         <div className="credits">
+                            Design based on <a target="_blank" href="https://bootstrapmade.com/personal-free-resume-bootstrap-template/" rel="noopener noreferrer">Personal</a> from <a target="_blank" href="https://bootstrapmade.com" rel="noopener noreferrer">BootstrapMade</a>.<br/>
                             Made with React by <strong className="px-1 sitename">{children}</strong>.
                         </div>
                     </div>

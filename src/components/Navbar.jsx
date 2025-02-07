@@ -1,7 +1,7 @@
 import React from "react";
 import { NavMenu, NavItem } from "./NavbarElements";
 
-import Sections from "../Sections.jsx"
+import Sections from "../misc/Sections.jsx"
 
 export default function Navbar() {
 

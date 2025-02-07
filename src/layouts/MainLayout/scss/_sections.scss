@@ -1,3 +1,4 @@
+@use "sass:meta";
 // main: MainLayout.scss
 
 /*--------------------------------------------------------------
@@ -58,4 +59,5 @@ section,
   }
 }
 
-@import './sections/_hero.scss';
+@include meta.load-css('sections/_hero.scss');
+@include meta.load-css('sections/_portfolio.scss');
