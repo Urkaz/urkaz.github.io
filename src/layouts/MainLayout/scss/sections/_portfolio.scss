@@ -2,174 +2,172 @@
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio {
-  .isotope-filters {
+
+.isotope-filters {
+  padding: 0;
+  margin: 0 auto 30px auto;
+  list-style: none;
+  text-align: center;
+
+  li {
+    cursor: pointer;
+    display: inline-block;
     padding: 0;
-    margin: 0 auto 30px auto;
-    list-style: none;
-    text-align: center;
-
-    li {
-      cursor: pointer;
-      display: inline-block;
-      padding: 0;
-      font-size: 18px;
-      font-weight: 500;
-      margin: 0 10px;
-      line-height: 1;
-      margin-bottom: 5px;
-      transition: all 0.3s ease-in-out;
-      display: inline-block;
-      background-color: var(--secondary-accent-color);
-      padding: 5px 10px;
-
-      &:hover {
-        color: var(--secondary-accent-color);
-      }
-
-      &.filter-active {
-        color: var(--surface-color);
-      }
-
-      &.filter-inactive {
-        background-color: var(--surface-color);
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      @media (max-width: 575px) {
-        font-size: 14px;
-        margin: 0 5px;
-      }
-    }
-  }
-
-  .grid-item {
-    height: 80px;
-  }
-
-  .portfolio-content {
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.2s ease;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #1d1d1d;
-    box-shadow: 3px 3px #1d1d1d;
-    background-size: cover;
-
-    img {
-      transition: all 1s ease-out;
-      object-fit: contain;
-      width: 70%;
-      height: 100%;
-      transform: scale(0.95, 0.95);
-    }
-
-    .portfolio-overlay {
-      transition: all ease-in-out 0.3s;
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      overflow: hidden;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    .portfolio-info {
-      opacity: 0;
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      transition: all ease-in-out 0.3s;
-      text-align: left;
-      pointer-events: none;
-
-      h4 {
-        font-size: 15px;
-        padding: 5px 10px;
-        font-weight: 400;
-        color: #ffffff;
-        display: inline-block;
-        background-color: var(--accent-color);
-      }
-
-      .floating-left {
-        position: absolute;
-        left: -1px;
-        top: 0;
-        transform: translateY(-100%);
-      }
-
-      .floating-right {
-        position: absolute;
-        right: -1px;
-        top: 0;
-        transform: translateY(-100%);
-        pointer-events: none;
-      }
-
-      .miniplatforms img {
-        width: 20px;
-        height: 16px;
-      }
-
-
-      p {
-        position: absolute;
-        bottom: 10px;
-        text-align: center;
-        display: inline-block;
-        left: 0;
-        right: 0;
-        font-size: 16px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      .preview-link,
-      .details-link {
-        position: absolute;
-        left: calc(50% - 40px);
-        font-size: 26px;
-        top: calc(50% - 14px);
-        color: #fff;
-        transition: 0.3s;
-        line-height: 1.2;
-
-        &:hover {
-          color: var(--accent-color);
-        }
-      }
-
-      .details-link {
-        left: calc(50%);
-        font-size: 34px;
-        line-height: 0;
-      }
-    }
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 10px;
+    line-height: 1;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    background-color: var(--secondary-accent-color);
+    padding: 5px 10px;
 
     &:hover {
-      transform: scale(1.05, 1.05);
-      border-color: #ff005e;
-      box-shadow: 3px 3px #ff005e;
+      color: var(--secondary-accent-color);
+    }
 
-      .portfolio-info {
-        opacity: 1;
-      }
+    &.filter-active {
+      color: var(--surface-color);
+    }
 
-      img {
-        transform: scale(1, 1);
+    &.filter-inactive {
+      background-color: var(--surface-color);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 14px;
+      margin: 0 5px;
+    }
+  }
+}
+
+.small-grid-item {
+  height: 80px;
+}
+
+.game-content {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #1d1d1d;
+  box-shadow: 3px 3px #1d1d1d;
+  background-size: cover;
+
+  img {
+    transition: all 1s ease-out;
+    object-fit: contain;
+    width: 70%;
+    height: 100%;
+    transform: scale(0.95, 0.95);
+  }
+
+  .game-overlay {
+    transition: all ease-in-out 0.3s;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .game-info {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    text-align: left;
+    pointer-events: none;
+
+    h4 {
+      font-size: 15px;
+      padding: 5px 10px;
+      font-weight: 400;
+      color: #ffffff;
+      display: inline-block;
+      background-color: var(--accent-color);
+    }
+
+    .floating-left {
+      position: absolute;
+      left: -1px;
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    .floating-right {
+      position: absolute;
+      right: -1px;
+      top: 0;
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+
+    .miniplatforms img {
+      width: 20px;
+      height: 16px;
+    }
+
+    p {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      display: inline-block;
+      left: 0;
+      right: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .preview-link,
+    .details-link {
+      position: absolute;
+      left: calc(50% - 40px);
+      font-size: 26px;
+      top: calc(50% - 14px);
+      color: #fff;
+      transition: 0.3s;
+      line-height: 1.2;
+
+      &:hover {
+        color: var(--accent-color);
       }
+    }
+
+    .details-link {
+      left: calc(50%);
+      font-size: 34px;
+      line-height: 0;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+    border-color: #ff005e;
+    box-shadow: 3px 3px #ff005e;
+
+    .game-info {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1, 1);
     }
   }
 }
