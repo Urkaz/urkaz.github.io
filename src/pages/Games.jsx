@@ -1,27 +1,31 @@
 import { React } from "react";
+import { Link } from "react-router-dom";
 
 import IsotopeGrid from "../components/Isotope.jsx";
+import SectionContent from "../components/SectionsContent.jsx";
 
-import { GameFilterList, GamesList, cleanText } from "../misc/GamesList.jsx"
+import { GameFilterList, GameFilterList2, GamesList, cleanText } from "../misc/GamesList.jsx"
 
-const GridGame = ({ category, name, tag, nologo = false, platforms }) => {
+const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection = false }) => {
+    const content = <>
+        <div className={`game-content h-100 ${cleanText(name)}`}>
+            <div className="game-overlay">
+                {nologo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
+            </div>
+            <div className="game-info">
+                <h4 className="floating-left">{tag}</h4>
+                <h4 className="floating-right miniplatforms">
+                    {platforms?.map((item) => (
+                        <img src={`/img/games/platforms/system_mini_${item}.png`} />
+                    ))}
+                </h4>
+            </div>
+        </div>
+    </>;
+
     return <>
-        <div className={`col-lg-4 col-md-6 grid-item ${category.map(cat => `category-${cat}`).join(" ")}`}>
-            <a target="blank" href="https://catnessgames.com/games/xuan-yuan-sword-7/">
-                <div className={`portfolio-content h-100 ${cleanText(name)}`}>
-                    <div className="portfolio-overlay">
-                        {nologo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name}/> }
-                    </div>
-                    <div className="portfolio-info">
-                        <h4 className="floating-left">{tag}</h4>
-                        <h4 className="floating-right miniplatforms">
-                            {platforms?.map((item) => (
-                                <img src={`/img/games/platforms/system_mini_${item}.png`} />
-                            ))}
-                        </h4>
-                    </div>
-                </div>
-            </a>
+        <div className={`col-lg-4 col-md-6 small-grid-item isotope-grid-item ${category.map(cat => `category-${cat}`).join(" ")}`}>
+            {hasSection ? <Link to={cleanText(name)}>{content}</Link> : content}
         </div>
     </>
 };
@@ -29,31 +33,15 @@ const GridGame = ({ category, name, tag, nologo = false, platforms }) => {
 const Games = () => {
     return (
         <>
-            <div className="page-title" data-aos="fade">
-                <div className="heading">
-                    <div className="container">
-                        <div className="row d-flex justify-content-center text-center">
-                            <div className="col-lg-8">
-                                <h1>Games</h1>
-                                <p className="mb-0">In this section you can see all the games in which I worked on, from Porting, to QA, to personal or educational projects.<br />You can use the filters to show and hide the different categories. Clicking on a game will redirect you to a new page with more information.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <nav className="breadcrumbs">
-                    <div className="container">
-                        <ol>
-                            <li><a href="/">Home</a></li>
-                            <li className="current">Games</li>
-                        </ol>
-                    </div>
-                </nav>
-            </div>
-            <section id="portfolio" className="portfolio section">
-                <div className="container">
-                    <IsotopeGrid filters={GameFilterList} items={GamesList} GridComponent={GridGame} />
-                </div>
-            </section>
+            <SectionContent title="Games" description=
+                {<>
+                    Below you will find a list of all the games in which I worked on thorugh my life, from professional jobs, to educational projects, and game jams.<br />
+                    Use the filters to show and hide the different categories.<br />
+                    Clicking on a game will redirect you to a new page with more information.
+                </>}
+                sectionId="games">
+                <IsotopeGrid filters={GameFilterList} items={GamesList} GridComponent={GridGame} />
+            </SectionContent>
         </>
     );
 };

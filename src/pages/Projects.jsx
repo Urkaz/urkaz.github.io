@@ -1,27 +1,42 @@
-import React from "react";
+import { React } from "react";
+import { Link } from "react-router-dom";
+
+import SectionContent from "../components/SectionsContent.jsx";
+import IsotopeGrid from "../components/Isotope.jsx";
+
+import { PersonalProjectsFilterList, PersonalProjectsList, cleanText } from "../misc/GamesList.jsx"
+
+const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection = false }) => {
+    const content = <>
+        <div className={`game-content h-100 ${cleanText(name)}`}>
+            <div className="game-overlay">
+                {nologo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
+            </div>
+            <div className="game-info">
+                <h4 className="floating-left">{tag}</h4>
+                {platforms ?
+                    <h4 className="floating-right miniplatforms">
+                        {platforms?.map((item) => (
+                            <img src={`/img/games/platforms/system_mini_${item}.png`} />
+                        ))}
+                    </h4>
+                    : null}
+            </div>
+        </div>
+    </>;
+
+    return <>
+        <div className={`col-lg-4 col-md-6 small-grid-item isotope-grid-item ${category.map(cat => `category-${cat}`).join(" ")}`}>
+            {hasSection ? <Link to={cleanText(name)}>{content}</Link> : content}
+        </div>
+    </>
+};
 
 const Projects = () => {
     return (
-        <div className="page-title" data-aos="fade">
-            <div className="heading">
-                <div className="container">
-                    <div className="row d-flex justify-content-center text-center">
-                        <div className="col-lg-8">
-                            <h1>Personal Projects</h1>
-                            <p className="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav className="breadcrumbs">
-                <div className="container">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li className="current">Personal Projects</li>
-                    </ol>
-                </div>
-            </nav>
-        </div>
+        <SectionContent title="Personal Projects" description="<TODO>" sectionId="projects">
+            <IsotopeGrid filters={PersonalProjectsFilterList} items={PersonalProjectsList} GridComponent={GridGame} />
+        </SectionContent>
     );
 };
 

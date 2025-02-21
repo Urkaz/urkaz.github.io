@@ -1,11 +1,11 @@
 import React from "react";
 import SectionContent from "../components/SectionsContent.jsx";
 
-const Contact = () => {
+const Education = () => {
     return (
-        <SectionContent title="Contact" description="<TODO>" sectionId="contact">
+        <SectionContent title="Education" description="<TODO>" sectionId="education">
         </SectionContent>
     );
 };
 
-export default Contact;
+export default Education;
