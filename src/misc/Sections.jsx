@@ -18,6 +18,7 @@ const Sections = [
       { path: "/experience/:workName", element: <GameDescription />, hidden: true },
       { path: "/education", element: <Education />, sectionName: "Education" },
       { path: "/projects", element: <Projects />, sectionName: "Personal Projects" },
+      { path: "/projects/:projectName", element: <GameDescription />, hidden: true },
       { path: "/games", element: <Games />, sectionName: "Games"},
       { path: "/games/:gameName", element: <GameDescription />, hidden: true },
       { path: "/contact", element: <Contact />, sectionName: "Contact" },
