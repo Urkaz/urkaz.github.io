@@ -5,11 +5,23 @@ export const GameFilterList = [
     { name: "Quality Assurance", selector: ".category-qa" },
 ];
 
-export const GameFilterList2 = [
+export const GameFilterPlatform = [
     { name: "All", selector: "*" },
-    { name: "Professional Experience", selector: ".category-professional" },
-    { name: "Education", selector: ".category-education" },
-    { name: "Game Jams", selector: ".category-jams" },
+    { img: "/img/games/platforms/system_mini_steam.png", selector: ".category-steam" },
+    { img: "/img/games/platforms/system_mini_deck.png", selector: ".category-deck" },
+    { img: "/img/games/platforms/system_mini_windows.png", selector: ".category-windows" },
+    { img: "/img/games/platforms/system_mini_ps4.png", selector: ".category-ps4" },
+    { img: "/img/games/platforms/system_mini_ps5.png", selector: ".category-ps5" },
+    { img: "/img/games/platforms/system_mini_vita.png", selector: ".category-vita" },
+    { img: "/img/games/platforms/system_mini_xbo.png", selector: ".category-xbo" },
+    { img: "/img/games/platforms/system_mini_xsx.png", selector: ".category-xsx" },
+    { img: "/img/games/platforms/system_mini_switch.png", selector: ".category-switch" },
+    { img: "/img/games/platforms/system_mini_wiiu.png", selector: ".category-wiiu" },
+    { img: "/img/games/platforms/system_mini_android.png", selector: ".category-android" },
+    { img: "/img/games/platforms/system_mini_apple.png", selector: ".category-apple" },
+    { img: "/img/games/platforms/system_mini_quest.png", selector: ".category-quest" },
+    { img: "/img/games/platforms/system_mini_stadia.png", selector: ".category-stadia" },
+    { img: "/img/games/platforms/system_mini_win10.png", selector: ".category-win10" },
 ];
 
 export const GamesList = [
@@ -19,12 +31,13 @@ export const GamesList = [
     { category: ["porting"], name: "Togges", tag: "Porting", platforms: ["switch", "xbo"], hasSection: true },
     { category: ["porting"], name: "Hell Pie", tag: "Porting", platforms: ["xbo", "xsx"], hasSection: true },
     { category: ["porting"], name: "Firegirl: Hack 'n Splash Rescue DX", tag: "Porting", platforms: ["switch"], hasSection: true },
-    { category: ["porting"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam"], hasSection: true },
-    { category: ["development", "jams"], name: "Quantum Fields", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true },
-    { category: ["development", "education"], name: "Ronin-Hood Sisters", tag: "Development, Education", platforms: ["pc"], hasSection: true },
-    { category: ["development", "education"], name: "Unity Zombie Killer", tag: "Development, Education", platforms: ["pc"], hasSection: true },
-    { category: ["development", "education"], name: "Medieval Floor", tag: "Development, Education", platforms: ["pc"], hasSection: true },
+    { category: ["porting"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"], hasSection: true },
+    { category: ["development", "jams"], name: "Quantum Fields", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true },
+    { category: ["development", "education"], name: "Ronin-Hood Sisters", tag: "Development, Education", platforms: ["windows"], hasSection: true },
+    { category: ["development", "education"], name: "Unity Zombie Killer", tag: "Development, Education", platforms: ["windows"], hasSection: true },
+    { category: ["development", "education"], name: "Medieval Floor", tag: "Development, Education", platforms: ["windows"], hasSection: true },
     { category: ["qa"], name: "Divinity Original Sin II", tag: "QA", platforms: ["switch"] },
+    { category: ["qa"], name: "Baldur's Gate III", tag: "QA", platforms: ["stadia"] },
     { category: ["qa"], name: "Spelunky 2", tag: "QA", platforms: ["ps4", "steam"] },
     { category: ["qa"], name: "Braid, Anniversary Edition", tag: "QA", platforms: ["ps4", "xbo", "switch"] },
     { category: ["qa"], name: "Rebel Galaxy Outlaw", tag: "QA", platforms: ["switch"] },
@@ -93,14 +106,15 @@ export const GamesList = [
     { category: ["qa"], name: "Clicker Heroes", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Super Meat Boy", tag: "QA", platforms: ["switch", "wiiu"] },
     { category: ["qa"], name: "Kholat", tag: "QA", platforms: ["xbo"] },
-    { category: ["qa"], name: "Crypt of the Necrodancer", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple"] },
+    { category: ["qa"], name: "Crypt of the Necrodancer", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple", "vita"] },
     { category: ["qa"], name: "Cannon Brawl", tag: "QA", platforms: ["ps4", "xbo"] },
-    { category: ["qa"], name: "Don't Starve: Console Edition", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple", "android"] },
+    { category: ["qa"], name: "Don't Starve: Console Edition", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple", "android", "vita"] },
     { category: ["qa"], name: "Reus", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Axiom Verge", tag: "QA", platforms: ["wiiu"] },
-    { category: ["development", "jams"], name: "Pengüin", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true},
-    { category: ["development", "jams"], name: "Purramid", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true },
-    { category: ["development", "education"], name: "Griddle", tag: "Development, Education", platforms: ["pc"], hasSection: true },
+    { category: ["development", "jams"], name: "Pengüin", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true},
+    { category: ["development", "jams"], name: "Purramid", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true },
+    { category: ["development", "education"], name: "Griddle", tag: "Development, Education", platforms: ["windows"], hasSection: true },
+    { category: ["development", "education"], name: "Arrow Defense", tag: "Development, Education", platforms: ["windows"], hasSection: true },
 ];
 
 export const PersonalProjectsFilterList = [
@@ -111,12 +125,12 @@ export const PersonalProjectsFilterList = [
 ];
 
 export const PersonalProjectsList = [
-    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", platforms: ["windows", "apple", "linux"], hasSection: true },
-    { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["pc"], hasSection: true },
+    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", hasSection: true },
+    { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true },
     { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true },
     { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true },
-    { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["pc"], hasSection: true},
     { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["pc"], hasSection: true },
+    { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true},
 ];
 
 export function cleanText(text) {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import IsotopeGrid from "../components/Isotope.jsx";
 import SectionContent from "../components/SectionsContent.jsx";
 
-import { GameFilterList, GameFilterList2, GamesList, cleanText } from "../misc/GamesList.jsx"
+import { GameFilterList, GameFilterPlatform, GamesList, cleanText } from "../misc/GamesList.jsx"
 
 const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection = false }) => {
     const content = <>
@@ -36,11 +36,10 @@ const Games = () => {
             <SectionContent title="Games" description=
                 {<>
                     Below you will find a list of all the games in which I worked on thorugh my life, from professional jobs, to educational projects, and game jams.<br />
-                    Use the filters to show and hide the different categories.<br />
                     Clicking on a game will redirect you to a new page with more information.
                 </>}
                 sectionId="games">
-                <IsotopeGrid filters={GameFilterList} items={GamesList} GridComponent={GridGame} />
+                <IsotopeGrid filters={GameFilterList} secondaryfilters={GameFilterPlatform} items={GamesList} GridComponent={GridGame} />
             </SectionContent>
         </>
     );

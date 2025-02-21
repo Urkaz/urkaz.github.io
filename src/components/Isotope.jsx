@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import Isotope from "isotope-layout";
 
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
 const IsotopeGrid = ({ filters, secondaryfilters, items, GridComponent }) => {
   const gridRef = useRef(null);
   const [isotope, setIsotope] = useState(null);
@@ -44,8 +52,12 @@ const IsotopeGrid = ({ filters, secondaryfilters, items, GridComponent }) => {
         {secondaryfilters ?
           <ul className="isotope-filters" data-aos="fade-up" data-aos-delay="100">
             {secondaryfilters.map((f) => (
-              <li key={f.name} onClick={() => setSecondaryFilter(f.selector)} className={secondaryfilter === f.selector ? "filter-active" : "filter-inactive"}>
-                {f.name}
+              <li key={f.name} onClick={() => setSecondaryFilter(f.selector)} className={`miniplatforms ${secondaryfilter === f.selector ? "filter-active" : "filter-inactive"}`}>
+                {f.name ?
+                  <>{f.name}</>
+                  :
+                  <img src={f.img} />
+                }
               </li>
             ))}
           </ul>
