@@ -5,15 +5,26 @@ export const GameFilterList = [
     { name: "Quality Assurance", selector: ".category-qa" },
 ];
 
+export const GameFilterList2 = [
+    { name: "All", selector: "*" },
+    { name: "Professional Experience", selector: ".category-professional" },
+    { name: "Education", selector: ".category-education" },
+    { name: "Game Jams", selector: ".category-jams" },
+];
+
 export const GamesList = [
-    { category: ["porting"], name: "Xuan Yuan Sword 7", tag: "Porting", platforms: ["switch"] },
-    { category: ["porting"], name: "American Arcadia", tag: "Porting", platforms: ["switch", "ps4", "xsx"] },
-    { category: ["porting"], name: "Hell Pie", tag: "Porting", platforms: ["xbo", "xsx"] },
-    { category: ["porting"], name: "Togges", tag: "Porting", platforms: ["switch", "xbo"] },
-    { category: ["porting", "development"], name: "Metamorphosis VR", tag: "Porting, Development", platforms: ["quest"] },
-    { category: ["porting"], name: "Firegirl: Hack 'n Splash Rescue DX", tag: "Porting", platforms: ["switch"] },
-    { category: ["porting", "development"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam"] },
-    { category: ["development"], name: "Ronin-Hood Sisters", tag: "Development", platforms: ["pc"] },
+    { category: ["porting"], name: "American Arcadia", tag: "Porting", platforms: ["switch", "ps4", "xsx"], hasSection: true },
+    { category: ["development", "porting"], name: "Metamorphosis VR", tag: "Porting, Development", platforms: ["quest"], hasSection: true },
+    { category: ["porting"], name: "Xuan Yuan Sword 7", tag: "Porting", platforms: ["switch"], hasSection: true },
+    { category: ["porting"], name: "Togges", tag: "Porting", platforms: ["switch", "xbo"], hasSection: true },
+    { category: ["porting"], name: "Hell Pie", tag: "Porting", platforms: ["xbo", "xsx"], hasSection: true },
+    { category: ["porting"], name: "Firegirl: Hack 'n Splash Rescue DX", tag: "Porting", platforms: ["switch"], hasSection: true },
+    { category: ["porting"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam"], hasSection: true },
+    { category: ["development", "jams"], name: "Quantum Fields", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true },
+    { category: ["development", "education"], name: "Ronin-Hood Sisters", tag: "Development, Education", platforms: ["pc"], hasSection: true },
+    { category: ["development", "education"], name: "Unity Zombie Killer", tag: "Development, Education", platforms: ["pc"], hasSection: true },
+    { category: ["development", "education"], name: "Medieval Floor", tag: "Development, Education", platforms: ["pc"], hasSection: true },
+    { category: ["qa"], name: "Divinity Original Sin II", tag: "QA", platforms: ["switch"] },
     { category: ["qa"], name: "Spelunky 2", tag: "QA", platforms: ["ps4", "steam"] },
     { category: ["qa"], name: "Braid, Anniversary Edition", tag: "QA", platforms: ["ps4", "xbo", "switch"] },
     { category: ["qa"], name: "Rebel Galaxy Outlaw", tag: "QA", platforms: ["switch"] },
@@ -35,7 +46,6 @@ export const GamesList = [
     { category: ["qa"], name: "Streets of Rage 4", tag: "QA", platforms: ["xbo", "win10"] },
     { category: ["qa"], name: "Gris", tag: "QA", platforms: ["ps4", "apple"] },
     { category: ["qa"], name: "Fight'N Rage", tag: "QA", platforms: ["switch", "ps4", "xbo"] },
-    { category: ["qa"], name: "Divinity Original Sin II", tag: "QA", platforms: ["switch"] },
     { category: ["qa"], name: "They Are Billions", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Trine Enchanted Edition", tag: "QA", platforms: ["switch", "xbo"] },
     { category: ["qa"], name: "Trine 2: Complete Story", tag: "QA", platforms: ["switch", "xbo"] },
@@ -52,7 +62,7 @@ export const GamesList = [
     { category: ["qa"], name: "Full Metal Furies", tag: "QA", platforms: ["switch", "xbo", "win10"] },
     { category: ["qa"], name: "Windjammers", tag: "QA", platforms: ["switch"] },
     { category: ["qa"], name: "Tricky Towers", tag: "QA", platforms: ["switch", "xbo"] },
-    { category: ["qa"], name: "Pushy and Pully in Blockland", tag: "QA" },
+    { category: ["qa"], name: "Pushy and Pully in Blockland", tag: "QA", platforms: ["switch"] },
     { category: ["qa"], name: "Amnesia: Collection", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Broken Age", tag: "QA", platforms: ["switch", "xbo"] },
     { category: ["qa"], name: "Bastion", tag: "QA", platforms: ["switch", "xbo"] },
@@ -83,30 +93,30 @@ export const GamesList = [
     { category: ["qa"], name: "Clicker Heroes", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Super Meat Boy", tag: "QA", platforms: ["switch", "wiiu"] },
     { category: ["qa"], name: "Kholat", tag: "QA", platforms: ["xbo"] },
-    { category: ["qa"], name: "Crypt of the Necrodancer: Amplified", tag: "QA", platforms: ["apple"] },
-    { category: ["qa"], name: "Crypt of the Necrodancer", tag: "QA", platforms: ["switch", "ps4", "xbo"] },
+    { category: ["qa"], name: "Crypt of the Necrodancer", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple"] },
     { category: ["qa"], name: "Cannon Brawl", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Don't Starve: Console Edition", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple", "android"] },
     { category: ["qa"], name: "Reus", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Axiom Verge", tag: "QA", platforms: ["wiiu"] },
+    { category: ["development", "jams"], name: "Pengüin", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true},
+    { category: ["development", "jams"], name: "Purramid", tag: "Development, Game Jams", platforms: ["pc"], hasSection: true },
+    { category: ["development", "education"], name: "Griddle", tag: "Development, Education", platforms: ["pc"], hasSection: true },
 ];
 
 export const PersonalProjectsFilterList = [
     { name: "All", selector: "*" },
-    { name: "Games", selector: ".category-game" },
     { name: "Unreal Plugins", selector: ".category-plugin" },
-    { name: "Mod/Addons", selector: ".category-mod" },
+    { name: "Game Mod/Addons", selector: ".category-mod" },
+    { name: "Game Jams", selector: ".category-jams" },
 ];
 
 export const PersonalProjectsList = [
-    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin" },
-    { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod" },
-    { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon" },
-    { category: ["game"], name: "Quantum Fields", tag: "Game" },
-    { category: ["game"], name: "Unity Zombie Killer", tag: "Game" },
-    { category: ["game"], name: "Medieval Floor", tag: "Game" },
-    { category: ["game"], name: "Pengüin", tag: "Game" },
-    { category: ["game"], name: "Griddle", tag: "Game" },
+    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", platforms: ["windows", "apple", "linux"], hasSection: true },
+    { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["pc"], hasSection: true },
+    { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true },
+    { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true },
+    { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["pc"], hasSection: true},
+    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["pc"], hasSection: true },
 ];
 
 export function cleanText(text) {
