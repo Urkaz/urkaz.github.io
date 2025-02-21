@@ -7,7 +7,7 @@ export default function Navbar() {
 
   const renderNavItems = (sections) => {
     return sections.flatMap(({ children }) =>
-      children.filter(section => section.path)
+      children.filter(section => section.path && !section.hidden)
         .map(({ path, sectionName }, index) => (
           <NavItem key={index} to={path} activeStyle>{sectionName}</NavItem>
         ))
@@ -20,6 +20,7 @@ export default function Navbar() {
       <NavMenu>
         <NavItem to="/" activeStyle>Home</NavItem>
         {renderNavItems(Sections)}
+        <li><a href="/img/games/logos/roninhoodsisters.png" download>Download CV</a></li>
       </NavMenu>
     </>
   );
