@@ -4,8 +4,12 @@
 var created = false;
 
 window.addEventListener("resize", Resize);
-window.onload = Resize;
+window.onload = OnLoad;
 setInterval(Update, 20);
+
+function OnLoad(e) {
+  Resize();
+}
 
 ///////////////////////////////////////////////////////////////
 //////////////////////////GLOBAL
@@ -28,17 +32,11 @@ var maxVelocity = 0.5;
 ///////////////////////////////////////////////////////////////
 
 var mousePosition = { x: 0, y: 0 };
-document.addEventListener("mousemove", Mouse);
-
+window.addEventListener("mousemove", Mouse);
 function Mouse(mouseMoveEvent) {
   if (created) {
-    var canvas = document.getElementById("background");
-    var ctx = canvas.getContext("2d");
-
-    mousePosition.x = mouseMoveEvent.pageX;
-    mousePosition.y = mouseMoveEvent.pageY;
-
-    //drawPoint(ctx, [mousePosition.x, mousePosition.y], 3);
+    mousePosition.x = mouseMoveEvent.clientX;
+    mousePosition.y = mouseMoveEvent.clientY;
 
     pointsArray[numPoints] = [mousePosition.x, mousePosition.y];
     pointsVelocities[numPoints] = [0, 0];
