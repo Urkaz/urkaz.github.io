@@ -12,8 +12,6 @@ const Experience = () => {
                 <div className="row">
                     {/*Left side */}
                     <div >
-
-
                         <h3 className="experience-title">Professional Experience</h3>
 
                         <div className="experience-timeline-item" data-aos="fade-up" data-aos-delay="100">
@@ -23,7 +21,7 @@ const Experience = () => {
                                     <h4>Unreal Tools Programmer & Porting Engineer</h4>
                                     <h5>Catness Game Studios</h5>
                                     <p><FontAwesomeIcon icon={faCalendarDays} /> December 2021 - March 2025 (3 years 3 months)</p>
-                                    <p><FontAwesomeIcon icon={faLocationDot} /> Catelló de la Plana, Castellón, Spain (In-office)</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Catelló de la Plana, Castelló, Spain (In-office)</p>
                                     <ul>
                                         <li>Game porting with Unreal Engine 4 and 5 to consoles (Xbox One, Xbox Series S|X, PS4, PS5, Switch, Steam Deck).</li>
                                         <li>Plugin and tool development to expand the engine base functionality: custom device profiles, mesh instancing editor tools, project analysis tools, custom blueprint nodes, async loading screen, right-click editor extensions with custom tasks, and more.</li>
@@ -42,7 +40,8 @@ const Experience = () => {
                                 <div className="experience-card">
                                     <h4>QA Technician</h4>
                                     <h5>Lollipop Robot</h5>
-                                    <p>October 2016 - September 2020 (4 years)<br />Vila-real, Castellón, Spain - In-office</p>
+                                    <p><FontAwesomeIcon icon={faCalendarDays} /> October 2016 - September 2020 (4 years)</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Vila-real, Castelló, Spain - In-office</p>
                                     <ul>
                                         <li>Compliance and Playtesting for PS4, Xbox One, and Nintendo Switch.</li>
                                         <li>Designer support of the porting development for the platforms above.</li>
@@ -61,7 +60,8 @@ const Experience = () => {
                                 <div className="experience-card">
                                     <h4>QA Tester Internship</h4>
                                     <h5>Lollipop Robot</h5>
-                                    <p>February 2016 - July 2016 (6 months)<br />Vila-real, Castellón, Spain - In-office</p>
+                                    <p><FontAwesomeIcon icon={faCalendarDays} /> February 2016 - July 2016 (6 months)</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Vila-real, Castelló, Spain - In-office</p>
                                     <ul>
                                         <li>Playtesting for console games.</li>
                                     </ul>

@@ -1,10 +1,58 @@
 import React from "react";
 import SectionContent from "../components/SectionsContent.jsx";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+
 const Education = () => {
     return (
-        <SectionContent title="Education" description="<TODO>" sectionId="education">
-        </SectionContent>
+        <>
+            <SectionContent title="Experience" description="<TODO>" sectionId="experience">
+                <div className="row">
+                    {/*Left side */}
+                    <div >
+                        <h3 className="experience-title">Education</h3>
+
+                        <div className="experience-timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div className="experience-item">
+                                <div className="icon"><img src="/img/experience/icons/u_tad_logo.jpg"></img></div>
+                                <div className="experience-card">
+                                    <h4>Master's Degree in Video Game Programming</h4>
+                                    <h5>U-tad</h5>
+                                    <p><FontAwesomeIcon icon={faCalendarDays} /> October 2020 - October 2021</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Madrid, Spain</p>
+                                    <ul>
+                                        <li>C++ programming using Unreal Engine 4.</li>
+                                        <li>AI programming in C++.</li>
+                                        <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI).</li>
+                                        <li>Audio programming using OpenAL in C++.</li>
+                                    </ul>
+                                    <a className="button">More details</a>
+                                </div>
+                            </div>
+                            <div className="experience-item-spacer"></div>
+                        </div>
+
+                        <div className="experience-timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div className="experience-item">
+                                <div className="icon"><img src="/img/experience/icons/uji_logo.jpg"></img></div>
+                                <div className="experience-card">
+                                    <h4>Degree in Video game Design and Development</h4>
+                                    <h5>Universitat Jaume I</h5>
+                                    <p><FontAwesomeIcon icon={faCalendarDays} /> 2012 - 2016</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Castelló de la Plana, Castelló, Spain - In-office</p>
+                                    <ul>
+                                        <li>Unity 3D.</li>
+                                        <li>Algorithms and Data structures.</li>
+                                    </ul>
+                                    <a className="button">More details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </SectionContent>
+        </>
     );
 };
 
