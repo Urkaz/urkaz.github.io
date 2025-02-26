@@ -71,6 +71,7 @@
       background-color: var(--accent-color);
       padding: 8px 10px;
       color: var(--default-color);
+      box-shadow: 3px 3px 0 0 var(--contrast-color);
 
       &:hover {
         background-color: var(--secondary-accent-color);
