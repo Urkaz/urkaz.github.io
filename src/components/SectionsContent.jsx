@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouseChimney } from '@fortawesome/free-solid-svg-icons'
+
 export function Breadcrumbs() {
     return (
         <>
@@ -8,7 +11,7 @@ export function Breadcrumbs() {
             <nav className="breadcrumbs">
                 <div className="container">
                     <ol>
-                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/"><FontAwesomeIcon icon={faHouseChimney} /> Home</NavLink></li>
                         <li className="current">&lt;TODO&gt;</li>
                     </ol>
                 </div>

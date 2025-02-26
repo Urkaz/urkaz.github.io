@@ -2,6 +2,9 @@ import React from "react";
 
 import SectionContent from "../components/SectionsContent.jsx";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+
 const Experience = () => {
     return (
         <>
@@ -19,8 +22,8 @@ const Experience = () => {
                                 <div className="experience-card">
                                     <h4>Unreal Tools Programmer & Porting Engineer</h4>
                                     <h5>Catness Game Studios</h5>
-                                    <p>December 2021 - March 2025 (3 years 3 months)<br />
-                                        Catelló de la Plana, Castellón, Spain - In-office</p>
+                                    <p><FontAwesomeIcon icon={faCalendarDays} /> December 2021 - March 2025 (3 years 3 months)</p>
+                                    <p><FontAwesomeIcon icon={faLocationDot} /> Catelló de la Plana, Castellón, Spain (In-office)</p>
                                     <ul>
                                         <li>Game porting with Unreal Engine 4 and 5 to consoles (Xbox One, Xbox Series S|X, PS4, PS5, Switch, Steam Deck).</li>
                                         <li>Plugin and tool development to expand the engine base functionality: custom device profiles, mesh instancing editor tools, project analysis tools, custom blueprint nodes, async loading screen, right-click editor extensions with custom tasks, and more.</li>
