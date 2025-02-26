@@ -24,6 +24,29 @@ var distanceForLine = 250;
 var speed = 0.05;
 var maxVelocity = 0.5;
 
+///////////////////////////////////////////////////////////////
+//////////////////////////MOUSE
+///////////////////////////////////////////////////////////////
+
+var mousePosition = {x:0, y:0};
+document.addEventListener('mousemove', Mouse);
+
+function Mouse(mouseMoveEvent) {
+    if (created) {
+        var canvas = document.getElementById('background');
+        var ctx = canvas.getContext('2d'); 
+
+        mousePosition.x = mouseMoveEvent.pageX;
+        mousePosition.y = mouseMoveEvent.pageY;
+
+        //drawPoint(ctx, [mousePosition.x, mousePosition.y], 3);
+
+        pointsArray[numPoints] = [mousePosition.x, mousePosition.y];
+        pointsVelocities[numPoints] = [0,0];
+    }
+}
+
+
 function Update(e)
 {
     ///////////////////////////////////////////////////////////////
@@ -51,7 +74,12 @@ function Update(e)
             pointsArray[i] = [randomX, randomY];
             pointsVelocities[i] = [0,0];
         }
+       
+        pointsArray[numPointsToCreate] = [randomX, randomY];
+        pointsVelocities[numPointsToCreate] = [0,0];
+
         numPoints = numPointsToCreate;
+
         created = true;
     }
     
@@ -112,22 +140,22 @@ function Update(e)
     ctx.clearRect (0, 0, ctx.canvas.width, ctx.canvas.height);
     
     var allowRender = true;
-    if( canvas.width < 400 || canvas.height < 300)
+    if (canvas.width < 400 || canvas.height < 300)
     {
         allowRender = false;
     }
     
-    if(allowRender)
+    if (allowRender)
     {
-        for(i = 0; i < numPoints; i++)
+        for(i = 0; i < numPoints + 1; i++)
         {
             drawPoint(ctx, pointsArray[i], 3);
 
-            for(var j = i; j < numPoints; j++)
+            for(var j = i; j < numPoints + 1; j++)
             {
                 var distanceBetweenPoints = distanceCheck(pointsArray[i], pointsArray[j]);
                 var distanceForLineSq = distanceForLine * distanceForLine;
-                if(distanceBetweenPoints < distanceForLineSq)
+                if (distanceBetweenPoints < distanceForLineSq)
                 {
                     var a1 = 1-(distanceBetweenPoints/distanceForLineSq);
                     var opacity = a1*a1 * 2;
