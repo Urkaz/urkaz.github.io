@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import SectionContent from "../components/SectionsContent.jsx";
 
@@ -28,7 +29,7 @@ const Experience = () => {
                                         <li>Plugin and tool development to ease the porting process to consoles: Xbox user management, PS5 activities, Switch controller handling, and other optimization tools.</li>
                                         <li>Engine customizations with multiple bug fixes and improvements.</li>
                                     </ul>
-                                    <a className="button">More details</a>
+                                    <Link to="/experience/catnessgamestudios" className="button">More details</Link>
                                 </div>
                             </div>
                             <div className="experience-item-spacer"></div>
@@ -48,7 +49,7 @@ const Experience = () => {
                                         <li>Experience using popular bug trackers like Jira, Mantis, Bitbucket, or GitHub.</li>
                                         <li>Creating and maintaining tools to ease the tests (cmd scripts, input macros, etc).</li>
                                     </ul>
-                                    <a className="button">More details</a>
+                                    <Link to="/experience/lollipoprobot" className="button">More details</Link>
                                 </div>
                             </div>
                             <div className="experience-item-spacer"></div>

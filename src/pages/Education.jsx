@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import SectionContent from "../components/SectionsContent.jsx";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -27,7 +29,7 @@ const Education = () => {
                                         <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI).</li>
                                         <li>Audio programming using OpenAL in C++.</li>
                                     </ul>
-                                    <a className="button">More details</a>
+                                    <Link to="/education/utad" className="button">More details</Link>
                                 </div>
                             </div>
                             <div className="experience-item-spacer"></div>
@@ -45,7 +47,7 @@ const Education = () => {
                                         <li>Unity 3D.</li>
                                         <li>Algorithms and Data structures.</li>
                                     </ul>
-                                    <a className="button">More details</a>
+                                    <Link to="/education/uji" className="button">More details</Link>
                                 </div>
                             </div>
                         </div>
