@@ -6,11 +6,11 @@ import IsotopeGrid from "../components/Isotope.jsx";
 
 import { PersonalProjectsFilterList, PersonalProjectsList, cleanText } from "../misc/GamesList.jsx"
 
-const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection = false }) => {
+const GridGame = ({ category, name, tag, noLogo = false, platforms, hasSection = false, useText = true }) => {
     const content = <>
         <div className={`game-content h-100 ${cleanText(name)}`}>
             <div className="game-overlay">
-                {nologo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
+                {noLogo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
             </div>
             <div className="game-info">
                 <h4 className="floating-left">{tag}</h4>
