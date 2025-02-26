@@ -66,7 +66,7 @@
 }
 
 .hero .social-links a {
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: var(--accent-color);
   color: var(--default-color);
   font-size: 20px;
   width: 40px;
@@ -77,10 +77,16 @@
   justify-content: center;
   margin-right: 20px;
   transition: 0.3s;
+  text-align: center;
 }
 
 .hero .social-links a:hover {
-  background-color: var(--accent-color);
+  background: color-mix(
+    in srgb,
+    var(--secondary-accent-color),
+    transparent 20%
+  );
+  color: var(--contrast-color);
 }
 
 @media (max-width: 768px) {
