@@ -31,7 +31,7 @@ export const GamesList = [
     { category: ["porting"], name: "Togges", tag: "Porting", platforms: ["switch", "xbo"], hasSection: true },
     { category: ["porting"], name: "Hell Pie", tag: "Porting", platforms: ["xbo", "xsx"], hasSection: true },
     { category: ["porting"], name: "Firegirl: Hack 'n Splash Rescue DX", tag: "Porting", platforms: ["switch"], hasSection: true },
-    { category: ["porting"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"], hasSection: true },
+    { category: ["development", "porting"], name: "Unpublished Game #1", tag: "Porting, Development", platforms: ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"], hasSection: true },
     { category: ["development", "jams"], name: "Quantum Fields", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true },
     { category: ["development", "education"], name: "Ronin-Hood Sisters", tag: "Development, Education", platforms: ["windows"], hasSection: true },
     { category: ["development", "education"], name: "Unity Zombie Killer", tag: "Development, Education", platforms: ["windows"], hasSection: true },
