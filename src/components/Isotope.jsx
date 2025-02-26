@@ -9,13 +9,19 @@ function concatValues( obj ) {
   return value;
 }
 
-const IsotopeGrid = ({ filters, secondaryfilters, items, GridComponent }) => {
+const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent }) => {
   const gridRef = useRef(null);
   const [isotope, setIsotope] = useState(null);
-  const [filter, setFilter] = useState("*");
-  const [secondaryfilter, setSecondaryFilter] = useState("*");
+  const [filter, setFilter] = useState("");
+  const [secondaryfilter, setSecondaryFilter] = useState("");
   const [gameIds] = useState(() =>
     items.map(() => crypto.randomUUID())
+  );
+  const [filterIds] = useState(() =>
+    mainFilters?.map(() => crypto.randomUUID())
+  );
+  const [secondaryFilterIds] = useState(() =>
+    secondaryfilters?.map(() => crypto.randomUUID())
   );
 
   useEffect(() => {
@@ -30,20 +36,23 @@ const IsotopeGrid = ({ filters, secondaryfilters, items, GridComponent }) => {
 
   useEffect(() => {
     if (isotope) {
-      filter === "*"
-        ? isotope.arrange({ filter: "*" })
-        : isotope.arrange({ filter });
+      var _mainFilter = mainFilters ? filter : "";
+      var _secondaryfilter = secondaryfilters ? secondaryfilter : "";
+
+      var finalFilter = concatValues([_mainFilter, _secondaryfilter]);
+
+      isotope.arrange({ filter: finalFilter });
     }
-  }, [filter, isotope]);
+  }, [filter, secondaryfilter, isotope]);
 
   return (
     <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
       <div>
         {/* Botones para filtrar */}
-        {filters ?
+        {mainFilters ?
           <ul className="isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            {filters.map((f) => (
-              <li key={f.name} onClick={() => setFilter(f.selector)} className={filter === f.selector ? "filter-active" : "filter-inactive"}>
+            {mainFilters.map((f, index) => (
+              <li key={filterIds[index]} onClick={() => setFilter(f.selector)} className={filter === f.selector ? "filter-active" : "filter-inactive"}>
                 {f.name}
               </li>
             ))}
@@ -51,8 +60,8 @@ const IsotopeGrid = ({ filters, secondaryfilters, items, GridComponent }) => {
           : null}
         {secondaryfilters ?
           <ul className="isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            {secondaryfilters.map((f) => (
-              <li key={f.name} onClick={() => setSecondaryFilter(f.selector)} className={`miniplatforms ${secondaryfilter === f.selector ? "filter-active" : "filter-inactive"}`}>
+            {secondaryfilters.map((f, index) => (
+              <li key={secondaryFilterIds[index]} onClick={() => setSecondaryFilter(f.selector)} className={`miniplatforms ${secondaryfilter === f.selector ? "filter-active" : "filter-inactive"}`}>
                 {f.name ?
                   <>{f.name}</>
                   :

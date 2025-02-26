@@ -15,8 +15,8 @@ const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection =
             <div className="game-info">
                 <h4 className="floating-left">{tag}</h4>
                 <h4 className="floating-right miniplatforms">
-                    {platforms?.map((item) => (
-                        <img src={`/img/games/platforms/system_mini_${item}.png`} />
+                    {platforms?.map((item, index) => (
+                        <img key={index} src={`/img/games/platforms/system_mini_${item}.png`} />
                     ))}
                 </h4>
             </div>
@@ -24,7 +24,7 @@ const GridGame = ({ category, name, tag, nologo = false, platforms, hasSection =
     </>;
 
     return <>
-        <div className={`col-lg-4 col-md-6 small-grid-item isotope-grid-item ${category.map(cat => `category-${cat}`).join(" ")}`}>
+        <div className={`col-lg-4 col-md-6 small-grid-item isotope-grid-item ${category.map(cat => `category-${cat}`).join(" ")} ${platforms.map(platform => `category-${platform}`).join(" ")}`}>
             {hasSection ? <Link to={cleanText(name)}>{content}</Link> : content}
         </div>
     </>
@@ -39,7 +39,7 @@ const Games = () => {
                     Clicking on a game will redirect you to a new page with more information.
                 </>}
                 sectionId="games">
-                <IsotopeGrid filters={GameFilterList} secondaryfilters={GameFilterPlatform} items={GamesList} GridComponent={GridGame} />
+                <IsotopeGrid mainFilters={GameFilterList} secondaryfilters={GameFilterPlatform} items={GamesList} GridComponent={GridGame} />
             </SectionContent>
         </>
     );

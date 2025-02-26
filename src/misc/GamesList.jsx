@@ -1,12 +1,12 @@
 export const GameFilterList = [
-    { name: "All", selector: "*" },
+    { name: "All", selector: "" },
     { name: "Porting", selector: ".category-porting" },
     { name: "Development", selector: ".category-development" },
     { name: "Quality Assurance", selector: ".category-qa" },
 ];
 
 export const GameFilterPlatform = [
-    { name: "All", selector: "*" },
+    { name: "All", selector: "" },
     { img: "/img/games/platforms/system_mini_steam.png", selector: ".category-steam" },
     { img: "/img/games/platforms/system_mini_deck.png", selector: ".category-deck" },
     { img: "/img/games/platforms/system_mini_windows.png", selector: ".category-windows" },
@@ -129,7 +129,7 @@ export const PersonalProjectsList = [
     { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true },
     { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true },
     { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true },
-    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["pc"], hasSection: true },
+    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true },
     { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true},
 ];
 
