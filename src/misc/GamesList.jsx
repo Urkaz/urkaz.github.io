@@ -118,10 +118,10 @@ export const GamesList = [
 ];
 
 export const PersonalProjectsFilterList = [
-    { name: "All", selector: "*" },
+    { name: "All", selector: "" },
     { name: "Unreal Plugins", selector: ".category-plugin" },
     { name: "Game Mod/Addons", selector: ".category-mod" },
-    { name: "Game Jams", selector: ".category-jams" },
+    { name: "Games", selector: ".category-jams" },
 ];
 
 export const PersonalProjectsList = [
@@ -129,8 +129,8 @@ export const PersonalProjectsList = [
     { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true },
     { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true, noLogo: true },
     { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true, noLogo: true },
-    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true },
     { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true, noLogo: true},
+    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true },
 ];
 
 export function cleanText(text) {

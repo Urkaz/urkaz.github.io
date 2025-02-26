@@ -65,7 +65,7 @@ const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent }) =>
                 {f.name ?
                   <>{f.name}</>
                   :
-                  <img src={f.img} />
+                  <img src="/img/games/platforms/empty.png" style={{WebkitMaskImage: `url(${f.img})`, maskImage: `url(${f.img})`}}/>
                 }
               </li>
             ))}
