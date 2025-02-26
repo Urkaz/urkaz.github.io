@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faItchIo } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default function Footer({ children }) {
@@ -12,9 +12,10 @@ export default function Footer({ children }) {
                 <div className="container">
                     <h3 className="sitename">{children}</h3>
                     <div className="social-links d-flex justify-content-center">
-                        <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
-                        <a href=""><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href=""><FontAwesomeIcon icon={faEnvelope} /></a>
+                        <a href="https://www.linkedin.com/in/fransanchezrodrigo/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a href="https://github.com/Urkaz"><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href="https://urkaz.itch.io/"><FontAwesomeIcon icon={faItchIo} /></a>
+                        <a href="mailto:fran.sanchez.rodrigo@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
                     </div>
                     <div className="container">
                         <div className="credits">

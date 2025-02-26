@@ -1,5 +1,8 @@
 import { React, useEffect, useRef } from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+
 export default function ScrollToTop() {
   const componentRef = useRef(null);
 
@@ -35,7 +38,7 @@ export default function ScrollToTop() {
   return (
     <>
       {/*Scroll Top*/}
-      <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center" ref={componentRef}><i className="bi bi-arrow-up-short"></i></a>
+      <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center" ref={componentRef}><FontAwesomeIcon icon={faArrowUp} /></a>
     </>
   );
 }

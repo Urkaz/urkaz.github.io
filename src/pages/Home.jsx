@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faItchIo } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
@@ -25,9 +25,10 @@ const Home = () => {
                     <p>I'm {age} years old, and a video game enthusiast and a passionate programmer that loves new technologies. DigiDestinied, Pokémon trainer and D&D game master.</p>
                 </div>
                 <div className="social-links">
-                    <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href=""><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href=""><FontAwesomeIcon icon={faEnvelope} /></a>
+                    <a href="https://www.linkedin.com/in/fransanchezrodrigo/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href="https://github.com/Urkaz"><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href="https://urkaz.itch.io/"><FontAwesomeIcon icon={faItchIo} /></a>
+                    <a href="mailto:fran.sanchez.rodrigo@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
                 </div>
             </div>
         </section>
