@@ -12,10 +12,10 @@ export default function Footer({ children }) {
                 <div className="container">
                     <h3 className="sitename">{children}</h3>
                     <div className="social-links d-flex justify-content-center">
-                        <a href="https://www.linkedin.com/in/fransanchezrodrigo/"><FontAwesomeIcon icon={faLinkedin} /></a>
-                        <a href="https://github.com/Urkaz"><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href="https://urkaz.itch.io/"><FontAwesomeIcon icon={faItchIo} /></a>
-                        <a href="mailto:fran.sanchez.rodrigo@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/fransanchezrodrigo/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a target="_blank" href="https://github.com/Urkaz"><FontAwesomeIcon icon={faGithub} /></a>
+                        <a target="_blank" href="https://urkaz.itch.io/"><FontAwesomeIcon icon={faItchIo} /></a>
+                        <a target="_blank" href="mailto:fran.sanchez.rodrigo@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
                     </div>
                     <div className="container">
                         <div className="credits">
