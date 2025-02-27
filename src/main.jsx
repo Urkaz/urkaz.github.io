@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'aos/dist/aos.css'
 import 'glightbox/dist/css/glightbox.css'
+import 'swiper/css';
 
 import AOS from 'aos';
 AOS.init();
