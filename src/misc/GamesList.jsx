@@ -120,15 +120,16 @@ export const GamesList = [
 export const PersonalProjectsFilterList = [
     { name: "All", selector: "" },
     { name: "Unreal Plugins", selector: ".category-plugin" },
-    { name: "Game Mod/Addons", selector: ".category-mod" },
     { name: "Games", selector: ".category-jams" },
+    { name: "Other", selector: ".category-other" },
 ];
 
 export const PersonalProjectsList = [
+    { category: ["other"], name: "Personal webpage", tag: "Webpage", hasSection: true, noLogo: true, type: "project" },
     { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", hasSection: true, noLogo: true, type: "project" },
     { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true, type: "game" },
-    { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true, noLogo: true, type: "project" },
-    { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true, noLogo: true, type: "project" },
+    { category: ["other"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true, noLogo: true, type: "project" },
+    { category: ["other"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true, noLogo: true, type: "project" },
     { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true, noLogo: true, type: "game" },
     { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true, type: "game" },
 ];

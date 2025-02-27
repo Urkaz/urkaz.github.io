@@ -3,12 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { SectionContent } from "../../components/SectionsContent.jsx";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, A11y } from 'swiper/modules';
-
-import app1 from '../../assets/img/portfolio/app-1.jpg';
-import app2 from '../../assets/img/portfolio/app-2.jpg';
-import app3 from '../../assets/img/portfolio/app-3.jpg';
+//import { Swiper, SwiperSlide } from 'swiper/react';
+//import { Autoplay, Pagination, Navigation, A11y } from 'swiper/modules';
 
 const GameDescription = () => {
     const { gameName } = useParams();
