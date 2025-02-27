@@ -5,7 +5,7 @@ import Projects from "../pages/Projects.jsx";
 import Games from "../pages/Games.jsx";
 import Contact from "../pages/Contact.jsx";
 import Education from "../pages/Education.jsx";
-import GameDescription from "../pages/GameDescription.jsx";
+import GameDescription from "../pages/subpages/GameDescription.jsx";
 
 const Sections = [
   {
@@ -16,6 +16,7 @@ const Sections = [
       { index: true, element: <Home /> },
       { path: "/experience", element: <Experience />, sectionName: "Experience" },
       { path: "/experience/:workName", element: <GameDescription />, hidden: true },
+      { path: "/experience/:workName/:subProject", element: <GameDescription />, hidden: true },
       { path: "/education", element: <Education />, sectionName: "Education" },
       { path: "/education/:workName", element: <GameDescription />, hidden: true },
       { path: "/projects", element: <Projects />, sectionName: "Personal Projects" },

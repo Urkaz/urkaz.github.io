@@ -111,7 +111,7 @@ export const GamesList = [
     { category: ["qa"], name: "Don't Starve: Console Edition", tag: "QA", platforms: ["switch", "ps4", "xbo", "apple", "android", "vita"] },
     { category: ["qa"], name: "Reus", tag: "QA", platforms: ["ps4", "xbo"] },
     { category: ["qa"], name: "Axiom Verge", tag: "QA", platforms: ["wiiu"] },
-    { category: ["development", "jams"], name: "Pengüin", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true},
+    { category: ["development", "jams"], name: "Pengüin", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true, noLogo: true },
     { category: ["development", "jams"], name: "Purramid", tag: "Development, Game Jams", platforms: ["windows"], hasSection: true },
     { category: ["development", "education"], name: "Griddle", tag: "Development, Education", platforms: ["windows"], hasSection: true },
     { category: ["development", "education"], name: "Arrow Defense", tag: "Development, Education", platforms: ["windows"], hasSection: true },
@@ -125,12 +125,12 @@ export const PersonalProjectsFilterList = [
 ];
 
 export const PersonalProjectsList = [
-    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", hasSection: true, noLogo: true },
-    { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true },
-    { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true, noLogo: true },
-    { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true, noLogo: true },
-    { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true, noLogo: true},
-    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true },
+    { category: ["plugin"], name: "Unused Node Cleaner", tag: "Unreal Plugin", hasSection: true, noLogo: true, type: "project" },
+    { category: ["development", "jams"], name: "Quantum Fields", tag: "Game", platforms: ["windows"], hasSection: true, type: "game" },
+    { category: ["mod"], name: "Urkaz Moon Tools", tag: "Minecraft Mod", hasSection: true, noLogo: true, type: "project" },
+    { category: ["mod"], name: "Item Name Localized", tag: "World of Warcraft Addon", hasSection: true, noLogo: true, type: "project" },
+    { category: ["development", "jams"], name: "Pengüin", tag: "Game", platforms: ["windows"], hasSection: true, noLogo: true, type: "game" },
+    { category: ["development", "jams"], name: "Purramid", tag: "Game", platforms: ["windows"], hasSection: true, type: "game" },
 ];
 
 export function cleanText(text) {
