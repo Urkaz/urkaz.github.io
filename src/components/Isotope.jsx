@@ -9,7 +9,7 @@ function concatValues( obj ) {
   return value;
 }
 
-const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent }) => {
+export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent }) => {
   const gridRef = useRef(null);
   const [isotope, setIsotope] = useState(null);
   const [filter, setFilter] = useState("");
@@ -83,5 +83,3 @@ const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent }) =>
     </div>
   );
 };
-
-export default IsotopeGrid;

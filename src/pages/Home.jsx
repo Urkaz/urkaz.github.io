@@ -1,5 +1,7 @@
 import React from "react";
 
+import { SectionContent } from "../components/SectionsContent.jsx";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faItchIo } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'

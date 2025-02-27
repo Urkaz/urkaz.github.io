@@ -1,11 +1,11 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 
-import SectionContent from "../components/SectionsContent.jsx"
-import IsotopeGrid from "../components/Isotope.jsx"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
+
+import { SectionContent } from "../components/SectionsContent.jsx";
+import { IsotopeGrid } from "../components/Isotope.jsx"
 
 import { PersonalProjectsFilterList, PersonalProjectsList, cleanText } from "../misc/GamesList.jsx"
 

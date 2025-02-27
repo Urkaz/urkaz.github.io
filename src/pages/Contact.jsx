@@ -1,5 +1,6 @@
 import React from "react";
-import SectionContent from "../components/SectionsContent.jsx";
+
+import { SectionContent } from "../components/SectionsContent.jsx";
 
 const Contact = () => {
     return (

@@ -28,8 +28,8 @@ export function Heading({ title, description }) {
                 <div className="container">
                     <div className="row d-flex justify-content-center text-center">
                         <div className="col-lg-8">
-                            <h1>{title}</h1>
-                            <p className="mb-0">{description}</p>
+                            {title ? <h1>{title}</h1> : null}
+                            {description ? <p className="mb-0">{description}</p> : null}
                         </div>
                     </div>
                 </div>
@@ -38,18 +38,18 @@ export function Heading({ title, description }) {
     );
 }
 
-export default function SectionContent({ title, description, sectionId, children }) {
+export function SectionContent({ title, description, sectionId, children }) {
     return (
-            <>
-                <div className="page-title" data-aos="fade">
-                    <Heading title={title} description={description} />
-                    <Breadcrumbs />
-                    <section id={sectionId} className={`${sectionId} section`}>
-                        <div className="container">
-                            {children}
-                        </div>
-                    </section>
-                </div>
-            </>
-        );
+        <>
+            <div className="page-title" data-aos="fade">
+                <Breadcrumbs />
+                <Heading title={title} description={description} />
+                <section id={sectionId} className={`${sectionId} section`}>
+                    <div className="container">
+                        {children}
+                    </div>
+                </section>
+            </div>
+        </>
+    );
 }
