@@ -1,0 +1,63 @@
+.isotope-filters {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    img {
+        transition: all 0.3s ease-in-out;
+        background: var(--default-color);
+    }
+
+    li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 10px;
+        line-height: 1;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+        background-color: var(--secondary-accent-color);
+        padding: 5px 10px;
+        box-shadow: 3px 3px 0 0 var(--contrast-color);
+
+        &:hover {
+            color: var(--secondary-accent-color);
+
+            img {
+                background: var(--secondary-accent-color);
+            }
+        }
+
+        &.filter-active {
+            color: var(--contrast-color);
+
+            img {
+                background: var(--contrast-color);
+            }
+        }
+
+        &.filter-inactive {
+            background-color: var(--contrast-color);
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 14px;
+            margin: 0 5px;
+        }
+    }
+}
+
+.isotope-container {
+    margin: 0 auto 30px auto;
+}

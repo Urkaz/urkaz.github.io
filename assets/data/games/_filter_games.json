@@ -1,0 +1,18 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "name": "Porting",
+        "selector": ".category-porting"
+    },
+    {
+        "name": "Development",
+        "selector": ".category-development"
+    },
+    {
+        "name": "Quality Assurance",
+        "selector": ".category-qa"
+    }
+]

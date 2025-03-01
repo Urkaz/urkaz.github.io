@@ -1,0 +1,18 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "name": "Unreal Plugins",
+        "selector": ".category-plugin"
+    },
+    {
+        "name": "Games",
+        "selector": ".category-jams"
+    },
+    {
+        "name": "Other",
+        "selector": ".category-other"
+    }
+]
