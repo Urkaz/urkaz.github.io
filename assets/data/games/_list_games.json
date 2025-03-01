@@ -11,7 +11,7 @@
             "xsx"
         ],
         "hasSection": true,
-        "description": "American Arcadia is a puzzle-adventure game that mixes a 2.5D platforming game with first person puzzles to deliver an amazing story full of misteries, stunning environments, action and a thought-provoking storyline.",
+        "description": "American Arcadia is a cinematic puzzle game that combines a 2.5D platformer and first-person game to tell the tale of a thrilling escape. Experience the extraordinary story of Trevor, an average man escaping from the world's most popular reality tv show.",
         "video": "https://www.youtube.com/embed/ARE0iL-HqC8?si=MuUYQF0yS55bCDFU",
         "engine": "Unreal Engine 5.3"
     },
@@ -50,7 +50,9 @@
             "switch",
             "xbo"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "",
+        "video": "https://www.youtube.com/embed/DtZQakG85ws?si=zxGQA8De61Ung6iL"
     },
     "hell-pie": {
         "category": [
@@ -62,7 +64,9 @@
             "xbo",
             "xsx"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "",
+        "video": "https://www.youtube.com/embed/CqzaE14IVPM?si=6TPcf6hd4s5GUIKC"
     },
     "firegirl-hack-n-splash-rescue-dx": {
         "category": [
@@ -73,7 +77,9 @@
         "platforms": [
             "switch"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "",
+        "video": "https://www.youtube.com/embed/f1oOPx02ANM?si=jxPJ4Qc6Evh8lhyA"
     },
     "unpublished-game-1": {
         "category": [
@@ -102,7 +108,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "You're trapped in the office you hate so much, with its ugly and sober walls, and you want to escape. Luckily, you find a prototype of the \"Quantum Gun\" from \"Quantum Fields Inc.\".",
+        "video": "https://www.youtube.com/embed/YTDTJIYtTWE?si=JhmzNUGyyHs-_bDK"
     },
     "ronin-hood-sisters": {
         "category": [
@@ -113,7 +121,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "Ronin-Hood Sisters is a Tactical RPG with elements of Rogue-Lite, where the player takes control of a group of magical girls with the ability to combine elements using their special powers that come from their costumes. This group of girls will use all of their abilities to destroy Otakio in order to recover their audience.",
+        "video": "https://www.youtube.com/embed/B--4Gu-ndzQ?si=tzgcgnhPgVhDHeh5"
     },
     "unity-zombie-killer": {
         "category": [
@@ -124,7 +134,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "Unity Zombie Killer is a first-person shooter that challenges us with dark, abandoned, and full of zombie scenarios.",
+        "video": "https://www.youtube.com/embed/f6SdXyaohnU?si=IsXJvFEmODw0-c4e"
     },
     "medieval-floor": {
         "category": [
@@ -135,7 +147,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "Medieval Floor is a 4 player couch coop where you must defend the town against enemy waves of increasing difficulty.",
+        "video": "https://www.youtube.com/embed/ZdE0SQwgtt4?si=ULW82rMezwJXAJql"
     },
     "divinity-original-sin-ii": {
         "category": [
@@ -962,7 +976,8 @@
             "windows"
         ],
         "hasSection": true,
-        "noLogo": true
+        "noLogo": true,
+        "description": "Pengüin is a puzzle game where you should help our lovely penguin to escape from the ship where it's trapped. Each room is a challenging puzzle that hides the real truth about the situation it's facing our friend."
     },
     "purramid": {
         "category": [
@@ -973,7 +988,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "Take control of a mighty pharaons's cat trying to protect his pyramid from human explorers by setting and activating different kinds of traps. Enjoy a 4-face challenge where you decide your strategy to keep away the intruders in 360º."
+
     },
     "griddle": {
         "category": [
@@ -984,7 +1001,9 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "Griddle is a puzzle game where you have to fill the cells of the board with the help of the numbers at the top and left sides to discover a hidden picture.",
+        "video": "https://www.youtube.com/embed/k_q_9H-PWH4?si=VkJUJRs7kpp62kQF"
     },
     "arrow-defense": {
         "category": [
@@ -995,6 +1014,8 @@
         "platforms": [
             "windows"
         ],
-        "hasSection": true
+        "hasSection": true,
+        "description": "You are under siege in your castle, and the enemy is shooting lots of arrows. You need to protect yourself surviving the attack or counterattacking with the same weapon, the arrows.",
+        "video": "https://www.youtube.com/embed/h9nzfR9EgmE?si=L_mY0LAqMyz9Kl5L"
     }
 }

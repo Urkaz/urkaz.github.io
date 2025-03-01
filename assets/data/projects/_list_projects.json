@@ -6,8 +6,7 @@
         "name": "Personal Webpage",
         "tag": "Webpage",
         "hasSection": true,
-        "noLogo": true,
-        "type": "project"
+        "noLogo": true
     },
     "unused-node-cleaner": {
         "category": [
@@ -16,8 +15,7 @@
         "name": "Unused Node Cleaner",
         "tag": "Unreal Plugin",
         "hasSection": true,
-        "noLogo": true,
-        "type": "project"
+        "noLogo": true
     },
     "quantum-fields": {
         "category": [
@@ -30,7 +28,7 @@
             "windows"
         ],
         "hasSection": true,
-        "type": "game"
+        "externalLink": "/games/quantum-fields"
     },
     "urkaz-moon-tools": {
         "category": [
@@ -39,8 +37,7 @@
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Mod",
         "hasSection": true,
-        "noLogo": true,
-        "type": "project"
+        "noLogo": true
     },
     "item-name-localized": {
         "category": [
@@ -49,8 +46,7 @@
         "name": "Item Name Localized",
         "tag": "World of Warcraft Addon",
         "hasSection": true,
-        "noLogo": true,
-        "type": "project"
+        "noLogo": true
     },
     "penguin": {
         "category": [
@@ -64,7 +60,7 @@
         ],
         "hasSection": true,
         "noLogo": true,
-        "type": "game"
+        "externalLink": "/games/penguin"
     },
     "purramid": {
         "category": [
@@ -77,6 +73,6 @@
             "windows"
         ],
         "hasSection": true,
-        "type": "game"
+        "externalLink": "/games/purramid"
     }
 }
