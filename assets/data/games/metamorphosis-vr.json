@@ -1,0 +1,35 @@
+{
+    "description": "Wake up as Gregor, a boy turned into a cockroach! Solve puzzles, explore huge environments, and uncover the mystery of a strange Tower. Can you save your friend and return to humanity? Adventure, danger, and discovery await.",
+    "video": "https://www.youtube.com/embed/r221n-Tlf6A?si=uXQ-b3Su_rzOopox",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

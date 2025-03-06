@@ -7,9 +7,9 @@ import { SectionContent } from "@components/common/SectionsContent.jsx";
 import { GameGridItem } from "@src/components/pages/games/GameGridItem.jsx";
 import { FilterItem } from "@src/components/pages/games/FilterItem.jsx";
 
-import GamesList from "@assets/data/games/_list_games.json";
-import GameFilterList from "@assets/data/games/_filter_games.json";
-import GameFilterPlatform from "@assets/data/games/_filter_platforms.json";
+import GamesList from "@assets/data/games/lists/_list_games.json";
+import GameFilterList from "@assets/data/games/lists/_filter_games.json";
+import GameFilterPlatform from "@assets/data/games/lists/_filter_platforms.json";
 
 const Games = () => {
     return (

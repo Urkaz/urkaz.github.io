@@ -1,0 +1,35 @@
+{
+    "description": "American Arcadia is a cinematic puzzle game that combines a 2.5D platformer and first-person game to tell the tale of a thrilling escape. Experience the extraordinary story of Trevor, an average man escaping from the world's most popular reality tv show.",
+    "video": "https://www.youtube.com/embed/ARE0iL-HqC8?si=MuUYQF0yS55bCDFU",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "3 Developers + 1 Producer"
+        },
+        {
+            "left": "Project Length",
+            "right": "4 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 5.3"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}
