@@ -177,7 +177,7 @@ function distanceCheck(pointOne, pointTwo) {
     return dist_points;
 }
 
-function drawPoint(ctx, point, size) {-
+function drawPoint(ctx, point, size) {
     ctx.beginPath();
     ctx.arc(point[0], point[1], size, 0, 2 * Math.PI, false);
     ctx.fillStyle = niceColour;
