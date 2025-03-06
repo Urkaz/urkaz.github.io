@@ -19,6 +19,6 @@ export function GallerySwiper({ swiperClassName, imageList }) {
         navigation
         className={swiperClassName}
     >
-        {imageList?.map((image) => { return <SwiperSlide><img src={image} alt="" /></SwiperSlide> })}
+        {imageList?.map((image, index) => { return <SwiperSlide key={index}><img src={image} alt="" /></SwiperSlide> })}
     </Swiper>
 }
