@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -14,11 +14,10 @@ export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponen
 
     useEffect(() => {
         if (gridRef.current) {
-
             (async () => {
                 // Dynamically load Isotope
-                const Isotope = (await import('isotope-layout')).default;
-        
+                const Isotope = (await import("isotope-layout")).default;
+
                 const iso = new Isotope(gridRef.current, {
                     itemSelector: ".isotope-grid-item",
                     layoutMode: "fitRows",

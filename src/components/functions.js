@@ -4,7 +4,7 @@ function concatValues(obj) {
         value += obj[prop];
     }
     return value;
-};
+}
 
 function cleanText(text) {
     const cleanedText = text
@@ -14,4 +14,4 @@ function cleanText(text) {
     return cleanedText;
 }
 
-module.exports = { concatValues,cleanText };
+module.exports = { concatValues, cleanText };

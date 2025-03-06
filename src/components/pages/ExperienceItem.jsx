@@ -45,4 +45,4 @@ export const ExperienceItem = ({ children }) => {
             </footer>
         </>
     );
-}
+};

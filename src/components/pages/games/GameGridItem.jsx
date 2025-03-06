@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
 import React from "react";
 import Link from "next/link";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-import { cleanText } from '@src/components/functions'
+import { cleanText } from "@src/components/functions";
 
 import styles from "@styles/pages/games.module.scss";
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ export const IsotopeFilter = ({ filter, FilterItem, onClick }) => {
     return (
         <>
             {filter ? (
-                <ul className={styles['isotope-filters']} data-aos="fade-up" data-aos-delay="100">
+                <ul className={styles["isotope-filters"]} data-aos="fade-up" data-aos-delay="100">
                     {filter.map((f, index) => (
                         <FilterItem
                             key={filterIDs[index]}
