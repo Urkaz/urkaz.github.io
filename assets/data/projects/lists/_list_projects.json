@@ -28,7 +28,7 @@
             "windows"
         ],
         "hasSection": true,
-        "externalLink": "/games/quantum-fields"
+        "customRoute": "/games/quantum-fields"
     },
     "urkaz-moon-tools": {
         "category": [
@@ -60,7 +60,7 @@
         ],
         "hasSection": true,
         "noLogo": true,
-        "externalLink": "/games/penguin"
+        "customRoute": "/games/penguin"
     },
     "purramid": {
         "category": [
@@ -73,6 +73,6 @@
             "windows"
         ],
         "hasSection": true,
-        "externalLink": "/games/purramid"
+        "customRoute": "/games/purramid"
     }
 }

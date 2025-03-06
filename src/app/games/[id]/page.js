@@ -1,11 +1,12 @@
 import React from "react";
 import fs from "fs";
 import path from "path";
-import GameMetaData from "@assets/data/games/lists/_list_games.json";
 import { notFound } from "next/navigation";
 
-import { SectionContent } from "@components/common/SectionsContent.jsx";
 import { GallerySwiper } from "@components/thirdparty/Swiper.jsx";
+import { SectionContent } from "@components/common/SectionsContent.jsx";
+
+import GameMetaData from "@assets/data/games/lists/_list_games.json";
 
 import styles from "@styles/pages/game_details.module.scss";
 
