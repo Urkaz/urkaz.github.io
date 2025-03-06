@@ -1,0 +1,35 @@
+{
+    "description": "Griddle is a puzzle game where you have to fill the cells of the board with the help of the numbers at the top and left sides to discover a hidden picture.",
+    "video": "https://www.youtube.com/embed/k_q_9H-PWH4?si=VkJUJRs7kpp62kQF",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

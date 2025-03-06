@@ -56,10 +56,6 @@
         "selector": ".category-quest"
     },
     {
-        "img": "/img/games/platforms/system_mini_stadia.png",
-        "selector": ".category-stadia"
-    },
-    {
         "img": "/img/games/platforms/system_mini_win10.png",
         "selector": ".category-win10"
     }

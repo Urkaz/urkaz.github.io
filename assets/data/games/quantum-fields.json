@@ -1,0 +1,35 @@
+{
+    "description": "You're trapped in the office you hate so much, with its ugly and sober walls, and you want to escape. Luckily, you find a prototype of the \"Quantum Gun\" from \"Quantum Fields Inc.\".",
+    "video": "https://www.youtube.com/embed/YTDTJIYtTWE?si=JhmzNUGyyHs-_bDK",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

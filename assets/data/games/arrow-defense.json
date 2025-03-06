@@ -1,0 +1,35 @@
+{
+    "description": "You are under siege in your castle, and the enemy is shooting lots of arrows. You need to protect yourself surviving the attack or counterattacking with the same weapon, the arrows.",
+    "video": "https://www.youtube.com/embed/h9nzfR9EgmE?si=L_mY0LAqMyz9Kl5L",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

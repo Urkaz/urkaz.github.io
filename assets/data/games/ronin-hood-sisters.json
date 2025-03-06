@@ -1,0 +1,35 @@
+{
+    "description": "Ronin-Hood Sisters is a Tactical RPG with elements of Rogue-Lite, where the player takes control of a group of magical girls with the ability to combine elements using their special powers that come from their costumes. This group of girls will use all of their abilities to destroy Otakio in order to recover their audience.",
+    "video": "https://www.youtube.com/embed/B--4Gu-ndzQ?si=tzgcgnhPgVhDHeh5",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

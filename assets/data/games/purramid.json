@@ -1,0 +1,43 @@
+{
+    "description": "Take control of a mighty pharaons's cat trying to protect his pyramid from human explorers by setting and activating different kinds of traps. Enjoy a 4-face challenge where you decide your strategy to keep away the intruders in 360º.",
+    "hasGallery": true,
+    "gallery": [
+        "/img/games/screenshots/purramid0.webp",
+        "/img/games/screenshots/purramid1.png",
+        "/img/games/screenshots/purramid2.webp",
+        "/img/games/screenshots/purramid3.webp",
+        "/img/games/screenshots/purramid4.png",
+        "/img/games/screenshots/purramid5.jpg"
+    ],
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}

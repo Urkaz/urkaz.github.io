@@ -1,0 +1,35 @@
+{
+    "description": "Unity Zombie Killer is a first-person shooter that challenges us with dark, abandoned, and full of zombie scenarios.",
+    "video": "https://www.youtube.com/embed/f6SdXyaohnU?si=IsXJvFEmODw0-c4e",
+    "details": [
+        {
+            "left": "Company",
+            "right": "Catness Game Studios"
+        },
+        {
+            "left": "My role",
+            "right": "Programmer"
+        },
+        {
+            "left": "Team Size",
+            "right": "4 Developers"
+        },
+        {
+            "left": "Project Length",
+            "right": "6 months"
+        },
+        {
+            "left": "Engine",
+            "right": "Unreal Engine 4.27"
+        }
+    ],
+    "platforms": [
+        {
+            "id": "switch",
+            "shop_link": ""
+        }
+    ],
+    "links": [
+        {}
+    ]
+}
