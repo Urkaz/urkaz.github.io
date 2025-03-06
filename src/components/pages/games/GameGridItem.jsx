@@ -13,7 +13,7 @@ import styles from "@styles/pages/games.module.scss";
 export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName }) => {
 
     const content = <>
-        <div className={`${styles['game-content']} h-100 ${keyName}`}>
+        <div className={`${styles['game-content']} h-100 ${keyName} ${hasSection ? styles["selectable"] : null}`}>
             {hasSection ?
                 <div className={styles['fold']}><div className={styles['fold-link']}><FontAwesomeIcon icon={faLink} /></div></div>
                 : null}
