@@ -2,6 +2,7 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
+import Markdown from "markdown-to-jsx";
 
 import { GallerySwiper } from "@components/thirdparty/Swiper.jsx";
 import { SectionContent } from "@components/common/SectionsContent.jsx";
@@ -12,7 +13,6 @@ import styles from "@styles/pages/game_details.module.scss";
 
 const YoutubeVideo = ({ videoURL }) => {
     return (
-        <div className={styles["game-video"]}>
             <iframe
                 src={videoURL}
                 title="YouTube video player"
@@ -20,22 +20,24 @@ const YoutubeVideo = ({ videoURL }) => {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
             ></iframe>
-        </div>
     );
 };
 
 const GameDescription = async ({ params }) => {
     const { id } = await params;
 
-    const filePath = path.join(process.cwd(), "assets", "data", "games", `${id}.json`);
+    const jsonFilePath = path.join(process.cwd(), "assets", "data", "games", `${id}.json`);
+    const mdFilePath = path.join(process.cwd(), "assets", "data", "games", `${id}.md`);
 
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(jsonFilePath) || !fs.existsSync(mdFilePath)) {
         return notFound();
     }
 
-    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const fileContent = fs.readFileSync(jsonFilePath, "utf-8");
     const gameData = JSON.parse(fileContent);
     const gameMetaData = GameMetaData[id];
+
+    const markdownContent = fs.readFileSync(mdFilePath, "utf-8");
 
     if (!gameData || !gameMetaData.hasSection) {
         notFound();
@@ -47,7 +49,7 @@ const GameDescription = async ({ params }) => {
                 <div className="row gy-4">
                     <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                         {!gameData.hasGallery ? (
-                            <YoutubeVideo videoURL={gameData.video} />
+                            <div className={styles["game-video"]}><YoutubeVideo videoURL={gameData.video} /></div>
                         ) : (
                             <GallerySwiper swiperClassName={styles["game-slider"]} imageList={gameData.gallery} />
                         )}
@@ -67,7 +69,24 @@ const GameDescription = async ({ params }) => {
                         </div>
                     </div>
                 </div>
-                <div className="row gy-4" data-aos="fade-up" data-aos-delay="300"></div>
+                <div className="row gy-4" data-aos="fade-up" data-aos-delay="300">
+                    <Markdown
+                        options={{
+                            overrides: {
+                                a: {
+                                    component: ({ children, href }) => {
+                                        if (href.includes("youtube.com") || href.includes("youtu.be")) {
+                                            return <YoutubeVideo videoURL={href} />;
+                                        }
+                                        return <a href={href}>{children}</a>;
+                                    },
+                                },
+                            },
+                        }}
+                    >
+                        {markdownContent}
+                    </Markdown>
+                </div>
             </SectionContent>
         </>
     );
