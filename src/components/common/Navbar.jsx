@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -33,7 +33,7 @@ export function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(prev => {
+        setMenuOpen((prev) => {
             const newState = !prev;
             if (newState) {
                 document.body.classList.add(styles["mobile-nav-active"]);
@@ -48,20 +48,20 @@ export function Navbar() {
         <>
             <nav id={styles["navmenu"]} className={styles["navmenu"]}>
                 <ul>
-                    {Object.entries(Sections)
-                        .map(([key, section]) => (
-                            <NavItem key={key} to={section.path} pathname={pathname} onClick={toggleMenu}>
-                                {section.sectionName}
-                            </NavItem>
-                        ))}
+                    {Object.entries(Sections).map(([key, section]) => (
+                        <NavItem key={key} to={section.path} pathname={pathname} onClick={toggleMenu}>
+                            {section.sectionName}
+                        </NavItem>
+                    ))}
                     <li>
                         <a href="/img/games/logos/roninhoodsisters.png" download>
                             Download CV
                         </a>
                     </li>
                 </ul>
-                <i className={`${styles["mobile-nav-toggle"]} d-xl-none`}
-                    onClick={toggleMenu}>{menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}</i>
+                <i className={`${styles["mobile-nav-toggle"]} d-xl-none`} onClick={toggleMenu}>
+                    {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
+                </i>
             </nav>
         </>
     );

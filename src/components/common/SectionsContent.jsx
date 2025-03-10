@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Breadcrumb} from "@components/common/Breadcrumb"
+import { Breadcrumb } from "@components/common/Breadcrumb";
 
 export function Heading({ title, description }) {
     return (

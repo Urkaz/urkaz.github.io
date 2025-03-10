@@ -13,11 +13,7 @@ const Experience = () => {
         <>
             <SectionContent
                 title="Professional Experience"
-                description={
-                    <>
-                        This section highlights my professional experience, detailing the responsibilities and key tasks of each job role.
-                    </>
-                }
+                description={<>This section highlights my professional experience, detailing the responsibilities and key tasks of each job role.</>}
                 sectionId={styles["experience"]}
             >
                 <div className="row">

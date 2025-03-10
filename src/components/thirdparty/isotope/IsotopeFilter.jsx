@@ -16,8 +16,11 @@ export const IsotopeFilter = ({ filter, FilterItem, onClick }) => {
                     {filter.map((f, index) => (
                         <FilterItem
                             key={filterIDs[index]}
-                            onClick={() => { onClick(f.selector); setFilter(f.selector) }}
-                            className={`${stylesGames['miniplatforms']} ${currentFilter === f.selector ? styles['filter-active'] : styles['filter-inactive']}`}
+                            onClick={() => {
+                                onClick(f.selector);
+                                setFilter(f.selector);
+                            }}
+                            className={`${stylesGames["miniplatforms"]} ${currentFilter === f.selector ? styles["filter-active"] : styles["filter-inactive"]}`}
                             name={f.name}
                             img={f.img}
                         />

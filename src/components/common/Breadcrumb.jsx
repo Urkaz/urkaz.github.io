@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import Link from 'next/link';
+import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
@@ -59,12 +59,13 @@ export function Breadcrumb() {
                                 <FontAwesomeIcon icon={faHouseChimney} /> Home
                             </Link>
                         </li>
-                        {breadcrumbs.map((crumb, index) => (
-                            crumb.current ?
+                        {breadcrumbs.map((crumb, index) =>
+                            crumb.current ? (
                                 <li key={index} className="current"> {crumb.name}</li>
-                                :
+                            ) : (
                                 <li key={index} className="current"><Link href={crumb.path}> {crumb.name}</Link></li>
-                        ))}
+                            )
+                        )}
                     </ol>
                 </div>
             </nav>

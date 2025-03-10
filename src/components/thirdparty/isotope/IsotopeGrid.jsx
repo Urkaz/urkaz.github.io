@@ -42,19 +42,14 @@ export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponen
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
             <div>
                 {/* Botones para filtrar */}
-                {mainFilters ? (
-                    <IsotopeFilter filter={mainFilters} FilterItem={FilterComponent} onClick={setMainFilter} />
-                ) : null}
-                {secondaryfilters ? (
-                    <IsotopeFilter filter={secondaryfilters} FilterItem={FilterComponent} onClick={setSecondaryFilter} />
-                ) : null}
+                {mainFilters ? <IsotopeFilter filter={mainFilters} FilterItem={FilterComponent} onClick={setMainFilter} /> : null}
+                {secondaryfilters ? <IsotopeFilter filter={secondaryfilters} FilterItem={FilterComponent} onClick={setSecondaryFilter} /> : null}
 
                 {/* Grid de elementos con un componente dinámico */}
                 <div ref={gridRef} className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                    {
-                        Object.entries(items)
-                            .map(([key, game]) => <GridComponent {...game} key={key} keyName={key} />)
-                    }
+                    {Object.entries(items).map(([key, game]) => (
+                        <GridComponent {...game} key={key} keyName={key} />
+                    ))}
                 </div>
             </div>
         </div>

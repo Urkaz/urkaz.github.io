@@ -9,8 +9,8 @@ export function AOSClient() {
         AOS.init({
             offset: 50,
             once: true,
-            easing: 'ease-in-out',
-            mirror: false
+            easing: "ease-in-out",
+            mirror: false,
         });
         AOS.refresh();
     }, []);

@@ -27,9 +27,7 @@ const ProjectDescription = async ({ params }) => {
     return (
         <>
             <SectionContent title={gameMetaData.name} description={gameData.description} sectionId="gamedetails">
-                <div className="row gy-4">
-                    TEST
-                </div>
+                <div className="row gy-4">TEST</div>
             </SectionContent>
         </>
     );

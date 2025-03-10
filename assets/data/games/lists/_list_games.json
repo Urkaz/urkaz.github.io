@@ -1,996 +1,552 @@
 {
     "american-arcadia": {
-        "category": [
-            "porting"
-        ],
+        "category": ["porting"],
         "name": "American Arcadia",
         "tag": "Porting",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xsx"
-        ],
+        "platforms": ["switch", "ps4", "xsx"],
         "hasSection": true
     },
     "metamorphosis-vr": {
-        "category": [
-            "development",
-            "porting"
-        ],
+        "category": ["development", "porting"],
         "name": "Metamorphosis VR",
         "tag": "Porting, Development",
-        "platforms": [
-            "quest"
-        ],
+        "platforms": ["quest"],
         "hasSection": true
     },
     "xuan-yuan-sword-7": {
-        "category": [
-            "porting"
-        ],
+        "category": ["porting"],
         "name": "Xuan Yuan Sword 7",
         "tag": "Porting",
-        "platforms": [
-            "switch"
-        ],
+        "platforms": ["switch"],
         "hasSection": true
     },
     "togges": {
-        "category": [
-            "porting"
-        ],
+        "category": ["porting"],
         "name": "Togges",
         "tag": "Porting",
-        "platforms": [
-            "switch",
-            "xbo"
-        ],
+        "platforms": ["switch", "xbo"],
         "hasSection": true
     },
     "hell-pie": {
-        "category": [
-            "porting"
-        ],
+        "category": ["porting"],
         "name": "Hell Pie",
         "tag": "Porting",
-        "platforms": [
-            "xbo",
-            "xsx"
-        ],
+        "platforms": ["xbo", "xsx"],
         "hasSection": true
     },
     "firegirl-hack-n-splash-rescue-dx": {
-        "category": [
-            "porting"
-        ],
+        "category": ["porting"],
         "name": "Firegirl: Hack 'n Splash Rescue DX",
         "tag": "Porting",
-        "platforms": [
-            "switch"
-        ],
+        "platforms": ["switch"],
         "hasSection": true
     },
     "unpublished-game-1": {
-        "category": [
-            "development",
-            "porting"
-        ],
+        "category": ["development", "porting"],
         "name": "Unpublished Game #1",
         "tag": "Porting, Development",
-        "platforms": [
-            "switch",
-            "xbo",
-            "xsx",
-            "ps4",
-            "ps5",
-            "steam",
-            "deck"
-        ],
+        "platforms": ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"],
         "hasSection": true
     },
     "quantum-fields": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Quantum Fields",
         "tag": "Development, Game Jams",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     },
     "ronin-hood-sisters": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Ronin-Hood Sisters",
         "tag": "Development, Education",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     },
     "unity-zombie-killer": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Unity Zombie Killer",
         "tag": "Development, Education",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     },
     "medieval-floor": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Medieval Floor",
         "tag": "Development, Education",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     },
     "divinity-original-sin-ii": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Divinity Original Sin II",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "spelunky-2": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Spelunky 2",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "steam"
-        ]
+        "platforms": ["ps4", "steam"]
     },
     "braid-anniversary-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Braid, Anniversary Edition",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo",
-            "switch"
-        ]
+        "platforms": ["ps4", "xbo", "switch"]
     },
     "rebel-galaxy-outlaw": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Rebel Galaxy Outlaw",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "battle-brothers": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Battle Brothers",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "starbound": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Starbound",
         "tag": "QA",
-        "platforms": [
-            "win10"
-        ]
+        "platforms": ["win10"]
     },
     "heroes-of-hammerwatch": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Heroes of Hammerwatch",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo",
-            "switch",
-            "steam"
-        ]
+        "platforms": ["ps4", "xbo", "switch", "steam"]
     },
     "esports-life-tycoon": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "eSports Life Tycoon",
         "tag": "QA",
-        "platforms": [
-            "steam"
-        ]
+        "platforms": ["steam"]
     },
     "radical-rabbit-stew": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Rädical Rabbit Stew",
         "tag": "QA",
-        "platforms": [
-            "steam",
-            "ps4",
-            "xbo",
-            "steam"
-        ]
+        "platforms": ["steam", "ps4", "xbo", "steam"]
     },
     "invisible-inc": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Invisible, Inc",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "switch",
-            "apple"
-        ]
+        "platforms": ["ps4", "switch", "apple"]
     },
     "gold-rush-the-game": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Gold Rush: The Game",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "sunless-skies": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Sunless Skies",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "youtubers-life-omg": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Youtubers Life Omg!",
         "tag": "QA",
-        "platforms": [
-            "steam",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["steam", "ps4", "xbo"]
     },
     "youtubers-life-2": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Youtubers Life 2",
         "tag": "QA",
-        "platforms": [
-            "steam",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["steam", "ps4", "xbo"]
     },
     "super-animal-royale": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Super Animal Royale",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "kingdom-rush-frontiers": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Kingdom Rush Frontiers",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "out-of-space-couch-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Out of Space: Couch Edition",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "jump-step-step": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Jump Step Step",
         "tag": "QA",
-        "platforms": [
-            "ps4"
-        ]
+        "platforms": ["ps4"]
     },
     "oddmar": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Oddmar",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "streets-of-rage-4": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Streets of Rage 4",
         "tag": "QA",
-        "platforms": [
-            "xbo",
-            "win10"
-        ]
+        "platforms": ["xbo", "win10"]
     },
     "gris": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Gris",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "apple"
-        ]
+        "platforms": ["ps4", "apple"]
     },
     "fight-n-tage": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Fight'N Rage",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["switch", "ps4", "xbo"]
     },
     "they-are-billions": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "They Are Billions",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "trine-enchanted-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Trine Enchanted Edition",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "trine-2-complete-story": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Trine 2: Complete Story",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "trine-3-the-artifacts-of-power": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Trine 3: The Artifacts of Power",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "ancestors-legacy": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Ancestors Legacy",
         "tag": "QA",
-        "platforms": [
-            "ps4"
-        ]
+        "platforms": ["ps4"]
     },
     "wargroove": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Wargroove",
         "tag": "QA",
-        "platforms": [
-            "xbo",
-            "ps4",
-            "win10"
-        ]
+        "platforms": ["xbo", "ps4", "win10"]
     },
     "super-skelemania": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Super Skelemania",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "spell-casting": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Spell Casting",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "aurion-legacy-of-the-kori-odan": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Aurion: Legacy of the Kori-Odan",
         "tag": "QA",
-        "platforms": [
-            "xbo"
-        ]
+        "platforms": ["xbo"]
     },
     "table-top-racing-world-tour": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Table Top Racing: World Tour",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "path-to-mnemosyne": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Path to Mnemosyne",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4"
-        ]
+        "platforms": ["switch", "ps4"]
     },
     "salt-and-sanctuary": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Salt and Sanctuary",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "rogue-legacy": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Rogue Legacy",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "full-metal-furies": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Full Metal Furies",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo",
-            "win10"
-        ]
+        "platforms": ["switch", "xbo", "win10"]
     },
     "windjammers": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Windjammers",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "tricky-towers": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Tricky Towers",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "pushy-and-pully-in-blockland": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Pushy and Pully in Blockland",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "amnesia-collection": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Amnesia: Collection",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "broken-age": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Broken Age",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "bastion": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Bastion",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo"
-        ]
+        "platforms": ["switch", "xbo"]
     },
     "gone-home": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Gone Home",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "apple"
-        ]
+        "platforms": ["switch", "apple"]
     },
     "elea": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "ELEA",
         "tag": "QA",
-        "platforms": [
-            "xbo"
-        ]
+        "platforms": ["xbo"]
     },
     "hyper-light-drifter-special-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Hyper Light Drifter: Special Edition",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "sunlesssea": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Sunless Sea",
         "tag": "QA",
-        "platforms": [
-            "apple",
-            "ps4"
-        ]
+        "platforms": ["apple", "ps4"]
     },
     "de-blob": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "de Blob",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo",
-            "steam"
-        ]
+        "platforms": ["switch", "ps4", "xbo", "steam"]
     },
     "de-blob-2": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "de Blob 2",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo",
-            "steam"
-        ]
+        "platforms": ["switch", "ps4", "xbo", "steam"]
     },
     "the-journey-down-chapter-one": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "The Journey Down Chapter One",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["switch", "ps4", "xbo"]
     },
     "the-journey-down-chapter-two": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "The Journey Down Chapter Two",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["switch", "ps4", "xbo"]
     },
     "the-journey-down-chapter-three": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "The Journey Down Chapter Three",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["switch", "ps4", "xbo"]
     },
     "n-plus-plus": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "n++",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "pwlboy": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Owlboy",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "xbo",
-            "ps4"
-        ]
+        "platforms": ["switch", "xbo", "ps4"]
     },
     "bit-dungeon-plus": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "bit Dungeon +",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "vita"
-        ]
+        "platforms": ["ps4", "vita"]
     },
     "rad-rodgers": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Rad Rodgers",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "soma": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "SOMA",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "olliolli-switch-stance": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "OlliOlli: Switch Stance",
         "tag": "QA",
-        "platforms": [
-            "switch"
-        ]
+        "platforms": ["switch"]
     },
     "hob": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Hob",
         "tag": "QA",
-        "platforms": [
-            "ps4"
-        ]
+        "platforms": ["ps4"]
     },
     "symmetry": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Symmetry",
         "tag": "QA",
-        "platforms": [
-            "xbo",
-            "ps4"
-        ]
+        "platforms": ["xbo", "ps4"]
     },
     "kerbal-space-program-enhanced-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Kerbal Space Program Enhanced Edition",
         "tag": "QA",
-        "platforms": [
-            "xbo",
-            "ps4"
-        ]
+        "platforms": ["xbo", "ps4"]
     },
     "hammerwatch": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Hammerwatch",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["switch", "ps4", "xbo"]
     },
     "fez-pocket-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Fez Pocket Edition",
         "tag": "QA",
-        "platforms": [
-            "apple"
-        ]
+        "platforms": ["apple"]
     },
     "dont-starve-together": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Don't Starve Together",
         "tag": "QA",
-        "platforms": [
-            "xbo"
-        ]
+        "platforms": ["xbo"]
     },
     "baja-edge-of-control-hd": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Baja: Edge of Control HD",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo",
-            "steam"
-        ]
+        "platforms": ["ps4", "xbo", "steam"]
     },
     "hole-new-world": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Hole New World",
         "tag": "QA",
-        "platforms": [
-            "ps4"
-        ]
+        "platforms": ["ps4"]
     },
     "talisman-digital-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Talisman: Digital Edition",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "vita"
-        ]
+        "platforms": ["ps4", "vita"]
     },
     "clicker-heroes": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Clicker Heroes",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "super-meat-boy": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Super Meat Boy",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "wiiu"
-        ]
+        "platforms": ["switch", "wiiu"]
     },
     "kholat": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Kholat",
         "tag": "QA",
-        "platforms": [
-            "xbo"
-        ]
+        "platforms": ["xbo"]
     },
     "crypt-of-the-necrodancer": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Crypt of the Necrodancer",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo",
-            "apple",
-            "vita"
-        ]
+        "platforms": ["switch", "ps4", "xbo", "apple", "vita"]
     },
     "cannon-brawl": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Cannon Brawl",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "dont-starve-console-edition": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Don't Starve: Console Edition",
         "tag": "QA",
-        "platforms": [
-            "switch",
-            "ps4",
-            "xbo",
-            "apple",
-            "android",
-            "vita"
-        ]
+        "platforms": ["switch", "ps4", "xbo", "apple", "android", "vita"]
     },
     "reus": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Reus",
         "tag": "QA",
-        "platforms": [
-            "ps4",
-            "xbo"
-        ]
+        "platforms": ["ps4", "xbo"]
     },
     "axiom-verge": {
-        "category": [
-            "qa"
-        ],
+        "category": ["qa"],
         "name": "Axiom Verge",
         "tag": "QA",
-        "platforms": [
-            "wiiu"
-        ]
+        "platforms": ["wiiu"]
     },
     "penguin": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Pengüin",
         "tag": "Development, Game Jams",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true,
         "noLogo": true
     },
     "purramid": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Purramid",
         "tag": "Development, Game Jams",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
-
     },
     "griddle": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Griddle",
         "tag": "Development, Education",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     },
     "arrow-defense": {
-        "category": [
-            "development"
-        ],
+        "category": ["development"],
         "name": "Arrow Defense",
         "tag": "Development, Education",
-        "platforms": [
-            "windows"
-        ],
+        "platforms": ["windows"],
         "hasSection": true
     }
 }
