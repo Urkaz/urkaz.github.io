@@ -1,6 +1,7 @@
 "use client";
 
 import { React, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Navbar } from "@src/components/common/Navbar.jsx";
 
 import Link from "next/link";
@@ -8,6 +9,8 @@ import Link from "next/link";
 import styles from "@styles/components/Header.module.scss";
 
 export function Header({ children }) {
+    const pathname = usePathname();
+
     useEffect(() => {
         const toggleScrolled = (event) => {
             const selectBody = document.querySelector("body");
@@ -34,10 +37,7 @@ export function Header({ children }) {
             <header id={styles["header"]} className={`${styles["header"]} d-flex align-items-center fixed-top`}>
                 <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
                     <Link href="/" className={`${styles["logo"]} d-flex align-items-center`}>
-                        {/*pathname !== "/" &&<h1 className="sitename" data-aos="fade">{children}</h1>*/}
-                        <h1 className="sitename" data-aos="fade">
-                            {children}
-                        </h1>
+                        {pathname !== "/" && <h1 className="sitename" data-aos="fade">{children}</h1>}
                     </Link>
                     <Navbar />
                 </div>
