@@ -53,11 +53,11 @@ export function Navbar() {
                             {section.sectionName}
                         </NavItem>
                     ))}
-                    <li>
+                    {/*<li>
                         <a href="/img/games/logos/roninhoodsisters.png" download>
                             Download CV
                         </a>
-                    </li>
+                    </li>*/}
                 </ul>
                 <i className={`${styles["mobile-nav-toggle"]} d-xl-none`} onClick={toggleMenu}>
                     {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
