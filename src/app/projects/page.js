@@ -7,8 +7,8 @@ import { SectionContent } from "@components/common/SectionsContent.jsx";
 import { GameGridItem } from "@src/components/pages/games/GameGridItem.jsx";
 import { FilterItem } from "@src/components/pages/games/FilterItem.jsx";
 
-import GamesList from "@assets/data/projects/lists/_list_projects.json";
-import GameFilterList from "@assets/data/projects/lists/_filter_projects.json";
+import ProjectsList from "@assets/data/projects/lists/_list_projects.json";
+import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.json";
 
 const Projects = () => {
     return (
@@ -23,8 +23,8 @@ const Projects = () => {
                 sectionId="projects"
             >
                 <IsotopeGrid
-                    mainFilters={GameFilterList}
-                    items={GamesList}
+                    mainFilters={ProjectsFilterList}
+                    items={ProjectsList}
                     FilterComponent={FilterItem}
                     GridComponent={GameGridItem}
                 />
