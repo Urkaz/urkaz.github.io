@@ -10,10 +10,14 @@ runs:
 
     - name: ⚡ Cache dependencies
       id: cache_dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
+        path: |
+          ~/.npm
+          ${{ github.workspace }}/.next/cache
+        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+        restore-keys: |
+          ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
     - name: 🔧 Install dependencies
       shell: bash
