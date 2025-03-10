@@ -6,7 +6,12 @@ import "aos/dist/aos.css";
 
 export function AOSClient() {
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            offset: 50,
+            once: true,
+            easing: 'ease-in-out',
+            mirror: false
+        });
         AOS.refresh();
     }, []);
 
