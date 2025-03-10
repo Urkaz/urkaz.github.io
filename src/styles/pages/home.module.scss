@@ -12,14 +12,30 @@
 }
 
 .hero img {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+    transition: all ease-in-out 0.2s;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--contrast-color);
+    box-shadow: 3px 3px var(--contrast-color);
+
+    &:hover {
+        border-color: var(--accent-color);
+        cursor: pointer;
+        transform: scale(1.05, 1.05);
+    }
+
+    &:active {
+        transform: scale(1.02, 1.02);
+    }
 }
+
+.hero .img-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-width: fit-content; /* Asegura que el div no sea más pequeño que la imagen */
+    min-height: fit-content;
+  }
 
 .hero :global(.container) {
     position: relative;
@@ -50,6 +66,7 @@
 .hero .description p {
     font-size: 16px;
     font-family: var(--sub-font-1);
+    margin-bottom: 1em;
 }
 
 .hero .description p span {
@@ -62,13 +79,20 @@
 
 .hero .social-links {
     margin-top: 25px;
+    text-align: center;
+}
+
+.hero .social-links svg {
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 .hero .social-links a {
     background: var(--accent-color);
     color: var(--default-color);
-    font-size: 20px;
-    width: 40px;
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     height: 40px;
     border-radius: 50px;
     display: inline-flex;
@@ -94,3 +118,319 @@
         font-size: 20px;
     }
 }
+
+.digimon {
+    font-weight: bold;
+    -webkit-animation: agumon 2000ms infinite;
+    animation: agumon 2000ms infinite;
+}
+
+.digimon:before {
+    content: "DigiDestinied";
+    background: #000;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    z-index: -1;
+    position: absolute;
+}
+
+.pokemon {
+    color: #fdca16 !important;
+    -webkit-animation: pikachu 1000ms infinite;
+    animation: pikachu 1000ms infinite;
+}
+
+.pokemon:before {
+    content: "Pokémon trainer";
+    background: #385da7;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    z-index: -1;
+    position: absolute;
+}
+
+.dnd {
+    color: #f00 !important;
+    -webkit-animation: spellbook 1000ms infinite;
+    animation: spellbook 1000ms infinite;
+}
+
+.dnd:before {
+    content: "D&D";
+    background: #000;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    z-index: -1;
+    position: absolute;
+}
+
+@-webkit-keyframes pikachu {
+    0% {
+        cursor: url("/img/home/pikachu/frame_00.gif"), auto;
+    }
+    28% {
+        cursor: url("/img/home/pikachu/frame_01.gif"), auto;
+    }
+    32% {
+        cursor: url("/img/home/pikachu/frame_02.gif"), auto;
+    }
+    36% {
+        cursor: url("/img/home/pikachu/frame_03.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/pikachu/frame_04.gif"), auto;
+    }
+    44% {
+        cursor: url("/img/home/pikachu/frame_05.gif"), auto;
+    }
+    48% {
+        cursor: url("/img/home/pikachu/frame_06.gif"), auto;
+    }
+    52% {
+        cursor: url("/img/home/pikachu/frame_07.gif"), auto;
+    }
+    56% {
+        cursor: url("/img/home/pikachu/frame_08.gif"), auto;
+    }
+    60% {
+        cursor: url("/img/home/pikachu/frame_09.gif"), auto;
+    }
+    64% {
+        cursor: url("/img/home/pikachu/frame_10.gif"), auto;
+    }
+    68% {
+        cursor: url("/img/home/pikachu/frame_11.gif"), auto;
+    }
+    72% {
+        cursor: url("/img/home/pikachu/frame_12.gif"), auto;
+    }
+    76% {
+        cursor: url("/img/home/pikachu/frame_13.gif"), auto;
+    }
+    80% {
+        cursor: url("/img/home/pikachu/frame_14.gif"), auto;
+    }
+    84% {
+        cursor: url("/img/home/pikachu/frame_15.gif"), auto;
+    }
+    88% {
+        cursor: url("/img/home/pikachu/frame_16.gif"), auto;
+    }
+    92% {
+        cursor: url("/img/home/pikachu/frame_17.gif"), auto;
+    }
+    96% {
+        cursor: url("/img/home/pikachu/frame_18.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/pikachu/frame_19.gif"), auto;
+    }
+}
+
+@keyframes pikachu {
+    0% {
+        cursor: url("/img/home/pikachu/frame_00.gif"), auto;
+    }
+    28% {
+        cursor: url("/img/home/pikachu/frame_01.gif"), auto;
+    }
+    32% {
+        cursor: url("/img/home/pikachu/frame_02.gif"), auto;
+    }
+    36% {
+        cursor: url("/img/home/pikachu/frame_03.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/pikachu/frame_04.gif"), auto;
+    }
+    44% {
+        cursor: url("/img/home/pikachu/frame_05.gif"), auto;
+    }
+    48% {
+        cursor: url("/img/home/pikachu/frame_06.gif"), auto;
+    }
+    52% {
+        cursor: url("/img/home/pikachu/frame_07.gif"), auto;
+    }
+    56% {
+        cursor: url("/img/home/pikachu/frame_08.gif"), auto;
+    }
+    60% {
+        cursor: url("/img/home/pikachu/frame_09.gif"), auto;
+    }
+    64% {
+        cursor: url("/img/home/pikachu/frame_10.gif"), auto;
+    }
+    68% {
+        cursor: url("/img/home/pikachu/frame_11.gif"), auto;
+    }
+    72% {
+        cursor: url("/img/home/pikachu/frame_12.gif"), auto;
+    }
+    76% {
+        cursor: url("/img/home/pikachu/frame_13.gif"), auto;
+    }
+    80% {
+        cursor: url("/img/home/pikachu/frame_14.gif"), auto;
+    }
+    84% {
+        cursor: url("/img/home/pikachu/frame_15.gif"), auto;
+    }
+    88% {
+        cursor: url("/img/home/pikachu/frame_16.gif"), auto;
+    }
+    92% {
+        cursor: url("/img/home/pikachu/frame_17.gif"), auto;
+    }
+    96% {
+        cursor: url("/img/home/pikachu/frame_18.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/pikachu/frame_19.gif"), auto;
+    }
+}
+
+@-webkit-keyframes agumon {
+    0% {
+        cursor: url("/img/home/agumon/frame_00.gif"), auto;
+    }
+    6% {
+        cursor: url("/img/home/agumon/frame_01.gif"), auto;
+    }
+    22% {
+        cursor: url("/img/home/agumon/frame_02.gif"), auto;
+    }
+    28% {
+        cursor: url("/img/home/agumon/frame_03.gif"), auto;
+    }
+    34% {
+        cursor: url("/img/home/agumon/frame_04.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/agumon/frame_05.gif"), auto;
+    }
+    46% {
+        cursor: url("/img/home/agumon/frame_06.gif"), auto;
+    }
+    52% {
+        cursor: url("/img/home/agumon/frame_07.gif"), auto;
+    }
+    58% {
+        cursor: url("/img/home/agumon/frame_08.gif"), auto;
+    }
+    64% {
+        cursor: url("/img/home/agumon/frame_09.gif"), auto;
+    }
+    70% {
+        cursor: url("/img/home/agumon/frame_10.gif"), auto;
+    }
+    76% {
+        cursor: url("/img/home/agumon/frame_11.gif"), auto;
+    }
+    72% {
+        cursor: url("/img/home/agumon/frame_12.gif"), auto;
+    }
+    82% {
+        cursor: url("/img/home/agumon/frame_13.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/agumon/frame_14.gif"), auto;
+    }
+}
+
+@keyframes agumon {
+    0% {
+        cursor: url("/img/home/agumon/frame_00.gif"), auto;
+    }
+    6% {
+        cursor: url("/img/home/agumon/frame_01.gif"), auto;
+    }
+    22% {
+        cursor: url("/img/home/agumon/frame_02.gif"), auto;
+    }
+    28% {
+        cursor: url("/img/home/agumon/frame_03.gif"), auto;
+    }
+    34% {
+        cursor: url("/img/home/agumon/frame_04.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/agumon/frame_05.gif"), auto;
+    }
+    46% {
+        cursor: url("/img/home/agumon/frame_06.gif"), auto;
+    }
+    52% {
+        cursor: url("/img/home/agumon/frame_07.gif"), auto;
+    }
+    58% {
+        cursor: url("/img/home/agumon/frame_08.gif"), auto;
+    }
+    64% {
+        cursor: url("/img/home/agumon/frame_09.gif"), auto;
+    }
+    70% {
+        cursor: url("/img/home/agumon/frame_10.gif"), auto;
+    }
+    76% {
+        cursor: url("/img/home/agumon/frame_11.gif"), auto;
+    }
+    72% {
+        cursor: url("/img/home/agumon/frame_12.gif"), auto;
+    }
+    82% {
+        cursor: url("/img/home/agumon/frame_13.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/agumon/frame_14.gif"), auto;
+    }
+}
+
+@-webkit-keyframes spellbook {
+    0% {
+        cursor: url("/img/home/spellbook/frame_00.gif"), auto;
+    }
+    20% {
+        cursor: url("/img/home/spellbook/frame_01.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/spellbook/frame_02.gif"), auto;
+    }
+    60% {
+        cursor: url("/img/home/spellbook/frame_03.gif"), auto;
+    }
+    80% {
+        cursor: url("/img/home/spellbook/frame_04.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/spellbook/frame_05.gif"), auto;
+    }
+}
+
+@keyframes spellbook {
+    0% {
+        cursor: url("/img/home/spellbook/frame_00.gif"), auto;
+    }
+    20% {
+        cursor: url("/img/home/spellbook/frame_01.gif"), auto;
+    }
+    40% {
+        cursor: url("/img/home/spellbook/frame_02.gif"), auto;
+    }
+    60% {
+        cursor: url("/img/home/spellbook/frame_03.gif"), auto;
+    }
+    80% {
+        cursor: url("/img/home/spellbook/frame_04.gif"), auto;
+    }
+    100% {
+        cursor: url("/img/home/spellbook/frame_05.gif"), auto;
+    }
+}
+
