@@ -42,9 +42,9 @@ const Education = () => {
                                     <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI).</li>
                                     <li>Audio programming using OpenAL in C++.</li>
                                 </ul>
-                                <Link href="/education/utad" className={styles["button"]}>
+                                {/*<Link href="/education/utad" className={styles["button"]}>
                                     More details
-                                </Link>
+                                </Link>*/}
                             </div>
                         </div>
                         <div className={styles["experience-item-spacer"]}></div>
@@ -68,9 +68,9 @@ const Education = () => {
                                     <li>Unity 3D.</li>
                                     <li>Algorithms and Data structures.</li>
                                 </ul>
-                                <Link href="/education/uji" className={styles["button"]}>
+                                {/*<Link href="/education/uji" className={styles["button"]}>
                                     More details
-                                </Link>
+                                </Link>*/}
                             </div>
                         </div>
                     </div>

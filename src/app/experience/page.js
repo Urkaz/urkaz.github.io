@@ -46,9 +46,9 @@ const Experience = () => {
                                     </li>
                                     <li>Engine customizations with multiple bug fixes and improvements.</li>
                                 </ul>
-                                <Link href="/experience/catnessgamestudios" className={styles["button"]}>
+                                {/*<Link href="/experience/catnessgamestudios" className={styles["button"]}>
                                     More details
-                                </Link>
+                                </Link>*/}
                             </div>
                         </div>
                         <div className={styles["experience-item-spacer"]}></div>
@@ -74,9 +74,9 @@ const Experience = () => {
                                     <li>Experience using popular bug trackers like Jira, Mantis, Bitbucket, or GitHub.</li>
                                     <li>Creating and maintaining tools to ease the tests (cmd scripts, input macros, etc).</li>
                                 </ul>
-                                <Link href="/experience/lollipoprobot" className={styles["button"]}>
+                                {/*<Link href="/experience/lollipoprobot" className={styles["button"]}>
                                     More details
-                                </Link>
+                                </Link>*/}
                             </div>
                         </div>
                         <div className={styles["experience-item-spacer"]}></div>

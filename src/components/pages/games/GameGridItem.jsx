@@ -14,6 +14,11 @@ import styles from "@styles/pages/games.module.scss";
 export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, customRoute }) => {
     const pathname = usePathname();
 
+    {
+        /* @TODO TEMP DISABLED */
+    }
+    hasSection = false;
+    customRoute = "";
 
     const content = (
         <>
