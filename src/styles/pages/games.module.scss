@@ -150,6 +150,10 @@
     &.selectable:hover {
         transform: scale(1.05, 1.05);
     }
+
+    &.selectable:active {
+        transform: scale(1.02, 1.02);
+    }
 }
 
 @media (max-width: 768px) {
