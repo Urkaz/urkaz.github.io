@@ -11,6 +11,9 @@ import GamesList from "@assets/data/games/lists/_list_games.json";
 import GameFilterList from "@assets/data/games/lists/_filter_games.json";
 import GameFilterPlatform from "@assets/data/games/lists/_filter_platforms.json";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 const Games = () => {
     return (
         <>
@@ -18,10 +21,12 @@ const Games = () => {
                 title="Games"
                 description={
                     <>
-                        Below you will find a list of all the games in which I worked on thorugh my life, from professional jobs, to educational
-                        projects, and game jams.
+                        Here you'll find a list of all the games I've been involved in, from professional work and personal projects (e.g., game jams)
+                        to those created during my education.
                         <br />
-                        Clicking on a game will redirect you to a new page with more information.
+                        Filter by my role in the creative process and by the platforms I've worked on.
+                        <br />
+                        Click on any game marked with the <FontAwesomeIcon icon={faLink} /> icon to be redirected to a page with more details.
                     </>
                 }
                 sectionId="games"

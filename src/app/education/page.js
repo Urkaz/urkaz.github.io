@@ -11,7 +11,16 @@ import styles from "@styles/pages/experience.module.scss";
 const Education = () => {
     return (
         <>
-            <SectionContent title="Professional Experience" description="<TODO>" sectionId={styles["experience"]}>
+            <SectionContent
+                title="Education"
+                description={
+                    <>
+                        This section showcases my academic background, including degrees, certifications, courses, and any additional training or
+                        qualifications I've completed.
+                    </>
+                }
+                sectionId={styles["experience"]}
+            >
                 <div className="row">
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>

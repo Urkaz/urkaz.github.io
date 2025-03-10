@@ -10,6 +10,9 @@ import { FilterItem } from "@src/components/pages/games/FilterItem.jsx";
 import ProjectsList from "@assets/data/projects/lists/_list_projects.json";
 import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.json";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
+
 const Projects = () => {
     return (
         <>
@@ -17,17 +20,15 @@ const Projects = () => {
                 title="Personal Projects"
                 description={
                     <>
-                        &lt;TODO&gt;
+                        This section features all the personal and side projects I've created, demonstrating my skills and creativity.
+                        <br />
+                        Click on any project marked with the <FontAwesomeIcon icon={faLink} /> or <FontAwesomeIcon icon={faArrowTurnUp} /> icon to be
+                        redirected to a page with more details.
                     </>
                 }
                 sectionId="projects"
             >
-                <IsotopeGrid
-                    mainFilters={ProjectsFilterList}
-                    items={ProjectsList}
-                    FilterComponent={FilterItem}
-                    GridComponent={GameGridItem}
-                />
+                <IsotopeGrid mainFilters={ProjectsFilterList} items={ProjectsList} FilterComponent={FilterItem} GridComponent={GameGridItem} />
             </SectionContent>
         </>
     );
