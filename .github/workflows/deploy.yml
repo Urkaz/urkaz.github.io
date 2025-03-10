@@ -29,9 +29,6 @@ jobs:
       - name: 🏗️ Build project
         run: npx next build
 
-      - name: 🔍 Debug Build Output
-        run: ls -la
-
       - name: 📡 Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
