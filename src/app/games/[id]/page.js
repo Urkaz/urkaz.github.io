@@ -13,13 +13,13 @@ import styles from "@styles/pages/game_details.module.scss";
 
 const YoutubeVideo = ({ videoURL }) => {
     return (
-            <iframe
-                src={videoURL}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-            ></iframe>
+        <iframe
+            src={videoURL}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+        ></iframe>
     );
 };
 
@@ -46,10 +46,12 @@ const GameDescription = async ({ params }) => {
     return (
         <>
             <SectionContent title={gameMetaData.name} description={gameData.description} sectionId="gamedetails">
-                <div className="row gy-4">
+                <div className="row">
                     <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                         {!gameData.hasGallery ? (
-                            <div className={styles["game-video"]}><YoutubeVideo videoURL={gameData.video} /></div>
+                            <div className={styles["game-video"]}>
+                                <YoutubeVideo videoURL={gameData.video} />
+                            </div>
                         ) : (
                             <GallerySwiper swiperClassName={styles["game-slider"]} imageList={gameData.gallery} />
                         )}
@@ -69,23 +71,27 @@ const GameDescription = async ({ params }) => {
                         </div>
                     </div>
                 </div>
-                <div className="row gy-4" data-aos="fade-up" data-aos-delay="300">
-                    <Markdown
-                        options={{
-                            overrides: {
-                                a: {
-                                    component: ({ children, href }) => {
-                                        if (href.includes("youtube.com") || href.includes("youtu.be")) {
-                                            return <YoutubeVideo videoURL={href} />;
-                                        }
-                                        return <a href={href}>{children}</a>;
+                <div className="row mt-4">
+                    <div className="col">
+                        <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
+                            <Markdown
+                                options={{
+                                    overrides: {
+                                        a: {
+                                            component: ({ children, href }) => {
+                                                if (href.includes("youtube.com") || href.includes("youtu.be")) {
+                                                    return <YoutubeVideo videoURL={href} />;
+                                                }
+                                                return <a href={href}>{children}</a>;
+                                            },
+                                        },
                                     },
-                                },
-                            },
-                        }}
-                    >
-                        {markdownContent}
-                    </Markdown>
+                                }}
+                            >
+                                {markdownContent}
+                            </Markdown>
+                        </div>
+                    </div>
                 </div>
             </SectionContent>
         </>

@@ -85,3 +85,14 @@
         color: color-mix(in srgb, var(--default-color), transparent 30%);
     }
 }
+
+.description-card-container{
+    padding-right: calc(var(--bs-gutter-x)* 0.5);
+    padding-left: calc(var(--bs-gutter-x)* 0.5);
+}
+
+.description-card {
+    padding: 20px 0 20px 20px;
+    background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
+    box-shadow: 3px 3px 0 0 var(--contrast-color);
+}
