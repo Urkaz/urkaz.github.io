@@ -1,0 +1,26 @@
+{
+    "home": {
+        "path": "/",
+        "sectionName": "Home"
+    },
+    "experience": {
+        "path": "/experience",
+        "sectionName": "Experience"
+    },
+    "education": {
+        "path": "/education",
+        "sectionName": "Education"
+    },
+    "projects": {
+        "path": "/projects",
+        "sectionName": "Personal Projects"
+    },
+    "games": {
+        "path": "/games",
+        "sectionName": "Games"
+    },
+    "contact": {
+        "path": "/contact",
+        "sectionName": "Contact"
+    }
+}

@@ -9,19 +9,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@styles/components/Navbar.module.scss";
 
-const Sections = [
-    { path: "/", sectionName: "Home" },
-    { path: "/experience", sectionName: "Experience" },
-    { path: "/experience/:workName", hidden: true },
-    { path: "/experience/:workName/:subProject", hidden: true },
-    { path: "/education", sectionName: "Education" },
-    { path: "/education/:workName", hidden: true },
-    { path: "/projects", sectionName: "Personal Projects" },
-    { path: "/projects/:gameName", hidden: true },
-    { path: "/games", sectionName: "Games" },
-    { path: "/games/:gameName", hidden: true },
-    { path: "/contact", sectionName: "Contact" },
-];
+import Sections from "@assets/data/sections.json";
 
 function isActive(currentPath, sectionPath) {
     if (sectionPath === "/") return currentPath === "/";
@@ -60,11 +48,10 @@ export function Navbar() {
         <>
             <nav id={styles["navmenu"]} className={styles["navmenu"]}>
                 <ul>
-                    {Sections
-                        .filter((section) => section.path && !section.hidden)
-                        .map(({ path, sectionName }, index) => (
-                            <NavItem key={index} to={path} pathname={pathname} onClick={toggleMenu}>
-                                {sectionName}
+                    {Object.entries(Sections)
+                        .map(([key, section]) => (
+                            <NavItem key={key} to={section.path} pathname={pathname} onClick={toggleMenu}>
+                                {section.sectionName}
                             </NavItem>
                         ))}
                     <li>

@@ -1,28 +1,6 @@
 import React from "react";
-import Link from "next/link";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-
-export function Breadcrumbs() {
-    return (
-        <>
-            {/*Heading container*/}
-            <nav className="breadcrumbs">
-                <div className="container">
-                    <ol>
-                        <li>
-                            <Link href="/">
-                                <FontAwesomeIcon icon={faHouseChimney} /> Home
-                            </Link>
-                        </li>
-                        <li className="current">&lt;TODO&gt;</li>
-                    </ol>
-                </div>
-            </nav>
-        </>
-    );
-}
+import {Breadcrumb} from "@components/common/Breadcrumb"
 
 export function Heading({ title, description }) {
     return (
@@ -46,7 +24,7 @@ export function SectionContent({ title, description, sectionId, children }) {
     return (
         <>
             <div className="page-title" data-aos="fade">
-                <Breadcrumbs />
+                <Breadcrumb />
                 <Heading title={title} description={description} />
                 <section id={sectionId} className={`${sectionId} section`}>
                     <div className="container">{children}</div>
