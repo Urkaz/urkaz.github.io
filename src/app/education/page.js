@@ -16,7 +16,7 @@ const Education = () => {
                 description={
                     <>
                         This section showcases my academic background, including degrees, certifications, courses, and any additional training or
-                        qualifications I've completed.
+                        qualifications I&apos;ve completed.
                     </>
                 }
                 sectionId={styles["experience"]}

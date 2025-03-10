@@ -31,8 +31,9 @@
 
 .hero .img-container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     min-width: fit-content; /* Asegura que el div no sea más pequeño que la imagen */
     min-height: fit-content;
   }
@@ -98,10 +99,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     transition: 0.3s;
     text-align: center;
     box-shadow: 3px 3px 0 0 var(--contrast-color);
+    margin-bottom: 20px;
 }
 
 .hero .social-links a:hover {
@@ -138,8 +141,8 @@
 
 .pokemon {
     color: #fdca16 !important;
-    -webkit-animation: pikachu 1000ms infinite;
-    animation: pikachu 1000ms infinite;
+    -webkit-animation: pikachu 2000ms infinite;
+    animation: pikachu 2000ms infinite;
 }
 
 .pokemon:before {

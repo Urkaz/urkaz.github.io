@@ -20,7 +20,7 @@ const Projects = () => {
                 title="Personal Projects"
                 description={
                     <>
-                        This section features all the personal and side projects I've created, demonstrating my skills and creativity.
+                        This section features all the personal and side projects I&apos;ve created, demonstrating my skills and creativity.
                         <br />
                         Click on any project marked with the <FontAwesomeIcon icon={faLink} /> or <FontAwesomeIcon icon={faArrowTurnUp} /> icon to be
                         redirected to a page with more details.

@@ -37,13 +37,11 @@ export default function Home() {
                         <p className={styles["sub-title"]}>More about me</p>
                         <div className={styles["description"]}>
                             <p>
-                                I&apos;m {age} years old, and a video game enthusiast and a passionate programmer that loves new technologies.
+                                I&apos;m {age} years old, still a video game enthusiast and a passionate programmer that loves new technologies.
                                 <br />
                                 <LinearGradient gradient={["to bottom", "#fff100 ,#d96b17"]} className={styles["digimon"]}>
                                     DigiDestinied
-                                </LinearGradient>
-                                , <span className={styles["pokemon"]}>Pokémon trainer</span> and <span className={styles["dnd"]}>D&D</span> game
-                                master.
+                                </LinearGradient> and <span className={styles["pokemon"]}>Pokémon trainer</span>.
                             </p>
                         </div>
                     </div>
@@ -58,8 +56,10 @@ export default function Home() {
                         <a target="_blank" href="mailto:fran.sanchez.rodrigo@gmail.com" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faEnvelope} /> fran.sanchez.rodrigo@gmail.com
                         </a>
-                        <br />
-                        <br />
+                    </div>
+                </div>
+                <div className="row gy-4">
+                    <div className={styles["social-links"]}>
                         <a target="_blank" href="https://www.linkedin.com/in/fransanchezrodrigo/" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} />
                             LinkedIn

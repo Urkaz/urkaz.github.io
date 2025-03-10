@@ -21,10 +21,10 @@ const Games = () => {
                 title="Games"
                 description={
                     <>
-                        Here you'll find a list of all the games I've been involved in, from professional work and personal projects (e.g., game jams)
+                        Here you&apos;ll find a list of all the games I&apos;ve been involved in, from professional work and personal projects (e.g., game jams)
                         to those created during my education.
                         <br />
-                        Filter by my role in the creative process and by the platforms I've worked on.
+                        Filter by my role in the creative process and by the platforms I&apos;ve worked on.
                         <br />
                         Click on any game marked with the <FontAwesomeIcon icon={faLink} /> icon to be redirected to a page with more details.
                     </>
