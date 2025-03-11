@@ -11,8 +11,12 @@
     ],
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Game Jam"
+        },
+        {
+            "left": "Site",
+            "right": "2016 Global Game Jam (Castellón)"
         },
         {
             "left": "My role",
@@ -20,22 +24,30 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "7 Developers"
+        },
+        {
+            "left": "Project date",
+            "right": "2016"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "3 days"
         },
         {
             "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "right": "Unity"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "windows"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "id": "globe",
+            "link": "https://v3.globalgamejam.org/2016/games/purramid"
+        }
+    ]
 }

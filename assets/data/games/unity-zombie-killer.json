@@ -3,8 +3,12 @@
     "video": "https://www.youtube.com/embed/f6SdXyaohnU?si=IsXJvFEmODw0-c4e",
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Education"
+        },
+        {
+            "left": "Site",
+            "right": "Master's Degree in Video Game Programming"
         },
         {
             "left": "My role",
@@ -12,22 +16,26 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "2 Developers"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "1 week"
         },
         {
             "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "right": "Unity"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "windows"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "id": "itch-io",
+            "link": "https://urkaz.itch.io/unity-zombie-killer"
+        }
+    ]
 }

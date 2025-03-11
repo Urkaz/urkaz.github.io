@@ -17,8 +17,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
     {
         /* @TODO TEMP DISABLED */
     }
-    hasSection = false;
-    customRoute = "";
+    hasSection = hasSection & pathname != "/projects";
 
     const content = (
         <>

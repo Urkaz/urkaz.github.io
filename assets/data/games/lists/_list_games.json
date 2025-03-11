@@ -4,63 +4,63 @@
         "name": "American Arcadia",
         "tag": "Porting",
         "platforms": ["switch", "ps4", "xsx"],
-        "hasSection": true
+        "hasSection": false
     },
     "metamorphosis-vr": {
         "category": ["development", "porting"],
         "name": "Metamorphosis VR",
         "tag": "Porting, Development",
         "platforms": ["quest"],
-        "hasSection": true
+        "hasSection": false
     },
     "xuan-yuan-sword-7": {
         "category": ["porting"],
         "name": "Xuan Yuan Sword 7",
         "tag": "Porting",
         "platforms": ["switch"],
-        "hasSection": true
+        "hasSection": false
     },
     "togges": {
         "category": ["porting"],
         "name": "Togges",
         "tag": "Porting",
         "platforms": ["switch", "xbo"],
-        "hasSection": true
+        "hasSection": false
     },
     "hell-pie": {
         "category": ["porting"],
         "name": "Hell Pie",
         "tag": "Porting",
         "platforms": ["xbo", "xsx"],
-        "hasSection": true
+        "hasSection": false
     },
     "firegirl-hack-n-splash-rescue-dx": {
         "category": ["porting"],
         "name": "Firegirl: Hack 'n Splash Rescue DX",
         "tag": "Porting",
         "platforms": ["switch"],
-        "hasSection": true
+        "hasSection": false
     },
     "unpublished-game-1": {
         "category": ["development", "porting"],
         "name": "Unpublished Game #1",
         "tag": "Porting, Development",
         "platforms": ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"],
-        "hasSection": true
+        "hasSection": false
     },
     "quantum-fields": {
         "category": ["development"],
         "name": "Quantum Fields",
         "tag": "Development, Game Jams",
         "platforms": ["windows"],
-        "hasSection": true
+        "hasSection": false
     },
     "ronin-hood-sisters": {
         "category": ["development"],
         "name": "Ronin-Hood Sisters",
         "tag": "Development, Education",
         "platforms": ["windows"],
-        "hasSection": true
+        "hasSection": false
     },
     "unity-zombie-killer": {
         "category": ["development"],
@@ -546,7 +546,7 @@
         "category": ["development"],
         "name": "Arrow Defense",
         "tag": "Development, Education",
-        "platforms": ["windows"],
+        "platforms": ["android"],
         "hasSection": true
     }
 }

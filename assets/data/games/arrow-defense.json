@@ -3,8 +3,12 @@
     "video": "https://www.youtube.com/embed/h9nzfR9EgmE?si=L_mY0LAqMyz9Kl5L",
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Game Jam"
+        },
+        {
+            "left": "Site",
+            "right": "Degree in Video game Design and Development"
         },
         {
             "left": "My role",
@@ -12,22 +16,25 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "2 Developers"
+        },
+        {
+            "left": "Project date",
+            "right": "2015"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "3 months"
         },
         {
-            "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "left": "Engine/Language",
+            "right": "AS3 + Starling Framework"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "android",
+            "link": "https://github.com/Urkaz/urkaz.github.io/releases/download/Files1/air.alfra.ProjectArrow.apk"
         }
-    ],
-    "links": [{}]
+    ]
 }

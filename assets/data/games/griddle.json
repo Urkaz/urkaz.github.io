@@ -3,8 +3,12 @@
     "video": "https://www.youtube.com/embed/k_q_9H-PWH4?si=VkJUJRs7kpp62kQF",
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Game Jam"
+        },
+        {
+            "left": "Site",
+            "right": "Degree in Video game Design and Development"
         },
         {
             "left": "My role",
@@ -12,22 +16,30 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "2 Developers"
+        },
+        {
+            "left": "Project date",
+            "right": "2015"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "3 months"
         },
         {
-            "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "left": "Engine/Language",
+            "right": "Cocos-2d-x + C++"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "android"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "id": "itch-io",
+            "link": "https://urkaz.itch.io/griddle"
+        }
+    ]
 }
