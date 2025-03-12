@@ -2,39 +2,10 @@
 # Portfolio Details Section
 --------------------------------------------------------------*/
 
-.game-slider {
-    box-shadow: 3px 3px 0 0 var(--contrast-color);
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 16 / 9;
-    display: block;
-
-    img {
-        width: 100%;
-    }
-
-    :global(.swiper-button-prev),
-    :global(.swiper-button-next) {
-        color: var(--accent-color);
-    }
-
-    :global(.swiper-pagination) {
-        :global(.swiper-pagination-bullet) {
-            width: 12px;
-            height: 12px;
-            background-color: color-mix(in srgb, var(--default-color), transparent 55%);
-            opacity: 1;
-        }
-
-        :global(.swiper-pagination-bullet-active) {
-            background-color: var(--accent-color);
-        }
-    }
-}
-
 .game-video {
     box-shadow: 3px 3px 0 0 var(--contrast-color);
     width: 100%;
+    height: 100%;
     aspect-ratio: 16 / 9;
 
     iframe {

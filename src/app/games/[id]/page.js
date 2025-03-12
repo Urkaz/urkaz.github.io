@@ -2,26 +2,15 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
-import Markdown from "markdown-to-jsx";
 
-import { GallerySwiper } from "@components/thirdparty/Swiper.jsx";
-import { SectionContent } from "@components/common/SectionsContent.jsx";
+import { GallerySwiper } from "@components/thirdparty/Swiper";
+import { SectionContent } from "@components/common/SectionsContent";
+import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
+import { CustomMarkdown } from "@components/thirdparty/CustomMarkdown";
 
 import GameMetaData from "@assets/data/games/lists/_list_games.json";
 
 import styles from "@styles/pages/game_details.module.scss";
-
-const YoutubeVideo = ({ videoURL }) => {
-    return (
-        <iframe
-            src={videoURL}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-        ></iframe>
-    );
-};
 
 const GameDescription = async ({ params }) => {
     const { id } = await params;
@@ -53,7 +42,7 @@ const GameDescription = async ({ params }) => {
                                 <YoutubeVideo videoURL={gameData.video} />
                             </div>
                         ) : (
-                            <GallerySwiper swiperClassName={styles["game-slider"]} imageList={gameData.gallery} />
+                            <GallerySwiper imageList={gameData.gallery} />
                         )}
                     </div>
                     <div className="col-lg-4">
@@ -74,22 +63,7 @@ const GameDescription = async ({ params }) => {
                 <div className="row mt-4">
                     <div className="col">
                         <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
-                            <Markdown
-                                options={{
-                                    overrides: {
-                                        a: {
-                                            component: ({ children, href }) => {
-                                                if (href.includes("youtube.com") || href.includes("youtu.be")) {
-                                                    return <YoutubeVideo videoURL={href} />;
-                                                }
-                                                return <a href={href}>{children}</a>;
-                                            },
-                                        },
-                                    },
-                                }}
-                            >
-                                {markdownContent}
-                            </Markdown>
+                            <CustomMarkdown content={markdownContent} />
                         </div>
                     </div>
                 </div>
