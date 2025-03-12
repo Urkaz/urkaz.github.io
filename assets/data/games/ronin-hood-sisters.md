@@ -17,9 +17,9 @@ I was in charge of creating the classes and structures that represented the game
 The game world is composed by something that we called "the Grid". At the same time, the Grid is made up of Chunks, rectangular areas of the map that represented prebuilt areas. And furthermore, each Chunk is made of Tiles, cubes that represent the minimal unit of the world.
 
 <gallery>
-    /img/games/screenshots/rhs/grid.png
-    /img/games/screenshots/rhs/chunks.png
-    /img/games/screenshots/rhs/tile.png
+    /img/games/screenshots/rhs/grid.png | The entire Grid
+    /img/games/screenshots/rhs/chunks.png | A small Grid of 2x2x3 Chunks.
+    /img/games/screenshots/rhs/tile.png | A single Tile
 </gallery>
 
 #### The Grid
@@ -37,35 +37,43 @@ The tile destruction added one level of complexity to the Grid, generating two d
 
 The Tiles are 100% made from data contained in a Data Table. Each tile is represented by a different row, allowing visual customization for the artists and designers.
 
-<gallery>
-    /img/games/screenshots/rhs/tile_types.png
-    /img/games/screenshots/rhs/tile_dt1.png
-    /img/games/screenshots/rhs/tile_dt2.png
-</gallery>
-
 In addition to this, a tile could contain other things, like Props, Entities or Elements.
 
 A tile can be destroyed, but some special tiles are protected against destruction (at the designer's discretion, see Map Tool below). We had Bedrock tiles, that were completely indestructible, and Foundation tiles, that spawned a new Tile when destroyed (for example, to represent the foundation of a destroyed building). Tile destruction was another challenge, as it had to for example, handle the destruction of all attached props, or make Entities fall if they were standing on it.
 
+<gallery>
+    /img/games/screenshots/rhs/tiletypes.png | The Tile types data table
+    /img/games/screenshots/rhs/tiledt1.png | The properties of a single Tile
+    /img/games/screenshots/rhs/tiledt2.png | The configurable visual representation of a single Tile
+</gallery>
+
 #### Fog of War
 
-asdf
+The last challenge in the game world was the implementation of the Fog of War. After analyzing multiple solutions I ended implementin a 2D system where the vision of the units was a cylinder.
+
+It used a dynamic texture that the code painted black or white depending on the vision, with the capability to have an explored area between the real vision and the undicovered area. That texture was then applied and rendered in a postprocessing material that myself created.
+
+The system was almost standalone, ready to be used in any other project with minimal changes.
+
+<gallery>
+    /img/games/screenshots/rhs/fogofwar.png
+</gallery>
 
 ### Map tool
 
-asdf
+<warning>This section is work in progress</warning>
 
 ### Inventory UI
 
-asdf
+<warning>This section is work in progress</warning>
 
 ### Level selection UI
 
-asdf
+<warning>This section is work in progress</warning>
 
 ### Game HUD
 
-asdf
+<warning>This section is work in progress</warning>
 
 # Game Description
 
