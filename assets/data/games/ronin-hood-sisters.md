@@ -4,9 +4,7 @@ Made with Unreal Engine 4 as the final project for the "Master's degree in Video
 
 # My role
 
-I was in charge of programming the game world and its destruction, generating it at runtime and helping the designers with a tool to create it. I also was in charge of the fog of war effect, the programming of the UI from the inventory, level selection menu an in-game HUD.
-
----- Enemy view area
+I was in charge of programming the game world and its destruction, generating it at runtime and helping the designers with a tool to create it. I also was in charge of the fog of war effect, and the programming of the UI from the inventory, level selection menu an in-game HUD.
 
 ## Challenges
 
@@ -56,7 +54,7 @@ It used a dynamic texture that the code painted black or white depending on the 
 The system was almost standalone, ready to be used in any other project with minimal changes.
 
 <gallery>
-    /img/games/screenshots/rhs/fogofwar.png
+    /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same white pixels from the texture in the postprocess material.
 </gallery>
 
 ### Map tool
