@@ -3,8 +3,12 @@
     "video": "https://www.youtube.com/embed/YTDTJIYtTWE?si=JhmzNUGyyHs-_bDK",
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Game Jam"
+        },
+        {
+            "left": "Site",
+            "right": "2023 Epic MegaJam"
         },
         {
             "left": "My role",
@@ -12,22 +16,30 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "20 Developers"
+        },
+        {
+            "left": "Project date",
+            "right": "2021"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "1 week"
         },
         {
             "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "right": "Unreal Engine 5.3"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "windows"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "id": "itch-io",
+            "link": "https://urkaz.itch.io/quantumfields"
+        }
+    ]
 }

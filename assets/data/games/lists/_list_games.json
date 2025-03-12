@@ -53,7 +53,7 @@
         "name": "Quantum Fields",
         "tag": "Development, Game Jams",
         "platforms": ["windows"],
-        "hasSection": false
+        "hasSection": true
     },
     "ronin-hood-sisters": {
         "category": ["development"],
