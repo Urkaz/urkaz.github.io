@@ -33,13 +33,13 @@ export const RichSlide = ({ image }) => {
 RichSlide.displayName = 'SwiperSlider';
 
 
-export function GallerySwiper({ swiperExtraClasses, imageList }) {
+export function GallerySwiper({ swiperExtraClasses, imageList, autoplayEnabled }) {
     return (
         <Swiper
             modules={[Autoplay, Navigation, Pagination, A11y]}
             loop={true}
             speed={600}
-            autoplay={{ delay: 5000, disableOnInteraction: true }}
+            autoplay={autoplayEnabled ? { delay: 5000, disableOnInteraction: true } : false}
             slidesPerView={"auto"}
             spaceBetween={20}
             pagination={{ clickable: true, type: "bullets" }}

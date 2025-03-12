@@ -18,8 +18,9 @@ export const MarkdownGallery = ({ children }) => {
         <div className="row">
             <div className={`col-lg-8 ${styles["centered-gallery"]}`}>
                 <GallerySwiper
-                    swiperClassName={`${styles["game-slider"]}`}
+                    swiperExtraClasses={`${styles["inline-slider"]}`}
                     imageList={images}
+                    autoplayEnabled={false}
                 />
             </div>
         </div>
