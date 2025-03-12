@@ -60,3 +60,4 @@ Resolving Griddle:
 
 - Fran Sánchez Rodrigo: Gameplay and selection menu Programmer.
 - Álvaro Delgado Ramos: Game and puzzle designer & Menu and tutorial Programmer.
+- Jaime Lara: Puzzle designer.
