@@ -3,8 +3,12 @@
     "video": "https://www.youtube.com/embed/B--4Gu-ndzQ?si=tzgcgnhPgVhDHeh5",
     "details": [
         {
-            "left": "Company",
-            "right": "Catness Game Studios"
+            "left": "Type",
+            "right": "Education"
+        },
+        {
+            "left": "Site",
+            "right": "Master's Degree in Video Game Programming"
         },
         {
             "left": "My role",
@@ -12,22 +16,30 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "20 Developers"
+        },
+        {
+            "left": "Project date",
+            "right": "2021"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "8 months"
         },
         {
             "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "right": "Unreal Engine 4.26"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "windows"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "id": "itch-io",
+            "link": "https://frozenham-studios.itch.io/ronin-hood-sisters"
+        }
+    ]
 }

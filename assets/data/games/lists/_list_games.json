@@ -60,7 +60,7 @@
         "name": "Ronin-Hood Sisters",
         "tag": "Development, Education",
         "platforms": ["windows"],
-        "hasSection": false
+        "hasSection": true
     },
     "unity-zombie-killer": {
         "category": ["development"],
