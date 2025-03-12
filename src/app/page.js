@@ -29,9 +29,9 @@ export default function Home() {
                                 Programming.
                             </p>
                             <p>
-                                With <span className={styles["sub"]}>+3 years of experience</span> in <span>videogame programming</span>, and{" "}
+                                With <span className={styles["sub"]}>+3 years of professional experience</span> in <span>videogame programming</span>, and{" "}
                                 <span className={styles["sub"]}>4 years of experience</span> as <span>QA Technician</span>, I bring 7 years of
-                                experience and a variety of personal projects, ready to face any challenge!
+                                experience in the game industry ready to face any challenge!
                             </p>
                         </div>
                         <p className={styles["sub-title"]}>More about me</p>
