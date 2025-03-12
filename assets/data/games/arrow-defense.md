@@ -31,7 +31,9 @@ The level selector also had a custom XML with the level list and the properties 
 
 Tap the arrows on the screen to break them, and do it in the bottom panel to collect (obtaining twice the normal points) and make combos to counterattack.
 
-![Arrow defense screenshot](/img/games/screenshots/arrowdefense/tap1.png)
+<gallery>
+    /img/games/screenshots/arrowdefense/tap1.png
+</gallery>
 
 ## Level types
 
