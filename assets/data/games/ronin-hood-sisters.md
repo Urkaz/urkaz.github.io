@@ -4,7 +4,9 @@ Made with Unreal Engine 4 as the final project for the "Master's degree in Video
 
 # My role
 
-I was in charge of programming the game world and its destruction, generating it at runtime and helping the designers with a tool to create it. I also was in charge of the fog of war effect, and the programming of the UI from the inventory, level selection menu an in-game HUD.
+I was designated as the representative of the programming team for all meetings, coordinating all programmers with the design and art team, and keep track of tasks during the dailies, keeping an active communication between almost everyone involved in the project.
+
+For the programming part, I was in charge the generation and destruction of game world, and the development of a tool to help the designers with the creation of it. I also did the programming od the fog of war effect, the props, and the UI from level selection menu, from the inventory, and the in-game HUD.
 
 ## Challenges
 
@@ -54,12 +56,32 @@ It used a dynamic texture that the code painted black or white depending on the 
 The system was almost standalone, ready to be used in any other project with minimal changes.
 
 <gallery>
-    /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same white pixels from the texture in the postprocess material.
+    /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same area with white pixels from the texture in the postprocess material.
 </gallery>
+
+#### Props
+
+<warning>This section is work in progress</warning>
 
 ### Map tool
 
 <warning>This section is work in progress</warning>
+
+<gallery>
+    /img/games/screenshots/rhs/maptool.png | Two new tabs are opened when using the Map Tool. One in the left with different tools and controls. One in the bottom panel with a list of all existing Tiles.
+    /img/games/screenshots/rhs/maptoolhelpercontrols.png | Visual aids for the designers
+    /img/games/screenshots/rhs/maptoolduplicatefinder.png | Detection of duplicate tiles when saving the Preset
+</gallery>
+
+<gallery>
+    /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers
+    /img/games/screenshots/rhs/maptooltileproperties.png | All editable properties are accessible from the Details panel when selecting the Tile in the Editor.
+</gallery>
+
+<gallery>
+    /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset the menui changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
+    /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
+</gallery>
 
 ### Inventory UI
 
