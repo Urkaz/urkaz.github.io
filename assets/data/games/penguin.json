@@ -2,12 +2,26 @@
     "description": "Pengüin is a puzzle game where you should help our lovely penguin to escape from the ship where it's trapped. Each room is a challenging puzzle that hides the real truth about the situation it's facing our friend.",
     "hasGallery": true,
     "gallery": [
-        "/img/games/screenshots/penguin1.png",
-        "/img/games/screenshots/penguin2.png",
-        "/img/games/screenshots/penguin3.png",
-        "/img/games/screenshots/penguin4.png",
-        "/img/games/screenshots/penguin5.png",
-        "/img/games/screenshots/penguin6.png"
+        {
+            "src": "/img/games/screenshots/penguin1.png"
+        },
+        {
+            "src": "/img/games/screenshots/penguin2.png"
+        },
+        {
+            "src": "/img/games/screenshots/penguin3.png"
+        },
+        {
+            "src": "/img/games/screenshots/penguin4.png"
+        },
+        {
+            "src": "/img/games/screenshots/penguin5.png"
+        },
+        {
+            "src": "/img/games/screenshots/penguin6.png",
+            "spoiler": true,
+            "alt": "Solution to the room with the red and green tiles"
+        }
     ],
     "details": [
         {
