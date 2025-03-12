@@ -61,6 +61,20 @@ The system was almost standalone, ready to be used in any other project with min
 
 <warning>This section is work in progress</warning>
 
+<gallery>
+    /img/games/screenshots/rhs/maptool.png | Two new tabs are opened when using the Map Tool. The on in the left has different tools and controls to manipulate the Tiles and some visibility controls. The tab in the bottom panel has a list of all existing Tiles allowing to spawn them with a click.
+</gallery>
+
+<gallery>
+    /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers
+    /img/games/screenshots/rhs/maptooltileproperties.png | All editable properties are accessible from the Details panel when selecting the Tile in the Editor.
+</gallery>
+
+<gallery>
+    /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset the menui changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
+    /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
+</gallery>
+
 ### Inventory UI
 
 <warning>This section is work in progress</warning>
