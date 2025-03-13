@@ -6,7 +6,8 @@
             "@components/*": ["./src/components/*"],
             "@styles/*": ["./src/styles/*"],
             "@assets/*": ["./assets/*"],
-            "@scripts/*": ["scripts/*"]
+            "@scripts/*": ["./scripts/*"],
+            "@img/*": ["./src/app/img/*"]
         }
     }
 }

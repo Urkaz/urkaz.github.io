@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
 import "swiper/css";
@@ -19,7 +20,7 @@ export const RichSlide = ({ image, singleSlide }) => {
     };
 
     return (<SwiperSlide>
-        <img src={image.src} alt={image.alt} className={image.spoiler && !isRevealed ? styles["image-spoiler"] : null} />
+        <Image src={image.src} alt={image.alt} className={image.spoiler && !isRevealed ? styles["image-spoiler"] : null} />
         {image.alt ? <div className={`${styles["image-description"]} ${!singleSlide ? styles["padded"] : null}`}>
             {image.alt}
         </div>

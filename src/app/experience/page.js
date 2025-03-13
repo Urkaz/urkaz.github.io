@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +20,7 @@ const Experience = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/catness_game_studios_logo.jpg"></img>
+                                <Image src="/img/experience/icons/catness_game_studios_logo.jpg" alt="" />
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Unreal Tools Programmer & Porting Engineer</h4>
@@ -57,7 +57,7 @@ const Experience = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/lollipop_robot_logo.jpg"></img>
+                                <Image src="/img/experience/icons/lollipop_robot_logo.jpg" alt="" />
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>QA Technician</h4>
@@ -85,7 +85,7 @@ const Experience = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/lollipop_robot_logo.jpg"></img>
+                                <Image src="/img/experience/icons/lollipop_robot_logo.jpg" alt="" />
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>QA Tester Internship</h4>

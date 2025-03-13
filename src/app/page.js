@@ -1,9 +1,11 @@
+import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faItchIo } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { LinearGradient } from "react-text-gradients";
 
 import styles from "@styles/pages/home.module.scss";
+import profilePic from '@img/home/photo.png'
 
 export default function Home() {
     var diff_ms = new Date().getTime() - new Date(Date.UTC(1994, 1, 12)).getTime(); //Future date - current date
@@ -47,7 +49,7 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["img-container"]}>
-                            <img src="/img/home/photo.png" />
+                            <Image src={profilePic} alt="Profile photo"/>
                         </div>
                     </div>
                 </div>

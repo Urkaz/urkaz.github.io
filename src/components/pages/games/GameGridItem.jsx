@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
 import { usePathname } from "next/navigation";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -30,14 +31,14 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                     </div>
                 ) : null}
                 <div className={styles["game-overlay"]}>
-                    {noLogo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
+                    {noLogo == true ? <p>{name}</p> : <Image src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
                 </div>
                 <div className={styles["game-info"]}>
                     <h4 className={styles["floating-left"]}>{tag}</h4>
                     {platforms ? (
                         <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
                             {platforms.map((item, index) => (
-                                <img key={index} src={`/img/games/platforms/system_mini_${item}.png`} />
+                                <Image key={index} src={`/img/games/platforms/system_mini_${item}.png`} alt="" />
                             ))}
                         </h4>
                     ) : null}
