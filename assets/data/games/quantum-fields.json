@@ -16,11 +16,11 @@
         },
         {
             "left": "Team size",
-            "right": "20 Developers"
+            "right": "5 Developers"
         },
         {
             "left": "Project date",
-            "right": "2021"
+            "right": "2023"
         },
         {
             "left": "Project length",
@@ -38,7 +38,8 @@
     ],
     "links": [
         {
-            "id": "itch-io",
+            "id": "fa-brands fa-itch-io",
+            "text": "Itch.io",
             "link": "https://urkaz.itch.io/quantumfields"
         }
     ]

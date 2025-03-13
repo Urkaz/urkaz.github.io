@@ -52,14 +52,14 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className={styles["social-links"]}>
+                    <div className="pill-links">
                         <a target="_blank" href="mailto:fran.sanchez.rodrigo@gmail.com" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faEnvelope} /> fran.sanchez.rodrigo@gmail.com
                         </a>
                     </div>
                 </div>
                 <div className="row gy-4">
-                    <div className={styles["social-links"]}>
+                    <div className="pill-links">
                         <a target="_blank" href="https://www.linkedin.com/in/fransanchezrodrigo/" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedin} />
                             LinkedIn

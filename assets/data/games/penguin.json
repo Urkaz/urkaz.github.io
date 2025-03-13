@@ -60,8 +60,14 @@
     ],
     "links": [
         {
-            "id": "itch-io",
+            "id": "fa-brands fa-itch-io",
+            "text": "Itch.io",
             "link": "https://urkaz.itch.io/penguin"
+        },
+        {
+            "id": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/GJCas2017_VTeam"
         }
     ]
 }

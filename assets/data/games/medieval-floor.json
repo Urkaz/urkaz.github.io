@@ -38,7 +38,8 @@
     ],
     "links": [
         {
-            "id": "itch-io",
+            "id": "fa-brands fa-itch-io",
+            "text": "Itch.io",
             "link": "https://urkaz.itch.io/medievalfloor"
         }
     ]

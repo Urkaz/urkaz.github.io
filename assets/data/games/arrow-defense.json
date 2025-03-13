@@ -36,5 +36,12 @@
             "id": "android",
             "link": "https://github.com/Urkaz/urkaz.github.io/releases/download/Files1/air.alfra.ProjectArrow.apk"
         }
+    ],
+    "links": [
+        {
+            "id": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/Project-Arrow"
+        }
     ]
 }

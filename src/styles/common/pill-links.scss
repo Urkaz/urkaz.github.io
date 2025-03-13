@@ -1,0 +1,36 @@
+.pill-links svg {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.pill-links a:first-child {
+    margin-left: 0px;
+}
+
+.pill-links a:last-child {
+    margin-right: 0px;
+}
+
+.pill-links a {
+    background: var(--accent-color);
+    color: var(--default-color);
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 3px 3px 0 0 var(--contrast-color);
+    margin-bottom: 20px;
+}
+
+.pill-links a:hover {
+    background: color-mix(in srgb, var(--secondary-accent-color), transparent 20%);
+    color: var(--contrast-color);
+}

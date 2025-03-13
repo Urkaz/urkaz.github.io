@@ -58,8 +58,14 @@
     ],
     "links": [
         {
-            "id": "globe",
+            "id": "fa-solid fa-globe",
+            "text": "Global Game Jam",
             "link": "https://v3.globalgamejam.org/2016/games/purramid"
+        },
+        {
+            "id": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/GGJ2016_EquipoV"
         }
     ]
 }

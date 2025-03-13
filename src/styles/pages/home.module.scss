@@ -78,38 +78,9 @@
     color: var(--accent-color);
 }
 
-.hero .social-links {
+.hero :global(.pill-links) {
     margin-top: 25px;
     text-align: center;
-}
-
-.hero .social-links svg {
-    margin-right: 5px;
-    font-size: 20px;
-}
-
-.hero .social-links a {
-    background: var(--accent-color);
-    color: var(--default-color);
-    font-size: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
-    height: 40px;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: 0.3s;
-    text-align: center;
-    box-shadow: 3px 3px 0 0 var(--contrast-color);
-    margin-bottom: 20px;
-}
-
-.hero .social-links a:hover {
-    background: color-mix(in srgb, var(--secondary-accent-color), transparent 20%);
-    color: var(--contrast-color);
 }
 
 @media (max-width: 768px) {

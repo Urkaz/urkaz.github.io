@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { GallerySwiper } from "@components/thirdparty/Swiper";
 import { SectionContent } from "@components/common/SectionsContent";
 import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
@@ -56,6 +58,37 @@ const GameDescription = async ({ params }) => {
                                         </li>
                                     );
                                 })}
+
+                                {/*gameData.platforms ? (
+                                    <>
+                                        <li>
+                                            <strong>Platforms</strong>:{" "}
+                                            {gameData.platforms.map((platform, index) => {
+                                                return (
+                                                    <span key={index}>
+                                                        {platform.id} - {platform.link}
+                                                    </span>
+                                                );
+                                            })}
+                                        </li>
+                                    </>
+                                ) : null*/}
+
+                                {gameData.links ? (
+                                    <>
+                                        <li>
+                                            <div className="pill-links">
+                                                {gameData.links.map((link, index) => {
+                                                    return (
+                                                        <a key={index} target="_blank" href={link.link} rel="noopener noreferrer">
+                                                            <FontAwesomeIcon icon={`${link.id}`} /> {link.text}
+                                                        </a>
+                                                    );
+                                                })}
+                                            </div>
+                                        </li>
+                                    </>
+                                ) : null}
                             </ul>
                         </div>
                     </div>
