@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
 
-import { SectionContent } from "@components/common/SectionsContent.jsx";
+import { SectionContent } from "@components/common/SectionsContent";
 
 import ProjectsMetaData from "@assets/data/projects/lists/_list_projects.json";
 

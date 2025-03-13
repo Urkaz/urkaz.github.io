@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
-import { SectionContent } from "@components/common/SectionsContent.jsx";
+import { SectionContent } from "@components/common/SectionsContent";
 
 import styles from "@styles/pages/experience.module.scss";
 

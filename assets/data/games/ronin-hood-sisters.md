@@ -6,7 +6,7 @@ Made with Unreal Engine 4 as the final project for the "Master's degree in Video
 
 I was designated as the representative of the programming team for all meetings, coordinating all programmers with the design and art team, and keep track of tasks during the dailies, keeping an active communication between almost everyone involved in the project.
 
-For the programming part, I was in charge the generation and destruction of game world, and the development of a tool to help the designers with the creation of it. I also did the programming of the fog of war effect, the props, and the UI from level selection menu, the inventory, and the in-game HUD.
+For the programming part, I was in charge the generation and destruction of game world, and the development of a tool to help the designers with the creation of it. I also did the programming of the fog of war effect, the props, and the UI from costume selection menu, level selection menu, the inventory, and the in-game HUD.
 
 ## Challenges
 
@@ -121,6 +121,10 @@ The Save Preset menu allows the designers to choose the tags for each chunk cont
     /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset, the menu changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
     /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
 </gallery>
+
+### Girl costume selection UI
+
+<warning>Section work in progress</warning>
 
 ### Level selection UI
 

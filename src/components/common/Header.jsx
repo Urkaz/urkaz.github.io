@@ -2,7 +2,7 @@
 
 import { React, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Navbar } from "@src/components/common/Navbar.jsx";
+import { Navbar } from "@src/components/common/Navbar";
 
 import Link from "next/link";
 

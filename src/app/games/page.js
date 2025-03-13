@@ -2,10 +2,10 @@
 
 import React from "react";
 
-import { IsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid.jsx";
-import { SectionContent } from "@components/common/SectionsContent.jsx";
-import { GameGridItem } from "@src/components/pages/games/GameGridItem.jsx";
-import { FilterItem } from "@src/components/pages/games/FilterItem.jsx";
+import { IsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid";
+import { SectionContent } from "@components/common/SectionsContent";
+import { GameGridItem } from "@src/components/pages/games/GameGridItem";
+import { FilterItem } from "@src/components/pages/games/FilterItem";
 
 import GamesList from "@assets/data/games/lists/_list_games.json";
 import GameFilterList from "@assets/data/games/lists/_filter_games.json";
