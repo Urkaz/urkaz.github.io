@@ -3,7 +3,6 @@ import { Staatliches, Titillium_Web } from "next/font/google";
 import { Header } from "@components/common/Header";
 import { Footer } from "@components/common/Footer";
 import { ScrollToTop } from "@components/common/ScrollToTop";
-import { Preloader } from "@components/common/Preloader";
 import { DottedBackground } from "@components/common/DottedBackground";
 import { BootstrapClient } from "@components/thirdparty/BootstrapClient";
 import { AOSClient } from "@components/thirdparty/AOSClient";
@@ -43,7 +42,6 @@ export default function RootLayout({ children }) {
                     {children}
                 </main>
                 <ScrollToTop />
-                <Preloader />
                 <Footer>{siteName}</Footer>
                 <BootstrapClient />
                 <AOSClient />
