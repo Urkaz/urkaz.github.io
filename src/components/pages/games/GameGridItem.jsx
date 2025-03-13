@@ -3,13 +3,15 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink, faArrowUpRightFromSquare, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 
 import { cleanText } from "@src/components/functions";
 
 import styles from "@styles/pages/games.module.scss";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, customRoute }) => {
     const pathname = usePathname();
@@ -30,7 +32,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                     </div>
                 ) : null}
                 <div className={styles["game-overlay"]}>
-                    {noLogo == true ? <p>{name}</p> : <img src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} />}
+                    {noLogo == true ? <p>{name}</p> : <LazyLoadImage src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} effect="blur" />}
                 </div>
                 <div className={styles["game-info"]}>
                     <h4 className={styles["floating-left"]}>{tag}</h4>
