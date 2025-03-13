@@ -9,7 +9,7 @@ import "swiper/css/pagination"; //dots
 
 import styles from "@styles/components/thirdparty/swiper.module.scss";
 
-export const RichSlide = ({ image }) => {
+export const RichSlide = ({ image, singleSlide }) => {
     const [isRevealed, setIsRevealed] = useState(false);
 
     const handleReveal = () => {
@@ -20,7 +20,7 @@ export const RichSlide = ({ image }) => {
 
     return (<SwiperSlide>
         <img src={image.src} alt={image.alt} className={image.spoiler && !isRevealed ? styles["image-spoiler"] : null} />
-        {image.alt ? <div className={styles["image-description"]}>
+        {image.alt ? <div className={`${styles["image-description"]} ${!singleSlide ? styles["padded"] : null}`}>
             {image.alt}
         </div>
             : null}
@@ -48,7 +48,7 @@ export function GallerySwiper({ swiperExtraClasses, imageList, autoplayEnabled }
         >
             {imageList?.map((image, index) => {
                 return (
-                    <RichSlide image={image} key={index} />
+                    <RichSlide image={image} key={index} singleSlide={imageList.length === 1} />
                 );
             })}
         </Swiper>
