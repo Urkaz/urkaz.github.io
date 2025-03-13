@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"
+import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
@@ -25,7 +25,7 @@ const Education = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <Image src="/img/experience/icons/u_tad_logo.jpg" alt="" />
+                                <img src="/img/experience/icons/u_tad_logo.jpg"></img>
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Master&apos;s Degree in Video Game Programming</h4>
@@ -53,7 +53,7 @@ const Education = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <Image src="/img/experience/icons/uji_logo.jpg" alt="" />
+                                <img src="/img/experience/icons/uji_logo.jpg"></img>
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Degree in Video game Design and Development</h4>
