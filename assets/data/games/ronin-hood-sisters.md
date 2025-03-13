@@ -61,33 +61,72 @@ The system was almost standalone, ready to be used in any other project with min
 
 #### Props
 
-<warning>This section is work in progress</warning>
+The Props are decorative objects that can be placed on Tiles. They can also be destroyed like the Tiles, but they activate an ability from the Ability System (made by other programmers) to generate an effect. They can be attached on each of the 6 sides of the Tiles, so if the containing tile was destroyed, the Props attached to it are destroyed too.
+
+The implementation of the Props changed multiple times as they requirements and needs changed, but after working closely with both the Design and Art teams, we made them as Blueprint implementale objects. The code managed all the complex code and then called specific events in the Blueprint side where the designers and artists could add extra code. This allowed creating more complex props with more Actor Components (lights, sounds, VFX, etc) that still reacted accordingly to each situation.
+
+<gallery>
+    /img/games/screenshots/rhs/prop.png | The prop with 2 meshes, partices and sound.
+    /img/games/screenshots/rhs/propcode.png | The blueprint code that managed the showing and hiding of the prop, made by the designers and art teams.
+</gallery>
 
 ### Map tool
 
-<warning>This section is work in progress</warning>
+The Map Tool is an Engine module that contains all code that provides the designers with a tool to create the different parts of the world (called "Presets" in our game, consisting on individual buildings made of multiple chunks).
+
+Using a cutom button in the editor toolbar, the designers could open the tool, which opened two editor tabs containing on editor widget each:
+
+- The first one of the tabs contains a full list of the Tiles existing in the Tiles Data table mentioned earlier in the Tiles from Data section, being each tile a button with a visual representation of the mesh with all its default materials. Clickin on a Tile spawns it in the editor viewport as an actor.
+- The other one contains multiple useful controls for manipulating the spawned tiles, the current selection and teir visibility. It also allows loading, saving and deleting presets from the data table.
 
 <gallery>
     /img/games/screenshots/rhs/maptool.png | Two new tabs are opened when using the Map Tool. One in the left with different tools and controls. One in the bottom panel with a list of all existing Tiles.
-    /img/games/screenshots/rhs/maptoolhelpercontrols.png | Visual aids for the designers
-    /img/games/screenshots/rhs/maptoolduplicatefinder.png | Detection of duplicate tiles when saving the Preset
 </gallery>
 
+#### Editor Tiles
+
+The spawned tiles are a special class of Tile that only exists in the Map Tool. They are programmed to be snapped around when moved with the regular actor manipulation tools provived by the engine, and to be reactive to all property changes made by the designers.
+
+ALL properties available for a Tile are availabe and editable from the Details panel, with bits of customization to prevent modifying values that are blocked by other properties (for example, the "Foundation" properties can only be edited if the variable "Is Foundation" is enabled, or enabling "Is Foundation" disables the selection of "Is Bedrock"). When any of the properties is edited, it changes shape, colors, or spaws different elements to visualize the changes in real time in the editor.
+
 <gallery>
-    /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers
+    /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers (a prop, spawn point, element, etc).
     /img/games/screenshots/rhs/maptooltileproperties.png | All editable properties are accessible from the Details panel when selecting the Tile in the Editor.
 </gallery>
 
+Another feature I implemented for the Map Tool regarding the Tiles is the compatibility with the Undo/Redo options. All changes made to a Tile by any means are transactional and are supported by Undo/Redo, allowing the designers to quickly undo an undesired action, something that the engine doesn't support on custom actors like this on by default.
+
+#### Helping the designers
+
+Working closely with the design team, I developed and added more features at their request.
+
+One of those features was the addition of different visual hints, some toggleable from the menu, to help them visualizing better the world they were creating. This included bounding boxes for special Tiles, Chunks and Props, and also small spheres representing Enemy and Player spawn points.
+
+Another feature added after testing the first creations with the tool was the detection of duplicated tiles, which served as a data validation step before storing the Preset to the data table. In addition to adding an error message to warn them and a red bounding box in the Tiles, I made a special folder in the World Outliner that helped selecting the duplicate tiles.
+
 <gallery>
-    /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset the menui changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
+    /img/games/screenshots/rhs/maptoolhelpercontrols.png | Visual hints for the designers
+    /img/games/screenshots/rhs/maptoolduplicatefinder.png | Detection of duplicate tiles when saving the Preset
+</gallery>
+
+#### Saving and loading
+
+Finally, the tool has the ability to store the Preset (the set of tiles that the designers placed with all of their properties) in the Chunks Data Table used during the gameplay to fill the Grid with data.
+
+When the Save button is pressed and if the Preset is valid (without duplicate Tiles), the menu changes to a different one wityh multiple selector for GameplayTags. Those tags are used by the Procedural Generator that fill the Grid with data, so I had to work closely with other developers too to match their needs in the tool.
+
+The Save Preset menu allows the designers to choose the tags for each chunk contained in the Preset, mainly with the data used for the chunk connections from the Procedural Generator.
+
+<gallery>
+    /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset, the menu changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
     /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
 </gallery>
 
-### Inventory UI
+### Level selection UI
 
 <warning>This section is work in progress</warning>
 
-### Level selection UI
+### Inventory UI
 
 <warning>This section is work in progress</warning>
 
