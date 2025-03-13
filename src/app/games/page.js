@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { IsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid";
+import { LazyIsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid";
 import { SectionContent } from "@components/common/SectionsContent";
 import { GameGridItem } from "@src/components/pages/games/GameGridItem";
 import { FilterItem } from "@src/components/pages/games/FilterItem";
@@ -31,7 +31,7 @@ const Games = () => {
                 }
                 sectionId="games"
             >
-                <IsotopeGrid
+                <LazyIsotopeGrid
                     mainFilters={GameFilterList}
                     secondaryfilters={GameFilterPlatform}
                     items={GamesList}
