@@ -14,17 +14,44 @@
     box-shadow: 3px 3px var(--contrast-color);
     background-size: cover;
 
-    span {
+    .game-logo {
         width: 70%;
         height: 100%;
+        margin: auto;
+
+        & > * {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            transition: opacity 0.3s, transform 1s ease-out !important;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            transform: scale(0.95, 0.95);
+        }
     }
 
-    img {
-        transition: opacity 0.3s, transform 1s ease-out !important;
-        object-fit: contain;
-        width: 100%;
+    .game-background {
         height: 100%;
-        transform: scale(0.95, 0.95);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        & > * {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            transition: opacity 0.3s, transform 1s ease-out !important;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .game-overlay {
@@ -52,8 +79,7 @@
             --stroke-color: black;
             --stroke-width: 2px;
 
-            text-shadow:
-                calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
+            text-shadow: calc(var(--stroke-width) * 1) calc(var(--stroke-width) * 0) 0 var(--stroke-color),
                 calc(var(--stroke-width) * 0.9239) calc(var(--stroke-width) * 0.3827) 0 var(--stroke-color),
                 calc(var(--stroke-width) * 0.7071) calc(var(--stroke-width) * 0.7071) 0 var(--stroke-color),
                 calc(var(--stroke-width) * 0.3827) calc(var(--stroke-width) * 0.9239) 0 var(--stroke-color),

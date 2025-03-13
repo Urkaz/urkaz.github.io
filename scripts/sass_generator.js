@@ -24,8 +24,8 @@ function saveCode(scss) {
 }
 
 function GenerateSCSS() {
-    const code = generateCode();
-    saveCode(code);
+    //const code = generateCode();
+    //saveCode(code);
 }
 
 GenerateSCSS();
