@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { IsotopeFilter } from "@components/thirdparty/isotope/IsotopeFilter";
+import { trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { concatValues } from "@src/components/functions";
 
@@ -55,3 +56,7 @@ export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponen
         </div>
     );
 };
+
+const LazyIsotopeGrid = trackWindowScroll(IsotopeGrid);
+
+export { LazyIsotopeGrid };
