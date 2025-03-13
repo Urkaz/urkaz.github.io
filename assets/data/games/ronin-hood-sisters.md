@@ -87,7 +87,7 @@ Using a cutom button in the editor toolbar, the designers could open the tool, w
 
 The spawned tiles are a special class of Tile that only exists in the Map Tool. They are programmed to be snapped around when moved with the regular actor manipulation tools provived by the engine, and to be reactive to all property changes made by the designers.
 
-ALL properties available for a Tile are availabe and editable from the Details panel, with bits of customization to prevent modifying values that are blocked by other properties (for example, the "Foundation" properties can only be edited if the variable "Is Foundation" is enabled, or enabling "Is Foundation" disables the selection of "Is Bedrock"). When any of the properties is edited, it changes shape, colors, or spaws different elements to visualize the changes in real time in the editor.
+ALL properties available for a Tile are availabe and editable from the Details panel, with bits of customization to prevent modifying values that are blocked by other properties (for example, the "Foundation" properties can only be edited if the property "Is Foundation" is enabled, or enabling "Is Foundation" disables the selection of "Is Bedrock"). When any of the properties is edited, it changes shape, colors, or spaws different elements to visualize the changes in real time in the editor.
 
 <gallery>
     /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers (a prop, spawn point, element, etc).
@@ -124,15 +124,15 @@ The Save Preset menu allows the designers to choose the tags for each chunk cont
 
 ### Level selection UI
 
-<warning>This section is work in progress</warning>
+<warning>Section work in progress</warning>
 
 ### Inventory UI
 
-<warning>This section is work in progress</warning>
+<warning>Section work in progress</warning>
 
 ### Game HUD
 
-<warning>This section is work in progress</warning>
+<warning>Section work in progress</warning>
 
 # Game Description
 

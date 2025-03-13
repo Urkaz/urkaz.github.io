@@ -2,7 +2,7 @@
 
 # My role
 
-<warning>This section is work in progress</warning>
+<warning>Section work in progress</warning>
 
 # Game Description
 
