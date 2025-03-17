@@ -3,11 +3,13 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "swiper/css";
 import "swiper/css/navigation"; //left-right arrows
 import "swiper/css/pagination"; //dots
 
 import styles from "@styles/components/thirdparty/swiper.module.scss";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const RichSlide = ({ image, singleSlide }) => {
     const [isRevealed, setIsRevealed] = useState(false);
@@ -19,7 +21,7 @@ export const RichSlide = ({ image, singleSlide }) => {
     };
 
     return (<SwiperSlide>
-        <img src={image.src} alt={image.alt} className={image.spoiler && !isRevealed ? styles["image-spoiler"] : null} />
+        <LazyLoadImage src={image.src} className={image.spoiler && !isRevealed ? styles["image-spoiler"] : null} alt={image.alt} effect="blur" />
         {image.alt ? <div className={`${styles["image-description"]} ${!singleSlide ? styles["padded"] : null}`}>
             {image.alt}
         </div>
