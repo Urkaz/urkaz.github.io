@@ -7,11 +7,12 @@ export const MarkdownCodeBlock = ({ children, className, node, ...rest }) => {
         <SyntaxHighlighter
             {...rest}
             PreTag="div"
-            children={String(children).replace(/\n$/, '')}
             language={match[1]}
             style={atomDark}
             showLineNumbers={true}
-        />
+        >
+            {String(children).replace(/\n$/, '')}
+        </SyntaxHighlighter>
     ) : (
         <code {...rest} className={className}>
             {children}
