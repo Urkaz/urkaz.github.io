@@ -12,6 +12,11 @@
         object-fit: contain;
     }
 
+    :global(.swiper-slide) > * {
+        width: 100%;
+        height: 100%;
+    }
+
     :global(.swiper-button-prev),
     :global(.swiper-button-next) {
         color: var(--accent-color);
