@@ -15,7 +15,7 @@ This type of game is given to having many levels, being each one a puzzle with a
 
 I wanted the levels to be created by me and by other designers, so I created a simple puzzle generator python script that transformed human readable text files like the one below into a custom .dat data format that the game could read and interpret to generate the puzzles at runtime.
 
-```
+```xml
 5
 5
 00100
@@ -29,7 +29,7 @@ Autor
 
 The puzzle packs in the puzzle selection menu were also generated in the same way from readable text files to data files:
 
-```
+```xml
 0 13 14 0 0
 15 0 16 17 0
 0 0 18 0 0
