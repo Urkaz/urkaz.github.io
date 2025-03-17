@@ -22,6 +22,7 @@ const Education = () => {
                 sectionId={styles["experience"]}
             >
                 <div className="row">
+                    <h1>Education</h1>
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
@@ -41,6 +42,7 @@ const Education = () => {
                                     <li>AI programming in C++.</li>
                                     <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI).</li>
                                     <li>Audio programming using OpenAL in C++.</li>
+                                    <li>Unity game development.</li>
                                 </ul>
                                 {/*<Link href="/education/utad" className={styles["button"]}>
                                     More details
