@@ -122,21 +122,68 @@ The Save Preset menu allows the designers to choose the tags for each chunk cont
     /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
 </gallery>
 
-### Girl costume selection UI
+### UI programming
 
-<warning>Section work in progress</warning>
+I did the programming of most menus and UIs. This was my first time working with Unreal UMG system, but I tried to create small and reusable widgets for everything (tooltips, icons, girl protraits, progress bars, etc), and spawn them dynamically when needed instead of having them already placed in parent widgets (to avoid having extra things loaded when not needed).
 
-### Level selection UI
+Below you can see a brief description of each menu and a few screenshots.
 
-<warning>Section work in progress</warning>
+#### Girl costume selection UI
 
-### Inventory UI
+This menu was a bit challenging to make, as it required the girls to be always displayed on the screen with changeable costumes. Loading and spawning the Skeletal Meshes each time a costum was changed take a lot of time, so I decided to create a special character with all costumes loaded and synced with the same animation, so selecting a costume would require only to hide the old and show the new one. The girls are displayed in the UI using a render target.
 
-<warning>Section work in progress</warning>
+After finishing the selection, a transformation animation is played, this reuses the special characters with all Skeletal Meshes, allowing a seamless transition with some extra decorative effects.
 
-### Game HUD
+<gallery>
+    /img/games/screenshots/rhs/costume1.png | Costume selection menu, hovering a costume shows a comparison of their stats.
+    /img/games/screenshots/rhs/tr1.png | Transformation sequence after confirming the costumes.
+    /img/games/screenshots/rhs/tr2.png | Transformation sequence after confirming the costumes.
+</gallery>
 
-<warning>Section work in progress</warning>
+#### Level selection UI
+
+The level selection UI was the map of a metro network. The missions were generated procedurally (by another programmer) so I had to read the data and generate the UI. The challenge here was figuring out how to correctly spawn things in their correct positions, dynamically, as each game run had different missions and connections.
+
+<gallery>
+    /img/games/screenshots/rhs/metro1.png | An example of dynamically created level selection menu.
+    /img/games/screenshots/rhs/metro2.png | Another example of dynamically created level selection menu.
+    /img/games/screenshots/rhs/metro3.png
+</gallery>
+
+#### Inventory UI
+
+The inventory menu required displaying the girl stats and abilities, and it allowed equipping gems that changed the girl stats in real time. The equipment of the gems was made with a simple drag and drop from the "Inventory" area to the "Equipped Gems" area. The girl image is displayed in the UI using a render target of an spawned girl somewhere in the background.
+
+<gallery>
+    /img/games/screenshots/rhs/inventory1.png | Gem descriptions and stats changes.
+    /img/games/screenshots/rhs/inventory2.png | Drag and drop of gems.
+    /img/games/screenshots/rhs/inventory3.png | Insufficient magic points.
+</gallery>
+
+#### Game HUD
+
+The game HUD is main source of information the player has during the gameplay. I created multiple widgets that I reused for other menus, like the portraits, bars, tooltips, buttons, status icons, etc. This HUD also had buttons to interact with the Grid on the right sie, changing the visualization of it.
+
+One of the most challenging thins in the game HUD was the display of the small health bars and their ailments. All elements in those bars were synced with a lot of events with the game flow, so they had to react accodringly and also play some animations to help the player know what was happening. They were quite problematic as those events triggering widget animations sometimes caused crashes due to the syncronization of the animations and the real effects.
+
+<gallery>
+    /img/games/screenshots/rhs/hud1.png | Main HUD of the game.
+    /img/games/screenshots/rhs/hud2.png | Example of the mini health bars, ailments, and damage numbers.
+    /img/games/screenshots/rhs/hud3.png | Start turn notice.
+</gallery>
+
+#### Results and Progression
+
+After finishing a mission, the player obtains some rewards and can level up the girls if they gained enough experience during the battle. Additionally, at the end of a run the player gained some items and unlocked new costumes for the girst with a progression system we had.
+
+Both menus were simple to create, and reused a lot of widgets already created for all previous menus.
+
+<gallery>
+    /img/games/screenshots/rhs/results1.png | Results screen after finishing a mission.
+    /img/games/screenshots/rhs/results2.png | Level up screen.
+    /img/games/screenshots/rhs/progression1.png | Run progression screen, unlocking things for the next run.
+    /img/games/screenshots/rhs/progression2.png | Rewards notification.
+</gallery>
 
 # Game Description
 
