@@ -4,6 +4,12 @@
 
 <warning>Section work in progress</warning>
 
+## Challenges
+
+### Dynamic Meshes
+
+<warning>Section work in progress</warning>
+
 # Game Description
 
 ## Quantum Fields Inc.

@@ -15,13 +15,13 @@ export const MarkdownGallery = ({ children }) => {
         .filter((img) => img.src !== ""); // Filter empty lines
 
     return (
-        <div className="row">
-            <div className={`col-lg-8 ${styles["centered-gallery"]}`}>
+        <span className="row">
+            <span className={`col-lg-8 ${styles["centered-gallery"]}`}>
                 <GallerySwiper
                     imageList={images}
                     autoplayEnabled={false}
                 />
-            </div>
-        </div>
+            </span>
+        </span>
     );
 };

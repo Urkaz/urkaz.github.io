@@ -17,12 +17,15 @@
         "aos": "^2.3.4",
         "bootstrap": "^5.3.3",
         "isotope-layout": "^3.0.6",
-        "markdown-to-jsx": "^7.7.4",
         "next": "15.2.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-lazy-load-image-component": "^1.6.3",
+        "react-markdown": "^10.1.0",
+        "react-syntax-highlighter": "^15.6.1",
         "react-text-gradients": "^1.0.2",
+        "rehype-raw": "^7.0.0",
+        "remark-gfm": "^4.0.1",
         "swiper": "^11.2.4"
     },
     "devDependencies": {
