@@ -49,7 +49,11 @@ export function Navbar() {
             <nav id={styles["navmenu"]} className={styles["navmenu"]}>
                 <ul>
                     {Object.entries(Sections).map(([key, section]) => (
-                        <NavItem key={key} to={section.path} pathname={pathname} onClick={toggleMenu}>
+                        <NavItem key={key} to={section.path} pathname={pathname} onClick={() => {
+                            if (document.body.classList.contains(styles["mobile-nav-active"]))
+                                toggleMenu();
+                        }
+                        }>
                             {section.sectionName}
                         </NavItem>
                     ))}
