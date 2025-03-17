@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
+import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
 import { MarkdownGallery } from "@components/thirdparty/markdown/MarkdownGallery";
