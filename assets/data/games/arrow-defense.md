@@ -15,15 +15,17 @@ One of the things we wanted the game to have was a list of multiple levels, but 
 
 Those files allowed us to define the porperties of the level (time, points, lives, etc), the probability of each arrow spawn, victory conditions, if the level had a fog layer amd the position of the soldiers platforms:
 
-    <Level>
-        <properties time="120" points="600" lives="1" health="50" spawnMin="1" spawnMax="2.3" />
-        <arrow type="normal" prob="50" vel="1"/>
-        <arrow type="fire" prob="25" vel="1.5"/>
-        <arrow type="ice" prob="25" vel="1.5"/>
-        <panel type="fog"><status>false</status></panel>
-        <soldier x="10" y="340" armor="1" platfLength="150" />
-        <soldier x="20" y="220" armor="3" platfLength="300" />
-    </Level>
+```xml
+<Level>
+    <properties time="120" points="600" lives="1" health="50" spawnMin="1" spawnMax="2.3" />
+    <arrow type="normal" prob="50" vel="1"/>
+    <arrow type="fire" prob="25" vel="1.5"/>
+    <arrow type="ice" prob="25" vel="1.5"/>
+    <panel type="fog"><status>false</status></panel>
+    <soldier x="10" y="340" armor="1" platfLength="150" />
+    <soldier x="20" y="220" armor="3" platfLength="300" />
+</Level>
+```
 
 The level selector also had a custom XML with the level list and the properties of each level.
 
