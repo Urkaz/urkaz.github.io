@@ -77,6 +77,25 @@ const Education = () => {
                         </div>
                     </div>
                 </div>
+                <div className="row mt-4">
+                    <h1>Courses</h1>
+                    <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
+                        <div className={styles["experience-item"]}>
+                            <div className={styles["icon"]}>
+                                <img src="/img/experience/icons/udemy_logo.png"></img>
+                            </div>
+                            <div className={styles["experience-card"]}>
+                                <h4>Complete C# Unity 6 Game Developer 3D</h4>
+                                <h5>Udemy</h5>
+                                <p>
+                                <Link target="_blank" href="https://www.udemy.com/course/unitycourse2/" rel="noopener noreferrer" className={styles["button"]}>
+                                    View Course
+                                </Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </SectionContent>
         </>
     );
