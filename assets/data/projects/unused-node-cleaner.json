@@ -1,1 +1,54 @@
-{}
+{
+    "description": "\"Unused Node Cleaner\" is an Unreal Engine plugin that allows you to clean your blueprints from unused nodes that someone left somewhere and are still there to distract you.",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/unusednodecleaner/animated.gif"
+        },
+        {
+            "src": "/img/projects/unusednodecleaner/2.jpg"
+        },
+        {
+            "src": "/img/projects/unusednodecleaner/3.jpg"
+        },
+        {
+            "src": "/img/projects/unusednodecleaner/4.jpg"
+        },
+        {
+            "src": "/img/projects/unusednodecleaner/5.jpg"
+        },
+        {
+            "src": "/img/projects/unusednodecleaner/6.jpg"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Unreal Engine Plugin"
+        },
+        {
+            "left": "Engine versions",
+            "right": "4.25-5.5"
+        },
+        {
+            "left": "Language",
+            "right": "C++"
+        },
+        {
+            "left": "Price",
+            "right": "$14.99"
+        }
+    ],
+    "links": [
+        {
+            "id": "fa-solid fa-globe",
+            "text": "Fab",
+            "link": "https://www.fab.com/listings/e3d7a5b3-4696-4056-84d7-8d9c63954748"
+        },
+        {
+            "id": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/UnusedNodeCleaner"
+        }
+    ]
+}
