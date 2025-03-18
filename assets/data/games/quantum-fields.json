@@ -41,6 +41,11 @@
             "id": "fa-brands fa-itch-io",
             "text": "Itch.io",
             "link": "https://urkaz.itch.io/quantumfields"
+        },
+        {
+            "id": "fa-brands fa-github",
+            "text": "GitHub",
+            "link": "https://github.com/Urkaz/QuantumFields"
         }
     ]
 }
