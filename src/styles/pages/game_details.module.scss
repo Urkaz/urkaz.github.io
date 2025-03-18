@@ -64,4 +64,30 @@
     padding: 20px 20px 20px 20px;
     background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
     box-shadow: 3px 3px 0 0 var(--contrast-color);
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 0.3em;
+        overflow: hidden;
+        margin: 10px auto;
+    }
+
+    table td,
+    table th {
+        padding: 7px;
+    }
+
+    thead tr {
+        background-color: #2b2e31;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #1d1f21;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #242629;
+    }
 }
