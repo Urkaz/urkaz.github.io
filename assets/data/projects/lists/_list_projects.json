@@ -3,7 +3,7 @@
         "category": ["other"],
         "name": "Personal Webpage",
         "tag": "Webpage",
-        "hasSection": true,
+        "hasSection": false,
         "noLogo": true
     },
     "unused-node-cleaner": {
@@ -25,14 +25,14 @@
         "category": ["other"],
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Mod",
-        "hasSection": true,
+        "hasSection": false,
         "noLogo": true
     },
     "item-name-localized": {
         "category": ["other"],
         "name": "Item Name Localized",
         "tag": "World of Warcraft Addon",
-        "hasSection": true,
+        "hasSection": false,
         "noLogo": true
     },
     "penguin": {

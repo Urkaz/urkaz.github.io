@@ -16,11 +16,6 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, customRoute }) => {
     const pathname = usePathname();
 
-    {
-        /* @TODO TEMP DISABLED */
-    }
-    hasSection = hasSection & pathname != "/projects";
-
     const content = (
         <>
             <div className={`${styles["game-content"]} h-100 ${hasSection ? styles["selectable"] : null}`}>
