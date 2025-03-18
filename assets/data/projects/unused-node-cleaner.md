@@ -1,6 +1,16 @@
 
 # Overview
 
+# Challenges
+
+The development of the plugin required exploring how Blueprint Graphs and Nodes works on the Engine. This was one of the main challenges as each type of graph has its own specific nodes that I have to handle to avoid data loss when running the plugin.
+
+During the development I found that some graphs like Behavior Trees and EQS, although they support adding custom extensions to add my buttons, they never used those extensions and applied them. I had to open two pull requests ([PR-11958](https://github.com/EpicGames/UnrealEngine/pull/11958/files) and [PR-10345](https://github.com/EpicGames/UnrealEngine/pull/10345/files)) to fix this problem in the engine code. Both PR were accepted in UE 5.3 and UE 5.5, fixing the problem and making the plugin fully usable from engine menus on all supported graphs.
+
+Another challenge was maintaining multiple engine versions with the same code base and features. From Unreal 4.27 to 5.5 you can use the same plugin version with the same exact code and features (only limited by the engine bugs mentioned above).
+
+# Description
+
 ## Hide Unused
 
 While enabled the nodes that are not connected to any execution path (and their connections) will appear darker.
