@@ -1,116 +1,15 @@
 import React from "react";
-import fs from "fs";
-import path from "path";
-import { notFound } from "next/navigation";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { GallerySwiper } from "@components/thirdparty/Swiper";
-import { SectionContent } from "@components/common/SectionsContent";
-import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
-import { CustomMarkdown } from "@components/thirdparty/CustomMarkdown";
 
 import GameMetaData from "@assets/data/games/lists/_list_games.json";
 
-import styles from "@styles/pages/game_details.module.scss";
+import ProjectDescriptionID, { _generateStaticParams } from "@components/pages/ProjectDescriptionID";
 
 const GameDescription = async ({ params }) => {
-    const { id } = await params;
-
-    const jsonFilePath = path.join(process.cwd(), "assets", "data", "games", `${id}.json`);
-    const mdFilePath = path.join(process.cwd(), "assets", "data", "games", `${id}.md`);
-
-    if (!fs.existsSync(jsonFilePath) || !fs.existsSync(mdFilePath)) {
-        return notFound();
-    }
-
-    const fileContent = fs.readFileSync(jsonFilePath, "utf-8");
-    const gameData = JSON.parse(fileContent);
-    const gameMetaData = GameMetaData[id];
-
-    const markdownContent = fs.readFileSync(mdFilePath, "utf-8");
-
-    if (!gameData || !gameMetaData.hasSection) {
-        notFound();
-    }
-
-    return (
-        <>
-            <SectionContent title={gameMetaData.name} description={gameData.description} sectionId="gamedetails">
-                <div className="row">
-                    <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        {!gameData.hasGallery ? (
-                            <div className={styles["game-video"]}>
-                                <YoutubeVideo videoURL={gameData.video} />
-                            </div>
-                        ) : (
-                            <GallerySwiper imageList={gameData.gallery} />
-                        )}
-                    </div>
-                    <div className="col-lg-4">
-                        <div className={styles["game-info"]} data-aos="fade-up" data-aos-delay="200">
-                            <h3>Project Details</h3>
-                            <ul>
-                                {gameData.details?.map((detail, index) => {
-                                    return (
-                                        <li key={index}>
-                                            <strong>{detail.left}</strong>: {detail.right}
-                                        </li>
-                                    );
-                                })}
-
-                                {/*gameData.platforms ? (
-                                    <>
-                                        <li>
-                                            <strong>Platforms</strong>:{" "}
-                                            {gameData.platforms.map((platform, index) => {
-                                                return (
-                                                    <span key={index}>
-                                                        {platform.id} - {platform.link}
-                                                    </span>
-                                                );
-                                            })}
-                                        </li>
-                                    </>
-                                ) : null*/}
-
-                                {gameData.links ? (
-                                    <>
-                                        <li>
-                                            <div className="pill-links">
-                                                {gameData.links.map((link, index) => {
-                                                    return (
-                                                        <a key={index} target="_blank" href={link.link} rel="noopener noreferrer">
-                                                            <FontAwesomeIcon icon={`${link.id}`} /> {link.text}
-                                                        </a>
-                                                    );
-                                                })}
-                                            </div>
-                                        </li>
-                                    </>
-                                ) : null}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="row mt-4">
-                    <div className="col">
-                        <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
-                            <CustomMarkdown content={markdownContent} />
-                        </div>
-                    </div>
-                </div>
-            </SectionContent>
-        </>
-    );
+    return <ProjectDescriptionID params={params} metaData={GameMetaData} dataPath="assets/data/games" />;
 };
 
-export function generateStaticParams() {
-    return Object.keys(GameMetaData)
-        .filter((key) => GameMetaData[key].hasSection == true)
-        .map((key) => ({
-            id: key,
-        }));
+export async function generateStaticParams() {
+    return _generateStaticParams(GameMetaData);
 }
 
 export default GameDescription;
