@@ -18,10 +18,10 @@ My old webpage was a simple and static HTML site with a few section, but it was 
 
 With the problems from the old version in mind, I wanted to rewrite it entirely from scratch, and do so in a way that it was responsive to mobile, allowed me to reuse code and was made with modern tools.
 
-I found a static template that I liked to start the development, and started to rewrite everything with pure React. It was all good until I started needing more advanced features, like having dynamic routes with pregenerated content from json and markdown as I didn't want the clients to have all that work.
+The desing is based on the [Personal](https://bootstrapmade.com/personal-free-resume-bootstrap-template/) static template from [BootstrapMade](https://bootstrapmade.com/), but heavily modified to fit my needs. With it as a baseline, I started to rewrite everything with React. It was all good until I started needing more advanced features, like having dynamic routes with pregenerated content from json and markdown as I didn't want the clients to have all that work.
 
-Then I found Next.js, a React web development framework. I migrated everything to the needs of Next.js and thanks to it, I managed to get the result exactly as I wanted.
+Investigating about that I found Next.js, a React web development framework. I migrated everything to Next.js, having to rewrite a few things in the way, but thans to it I managed to get the result I wanted.
 
-Pages like this one (and all game and personal project descriptions) are dynamic routes that are pregenerated during build time using a json file for the metadata and video/main gallery, and a markdown file for the content and descriptions.
+Pages like this one (and all game and personal project descriptions) are dynamic routes that are pregenerated during build time using a json file for the metadata and video/main gallery, and a markdown file for the content and descriptions, reusing a lot of components and code, heling a lot with its maintentance.
 
 This is the first time I worked in a webpage made with React + Next.js, so sometimes it was a bit of trial and error until everything worked, but it was a nice learning experience with a better than expected final result!
