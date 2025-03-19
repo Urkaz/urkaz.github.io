@@ -8,7 +8,7 @@
         "selector": ".category-plugin"
     },
     {
-        "name": "Games",
+        "name": "Game Jams",
         "selector": ".category-jams"
     },
     {
