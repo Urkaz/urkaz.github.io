@@ -108,7 +108,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
 
 export function _generateStaticParams(metaData) {
     return Object.keys(metaData)
-        .filter((key) => metaData[key].hasSection == true)
+        .filter((key) => metaData[key].hasSection == true && !metaData[key].customRoute)
         .map((key) => ({
             id: key,
         }));
