@@ -4,59 +4,59 @@
         "selector": ""
     },
     {
-        "img": "/img/games/platforms/system_mini_steam.png",
+        "img": "/img/icons/mini_steam.png",
         "selector": ".category-steam"
     },
     {
-        "img": "/img/games/platforms/system_mini_deck.png",
+        "img": "/img/icons/mini_deck.png",
         "selector": ".category-deck"
     },
     {
-        "img": "/img/games/platforms/system_mini_windows.png",
+        "img": "/img/icons/mini_windows.png",
         "selector": ".category-windows"
     },
     {
-        "img": "/img/games/platforms/system_mini_ps4.png",
+        "img": "/img/icons/mini_ps4.png",
         "selector": ".category-ps4"
     },
     {
-        "img": "/img/games/platforms/system_mini_ps5.png",
+        "img": "/img/icons/mini_ps5.png",
         "selector": ".category-ps5"
     },
     {
-        "img": "/img/games/platforms/system_mini_vita.png",
+        "img": "/img/icons/mini_vita.png",
         "selector": ".category-vita"
     },
     {
-        "img": "/img/games/platforms/system_mini_xbo.png",
+        "img": "/img/icons/mini_xbo.png",
         "selector": ".category-xbo"
     },
     {
-        "img": "/img/games/platforms/system_mini_xsx.png",
+        "img": "/img/icons/mini_xsx.png",
         "selector": ".category-xsx"
     },
     {
-        "img": "/img/games/platforms/system_mini_switch.png",
+        "img": "/img/icons/mini_switch.png",
         "selector": ".category-switch"
     },
     {
-        "img": "/img/games/platforms/system_mini_wiiu.png",
+        "img": "/img/icons/mini_wiiu.png",
         "selector": ".category-wiiu"
     },
     {
-        "img": "/img/games/platforms/system_mini_android.png",
+        "img": "/img/icons/mini_android.png",
         "selector": ".category-android"
     },
     {
-        "img": "/img/games/platforms/system_mini_apple.png",
+        "img": "/img/icons/mini_apple.png",
         "selector": ".category-apple"
     },
     {
-        "img": "/img/games/platforms/system_mini_quest.png",
-        "selector": ".category-quest"
+        "img": "/img/icons/mini_meta.png",
+        "selector": ".category-meta"
     },
     {
-        "img": "/img/games/platforms/system_mini_win10.png",
+        "img": "/img/icons/mini_win10.png",
         "selector": ".category-win10"
     }
 ]

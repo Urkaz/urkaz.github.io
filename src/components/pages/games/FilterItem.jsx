@@ -8,7 +8,7 @@ export const FilterItem = ({ onClick, name, img, className }) => {
                     <>{name}</>
                 ) : (
                     <img
-                        src="/img/games/platforms/empty.png"
+                        src="/img/icons/empty.png"
                         style={{
                             WebkitMaskImage: `url(${img})`,
                             maskImage: `url(${img})`,

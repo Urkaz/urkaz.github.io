@@ -10,7 +10,7 @@
         "category": ["development", "porting"],
         "name": "Metamorphosis VR",
         "tag": "Porting, Development",
-        "platforms": ["quest"],
+        "platforms": ["meta"],
         "hasSection": false
     },
     "xuan-yuan-sword-7": {
