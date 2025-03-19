@@ -9,6 +9,7 @@ import { GallerySwiper } from "@components/thirdparty/Swiper";
 import { SectionContent } from "@components/common/SectionsContent";
 import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
 import { CustomMarkdown } from "@components/thirdparty/CustomMarkdown";
+import { CustomIcon } from "@components/common/CustomIcon";
 
 import styles from "@styles/pages/game_details.module.scss";
 
@@ -79,7 +80,8 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                                                 {projectData.links.map((link, index) => {
                                                     return (
                                                         <a key={index} target="_blank" href={link.link} rel="noopener noreferrer">
-                                                            <FontAwesomeIcon icon={`${link.id}`} /> {link.text}
+                                                            {link.iconType.includes("custom") ? <><CustomIcon img={link.icon}/> {link.text}</> :null}
+                                                            {link.iconType.includes("fontawesome") ? <><FontAwesomeIcon icon={link.icon} /> {link.text}</> :null}
                                                         </a>
                                                     );
                                                 })}

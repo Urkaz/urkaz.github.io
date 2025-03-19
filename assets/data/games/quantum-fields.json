@@ -38,12 +38,14 @@
     ],
     "links": [
         {
-            "id": "fa-brands fa-itch-io",
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-itch-io",
             "text": "Itch.io",
             "link": "https://urkaz.itch.io/quantumfields"
         },
         {
-            "id": "fa-brands fa-github",
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
             "text": "GitHub",
             "link": "https://github.com/Urkaz/QuantumFields"
         }

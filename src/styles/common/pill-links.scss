@@ -1,14 +1,11 @@
+.pill-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .pill-links svg {
     margin-right: 5px;
     font-size: 20px;
-}
-
-.pill-links a:first-child {
-    margin-left: 0px;
-}
-
-.pill-links a:last-child {
-    margin-right: 0px;
 }
 
 .pill-links a {
@@ -27,10 +24,22 @@
     transition: 0.3s;
     text-align: center;
     box-shadow: 3px 3px 0 0 var(--contrast-color);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .pill-links a:hover {
     background: color-mix(in srgb, var(--secondary-accent-color), transparent 20%);
     color: var(--contrast-color);
+}
+
+.pill-links a .custom-icon {
+    transition: 0.3s;
+    background: var(--default-color);
+}
+
+.pill-links a:hover .custom-icon {
+    background: var(--contrast-color);
+}
+.pill-links .custom-icon {
+    margin-right: 5px;
 }

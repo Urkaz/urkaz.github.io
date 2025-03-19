@@ -41,12 +41,14 @@
     ],
     "links": [
         {
-            "id": "fa-solid fa-globe",
+            "iconType": "custom",
+            "icon": "fab",
             "text": "Fab",
             "link": "https://www.fab.com/listings/e3d7a5b3-4696-4056-84d7-8d9c63954748"
         },
         {
-            "id": "fa-brands fa-github",
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
             "text": "Github",
             "link": "https://github.com/Urkaz/UnusedNodeCleaner"
         }

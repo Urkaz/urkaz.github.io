@@ -39,7 +39,8 @@
     ],
     "links": [
         {
-            "id": "fa-brands fa-github",
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
             "text": "Github",
             "link": "https://github.com/Urkaz/Project-Arrow"
         }

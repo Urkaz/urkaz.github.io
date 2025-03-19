@@ -80,7 +80,8 @@
 
 .hero :global(.pill-links) {
     margin-top: 25px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {

@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 
 import { cleanText } from "@src/components/functions";
+import { CustomIcon } from "@src/components/common/CustomIcon";
 
 import styles from "@styles/pages/games.module.scss";
 import 'react-lazy-load-image-component/src/effects/opacity.css';
@@ -42,7 +43,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                     {platforms ? (
                         <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
                             {platforms.map((item, index) => (
-                                <img key={index} src={`/img/games/platforms/system_mini_${item}.png`} />
+                                <CustomIcon img={`mini_${item}`} />
                             ))}
                         </h4>
                     ) : null}

@@ -38,7 +38,8 @@
     ],
     "links": [
         {
-            "id": "fa-brands fa-itch-io",
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-itch-io",
             "text": "Itch.io",
             "link": "https://frozenham-studios.itch.io/ronin-hood-sisters"
         }
