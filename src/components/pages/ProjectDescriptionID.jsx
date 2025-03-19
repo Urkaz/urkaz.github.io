@@ -75,13 +75,14 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
 
                                 {projectData.links ? (
                                     <>
+                                        <li><strong>External links</strong>:</li>
                                         <li>
                                             <div className="pill-links">
                                                 {projectData.links.map((link, index) => {
                                                     return (
                                                         <a key={index} target="_blank" href={link.link} rel="noopener noreferrer">
-                                                            {link.iconType.includes("custom") ? <><CustomIcon img={link.icon}/> {link.text}</> :null}
-                                                            {link.iconType.includes("fontawesome") ? <><FontAwesomeIcon icon={link.icon} /> {link.text}</> :null}
+                                                            {link.iconType.includes("custom") ? <><CustomIcon img={link.icon} /> {link.text}</> : null}
+                                                            {link.iconType.includes("fontawesome") ? <><FontAwesomeIcon icon={link.icon} /> {link.text}</> : null}
                                                         </a>
                                                     );
                                                 })}
