@@ -9,5 +9,6 @@ export const CustomIcon = ({ img }) => {
             maskImage: `url(/img/icons/${img}.png)`,
         }}
         className={`${styles["icon"]} custom-icon`}
+        alt=""
     />
 }

@@ -26,7 +26,7 @@ const Education = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/u_tad_logo.jpg"></img>
+                                <img src="/img/experience/icons/u_tad_logo.jpg" alt=""></img>
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Master&apos;s Degree in Video Game Programming</h4>
@@ -55,7 +55,7 @@ const Education = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/uji_logo.jpg"></img>
+                                <img src="/img/experience/icons/uji_logo.jpg" alt=""></img>
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Degree in Video game Design and Development</h4>
@@ -82,7 +82,7 @@ const Education = () => {
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
                             <div className={styles["icon"]}>
-                                <img src="/img/experience/icons/udemy_logo.png"></img>
+                                <img src="/img/experience/icons/udemy_logo.png" alt=""></img>
                             </div>
                             <div className={styles["experience-card"]}>
                                 <h4>Complete C# Unity 6 Game Developer 3D</h4>

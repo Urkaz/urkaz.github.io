@@ -13,6 +13,7 @@ export const FilterItem = ({ onClick, name, img, className }) => {
                             WebkitMaskImage: `url(${img})`,
                             maskImage: `url(${img})`,
                         }}
+                        alt=""
                     />
                 )}
             </li>

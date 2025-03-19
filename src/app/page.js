@@ -47,7 +47,7 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["img-container"]}>
-                            <img src="/img/home/photo.png" />
+                            <img src="/img/home/photo.png" alt="My photo"/>
                         </div>
                     </div>
                 </div>
