@@ -25,7 +25,7 @@
         "category": ["other"],
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Mod",
-        "hasSection": false,
+        "hasSection": true,
         "noLogo": true
     },
     "item-name-localized": {
