@@ -16,7 +16,7 @@
     "quantum-fields": {
         "category": ["development", "jams"],
         "name": "Quantum Fields",
-        "tag": "Game",
+        "tag": "Game - 2023 Epic MegaJam",
         "platforms": ["windows"],
         "hasSection": true,
         "customRoute": "/games/quantum-fields"
@@ -38,7 +38,7 @@
     "penguin": {
         "category": ["development", "jams"],
         "name": "Pengüin",
-        "tag": "Game",
+        "tag": "Game - I UJI Game Jam",
         "platforms": ["windows"],
         "hasSection": true,
         "noLogo": true,
@@ -47,7 +47,7 @@
     "purramid": {
         "category": ["development", "jams"],
         "name": "Purramid",
-        "tag": "Game",
+        "tag": "Game - 2016 Global Game Jam",
         "platforms": ["windows"],
         "hasSection": true,
         "customRoute": "/games/purramid"
