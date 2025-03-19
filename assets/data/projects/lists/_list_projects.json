@@ -3,7 +3,7 @@
         "category": ["other"],
         "name": "Personal Webpage",
         "tag": "Webpage",
-        "hasSection": false,
+        "hasSection": true,
         "noLogo": true
     },
     "unused-node-cleaner": {
@@ -32,7 +32,7 @@
         "category": ["other"],
         "name": "Item Name Localized",
         "tag": "World of Warcraft Addon",
-        "hasSection": false,
+        "hasSection": true,
         "noLogo": true
     },
     "penguin": {

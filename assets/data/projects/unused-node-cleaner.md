@@ -1,5 +1,6 @@
-
 # Overview
+
+"Unused Node Cleaner" is an Unreal Engine plugin that allows you to clean your blueprints from unused nodes. The plugins adds two buttons on the blueprint graphs to allow hiding and cleaning the unused nodes.
 
 # Challenges
 

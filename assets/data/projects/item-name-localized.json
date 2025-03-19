@@ -1,1 +1,50 @@
-{}
+{
+    "description": "ItemNameLocalized is an addon that allows you to see in the Item and Spell tooltips their name in a different language, always keeping the original name.",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/itemnamelocalized/inl2.png"
+        },
+        {
+            "src": "/img/projects/itemnamelocalized/inl1.png"
+        },
+        {
+            "src": "/img/projects/itemnamelocalized/inl3.png"
+        },
+        {
+            "src": "/img/projects/itemnamelocalized/inl_link.jpg"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "World of Warcraft Addon"
+        },
+        {
+            "left": "Language",
+            "right": "Lua"
+        },
+        {
+            "left": "Project started",
+            "right": "2016"
+        },
+        {
+            "left": "Project status",
+            "right": "Discontinued in 2021"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "curseforge",
+            "text": "CurseForge",
+            "link": "https://www.curseforge.com/wow/addons/item-name-localized"
+        },
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/ItemNameLocalized"
+        }
+    ]
+}

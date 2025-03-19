@@ -1,1 +1,42 @@
-{}
+{
+    "description": "This project corresponds to this same webpage you are visiting right now!",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/personalwebpage/web2.png",
+            "alt": "Webpage inception"
+        },
+        {
+            "src": "/img/projects/personalwebpage/web3.png"
+        },
+        {
+            "src": "/img/projects/personalwebpage/web1.png"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Webpage"
+        },
+        {
+            "left": "Language",
+            "right": "HTML + CSS + Javascript"
+        },
+        {
+            "left": "Project started",
+            "right": "2025"
+        },
+        {
+            "left": "Project status",
+            "right": "Currently maintained"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/urkaz.github.io"
+        }
+    ]
+}
