@@ -166,7 +166,7 @@
     }
 
     &:hover {
-        cursor: pointer;
+        cursor: no-drop;
         border-color: var(--accent-color);
 
         .game-info {
@@ -179,6 +179,7 @@
     }
 
     &.selectable:hover {
+        cursor: pointer;
         transform: scale(1.05, 1.05);
     }
 
