@@ -8,12 +8,6 @@ This webpage serves as a porfolio for all my personal projects, education, and p
 
 My old webpage was a simple and static HTML site with a few section, but it was all but responsive, breaking everywhere when visited from mobile phones. It also had duplicate code all around that I had to modify each time I wanted to update something. At the beginning it was an ok way to do thins, but as it started growing, it started being a bit unmanageable, and in some cases like the timeline section, were a bit confusing to understand.
 
-<gallery>
-    /img/projects/personalwebpage/oldweb1.png | The homepage, it was always horizontal, even when viewed in mobiles.
-    /img/projects/personalwebpage/oldweb2.png | The games had duplicate HTML code all around, and the sidebar was unusable in mobile phones.
-    /img/projects/personalwebpage/oldweb3.png | This timeline started simple, bit it grow in time becoming a confusing mess.
-</gallery>
-
 ## New webpage (this one!)
 
 With the problems from the old version in mind, I wanted to rewrite it entirely from scratch, and do so in a way that it was responsive to mobile, allowed me to reuse code and was made with modern tools.
