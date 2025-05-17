@@ -38,11 +38,11 @@ const Education = () => {
                                     <FontAwesomeIcon icon={faLocationDot} /> Madrid, Spain (On-Site)
                                 </p>
                                 <ul>
-                                    <li>C++ programming using Unreal Engine 4.</li>
-                                    <li>AI programming in C++.</li>
-                                    <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI).</li>
-                                    <li>Audio programming using OpenAL in C++.</li>
-                                    <li>Unity game development.</li>
+                                    <li>Advanced C++ programming using Unreal Engine 4</li>
+                                    <li>AI programming in C++</li>
+                                    <li>C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI)</li>
+                                    <li>Audio programming using OpenAL in C++</li>
+                                    <li>Advanced Unity game development</li>
                                 </ul>
                                 {/*<Link href="/education/utad" className={styles["button"]}>
                                     More details
@@ -67,8 +67,8 @@ const Education = () => {
                                     <FontAwesomeIcon icon={faLocationDot} /> Castelló de la Plana, Castelló, Spain (On-Site)
                                 </p>
                                 <ul>
-                                    <li>Unity 3D.</li>
-                                    <li>Algorithms and Data structures.</li>
+                                    <li>Basic Unity 3D game development</li>
+                                    <li>Algorithms and Data structures</li>
                                 </ul>
                                 {/*<Link href="/education/uji" className={styles["button"]}>
                                     More details
