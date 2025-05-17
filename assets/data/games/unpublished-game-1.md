@@ -30,6 +30,8 @@ This was the first project that we ported to Steam Deck. It required further CPU
 
 To fully support Steam Deck, I implemented a few methods to detect the Steam Deck system language (something that Unreal doesn't do in 4.27) and to allow checking if the game was running on it or in a regular computer.
 
+Another problem that I had to fix in Steam Deck was a constat stuttering caused by the just-in-time shader compilation. To get rid of that stuttering I generated the PSO (Pipeline State Object) cache, which hold information about shaders and the state of the graphics pipeline to avoid shader compilation in runtime and prevent the stuttering.
+
 ### Save data refactor
 
 The game saved the progress very frequently, so to avoid having problems with certification (I'm looking at you, Nintendo Switch) I refactored how the game saved the data, queueing the different operations and only processing one save operation at a time, and setting a time interval between operations.
