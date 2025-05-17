@@ -3,22 +3,22 @@
     "hasGallery": true,
     "gallery": [
         {
-            "src": "/img/games/screenshots/penguin1.png"
+            "src": "/img/games/screenshots/penguin/penguin1.png"
         },
         {
-            "src": "/img/games/screenshots/penguin2.png"
+            "src": "/img/games/screenshots/penguin/penguin2.png"
         },
         {
-            "src": "/img/games/screenshots/penguin3.png"
+            "src": "/img/games/screenshots/penguin/penguin3.png"
         },
         {
-            "src": "/img/games/screenshots/penguin4.png"
+            "src": "/img/games/screenshots/penguin/penguin4.png"
         },
         {
-            "src": "/img/games/screenshots/penguin5.png"
+            "src": "/img/games/screenshots/penguin/penguin5.png"
         },
         {
-            "src": "/img/games/screenshots/penguin6.png",
+            "src": "/img/games/screenshots/penguin/penguin6.png",
             "spoiler": true,
             "alt": "Solution to the room with the red and green tiles"
         }

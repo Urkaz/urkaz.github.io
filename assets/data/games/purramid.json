@@ -3,22 +3,22 @@
     "hasGallery": true,
     "gallery": [
         {
-            "src": "/img/games/screenshots/purramid0.webp"
+            "src": "/img/games/screenshots/purramid/purramid0.webp"
         },
         {
-            "src": "/img/games/screenshots/purramid1.png"
+            "src": "/img/games/screenshots/purramid/purramid1.png"
         },
         {
-            "src": "/img/games/screenshots/purramid2.webp"
+            "src": "/img/games/screenshots/purramid/purramid2.webp"
         },
         {
-            "src": "/img/games/screenshots/purramid3.webp"
+            "src": "/img/games/screenshots/purramid/purramid3.webp"
         },
         {
-            "src": "/img/games/screenshots/purramid4.png"
+            "src": "/img/games/screenshots/purramid/purramid4.png"
         },
         {
-            "src": "/img/games/screenshots/purramid5.jpg"
+            "src": "/img/games/screenshots/purramid/purramid5.jpg"
         }
     ],
     "details": [

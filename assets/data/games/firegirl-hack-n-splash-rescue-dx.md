@@ -24,11 +24,16 @@ The game ran at a decent performance, but it had 2 problems:
 * It used a lot of dynamic lights everywhere.
 * The spawning of some procedural rooms caused severe framedrops.
 
-#### 2D Light Max Draw Distance
+#### 3D Light Max Draw Distance
 
 The main optimization applied to the lights was the usage of the "Max Draw Distance" and "Max Distance Fade Range", but it was still enough due to the spherical nature this optimization has.
 
-I modified the implementation of all lights "Max Draw Distance" to allow using a 2D distance instead of using a circular radius. This allowed me fine tweaking all lights in the game and reduce the turned on area to the minimum needed for the compact rooms, getting a substantial FPS boost.
+I modified the implementation of all lights "Max Draw Distance" to allow using a 3D distance instead of using a circular radius. This allowed me fine tweaking all lights in the game and reduce the turned on area to the minimum needed for the compact rooms, getting a substantial FPS boost.
+
+<gallery>
+    /img/games/screenshots/firegirl/maxdrawvector.png | A new "Max Draw Distance" config for lights using a 3D vector
+    /img/games/screenshots/firegirl/maxdrawvectorvolume.png | The visualization of that config
+</gallery>
 
 #### Spreading the spawns
 
