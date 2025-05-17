@@ -46,7 +46,7 @@
         "name": "Unpublished Game #1",
         "tag": "Porting, Development",
         "platforms": ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"],
-        "hasSection": false
+        "hasSection": true
     },
     "quantum-fields": {
         "category": ["development"],
