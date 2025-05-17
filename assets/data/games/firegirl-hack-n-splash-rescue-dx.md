@@ -1,10 +1,6 @@
-# Overview
-
-Firegirl: Hack 'n Splash Rescue DX is a procedurally generated rogue like where you take the role of a young rescue officer.
-
 # My role
 
-I was the only developer working in the Switch port of the game.
+This was my first assignment in Catness Game Studios. I worked porting this game to Nintendo Switch in solitary, analyzing the code, performing CPU and GPU optimizations, and improving the engine code.
 
 ## Challenges
 

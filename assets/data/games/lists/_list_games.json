@@ -4,7 +4,7 @@
         "name": "American Arcadia",
         "tag": "Porting",
         "platforms": ["switch", "ps4", "xsx"],
-        "hasSection": false
+        "hasSection": true
     },
     "metamorphosis-vr": {
         "category": ["development", "porting"],

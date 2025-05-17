@@ -1,6 +1,6 @@
 # Overview
 
-Made with Unreal Engine 4 in 3 weeks as the final assignment for the "Unreal Engine" subject of the "Master's degree in Videogame Programming" at U-Tad.
+Made with Unreal Engine 4 in 3 weeks as the final assignment for the "Unreal Engine" subject of the "Master's degree in Videogame Programming" at U-Tad with other 4 people.
 
 Play cooperating with 3 more friends to defend the town against enemy waves of increasing difficulty. The game has 4 player characters with 1 attack and 1 special ability, and 4 enemies each one with different behavior and stats. Kill enemies to get the highest possible score.
 
@@ -36,7 +36,7 @@ Working in this game teached me how to manage multiple players and controllers i
 
 Also, as this was my first game made with Unreal, I had the oportunity to experiment and work with their C++ framework as we decided to avoid using Blueprint code for most components and elements.
 
-# Description
+# Game Description
 
 ## Player Characters
 

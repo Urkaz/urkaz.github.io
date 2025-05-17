@@ -29,7 +29,7 @@ Those files allowed us to define the porperties of the level (time, points, live
 
 The level selector also had a custom XML with the level list and the properties of each level.
 
-# Description
+# Game Description
 
 Tap the arrows on the screen to break them, and do it in the bottom panel to collect (obtaining twice the normal points) and make combos to counterattack.
 

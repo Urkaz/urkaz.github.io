@@ -38,7 +38,7 @@ The puzzle packs in the puzzle selection menu were also generated in the same wa
 Fruits
 ```
 
-# Description
+# Game Description
 
 ## Game modes
 

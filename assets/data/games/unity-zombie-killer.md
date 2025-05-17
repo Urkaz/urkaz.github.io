@@ -20,7 +20,7 @@ The State machine consisted in 5 states: Idle, Wandering, Chasing, Attacking and
 
 Que quest system was added in a few hours, consisting in a small list of hand crafted quests with some game objects linked to them. When a quest was selected, its target game objectsand some lights became available on the map.
 
-# Description
+# Game Description
 
 ## Massive map with objectives!
 

@@ -1,12 +1,10 @@
 # Overview
 
-
-
-Coordination, inventiveness and cat madness are essential to make use of the ancient secrets of Egypt!
+Game made in for the 2016 Global Game Jam in Unity.
 
 # My role
 
-I was in charge programming one of the traps.
+I was in charge programming the traps and its effects.
 
 ## Challenges
 
@@ -14,7 +12,7 @@ I was in charge programming one of the traps.
 
 This was my first time in a game jame, and it was also my first time working in a bigger team. This experience helped me coordinate with my colleagues in a more orderly manner.
 
-# Description
+# Game Description
 
 ## Controls
 

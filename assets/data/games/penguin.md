@@ -1,6 +1,6 @@
 # Overview
 
-Made on the first UJI GameJam in ~40h.
+This game was made in the first UJI GameJam in nearly 40h.
 
 # My role
 
