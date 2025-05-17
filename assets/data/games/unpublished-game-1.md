@@ -1,4 +1,4 @@
-# My rolev
+# My role
 
 I joined the team to only help with the Xbox Engagement screen, but it become a bigger problem and we expected, and with the sum of new bugs emmerging made me join the team permanently until the end of the development.
 
