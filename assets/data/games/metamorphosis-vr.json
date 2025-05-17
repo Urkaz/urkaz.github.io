@@ -25,9 +25,15 @@
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "switch"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "mini_meta",
+            "text": "Meta Store",
+            "link": "https://www.meta.com/es-es/experiences/metamorphosis/7251689061545022/"
+        }
+    ]
 }

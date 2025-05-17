@@ -1,6 +1,11 @@
 {
-    "description": "Wake up as Gregor, a boy turned into a cockroach! Solve puzzles, explore huge environments, and uncover the mystery of a strange Tower. Can you save your friend and return to humanity? Adventure, danger, and discovery await.",
-    "video": "https://www.youtube.com/embed/r221n-Tlf6A?si=uXQ-b3Su_rzOopox",
+    "description": "A frantic hack and slash couch-coop unnanounced project co-developed with Siver Entertainment.",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/games/screenshots/nintendo_shiver.webp"
+        }
+    ],
     "details": [
         {
             "left": "Company",
@@ -12,7 +17,7 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "3 Developers"
         },
         {
             "left": "Project Length",
@@ -25,9 +30,7 @@
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "switch"
         }
-    ],
-    "links": [{}]
+    ]
 }

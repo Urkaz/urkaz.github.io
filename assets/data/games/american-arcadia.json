@@ -1,6 +1,6 @@
 {
     "description": "American Arcadia is a cinematic puzzle game that combines a 2.5D platformer and first-person game to tell the tale of a thrilling escape. Experience the extraordinary story of Trevor, an average man escaping from the world's most popular reality tv show.",
-    "video": "https://www.youtube.com/embed/ARE0iL-HqC8?si=MuUYQF0yS55bCDFU",
+    "video": "https://www.youtube.com/embed/EVvHRnrveN8?si=KwPsIQVigNcRlBD9",
     "details": [
         {
             "left": "Company",
@@ -25,9 +25,21 @@
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "switch"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "mini_switch",
+            "text": "Nintendo eShop",
+            "link": "https://www.nintendo.com/us/store/products/american-arcadia-switch/"
+        },
+        {
+            "iconType": "custom",
+            "icon": "mini_ps5",
+            "text": "PlayStation Store",
+            "link": "https://store.playstation.com/es-es/product/UP2320-PPSA25653_00-AMERICANARCADIA0"
+        }
+    ]
 }

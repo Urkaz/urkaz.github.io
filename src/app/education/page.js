@@ -77,7 +77,7 @@ const Education = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row mt-4">
+                {/*<div className="row mt-4">
                     <h1>Courses</h1>
                     <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["experience-item"]}>
@@ -95,7 +95,7 @@ const Education = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </SectionContent>
         </>
     );

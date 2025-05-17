@@ -1,5 +1,5 @@
 {
-    "description": "Wake up as Gregor, a boy turned into a cockroach! Solve puzzles, explore huge environments, and uncover the mystery of a strange Tower. Can you save your friend and return to humanity? Adventure, danger, and discovery await.",
+    "description": "Take the role of the calm and reliable swordsman Taishi Zhao as he fights to protect his family and uncover the truth of a blight threatens all of China. With a story deeply rooted in ancient Chinese history and mythology, Xuan Yuan Sword 7 reimagines both as one fantastical and chaotic realm under the governance of a new Xin Dynasty.",
     "video": "https://www.youtube.com/embed/kewcAfA_1EU?si=2P6BMr6_UguaAGFR",
     "details": [
         {
@@ -12,22 +12,28 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "5 Developers"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "1 year"
         },
         {
             "left": "Engine",
-            "right": "Unreal Engine 4.27"
+            "right": "Unreal Engine 4.24-4.26"
         }
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "switch"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "mini_switch",
+            "text": "Nintendo eShop",
+            "link": "https://www.nintendo.com/us/store/products/xuan-yuan-sword-7-switch/"
+        }
+    ]
 }

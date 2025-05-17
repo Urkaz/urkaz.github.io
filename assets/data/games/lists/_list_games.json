@@ -39,7 +39,7 @@
         "name": "Firegirl: Hack 'n Splash Rescue DX",
         "tag": "Porting",
         "platforms": ["switch"],
-        "hasSection": false
+        "hasSection": true
     },
     "unpublished-game-1": {
         "category": ["development", "porting"],

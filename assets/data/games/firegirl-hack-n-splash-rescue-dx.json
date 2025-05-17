@@ -1,5 +1,5 @@
 {
-    "description": "Wake up as Gregor, a boy turned into a cockroach! Solve puzzles, explore huge environments, and uncover the mystery of a strange Tower. Can you save your friend and return to humanity? Adventure, danger, and discovery await.",
+    "description": "Take on the role of a young rescue officer starting her career. Armed with a trusty axe and high-pressure fire hose that also acts as a jetpack, Firegirl responds to emergency calls across the city. Can Firegirl save all the trapped civilians caught in each blaze? Can she uncover the truth of why these fires have engulfed the city? Find out in a mystery that goes all the way to the top…",
     "video": "https://www.youtube.com/embed/f1oOPx02ANM?si=jxPJ4Qc6Evh8lhyA",
     "details": [
         {
@@ -12,11 +12,11 @@
         },
         {
             "left": "Team Size",
-            "right": "4 Developers"
+            "right": "1 Developer"
         },
         {
             "left": "Project Length",
-            "right": "6 months"
+            "right": "4 months"
         },
         {
             "left": "Engine",
@@ -25,9 +25,15 @@
     ],
     "platforms": [
         {
-            "id": "switch",
-            "shop_link": ""
+            "id": "switch"
         }
     ],
-    "links": [{}]
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "mini_switch",
+            "text": "Nintendo eShop",
+            "link": "https://www.nintendo.com/us/store/products/firegirl-hack-n-splash-rescue-dx-switch/"
+        }
+    ]
 }

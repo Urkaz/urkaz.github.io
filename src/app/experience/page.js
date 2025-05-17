@@ -26,7 +26,7 @@ const Experience = () => {
                                 <h4>Unreal Tools Programmer & Porting Engineer</h4>
                                 <h5>Catness Game Studios</h5>
                                 <p>
-                                    <FontAwesomeIcon icon={faCalendarDays} /> December 2021 - March 2025 (3 years 3 months)
+                                    <FontAwesomeIcon icon={faCalendarDays} /> December 2021 - March 2025 (3 years 4 months)
                                 </p>
                                 <p>
                                     <FontAwesomeIcon icon={faLocationDot} /> Catelló de la Plana, Castelló, Spain (On-Site)
