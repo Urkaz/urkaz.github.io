@@ -17,7 +17,7 @@ This game required connecting more than one player, up to 4, during couch-coop g
 All those changes weren't an easy task, but it got worse when it was sent to certification and the QA team repoted that we weren't supporting Guest users (local users without an account linked). This required more changes to the plugin and to the engine, having to backport some parts of Xbox profile handling code from Unreal 5 to Unreal 4 and working with low level SDK calls.
 
 <gallery>
-    /img/games/screenshots/xboxmenu.webp | Words can't express how much I hate all those Xbox menus
+    /img/games/screenshots/xboxmenu.webp | Words can't express how much I hate user management in Xbox.
 </gallery>
 
 ### Multiplayer Switch controllers
