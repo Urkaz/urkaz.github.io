@@ -18,9 +18,5 @@
     "games": {
         "path": "/games",
         "sectionName": "Games"
-    },
-    "contact": {
-        "path": "/contact",
-        "sectionName": "Contact"
     }
 }
