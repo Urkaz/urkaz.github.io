@@ -33,6 +33,9 @@ export default function Home() {
                                 <span className={styles["sub"]}>4 years of experience</span> as <span>QA Technician</span>, I bring 7 years of
                                 experience in the game industry ready to face any challenge!
                             </p>
+                            <p>
+                                In this porfolio you will find an extensive explanation of all my personal and professional projects, experience, and formation.
+                            </p>
                         </div>
                         <p className={styles["sub-title"]}>More about me</p>
                         <div className={styles["description"]}>
