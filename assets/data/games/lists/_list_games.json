@@ -7,7 +7,7 @@
         "hasSection": true
     },
     "metamorphosis-vr": {
-        "category": ["development", "porting"],
+        "category": ["porting"],
         "name": "Metamorphosis VR",
         "tag": "Porting, Development",
         "platforms": ["meta"],
@@ -42,7 +42,7 @@
         "hasSection": true
     },
     "unpublished-game-1": {
-        "category": ["development", "porting"],
+        "category": ["porting"],
         "name": "Unpublished Game #1",
         "tag": "Porting, Development",
         "platforms": ["switch", "xbo", "xsx", "ps4", "ps5", "steam", "deck"],
