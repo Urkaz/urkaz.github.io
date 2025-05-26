@@ -16,6 +16,6 @@ The desing is based on the [Personal](https://bootstrapmade.com/personal-free-re
 
 Investigating about that I found Next.js, a React web development framework. I migrated everything to Next.js, having to rewrite a few things in the way, but thans to it I managed to get the result I wanted.
 
-Pages like this one (and all game and personal project descriptions) are dynamic routes that are pregenerated during build time using a json file for the metadata and video/main gallery, and a markdown file for the content and descriptions, reusing a lot of components and code, heling a lot with its maintentance.
+Pages like this one (and all game and personal project descriptions) are dynamic routes that are pregenerated during build time using a json file for the metadata and video/main gallery, and a markdown file for the content and descriptions, reusing a lot of components and code, helping a lot with its maintentance.
 
 This is the first time I worked in a webpage made with React + Next.js, so sometimes it was a bit of trial and error until everything worked, but it was a nice learning experience with a better than expected final result!
