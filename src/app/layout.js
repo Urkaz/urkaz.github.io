@@ -15,9 +15,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 // Prevent fontawesome from adding its CSS since we did it manually above:
 library.autoAddCss = false; /* eslint-disable import/first */
 // Add global icons
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { faItchIo, faGithub } from "@fortawesome/free-brands-svg-icons";
-library.add(faGlobe, faItchIo, faGithub);
+import { faGlobe, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faItchIo, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+library.add(faGlobe, faEnvelope, faItchIo, faGithub, faLinkedin);
 
 /* Style */
 import "@styles/global.scss";

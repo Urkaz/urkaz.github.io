@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faItchIo } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { LinearGradient } from "react-text-gradients";
+
+import {LinkPills, LinkPill} from "@components/common/LinkPills"
 
 import styles from "@styles/pages/home.module.scss";
 
@@ -55,25 +54,16 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="pill-links">
-                        <a target="_blank" href="mailto:fran.sanchez.rodrigo@gmail.com" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faEnvelope} /> fran.sanchez.rodrigo@gmail.com
-                        </a>
-                    </div>
+                    <LinkPills className={styles["pill-links"]}>
+                        <LinkPill link="mailto:fran.sanchez.rodrigo@gmail.com" iconType="fontawesome" icon="fa-solid fa-envelope" text="fran.sanchez.rodrigo@gmail.com" />
+                    </LinkPills>
                 </div>
                 <div className="row gy-4">
-                    <div className="pill-links">
-                        <a target="_blank" href="https://www.linkedin.com/in/fransanchezrodrigo/" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin} />
-                            LinkedIn
-                        </a>
-                        <a target="_blank" href="https://github.com/Urkaz" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub} /> GitHub
-                        </a>
-                        <a target="_blank" href="https://urkaz.itch.io/" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faItchIo} /> Itch.io
-                        </a>
-                    </div>
+                    <LinkPills className={styles["pill-links"]}>
+                        <LinkPill link="https://www.linkedin.com/in/fransanchezrodrigo/" iconType="fontawesome" icon="fa-brands fa-linkedin" text="LinkedIn" />
+                        <LinkPill link="https://github.com/Urkaz" iconType="fontawesome" icon="fa-brands fa-github" text="GitHub" />
+                        <LinkPill link="https://urkaz.itch.io/" iconType="fontawesome" icon="fa-brands fa-itch-io" text="Itch.io" />
+                    </LinkPills>
                 </div>
             </div>
         </section>
