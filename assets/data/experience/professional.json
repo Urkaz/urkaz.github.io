@@ -12,7 +12,7 @@
             "Plugin and tool development to ease the porting process to consoles: Xbox user management, PS5 activities, Switch controller handling, and other optimization tools",
             "Engine customizations with multiple bug fixes and improvements"
         ],
-        "hasButton": true,
+        "hasButton": false,
         "buttonLink": "/experience/catnessgamestudioss",
         "buttonText": "More details",
         "buttonExternal": false,
@@ -33,7 +33,7 @@
             "Experience using popular bug trackers like Jira, Mantis, Bitbucket, or GitHub",
             "Creating and maintaining tools to ease the tests (cmd scripts, input macros, etc)"
         ],
-        "hasButton": true,
+        "hasButton": false,
         "buttonLink": "/experience/lollipoprobot",
         "buttonText": "More details",
         "buttonExternal": false,
