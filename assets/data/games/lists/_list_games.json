@@ -18,7 +18,7 @@
         "name": "Xuan Yuan Sword 7",
         "tag": "Porting",
         "platforms": ["switch"],
-        "hasSection": false
+        "hasSection": true
     },
     "togges": {
         "category": ["porting"],
