@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
                     {children}
                 </main>
                 <ScrollToTop />
-                <Footer>{siteName}</Footer>
+                <Footer name={siteName}></Footer>
                 <BootstrapClient />
                 <AOSClient />
             </body>

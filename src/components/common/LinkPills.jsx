@@ -9,14 +9,14 @@ export function LinkPills({ children, className }) {
 
 export function LinkPill({link, iconType, icon, text}) {
     return <a className={styles["pill"]} target="_blank" href={link} rel="noopener noreferrer">
-        {iconType.includes("custom") ? <><CustomIcon img={icon} /> {text}</> : null}
+        {iconType.includes("custom") ? <><CustomIcon className={styles["custom-icon"]} img={icon} /> {text}</> : null}
         {iconType.includes("fontawesome") ? <><FontAwesomeIcon icon={icon} /> {text}</> : null}
     </a>
 }
 
 export function LinkDot({link, iconType, icon}) {
     return <a className={styles["dot"]} target="_blank" href={link} rel="noopener noreferrer">
-        {iconType.includes("custom") ? <CustomIcon img={icon} /> : null}
+        {iconType.includes("custom") ? <CustomIcon className={styles["custom-icon"]} img={icon} /> : null}
         {iconType.includes("fontawesome") ? <FontAwesomeIcon icon={icon} /> : null}
     </a>
 }
