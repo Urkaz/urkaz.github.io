@@ -8,7 +8,7 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place, remote, logo, bulletPoints, hasSection, linkParent, itemKey }) => {
+export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText }) => {
     let start_date = new Date(startDate);
     let end_date = new Date(endDate);
 
@@ -28,15 +28,18 @@ export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place
                         <p>
                             <FontAwesomeIcon icon={faCalendarDays} /> {start_month} {start_date.getFullYear()} - {end_month} {end_date.getFullYear()} ({getYearMonthDifference(start_date, end_date, true)} | {fullTime ? "Full-time" : "Part-time"})
                         </p>
-                        <p>
-                            <FontAwesomeIcon icon={faLocationDot} /> {place} {remote ? "(Remote)" : "(On-site)"}
-                        </p>
-                        <ul>
-                            {bulletPoints.map((point, index) => <li key={index}>{point}</li>)}
-                        </ul>
 
-                        {hasSection ? <Link href={`${linkParent}${itemKey}`} className={styles["button"]}>More details</Link>
-                            : ""
+                        {place ?
+                            <p><FontAwesomeIcon icon={faLocationDot} /> {place} {remote ? "(Remote)" : "(On-site)"}</p>
+                            : null
+                        }
+
+                        {bulletPoints ?
+                            <ul>{bulletPoints.map((point, index) => <li key={index}>{point}</li>)}</ul>
+                            : null}
+
+                        {hasButton ? <Link href={buttonLink} className={styles["button"]}>{buttonText}</Link>
+                            : null
                         }
 
                     </div>

@@ -18,10 +18,9 @@ const Experience = () => {
                 sectionId={styles["experience"]}
             >
                 <div className="row">
-                    {
-                    Object.entries(ExperienceList).map(([key, item], index) => (
+                    {Object.entries(ExperienceList).map(([key, item], index) => (
                         <div key={key}>
-                            <ExperienceItem {...item} itemKey={key} linkParent="/experience/" />
+                            <ExperienceItem {...item} />
                             {index != count-1 ? <ExperienceSeparator /> : null}
                         </div>
                     ))}
