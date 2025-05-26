@@ -29,7 +29,7 @@ export function Footer({ children }) {
                     </div>
                     <div className="container">
                         <div className={styles["credits"]}>
-                            Design based on{" "}
+                            {/*Design based on{" "}
                             <a target="_blank" href="https://bootstrapmade.com/personal-free-resume-bootstrap-template/" rel="noopener noreferrer">
                                 Personal
                             </a>{" "}
@@ -37,7 +37,7 @@ export function Footer({ children }) {
                             <a target="_blank" href="https://bootstrapmade.com" rel="noopener noreferrer">
                                 BootstrapMade
                             </a>
-                            .<br />
+                            .<br />*/}
                             Made with React+Next.js by <strong className="px-1 sitename">{children}</strong>.
                         </div>
                     </div>
