@@ -7,9 +7,10 @@
         "path": "/experience",
         "sectionName": "Experience"
     },
-    "education": {
-        "path": "/education",
-        "sectionName": "Education"
+    "formation": {
+        "path": "/formation",
+        "sectionName": "Formation"
+    },
     },
     "projects": {
         "path": "/projects",

@@ -15,7 +15,9 @@
         "hasButton": true,
         "buttonLink": "/experience/catnessgamestudioss",
         "buttonText": "More details",
+        "buttonExternal": false,
         "logo": "/img/experience/icons/catness_game_studios_logo.jpg",
+        "hideFullTime": false,
         "fullTime": true
     },
     "lollipoprobot": {
@@ -34,7 +36,9 @@
         "hasButton": true,
         "buttonLink": "/experience/lollipoprobot",
         "buttonText": "More details",
+        "buttonExternal": false,
         "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
+        "hideFullTime": false,
         "fullTime": true
     },
     "lollipoprobot_intern": {
@@ -49,6 +53,7 @@
         ],
         "hasButton": false,
         "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
+        "hideFullTime": false,
         "fullTime": false
     }
 }

@@ -8,12 +8,27 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText }) => {
-    let start_date = new Date(startDate);
-    let end_date = new Date(endDate);
+export const ExperienceItem = ({ name, site, startDate, endDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText, buttonExternal }) => {
+    const start_date = new Date(startDate);
+    const end_date = new Date(endDate);
 
     const start_month = start_date.toLocaleString('en', { month: 'long' });
     const end_month = end_date.toLocaleString('en', { month: 'long' });
+
+    let text = " ";
+    text += `${start_month} `; // Start month
+    text += `${start_date.getFullYear()} `; // Start year
+
+    text += hideEndDate ? "" : "- ";
+    text += hideEndDate ? "" : `${end_month} `; // End month
+    text += hideEndDate ? "" : `${end_date.getFullYear()} `; //End year
+
+    // hideEndDate also hides duration
+    text += hideFullTime && (hideEndDate || hideDuration) ? "" : "(";
+    text += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, end_date, true)}`;
+    text += hideEndDate || hideFullTime || hideDuration ? "" : " | ";
+    text += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
+    text += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
 
     return (
         <>
@@ -26,7 +41,7 @@ export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place
                         <h4>{name}</h4>
                         <h5>{site}</h5>
                         <p>
-                            <FontAwesomeIcon icon={faCalendarDays} /> {start_month} {start_date.getFullYear()} - {end_month} {end_date.getFullYear()} ({getYearMonthDifference(start_date, end_date, true)} | {fullTime ? "Full-time" : "Part-time"})
+                            <FontAwesomeIcon icon={faCalendarDays} />{text}
                         </p>
 
                         {place ?
@@ -38,7 +53,10 @@ export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place
                             <ul>{bulletPoints.map((point, index) => <li key={index}>{point}</li>)}</ul>
                             : null}
 
-                        {hasButton ? <Link href={buttonLink} className={styles["button"]}>{buttonText}</Link>
+                        {hasButton ?
+                            (buttonExternal ?
+                                <Link href={buttonLink} className={styles["button"]} target="_blank" rel="noopener noreferrer">{buttonText}</Link> :
+                                <Link href={buttonLink} className={styles["button"]}>{buttonText}</Link>)
                             : null
                         }
 

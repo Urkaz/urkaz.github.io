@@ -8,8 +8,6 @@ import ExperienceList from "@assets/data/experience/professional.json";
 import styles from "@styles/pages/experience.module.scss";
 
 const Experience = () => {
-    const count = Object.keys(ExperienceList).length;
-
     return (
         <>
             <SectionContent
@@ -21,7 +19,7 @@ const Experience = () => {
                     {Object.entries(ExperienceList).map(([key, item], index) => (
                         <div key={key}>
                             <ExperienceItem {...item} />
-                            {index != count-1 ? <ExperienceSeparator /> : null}
+                            {index != Object.keys(ExperienceList).length - 1 ? <ExperienceSeparator /> : null}
                         </div>
                     ))}
                 </div>

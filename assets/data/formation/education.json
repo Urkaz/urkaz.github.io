@@ -1,0 +1,42 @@
+{
+    "utadmaster": {
+        "name": "Master's Degree in Video Game Programming",
+        "site": "U-tad",
+        "startDate": "2020-10-01T00:00:00.000Z",
+        "endDate": "2021-10-01T00:00:00.000Z",
+        "hideEndDate": false,
+        "hideDuration": true,
+        "place": "Madrid, Spain",
+        "remote": false,
+        "bulletPoints": [
+            "Advanced C++ programming using Unreal Engine 4",
+            "AI programming in C++",
+            "C++ programming with OpenGL and other utility libraries (GLFW, STB Image, STB TrueType, NoesisGUI)",
+            "Audio programming using OpenAL in C++",
+            "Advanced Unity game development"
+        ],
+        "hasButton": false,
+        "buttonLink": "/formation/utadmaster",
+        "buttonText": "More details",
+        "buttonExternal": false,
+        "logo": "/img/experience/icons/u_tad_logo.jpg",
+        "hideFullTime": true
+    },
+    "ujivideogames": {
+        "name": "Degree in Video game Design and Development",
+        "site": "Universitat Jaume I",
+        "startDate": "2012-09-01T00:00:00.000Z",
+        "endDate": "2016-06-31T00:00:00.000Z",
+        "hideEndDate": false,
+        "hideDuration": true,
+        "place": "Castelló de la Plana, Castelló, Spain",
+        "remote": false,
+        "bulletPoints": [
+            "Basic Unity 3D game development",
+            "Algorithms and Data structures"
+        ],
+        "hasButton": false,
+        "logo": "/img/experience/icons/uji_logo.jpg",
+        "hideFullTime": true
+    }
+}
