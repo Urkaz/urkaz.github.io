@@ -1,0 +1,50 @@
+{
+    "catnessgamestudioss": {
+        "name": "Unreal Tools Programmer & Porting Engineer",
+        "site": "Catness Game Studios",
+        "startDate": "2021-12-01T00:00:00.000Z",
+        "endDate": "2025-03-31T00:00:00.000Z",
+        "place": "Catelló de la Plana, Castelló, Spain",
+        "remote": false,
+        "bulletPoints": [
+            "Game porting with Unreal Engine 4 and 5 to consoles (Xbox One, Xbox Series S|X, PS4, PS5, Switch, Steam Deck)",
+            "Plugin and tool development to expand the engine base functionality: custom device profiles, mesh instancing editor tools, project analysis tools, custom blueprint nodes, async loading screen, right-click editor extensions with custom tasks, and more",
+            "Plugin and tool development to ease the porting process to consoles: Xbox user management, PS5 activities, Switch controller handling, and other optimization tools",
+            "Engine customizations with multiple bug fixes and improvements"
+        ],
+        "hasSection": true,
+        "logo": "/img/experience/icons/catness_game_studios_logo.jpg",
+        "fullTime": true
+    },
+    "lollipoprobot": {
+        "name": "QA Technician",
+        "site": "Lollipop Robot",
+        "startDate": "2016-10-01T00:00:00.000Z",
+        "endDate": "2020-09-31T00:00:00.000Z",
+        "place": "Vila-real, Castelló, Spain",
+        "remote": false,
+        "bulletPoints": [
+            "Compliance and Playtesting for PS4, Xbox One, and Nintendo Switch",
+            "Designer support of the porting development for the platforms above",
+            "Experience using popular bug trackers like Jira, Mantis, Bitbucket, or GitHub",
+            "Creating and maintaining tools to ease the tests (cmd scripts, input macros, etc)"
+        ],
+        "hasSection": true,
+        "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
+        "fullTime": true
+    },
+    "lollipoprobot_intern": {
+        "name": "QA Tester Internship",
+        "site": "Lollipop Robot",
+        "startDate": "2016-02-01T00:00:00.000Z",
+        "endDate": "2016-07-31T00:00:00.000Z",
+        "place": "Vila-real, Castelló, Spain",
+        "remote": false,
+        "bulletPoints": [
+            "Playtesting for console games"
+        ],
+        "hasSection": false,
+        "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
+        "fullTime": false
+    }
+}

@@ -1,48 +1,53 @@
 import React from "react";
+import Link from "next/link";
+
+import { getYearMonthDifference } from "@components/functions"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faItchIo } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ children }) => {
+export const ExperienceItem = ({ name, site, startDate, endDate, fullTime, place, remote, logo, bulletPoints, hasSection, linkParent, itemKey }) => {
+    let start_date = new Date(startDate);
+    let end_date = new Date(endDate);
+
+    const start_month = start_date.toLocaleString('en', { month: 'long' });
+    const end_month = end_date.toLocaleString('en', { month: 'long' });
+
     return (
         <>
-            {/*Footer*/}
-            <footer id={styles["footer"]} className={`${styles["footer"]} dark-background`}>
-                <div className="container">
-                    <h3 className="sitename">{children}</h3>
-                    <div className={`${styles["social-links"]} d-flex justify-content-center`}>
-                        <a target="_blank" href="https://www.linkedin.com/in/fransanchezrodrigo/">
-                            <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
-                        <a target="_blank" href="https://github.com/Urkaz">
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a>
-                        <a target="_blank" href="https://urkaz.itch.io/">
-                            <FontAwesomeIcon icon={faItchIo} />
-                        </a>
-                        <a target="_blank" href="mailto:fran.sanchez.rodrigo@gmail.com">
-                            <FontAwesomeIcon icon={faEnvelope} />
-                        </a>
+            <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
+                <div className={styles["experience-item"]}>
+                    <div className={styles["icon"]}>
+                        <img src={logo} alt=""></img>
                     </div>
-                    <div className="container">
-                        <div className={styles["credits"]}>
-                            Design based on{" "}
-                            <a target="_blank" href="https://bootstrapmade.com/personal-free-resume-bootstrap-template/" rel="noopener noreferrer">
-                                Personal
-                            </a>{" "}
-                            from{" "}
-                            <a target="_blank" href="https://bootstrapmade.com" rel="noopener noreferrer">
-                                BootstrapMade
-                            </a>
-                            .<br />
-                            Made with React+Next.js by <strong className="px-1 sitename">{children}</strong>.
-                        </div>
+                    <div className={styles["experience-card"]}>
+                        <h4>{name}</h4>
+                        <h5>{site}</h5>
+                        <p>
+                            <FontAwesomeIcon icon={faCalendarDays} /> {start_month} {start_date.getFullYear()} - {end_month} {end_date.getFullYear()} ({getYearMonthDifference(start_date, end_date, true)} | {fullTime ? "Full-time" : "Part-time"})
+                        </p>
+                        <p>
+                            <FontAwesomeIcon icon={faLocationDot} /> {place} {remote ? "(Remote)" : "(On-site)"}
+                        </p>
+                        <ul>
+                            {bulletPoints.map((point, index) => <li key={index}>{point}</li>)}
+                        </ul>
+
+                        {hasSection ? <Link href={`${linkParent}${itemKey}`} className={styles["button"]}>More details</Link>
+                            : ""
+                        }
+
                     </div>
                 </div>
-            </footer>
+            </div>
         </>
     );
 };
+
+export const ExperienceSeparator = () => {
+    return <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
+        <div className={styles["experience-item-spacer"]}></div>
+    </div>;
+}
