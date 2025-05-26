@@ -21,6 +21,8 @@ export function Footer({ name }) {
                     <div className="container">
                         <div className={styles["credits"]}>
                             Made with React+Next.js by <strong className="px-1 sitename">{name}</strong>.
+                            <br />
+                            All trademarks, logos, and brand names are the property of their respective owners. Their use on this website is for identification only and does not imply endorsement.
                         </div>
                     </div>
                 </div>
