@@ -26,7 +26,7 @@ const Games = () => {
                         <br />
                         Filter by my role in the creative process and by the platforms I&apos;ve worked on.
                         <br />
-                        Click on any game marked with the <FontAwesomeIcon icon={faLink} /> icon to be redirected to a page with more details of the game, and my role in its development.
+                        Click on any game marked with the <FontAwesomeIcon icon={faLink} /> icon to be redirected to a page with more details of the game, and a detailed explanation of everything I did during its development.
                     </>
                 }
                 sectionId="games"
