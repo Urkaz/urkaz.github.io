@@ -1,20 +1,26 @@
 # Overview
 
-Made with Unreal Engine 4 as the final project for the "Master's degree in Videogame Programming" at U-Tad. We worked simulating the real production of a videogame, altogether with students from the Art and Design master's degrees from U-tad, as well as a game Producer from a real company. Starting from an idea selection, through a prototype phase and then a production phase.
+This project was developed in Unreal Engine 4 as the final assignment for the "Master's degree in Videogame Programming" at U-Tad. We simulated the real-world development of a video game, collaborating with students from the Art and Design master's degrees and a professional game producer from the industry. The process followed a standard production pipeline, beginning with idea selection, followed by prototyping, and concluding with a full production phase.
 
 # My role
 
-I was designated as the representative of the programming team for all meetings, coordinating all programmers with the design and art team, and keep track of tasks during the dailies, keeping an active communication between almost everyone involved in the project.
+I was appointed as the programming team representative in all meetings, acting as the main point of communication between the programmers and the design and art departments. I also coordinated task tracking during our daily meetings and helped maintain clear, ongoing communication between almost everyone involved in the project.
 
-For the programming part, I was in charge the generation and destruction of game world, and the development of a tool to help the designers with the creation of it. I also did the programming of the fog of war effect, the props, and the UI from costume selection menu, level selection menu, the inventory, and the in-game HUD.
+On the technical side, I was responsible for:
+
+- Designing and implementing the game world generation and destruction systems.
+- Developing an internal tool to help designers create the world more efficiently.
+- Programming the fog of war effect.
+- Creating and integrating in-game props.
+- Implementing all UI elements related to costume selection, level selection, inventory, and the in-game HUD.
 
 ## Challenges
 
 ### Game World
 
-I was in charge of creating the classes and structures that represented the game world from the beggining to the end of the end of the development. This is a core element for the game and evolved through the time to add extra functionalities that all the other teams needed (Programming, Design and Art).
+I was responsible for designing and implementing the classes and structures that represented the game world, from the very beginning of development all the way through to the final version. This system was a core component of the game and evolved over time to incorporate additional functionality required by the other teams (Programming, Design, and Art).
 
-The game world is composed by something that we called "the Grid". At the same time, the Grid is made up of Chunks, rectangular areas of the map that represented prebuilt areas. And furthermore, each Chunk is made of Tiles, cubes that represent the minimal unit of the world.
+The game world was built using a structure we referred to as "the Grid". This Grid was composed of Chunks, which were rectangular sections of the map representing prebuilt areas. Each Chunk, in turn, consisted of multiple Tiles, individual cubes that served as the smallest building blocks of the world.
 
 <gallery>
     /img/games/screenshots/rhs/grid.png | The entire Grid
@@ -22,24 +28,27 @@ The game world is composed by something that we called "the Grid". At the same t
     /img/games/screenshots/rhs/tile.png | A single Tile
 </gallery>
 
-#### The Grid
-
-One of the challenges that we faced in one of the first prototypes was the rendering of all tiles. We tried approaching them as 1 tile = 1 actor, but that made the game struggle a lot on the render thread as each mesh was generating multiple draw calls (and in a flat surface we already had 2.401 tiles each with its own mesh!).
+#### Optimizing Grid Rendering
 
 Because ot this, we decided to change how the Grid was structured for the final game, making it a single Actor with multiple [Instanced Mesh Components](https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine) (one for each different mesh, rendering all identical meshes in a single pass). The Instanced Mesh Component approach made the game run at very conmfortable FPS, significantly improving performance in every aspect. The Tiles ended being UObjects that only stored data.
 
-The tile destruction added one level of complexity to the Grid, generating two different problems:
+To resolve this, we restructured the Grid for the final version of the game, implementing it as a single Actor containing multiple Instanced Mesh Components[Instanced Mesh Components](https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine). This allowed all identical meshes to be rendered in a single draw call per type, drastically improving performance and ensuring stable, high frame rates. As a result, Tiles were converted into lightweight UObjects that only stored data, completely separating rendering from logic.
 
-- Each time a tile was destroyed, the neighbors of that tile had to be regenerated to allow the patfinding pass through the new hole when allowed.
-- As mentioned earlier, Tiles were only UObjects that store data. One of those variables was the index of its mesh in the Instanced Static Mesh. Removing a single instanced from an Instanced Mesh changed the indexes from the list (for example, removing a tile in the first position from a list of 5 elements made all stored indexes invalid). To fix this we had to create an special Instanced Mesh Component class that handled this special case. Additionally to the removal, the rubble that appears from a destoyed tile is created from a new spawned actor that contains a copy of the tile, but with a Destructible Mesh generated with [Apex Destruction](https://dev.epicgames.com/documentation/en-us/unreal-engine/apex?application_version=4.27).
+#### Tile Destruction System
 
-#### Tiles from Data
+Tile destruction introduced an additional layer of complexity to the Grid system, leading to two main challenges:
 
-The Tiles are 100% made from data contained in a Data Table. Each tile is represented by a different row, allowing visual customization for the artists and designers.
+- Whenever a tile was destroyed, its neighboring tiles needed to be regenerated to ensure the pathfinding system could correctly recognize and navigate through the newly created gap when permitted.
+- As mentioned earlier, Tiles were implemented as data-only UObjects, and one of their stored properties was the index of their corresponding mesh instance in the Instanced Static Mesh Component. The issue arose when removing a single instance: doing so would shift the indices of the remaining instances (e.g., deleting the first tile in a list of five would invalidate the stored indices of all subsequent tiles). To address this, we developed a custom Instanced Mesh Component class capable of handling these index changes safely. Additionally, when a tile is destroyed, the resulting debris is spawned as a separate Actor that contains a copy of the original tile, but uses a Destructible Mesh generated with[Apex Destruction](https://dev.epicgames.com/documentation/en-us/unreal-engine/apex?application_version=4.27).
+- Destroying tiles required handling things like removing attached Props or making Entities fall if they were standing on them.
 
-In addition to this, a tile could contain other things, like Props, Entities or Elements.
+#### Data-Driven Tiles
 
-A tile can be destroyed, but some special tiles are protected against destruction (at the designer's discretion, see Map Tool below). We had Bedrock tiles, that were completely indestructible, and Foundation tiles, that spawned a new Tile when destroyed (for example, to represent the foundation of a destroyed building). Tile destruction was another challenge, as it had to for example, handle the destruction of all attached props, or make Entities fall if they were standing on it.
+Tiles are entirely defined by data stored in a Data Table, with each row representing a different type of tile. This setup gave artists and designers full control over the visual customization of each tile.
+
+Beyond that, tiles could also include additional elements like Props, Entities, or Elements.
+
+Tiles could be destroyed, though some special ones were protected (at the designer's discretion, see Map Tool below).For example, Bedrock tiles were indestructible, while Foundation tiles spawned a new tile when broken (for example, to represent the foundation of a destroyed building).
 
 <gallery>
     /img/games/screenshots/rhs/tiletypes.png | The Tile types data table
@@ -49,21 +58,21 @@ A tile can be destroyed, but some special tiles are protected against destructio
 
 #### Fog of War
 
-The last challenge in the game world was the implementation of the Fog of War. After analyzing multiple solutions I ended implementin a 2D system where the vision of the units was a cylinder.
+The final big challenge in the game world was implementing the Fog of War. After exploring several approaches, I went with a 2D system where each unit's vision was represented as a cylinder.
 
-It used a dynamic texture that the code painted black or white depending on the vision, with the capability to have an explored area between the real vision and the undicovered area. That texture was then applied and rendered in a postprocessing material that myself created.
+It used a dynamic texture that the code updated in real time, painting areas black or white depending on visibility, with support for a separate "explored" state between visible and hidden zones. This texture was then applied using a custom post-processing material I created.
 
-The system was almost standalone, ready to be used in any other project with minimal changes.
+The system ended up being almost standalone, easily reusable in other projects with minimal changes.
 
 <gallery>
-    /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same area with white pixels from the texture in the postprocess material.
+    /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same area with white pixels from the texture in the post-process material.
 </gallery>
 
 #### Props
 
-The Props are decorative objects that can be placed on Tiles. They can also be destroyed like the Tiles, but they activate an ability from the Ability System (made by other programmers) to generate an effect. They can be attached on each of the 6 sides of the Tiles, so if the containing tile was destroyed, the Props attached to it are destroyed too.
+Props were decorative but interactive objects attached to Tiles, capable of triggering abilities via our Ability System when destroyed. Props can be attached to any of the six sides of a Tile, so if the Tile is destroyed, the attached Props are destroyed as well.
 
-The implementation of the Props changed multiple times as they requirements and needs changed, but after working closely with both the Design and Art teams, we made them as Blueprint implementale objects. The code managed all the complex code and then called specific events in the Blueprint side where the designers and artists could add extra code. This allowed creating more complex props with more Actor Components (lights, sounds, VFX, etc) that still reacted accordingly to each situation.
+Their implementation went through several iterations as requirements evolved, but after close collaboration with the Design and Art teams, we made them Blueprint-implementable. The core logic was handled in code, which then called events on the Blueprint side, allowing designers and artists to add their own behavior. This made it possible to create more complex Props with components like lights, sound, and VFX, while still ensuring they responded properly to different situations.
 
 <gallery>
     /img/games/screenshots/rhs/prop.png | The prop with 2 meshes, partices and sound.
@@ -72,12 +81,12 @@ The implementation of the Props changed multiple times as they requirements and 
 
 ### Map tool
 
-The Map Tool is an Engine module that contains all code that provides the designers with a tool to create the different parts of the world (called "Presets" in our game, consisting on individual buildings made of multiple chunks).
+The Map Tool is an Engine module that includes all the code needed to give designers a way to build the different parts of the game world, called "Presets" in our project, which are essentially individual buildings composed of multiple chunks.
 
-Using a cutom button in the editor toolbar, the designers could open the tool, which opened two editor tabs containing on editor widget each:
+By clicking a custom button added to the editor toolbar, designers could open the tool, which launched two editor tabs, each with its own editor widget:
 
-- The first one of the tabs contains a full list of the Tiles existing in the Tiles Data table mentioned earlier in the Tiles from Data section, being each tile a button with a visual representation of the mesh with all its default materials. Clickin on a Tile spawns it in the editor viewport as an actor.
-- The other one contains multiple useful controls for manipulating the spawned tiles, the current selection and teir visibility. It also allows loading, saving and deleting presets from the data table.
+- One tab showed a complete list of the Tiles from the Data Table mentioned earlier (see "Data-Driven Tiles"). Each Tile appeared as a button with a visual preview of its mesh and default materials. Clicking on one would spawn it as an actor in the editor viewport.
+- The other tab provided various tools for manipulating the spawned Tiles, managing the current selection, and adjusting visibility. It also allowed designers to load, save, and delete Presets from the Data Table.
 
 <gallery>
     /img/games/screenshots/rhs/maptool.png | Two new tabs are opened when using the Map Tool. One in the left with different tools and controls. One in the bottom panel with a list of all existing Tiles.

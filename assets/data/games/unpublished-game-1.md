@@ -1,20 +1,20 @@
 # My role
 
-I joined the team to only help with the Xbox Engagement screen, but it become a bigger problem and we expected, and with the sum of new bugs emmerging made me join the team permanently until the end of the development.
+I initially joined the team to help exclusively with the Xbox Engagement screen, but the task turned out to be more complex than expected. As new bugs began to surface, I ultimately stayed on the project full-time until the end of development.
 
-The game was a co-development project with Shiver Entertainment. We received the game almost finished the main goal was fixing bugs and polishing the game to reach a gold version for Steam, while porting it to all console platforms.
+The game was a co-development effort with Shiver Entertainment. We received the project nearly finished, with our primary responsibilities being bug fixing and polishing to reach the gold version for Steam, while also handling the porting process to all console platforms.
 
-We worked closely with the producer from Shiver Entertainment and with a QA team that tested the game in a daily basis, so we had to priorize the bugs according to the producer needs and communicate with the QA team.
+We worked closely with the producer at Shiver Entertainment and a QA team that tested the game daily. As a result, we had to prioritize bugs based on the producer's needs and maintain clear communication with QA.
 
 ## Challenges
 
 ### Multiplayer Xbox Engagement screen
 
-In all of our portsd to Xbox we had to implement an interactive engagement screen where the user could press a button to select the initial user, and also react to all controller and user disconnection and changes in real time. As we were reusing old code, I decided to create a new plugin with all this code in a previous code, but it was completely focused in singleplayer games in mind.
+For all our Xbox ports, we were required to implement an interactive engagement screen where the user selects their profile by pressing a button, and also handle controller and user disconnections or changes in real time. While we had existing code for this, it was designed with single-player experiences in mind.
 
-This game required connecting more than one player, up to 4, during couch-coop games. To make this work I refactored most part of the Engagement plugin we already had to correctly handle multiple Xbox profiles and controllers at the same time.
+This game supported local co-op for up to four players, which meant the system had to handle multiple Xbox profiles and controllers simultaneously. To achieve this, I created a new plugin based on that older code, which was originally designed with single-player games in mind.
 
-All those changes weren't an easy task, but it got worse when it was sent to certification and the QA team repoted that we weren't supporting Guest users (local users without an account linked). This required more changes to the plugin and to the engine, having to backport some parts of Xbox profile handling code from Unreal 5 to Unreal 4 and working with low level SDK calls.
+Implementing these changes was already a challenge, but things became even more complicated during certification and the QA team reported that Guest users (local users without linked accounts) weren't correctly supported. Addressing this required additional modifications to both the plugin and the engine, including backporting parts of the Xbox profile handling code from Unreal Engine 5.1 to Unreal Engine 4.27, and working directly with low-level SDK functions.
 
 <gallery>
     /img/games/screenshots/unpublished1/xboxmenu.webp | Words can't express how much I hate user management in Xbox.
@@ -22,18 +22,18 @@ All those changes weren't an easy task, but it got worse when it was sent to cer
 
 ### Multiplayer Switch controllers
 
-In a similar but more simple way, I did some changes to the engine code handling the Nintendo Switch controllers to improve how and when the Controller Applet was displayed.
+Similarly, though less complex, I made modifications to the engine's code handling of Nintendo Switch controllers to improve how and when the Controller Applet was displayed.
 
 ### Steam Deck
 
-This was the first project that we ported to Steam Deck. It required further CPU and GPU optimization due to the lower specs compared to the other consoles.
+This was the first project we ported to Steam Deck, which demanded additional CPU and GPU optimizations due to its lower specs compared to other platforms.
 
-To fully support Steam Deck, I implemented a few methods to detect the Steam Deck system language (something that Unreal doesn't do in 4.27) and to allow checking if the game was running on it or in a regular computer.
+To properly support the Steam Deck, I implemented a method to determine whether the game was running on Steam Deck versus a regular PC, and a methord to detect the system language (something Unreal Engine 4.27 doesn't handle).
 
-Another problem that I had to fix in Steam Deck was a constat stuttering caused by the just-in-time shader compilation. To get rid of that stuttering I generated the PSO (Pipeline State Object) cache, which hold information about shaders and the state of the graphics pipeline to avoid shader compilation in runtime and prevent the stuttering.
+One major issue I addressed was frequent stuttering due to just-in-time shader compilation. To resolve this, I generated a Pipeline State Object (PSO) cache, which stores information about shaders and rendering states, to prevent runtime shader compilation and eliminate stuttering.
 
 ### Queued Save data
 
-The game saved the progress very frequently, so to avoid having problems with certification (I'm looking at you, Nintendo Switch) I refactored how the game saved the data, queueing the different operations and only processing one save operation at a time, and setting a time interval between operations.
+The game saved progress frequently, and to avoid certification issues (especially on Nintendo Switch), I redesigned the save system, queueing the operations and only processing one save operation at a time, with a delay between operations.
 
-I had to made changes to the Nintendo Switch code to allow receiving events when the application closed, so we could store all remaining operations in the queue before the game closed. This change was not required in other consoles as they were already handling this event by default.
+Additionally, I had to modify the Nintendo Switch-specific code to handle application exit events properly. This allowed us to ensure any remaining queued save operations were written before the game closed. This change was not required in other platforms as they already handled this event natively.

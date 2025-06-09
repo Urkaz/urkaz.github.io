@@ -1,19 +1,19 @@
 # Overview
 
 Arrow Defense is a project for "Design and Developent of Web Games" subject using Action Script 3 with Starting Framework, and the result was exported to Android using Adobe AIR.
-In the game, you are under siege in your castle, and the enemy is shooting lots of arrows. You need to protect yourself surviving the attack or counterattacking with the same weapon, the arrows.
+In the game, you are under siege in your castle, and the enemy is firing a barrage of arrows. You need to protect yourself surviving the attack or counterattacking with the same weapon, the arrows.
 
 # My role
 
-I was in charge programming the level selection menu, the arrow gameplay and combos, and the level generation. Also, I exported the game to Android using Adobe AIR.
+I was responsible for programming the level selection menu, the arrow gameplay and combo system, and the level generation. I also handled the export to Android using Adobe AIR.
 
 ## Challenges
 
 ### Data oriented levels
 
-One of the things we wanted the game to have was a list of multiple levels, but we didn't want them hardcoded in some list inside the game code. I designed a custom xml files that allowed us to create the levels from data, allowing us to create an infinite amount of levels with different properties.
+One of our goals was to include multiple levels in the game, but we didn't want them hardcoded into the game logic. To solve this, I designed a custom XML format that allowed us to define level data externally, giving us the flexibility to create as many levels as we wanted with different properties.
 
-Those files allowed us to define the porperties of the level (time, points, lives, etc), the probability of each arrow spawn, victory conditions, if the level had a fog layer amd the position of the soldiers platforms:
+The XML files defined various aspects of each level: duration, score targets, number of lives, arrow spawn probabilities, victory conditions, presence of fog layers, and the positions of the soldier platforms:
 
 ```xml
 <Level>
@@ -27,11 +27,11 @@ Those files allowed us to define the porperties of the level (time, points, live
 </Level>
 ```
 
-The level selector also had a custom XML with the level list and the properties of each level.
+The level selector also used a custom XML file to manage the full list of levels and their properties.
 
 # Game Description
 
-Tap the arrows on the screen to break them, and do it in the bottom panel to collect (obtaining twice the normal points) and make combos to counterattack.
+Tap the arrows on the screen to break them, and do it in the bottom panel to collect them for double points and the chance to trigger combos for counterattacks.
 
 <gallery>
     /img/games/screenshots/arrowdefense/tap1.png
@@ -39,15 +39,15 @@ Tap the arrows on the screen to break them, and do it in the bottom panel to col
 
 ## Level types
 
-There are three level types, all sharing the same mechanic but changing the victory conditions.
+There are three level types. They share the same core mechanics but differ in victory conditions:
 
-- Time levels: Survive until time runs out. You can break, collect and make combos with the arrows to obtain a high score.
-- Life levels: Attack your enemy with combos to make them retreat (until the next level!). Each combo will decrease the enemy life points.
-- Combo levels: For some reason, you can only win this battle (not the war) making specific combos with the enemy arrows.
+- Time levels: Survive until the timer runs out. You can break, collect, and combo arrows to earn a high score.
+- Life levels: Counterattack with combos to push back the enemy (to the next level!). Each combo reduces the enemy's health.
+- Combo levels: For some reason, the only way to win the battle (not the war) is by executing specific combos using the enemy's arrows.
 
 ## Arrows and Combos
 
-Six different type of arrows will fall from the sky, sent by your enemy.
+Six different types of arrows fall from the sky, launched by your enemy:
 
 !["Normal arrow"](/img/games/screenshots/arrowdefense/normal.png "Arrow Defense")
 !["Fire arrow"](/img/games/screenshots/arrowdefense/fire.png "Arrow Defense")
@@ -56,57 +56,57 @@ Six different type of arrows will fall from the sky, sent by your enemy.
 !["Fast arrow"](/img/games/screenshots/arrowdefense/fast.png "Arrow Defense")
 !["plant arrow"](/img/games/screenshots/arrowdefense/plant.png "Arrow Defense")
 
-- Normal: The most common arrow, without anything special.
-- Fire: Burning arrow.
+- Normal: Standard arrow with no special traits.
+- Fire: Flaming arrow.
 - Ice: Frozen arrow.
-- Lightning: Arrow charged with electricity.
-- Quick: An arrow that falls faster than any other one.
-- Plant: Wooden arrow with some plant growing from it.
+- Lightning: Electrically charged arrow.
+- Quick: Falls faster than all the others.
+- Plant: Wooden arrow with plant matter growing from it.
 
-As mentioned before, touching the arrows in the bottom panel will collect them, allowing to make some combos. All are combinations of two or three specific arrows:
+As mentioned earlier, tapping arrows in the bottom panel collects them, enabling you to perform combos. Combos consist of specific combinations of 2 arrows:
 
-- Quick attack: 2 Normal + 1 Quick.
-- Fire attack: 2 Normal + 1 Fire.
-- Ice-Fire attack: 1 Fire + 1 Ice.
-- Lightning attack: 1 Lightning + 1 Quick.
-- Lightning-Fire attack: 1 Lightning + 1 Fire.
+- Quick attack: 2 Normal + 1 Quick
+- Fire attack: 2 Normal + 1 Fire
+- Ice-Fire attack: 1 Fire + 1 Ice
+- Lightning attack: 1 Lightning + 1 Quick
+- Lightning-Fire attack: 1 Lightning + 1 Fire
 
 Note: The combos are not shown on the screen! Sorry about that! D:
 
 ## Your soldiers
 
-You have some soldiers placed your wall. They can be moved on their platform horizontally.
+You have soldiers stationed on your castle walls, and they can be moved horizontally along their platforms.
 
 !["Regular soldier"](/img/games/screenshots/arrowdefense/soldado_1.png "Arrow Defense")
 !["Iron armored soldier"](/img/games/screenshots/arrowdefense/soldado_2.png "Arrow Defense")
 !["Fire resistant armored soldier"](/img/games/screenshots/arrowdefense/soldado_3.png "Arrow Defense")
 
-There are three armored soldiers:
+There are three types of armored soldiers:
 
-- Regular soldier: He will die if some arrow touch him.
-- Iron armored soldier: He will resist two normal arrows.
-- Fire resistant armored soldier: It will resist three normal arrows. In addition, he has immunity to the fire arrows.
+- Regular Soldier: Dies if hit by any arrow.
+- Iron Armored Soldier: Can withstand two normal arrows.
+- Fire-Resistant Armored Soldier: Can take three normal arrows and is immune to fire arrows.
 
 ## Controls
 
 Menus:
 
-- Touch: Select options or level
+- Tap: Select options or levels
 
 Ingame:
 
-- Touch arrow: Destroy or collect it.
-- Drag soldier: Move selected soldier through his platform.
+- Tap arrow: Destroy or collect it
+- Drag soldier: Move the selected soldier along his platform
 
 ## Tools used
 
-- Flash Develop
-- Action Script 3 + Startling Framework
+- FlashDevelop
+- ActionScript 3 + Starling Framework
 - Adobe AIR
 
 ## Disclaimer
 
-For some reason, the game (a Flash file exported to Android with AIR), is not closing when pressing home or back, if this happens in your mobile, kill it in your recent apps list.
+Due to limitations in the platform (Flash exported via AIR), the game might not close correctly when pressing the Home or Back button on Android. If that happens, please close it manually from the recent apps list.
 
 # Credits
 

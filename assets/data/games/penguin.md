@@ -1,18 +1,18 @@
 # Overview
 
-This game was made in the first UJI GameJam in nearly 40h.
+This game was developed during the first UJI GameJam, completed in just under 40 hours.
 
 # My role
 
-I was in charge programming the pickable objects and coordinating the team to avoid conflicts in the git repository.
+I was responsible for programming the pickable objects and coordinating the team to avoid conflicts in the Git repository.
 
 ## Challenges
 
 ### Coordination and Git
 
-With a team of 9 people it was difficult to coordinate all team members and get all parts of the project together while avoiding conflicts in the uploaded data to the repository.
+With a team of nine people, it was challenging to keep everyone in sync and merge all parts of the project without causing conflicts in the repository.
 
-This experience helped me coordinate with my colleagues in a more orderly manner.
+This experience taught me how to coordinate more efficiently with teammates and maintain better organization during the development.
 
 # Credits
 

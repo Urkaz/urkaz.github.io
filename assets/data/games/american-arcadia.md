@@ -1,23 +1,23 @@
 # My role
 
-My role has helping during the porting process to fix the async loading code of the scenes in consoles, and optimize the GPU and CPU in those levels that needed it.
+My job was to support the porting process by fixing the async scene loading on consoles and optimizing both GPU and CPU performance in the levels that needed it.
 
 ## Challenges
 
 ### Seamless loading
 
-The original game is programmed to load all scenes while you play or while you are watching cinematic videos. This works perfectly in all modern computers, but doing that in old gen consoles (PS4, Xbox One and Switch) was a different thing.
+The original game was designed to load scenes in the background as you played or during cinematic videos. This worked perfectly on modern PCs, but doing the same on older consoles like PS4, Xbox One, and Switch was a different story.
 
-Some consoles struggle a bit when reading from the hard drive, making all async loads a lot longer. This caused some scenes load later than it should, causing holes to appear in the level geometry and severe popping. Also, it was worse when loading an scene while watching a cinematic video, not ending the load before the video, starting the next scene in an incorrect world state.
+Some of these consoles struggle with disk read speeds, making async loading much slower. As a result, some scenes wouldn't load in time, causing gaps in the geometry and heavy popping. It got even worse when scenes were loading during a cinematic video, sometimes the new scene wouldn’t finish loading before the video ended, leaving the world in an incorrect state when gameplay resumed.
 
-To fix this I had to analyze how the game handled the async load of the scenes, and rewrite part of the original code to make the most important sublevels (the ones needed immediately) to load first and faster, while having the less important (the ones that were far away or not visible) to load later.
+To fix this, I analyzed how the async loading system worked in the game and rewrote parts of the original code so that the most critical sublevels (the ones needed immediately) would load first and faster, while less important ones (those far away or not visible) could load later.
 
-Additinally, videos were recompressed and rescaled from 4K to 1080p to save space and hasten their loading.
+Additionally, all videos were recompressed and downscaled from 4K to 1080p to save space and reduce loading times.
 
 ### Optimization
 
-General optimization techniques were used to gain CPU performance like limiting the ticking actors by distance, or selectively enabling and disabling actors that were always active by default.
+We applied general optimization techniques to improve CPU performance, like limiting ticking based on distance and selectively enabling/disabling actors that were always active by default.
 
-In terms of GPU, the gamme ran pretty good (with the exceptions of the scenes using Render Targets), so a general approach was used to optimize the GPU by tweaking the Device Profiles and generating more optimized LODs.
+On the GPU side, the game already ran well in most scenes, so we focused on overall improvements: tweaking Device Profiles and generating better-optimized LODs.
 
-The scenes that used Render Targets were worked extensively, reducing the poly count with more optimized LODs, and custom Device Profiles (using one of the plugins I developed for another port) that allowed us to gaing more GPU performance by removing some graphical features that were less noticeable.
+The scenes that used Render Targets required more attention. We reduced even more the poly count by creating more optimized LODs and used custom Device Profiles (leveraging one of the plugins I had developed in another port) to turn off less noticeable graphical features and gain extra GPU performance.

@@ -1,10 +1,10 @@
 # My role
 
-Xuan Yuan Sword 7 is probably the biggest game that got ported in Catness Game Studios, and due to my good performance and results in previous projects, I've got assigned as the main developer for it.
+Xuan Yuan Sword 7 is probably the biggest game that Catness Game Studios has ported, and thanks to my good performance and results in previous projects, I was assigned as the main developer for it.
 
-My role here was achieving a good performance on Switch, optimizing GPU, CPU and Memory usage, without losing the original look of the game. Sometimes, when porting a game to consoles, you have to make decisions that have impact in the overall look of the game, but early on I decided that a game like this one should look on Switch as closely as possible to the original one. This caused some discussions in the office, as changing the look in a mor drastic way could made the game run better (like adding more fog or bloom to hide certan flaws), but that wasn't a desirable result for me (but I had to concede it sometimes).
+My job was to get the game running smoothly on Switch, optimizing GPU, CPU, and memory usage without compromising the original look of the game. When porting to consoles, you often have to make choices that affect how the game looks overall, but from the start, I felt that a game like this deserved to look on Switch as close as possible to the original from PC. That led to some internal debates, since taking more drastic visual shortcuts (like adding extra fog or bloom to hide some flaws) could have improved performance, but for me, that wasn’t the right direction (though I did have to give in sometimes).
 
-I worked in this project from start to end, and eventually, some coworkers joined me, having to coordinate them and give them a common goal.
+I worked on the project from start to finish. Eventually, a few coworkers joined in, and I had to coordinate with them and make sure we were all working towards the same goal.
 
 ## Challenges
 
@@ -12,19 +12,19 @@ I worked in this project from start to end, and eventually, some coworkers joine
 
 #### Cloth Physics
 
-One of the first things we noticed about the game was the usage of cloth phyisics in some of the main character outfits. This made the CPU struggle a lot, reducing the fps to 20 when only two simulated clothes were on the screen.
+One of the first issues we noticed was the use of cloth physics in some of the main characters' outfits. It hit the CPU hard as just two simulated cloth elements on screen could drop the framerate to 20 FPS.
 
-I implemented a frame skipping feature for cloth based on the screen size of the actor, so far away actors executed the cloth simulation less frequently than the main character, but this wasn't enough and it was still consuming a lot of CPU time.
+I added a frame-skipping system for cloth, based on how big the character appears on screen. This meant faraway characters ran their cloth simulation less often than the main character. But even with that, CPU usage was still too high.
 
-I've reasearched what Unreal 4.24 was using for cloth physics, and it resulted to be the widespread Physics library. The source code and the tools used to compile it for Unreal were available in the source code, so I decided to recompile the entire library, removing some physic steps that weren't needed (some extra safety checks for example) and using the fastmath flag.
+I looked into what Unreal 4.24 was using for cloth physics and found it was based on the NvCloth library. The source code and the build tools were included in the engine, so I recompiled the whole library, removing some unnecessary physics steps (like extra safety checks), and enabled the fastmath flag.
 
-With those two changes, I managed to reach an acceptable CPU time, increasing the total of simulated cloths from 2 to 5 before reaching a critical point, leaving room for other CPU tasks.
+With those two changes, I managed to cut CPU usage enough to support up to five cloth elements on screen instead of two, freeing up CPU resources for the rest of the game.
 
 #### Tick Interval Manager plugin
 
-Some scenes had a big number of enemies around, patroling and awaiting for the player to be near before acting. All those actors were still ticking even if they were outside the player vision or far away.
+Some scenes had tons of enemies patrolling or waiting for the player. All those actors were still ticking, even if they were far from the camera or off-screen.
 
-I created a plugin (which was later used in other projects) that optimized the ticking actors. This plugin checked if the actor was recently rendered and the distance to the player, and applied a reduction of the Tick Interval dynamically to the actor itself and its components.
+So I created a plugin (which ended up being reused in other projects) that dynamically adjusted tick intervals. It checked whether each actor had been rendered recently and how far it was from the player, and adjusted both the actor's tick rate and its components accordingly.
 
 <gallery>
     /img/games/screenshots/xys7/tickmanager1.png | Distance and visibility configuration.
@@ -33,17 +33,17 @@ I created a plugin (which was later used in other projects) that optimized the t
 
 #### Level streaming
 
-The game seamlessly streams the differents levels while you travel using the Unreal's World Composition system. On Switch those loads caused severe time spikes, causing hitches constantly, interrupting the gameplay.
+The game uses Unreal's World Composition system to stream levels seamlessly as the player moves through the world. But on Switch, that caused severe frame spikes, with constant hitches that interrupted gameplay.
 
-We considered using a loadign screen when those hitches happened, but that was not a good solution as they would still interrupt the gameplay.
+We thought about adding a loading screen when streaming happened, but that wouldn't really solve the problem as it would still break immersion.
 
-After investigating how the system worked, I managed to reduce those hitches to almost zero by reducing the time budget per frame used for level streaming, reducing the number of actors spawned per frame, and disabling the automatic call to the garbage collector after the level finished streaming (at the cost of consuming more memory).
+After digging into how the system worked, I managed to reduce those hitches to almost nothing by lowering the streaming time budget per frame, limiting how many actors could spawn at once, and disabling the automatic garbage collection after each level finished streaming (which did increase memory usage a bit, but was worth it).
 
 #### Other optimizations
 
-Other optimizations we applied relied in applying [Profile-Guided Optimizations (PGO)](https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170) using the built in Unreal tools, which provided us a few extra milliseconds.
+We also used [Profile-Guided Optimizations (PGO)](https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170) via Unreal’s built-in tools, which helped us squeeze out a few extra milliseconds.
 
-I also analyzed the CPU load using the tools provided by Unreal and other propiertary tools by Nintendo. This analysis allowed me to change the affinity of some threads, moving some less time consuming threads out of the cores with more workload, for example.
+On top of that, I analyzed CPU load using both Unreal's profiling tools and Nintendo's proprietary tools. That helped me reassign some thread affinties to improve overall performance, moving lighter tasks off the most loaded cores, for example.
 
 ### GPU
 
@@ -115,3 +115,26 @@ To improve performance and visual quality, we replaced real-time Screen Space Re
 
 For further performance gains, we enabled Distance Field Shadows instead of relying on fully real-time Cascaded Shadow Maps. Additionally, we had to disable the foliage wind effect, as all the alternatives we tested to keep it active resulted in significant GPU overhead. Ultimately, removing it was the only viable solution.
 
+### Memory
+
+One of the main limitations we faced was the memory, since the Nintendo Switch only has 3GB available. The game used Unreal's World Composition system, which automatically loaded levels based on the player's distance. However, this ended up loading more levels than necessary, leading to out-of-memory crashes. To fix it, I adjusted several parameters and added custom conditions to the engine code to limit the number of levels loaded at once, significantly reducing memory usage.
+
+I also analyzed memory consumption using tools like Memory Profiler 2, MemPro, and some simple custom tools I created. This helped identify and fix several memory leaks that were causing crashes.
+
+Additionally, I disabled Unreal's Memory Cache system. While it can help reduce fragmentation and system calls, in our case it consistently increased memory usage, pushing the game over the limit. Disabling it reduced overall memory usage and improved stability.
+
+### Compression
+
+The initial builds of the game for Nintendo Switch were over 36GB, while the client needed it to fit on a 16GB cartridge.
+
+After analyzing the project, I removed unused assets that were being referenced by default through the Primary Assets system, which significantly reduced the build size. I also compressed and re-encoded the video files using the same Criware Middleware (Softdec2) used in the original game.
+
+Additionally, I backported some of the latest Oodle compression improvements from Unreal Engine 4.27 to our version (4.25), ultimately bringing the final build size down to 9.5GB.
+
+### Engine version and Nintendo Switch SDK
+
+The original project used Unreal Engine 4.24, which had limited support for Nintendo Switch and a different platform structure compared to what we were used to in other projects.
+
+We initially upgraded the project to 4.25 and later to 4.26 to take advantage of the latest platform improvements and SDK updates. However, due to project-specific constraints, we ultimately had to stick with Unreal 4.25, which did not support the latest Nintendo SDK.
+
+To resolve this, I backported several platform-related changes from versions 4.26 and 4.27 into 4.25, allowing the game to be built and run properly with the latest Nintendo Switch SDK.

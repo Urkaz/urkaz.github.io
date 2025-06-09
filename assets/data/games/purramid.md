@@ -1,24 +1,24 @@
 # Overview
 
-Game made in for the 2016 Global Game Jam in Unity.
+Game developed during the 2016 Global Game Jam using Unity.
 
 # My role
 
-I was in charge programming the traps and its effects.
+I was responsible for programming the traps and their effects.
 
 ## Challenges
 
-### First game jam and team size
+### First game jam and team collaboration
 
-This was my first time in a game jame, and it was also my first time working in a bigger team. This experience helped me coordinate with my colleagues in a more orderly manner.
+This was my first time participating in a game jam, as well as my first experience working with a larger team. It helped me improve my ability to coordinate and collaborate more effectively with teammates.
 
 # Game Description
 
 ## Controls
 
-Beetle stage: Right click for instructions
+Beetle Stage: Right-click for instructions.
 
-Pyramid stage: Place traps with 1, 2, 3. When you hit play they will remain inactive, activate them strategically to stop enemies with the right timing!
+Pyramid Stage: Place traps using keys 1, 2, and 3. When you press play, the traps remain inactive—activate them strategically to stop enemies with the right timing!
 
 ## Diversifiers
 

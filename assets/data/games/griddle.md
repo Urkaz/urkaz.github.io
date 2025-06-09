@@ -1,19 +1,19 @@
 # Overview
 
-Griddle is a puzzle game made in cocos-2d-x (for the "Software Engineering" subject of the "Degree on Video game Design and Development").
-You should fill the cells of the board with the help of the numbers at the top and left sides to discover a hidden picture.
+Griddle is a puzzle game developed in Cocos2d-x as part of the "Software Engineering" subject in the "Degree in Video game Design and Development".
+The objective is to fill in the board’s cells using the numbers shown on the top and left edges to gradually reveal a hidden image.
 
 # My role
 
-I was in charge programming the level selection menu and the griddle generation and gameplay.
+I was responsible for programming the level selection menu as well as the generation and gameplay of the puzzles.
 
 ## Challenges
 
 ### Data oriented puzzles
 
-This type of game is given to having many levels, being each one a puzzle with a black and white pixel art picture.
+This type of game usually includes a large number of levels, each one representing a black-and-white pixel art puzzle.
 
-I wanted the levels to be created by me and by other designers, so I created a simple puzzle generator python script that transformed human readable text files like the one below into a custom .dat data format that the game could read and interpret to generate the puzzles at runtime.
+I wanted both myself and other designers to be able to easily create new levels, so I developed a simple Python script that converts human-readable text files (like the example below) into a custom .dat format. This format is read by the game at runtime to generate the puzzles dynamically.
 
 ```xml
 5
@@ -27,7 +27,7 @@ Knife
 Autor
 ```
 
-The puzzle packs in the puzzle selection menu were also generated in the same way from readable text files to data files:
+Puzzle packs shown in the puzzle selection menu were also generated the same way, from plain text files to binary data files, making it easy to expand the game content:
 
 ```xml
 0 13 14 0 0
@@ -42,21 +42,21 @@ Fruits
 
 ## Game modes
 
-Griddle has three game modes
+Griddle features three different game modes:
 
-- Normal mode: Every mistake substracts a life. When you reach zero lives, you can't continue solving the current Griddle and you will have to try again.
-- Free mode: The errors aren't taken into account and the Griddle is considered resolved only when all the correct cells are marked.
-- Bomb mode: This mode is similar to the Normal one, but each mistake will make some cells to explode, unmarking them.
+- Normal Mode: Every mistake costs one life. Once you run out of lives, you can’t continue solving the current puzzle and will need to restart.
+- Free Mode: Mistakes are not penalized. The puzzle is considered complete only when all the correct cells have been marked.
+- Bomb Mode: Similar to Normal Mode, but every mistake causes some cells to "explode", unmarking them.
 
 ## Controls
 
 Menus:
 
-- Left click: Select option/Griddle.
+- Left Click: Select an option or puzzle.
 
-Resolving Griddle:
+In-Game (while solving a Griddle):
 
-- Left click: Moves the board, marks cells.
+- Left Click: Move the board or mark cells.
 - "+" key: Zoom in.
 - "-" key: Zoom out.
 
