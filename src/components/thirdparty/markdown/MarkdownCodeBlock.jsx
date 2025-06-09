@@ -1,8 +1,19 @@
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Import languages
+import ini from "react-syntax-highlighter/dist/esm/languages/prism/ini";
+import xml from "react-syntax-highlighter/dist/esm/languages/prism/xml-doc";
+import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
+
+// Register
+SyntaxHighlighter.registerLanguage("ini", ini);
+SyntaxHighlighter.registerLanguage("xml", xml);
+SyntaxHighlighter.registerLanguage("xml", json);
+
 export const MarkdownCodeBlock = ({ children, className, node, ...rest }) => {
     const match = /language-(\w+)/.exec(className || '');
+
     return match ? (
         <SyntaxHighlighter
             {...rest}
