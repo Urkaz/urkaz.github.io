@@ -16,7 +16,7 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
 
     let filterListState = new Array(filterList.length);
     for (let index = 0; index < filterList.length; index++) {
-        let param = searchParams.get('filter' + index);
+        let param = searchParams.get('f' + index);
         filterListState[index] = param ? `.category-${param}` : "";
     }
 
@@ -43,7 +43,6 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
         if (isotope) {
             var finalFilter = concatValues(filters);
             isotope.arrange({ filter: finalFilter });
-            console.log(finalFilter);
         }
     }, [filters, isotope]);
 
