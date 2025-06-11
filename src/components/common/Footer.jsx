@@ -16,7 +16,6 @@ export function Footer({ name }) {
                         <LinkDot link="https://www.linkedin.com/in/fransanchezrodrigo/" iconType="fontawesome" icon="fa-brands fa-linkedin" />
                         <LinkDot link="https://github.com/Urkaz" iconType="fontawesome" icon="fa-brands fa-github" />
                         <LinkDot link="https://urkaz.itch.io/" iconType="fontawesome" icon="fa-brands fa-itch-io" />
-                        <LinkDot link="https://bsky.app/profile/urkaz-dev.bsky.social" iconType="custom" icon="bluesky" />
                         <LinkDot link="https://www.devuego.es/bd/fpersona/francesc-sanchez-rodrigo" iconType="custom" icon="devuego" />
                     </LinkPills>
                     <div className="container">
