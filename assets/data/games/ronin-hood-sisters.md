@@ -94,24 +94,24 @@ By clicking a custom button added to the editor toolbar, designers could open th
 
 #### Editor Tiles
 
-The spawned tiles are a special class of Tile that only exists in the Map Tool. They are programmed to be snapped around when moved with the regular actor manipulation tools provived by the engine, and to be reactive to all property changes made by the designers.
+The spawned Tiles are a special class of Tile that exists only within the Map Tool. They are programmed to snap to the grid when moved using the engine's standard actor manipulation tools and to respond dynamically to all property changes made by the designers.
 
-ALL properties available for a Tile are availabe and editable from the Details panel, with bits of customization to prevent modifying values that are blocked by other properties (for example, the "Foundation" properties can only be edited if the property "Is Foundation" is enabled, or enabling "Is Foundation" disables the selection of "Is Bedrock"). When any of the properties is edited, it changes shape, colors, or spaws different elements to visualize the changes in real time in the editor.
+All available properties for a Tile are accessible and editable from the Details panel, with bits of customization to prevent changes to values that depend on other properties (or example, the "Foundation" settings can only be edited if "Is Foundation" is enabled, and enabling "Is Foundation" disables the "Is Bedrock" option). When a property is modified, the Tile updates in real time, changing shape, colors, or spawning new elements to visually reflect the change in the editor.
 
 <gallery>
     /img/games/screenshots/rhs/maptooltile.png | A Tile in the Map Tool with multiple properties changed by the designers (a prop, spawn point, element, etc).
     /img/games/screenshots/rhs/maptooltileproperties.png | All editable properties are accessible from the Details panel when selecting the Tile in the Editor.
 </gallery>
 
-Another feature I implemented for the Map Tool regarding the Tiles is the compatibility with the Undo/Redo options. All changes made to a Tile by any means are transactional and are supported by Undo/Redo, allowing the designers to quickly undo an undesired action, something that the engine doesn't support on custom actors like this on by default.
+Another feature I implemented for the Map Tool is full compatibility with the Undo/Redo system. All changes made to a Tile, regardless of how they are made, are transactional and fully support Undo/Redo. a functionality that the engine doesn't provide by default for custom actors like these.
 
 #### Helping the designers
 
-Working closely with the design team, I developed and added more features at their request.
+Working closely with the design team, I developed and added new features based on their feedback.
 
-One of those features was the addition of different visual hints, some toggleable from the menu, to help them visualizing better the world they were creating. This included bounding boxes for special Tiles, Chunks and Props, and also small spheres representing Enemy and Player spawn points.
+One of these features was the inclusion of various visual hints, some of them toggleable, to help them better visualize the world they were creating. These included bounding boxes for special Tiles, Chunks, and Props, as well as small spheres representing Enemy and Player spawn points.
 
-Another feature added after testing the first creations with the tool was the detection of duplicated tiles, which served as a data validation step before storing the Preset to the data table. In addition to adding an error message to warn them and a red bounding box in the Tiles, I made a special folder in the World Outliner that helped selecting the duplicate tiles.
+After testing the first creations made with the tool, I also implemented a system to detect duplicate Tiles as a form of data validation before saving a Preset to the Data Table. In addition to showing an error message and highlighting the duplicates with a red bounding box, I created a dedicated folder in the World Outliner to help designers quickly locate the duplicate Tiles by just clicking them there.
 
 <gallery>
     /img/games/screenshots/rhs/maptoolhelpercontrols.png | Visual hints for the designers
@@ -120,11 +120,9 @@ Another feature added after testing the first creations with the tool was the de
 
 #### Saving and loading
 
-Finally, the tool has the ability to store the Preset (the set of tiles that the designers placed with all of their properties) in the Chunks Data Table used during the gameplay to fill the Grid with data.
+Finally, the tool allows Presets (the set of Tiles placed by the designers, along with all their properties) to be stored in the Chunks Data Table, which is used during gameplay to populate the grid with content.
 
-When the Save button is pressed and if the Preset is valid (without duplicate Tiles), the menu changes to a different one wityh multiple selector for GameplayTags. Those tags are used by the Procedural Generator that fill the Grid with data, so I had to work closely with other developers too to match their needs in the tool.
-
-The Save Preset menu allows the designers to choose the tags for each chunk contained in the Preset, mainly with the data used for the chunk connections from the Procedural Generator.
+When the Save button is pressed, and the Preset is valid (i.e. contains no duplicate Tiles), the menu switches to a new interface with multiple selectors for Gameplay Tags. These tags are used by the Procedural Generator to populate the grid, so I collaborated closely with other developers to ensure the tool met their requirements too.
 
 <gallery>
     /img/games/screenshots/rhs/pcgconnectioneditor.png | When saving a Preset, the menu changed to a different one allowing to select the GameplayTags used by the Procedural Generation amongst other properties.
@@ -133,15 +131,15 @@ The Save Preset menu allows the designers to choose the tags for each chunk cont
 
 ### UI programming
 
-I did the programming of most menus and UIs. This was my first time working with Unreal UMG system, but I tried to create small and reusable widgets for everything (tooltips, icons, girl protraits, progress bars, etc), and spawn them dynamically when needed instead of having them already placed in parent widgets (to avoid having extra things loaded when not needed).
+I was responsible for programming most of the menus and UIs. This was my first time working with Unreal's UMG system, but I focused on creating small, reusable widgets for everything (tooltips, icons, character portraits, progress bars, etc). These widgets were spawned dynamically when needed, rather than being pre-placed in parent widgets, to avoid loading unnecessary elements.
 
-Below you can see a brief description of each menu and a few screenshots.
+Below is a brief description of each menu along with some screenshots.
 
-#### Girl costume selection UI
+#### Girl Costume Selection UI
 
-This menu was a bit challenging to make, as it required the girls to be always displayed on the screen with changeable costumes. Loading and spawning the Skeletal Meshes each time a costum was changed take a lot of time, so I decided to create a special character with all costumes loaded and synced with the same animation, so selecting a costume would require only to hide the old and show the new one. The girls are displayed in the UI using a render target.
+This menu was somewhat challenging to implement, as it required the girls to always be visible on screen with changeable costumes. Loading and spawning Skeletal Meshes each time a costume was selected took too long, so I created a special character that preloaded all costumes and kept them synced with the same animation. This way, selecting a costume simply involved hiding the previous one and showing the new one. The girls were displayed in the UI using a render target.
 
-After finishing the selection, a transformation animation is played, this reuses the special characters with all Skeletal Meshes, allowing a seamless transition with some extra decorative effects.
+After the selection was confirmed, a transformation animation was played. This reused the special characters with all Skeletal Meshes already loaded, allowing a seamless transition with additional decorative effects.
 
 <gallery>
     /img/games/screenshots/rhs/costume1.png | Costume selection menu, hovering a costume shows a comparison of their stats.
@@ -149,9 +147,9 @@ After finishing the selection, a transformation animation is played, this reuses
     /img/games/screenshots/rhs/tr2.png | Transformation sequence after confirming the costumes.
 </gallery>
 
-#### Level selection UI
+#### Level Selection UI
 
-The level selection UI was the map of a metro network. The missions were generated procedurally (by another programmer) so I had to read the data and generate the UI. The challenge here was figuring out how to correctly spawn things in their correct positions, dynamically, as each game run had different missions and connections.
+The level selection UI was based on a metro network map. Missions were generated procedurally (by another programmer), so I had to read that data and generate the UI accordingly. The main challenge was figuring out how to spawn elements in the correct positions dynamically, since each game run had different missions and connections.
 
 <gallery>
     /img/games/screenshots/rhs/metro1.png | An example of dynamically created level selection menu.
@@ -161,7 +159,7 @@ The level selection UI was the map of a metro network. The missions were generat
 
 #### Inventory UI
 
-The inventory menu required displaying the girl stats and abilities, and it allowed equipping gems that changed the girl stats in real time. The equipment of the gems was made with a simple drag and drop from the "Inventory" area to the "Equipped Gems" area. The girl image is displayed in the UI using a render target of an spawned girl somewhere in the background.
+The inventory menu displayed each girl's stats and abilities, and allowed equipping gems that would alter those stats in real time. Gems were equipped using a simple drag-and-drop system from the "Inventory" area to the "Equipped Gems" section. The girl's image was shown via a render target of a spawned character placed somewhere in the background.
 
 <gallery>
     /img/games/screenshots/rhs/inventory1.png | Gem descriptions and stats changes.
@@ -171,9 +169,9 @@ The inventory menu required displaying the girl stats and abilities, and it allo
 
 #### Game HUD
 
-The game HUD is main source of information the player has during the gameplay. I created multiple widgets that I reused for other menus, like the portraits, bars, tooltips, buttons, status icons, etc. This HUD also had buttons to interact with the Grid on the right sie, changing the visualization of it.
+The game HUD is the player's main source of information during gameplay. I created multiple widgets that I reused for other menus, including portraits, bars, tooltips, buttons, status icons, and more. The HUD also included buttons to interact with the Grid on the right side, allowing players to change its visualization.
 
-One of the most challenging thins in the game HUD was the display of the small health bars and their ailments. All elements in those bars were synced with a lot of events with the game flow, so they had to react accodringly and also play some animations to help the player know what was happening. They were quite problematic as those events triggering widget animations sometimes caused crashes due to the syncronization of the animations and the real effects.
+One of the most challenging parts of the HUD was displaying the small health bars and their related ailments. All elements in these bars were synchronized with many in-game events, so they needed to react properly and play animations to help players understand what was happening. These bars were particularly tricky because triggering animations through event-driven logic sometimes caused crashes due to synchronization issues between animations and the game's internal state.
 
 <gallery>
     /img/games/screenshots/rhs/hud1.png | Main HUD of the game.
@@ -183,9 +181,9 @@ One of the most challenging thins in the game HUD was the display of the small h
 
 #### Results and Progression
 
-After finishing a mission, the player obtains some rewards and can level up the girls if they gained enough experience during the battle. Additionally, at the end of a run the player gained some items and unlocked new costumes for the girst with a progression system we had.
+After finishing a mission, the player received rewards and could level up the girls if they had earned enough experience during battle. At the end of a run, players also received items and unlocked new costumes for the girls through our progression system.
 
-Both menus were simple to create, and reused a lot of widgets already created for all previous menus.
+Both of these menus were relatively simple to implement and reused many of the widgets already created for the previous menus.
 
 <gallery>
     /img/games/screenshots/rhs/results1.png | Results screen after finishing a mission.
