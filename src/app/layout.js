@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { Staatliches, Titillium_Web } from "next/font/google";
 
 import { Header } from "@components/common/Header";
@@ -21,6 +23,7 @@ library.add(faGlobe, faEnvelope, faItchIo, faGithub, faLinkedin);
 
 /* Style */
 import "@styles/global.scss";
+import { Preloader } from "@src/components/common/Preloader";
 
 /* Fonts */
 const staatliches = Staatliches({
@@ -41,15 +44,17 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <Header>{siteName}</Header>
-                <main className="main">
-                    <DottedBackground />
-                    {children}
-                </main>
-                <ScrollToTop />
-                <Footer name={siteName}></Footer>
-                <BootstrapClient />
-                <AOSClient />
+                <Suspense fallback={<Preloader />}>
+                    <Header>{siteName}</Header>
+                    <main className="main">
+                        <DottedBackground />
+                        {children}
+                    </main>
+                    <ScrollToTop />
+                    <Footer name={siteName}></Footer>
+                    <BootstrapClient />
+                    <AOSClient />
+                </Suspense>
             </body>
         </html>
     );
