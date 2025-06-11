@@ -20,7 +20,7 @@ export default function Home() {
                         <div className={styles["description"]}>
                             <p>
                                 Hello and welcome to my porfolio! My name is Fran Sánchez Rodrigo, and I&apos;m currently{" "}
-                                <span className={styles["sub"]}>open to new opportunities and offers</span> for <span>game systems programmer</span>,{" "}
+                                <span className={styles["sub"]}>open to new opportunities and offers</span> for <span>core game systems programmer</span>,{" "}
                                 <span>tools programmer</span>, <span>porting engineer</span>, and more!
                             </p>
                             <p>
