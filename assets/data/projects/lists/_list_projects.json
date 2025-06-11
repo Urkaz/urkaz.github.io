@@ -22,7 +22,7 @@
         "customRoute": "/games/quantum-fields"
     },
     "urkaz-moon-tools": {
-        "category": ["other"],
+        "category": ["mcmods"],
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Mod",
         "hasSection": true,

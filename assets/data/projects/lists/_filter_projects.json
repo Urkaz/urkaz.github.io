@@ -12,6 +12,10 @@
         "selector": ".category-jams"
     },
     {
+        "name": "Minecraft Mods",
+        "selector": ".category-mcmods"
+    },
+    {
         "name": "Other",
         "selector": ".category-other"
     }
