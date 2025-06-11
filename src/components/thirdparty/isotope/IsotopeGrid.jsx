@@ -21,28 +21,37 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
     }
 
     const gridRef = useRef(null);
-    const [isotope, setIsotope] = useState(null);
+    const isotope = useRef(null);
     const [filters, setFilters] = useState(filterListState);
 
     useEffect(() => {
-        if (gridRef.current) {
-            (async () => {
-                // Dynamically load Isotope
-                const Isotope = (await import("isotope-layout")).default;
+        let isoInstance;
 
-                const iso = new Isotope(gridRef.current, {
+        const initIsotope = async () => {
+            const Isotope = (await import("isotope-layout")).default;
+            if (gridRef.current) {
+                isoInstance = new Isotope(gridRef.current, {
                     itemSelector: ".isotope-grid-item",
                     layoutMode: "fitRows",
                 });
-                setIsotope(iso);
-            })();
-        }
+                isotope.current = isoInstance;
+            }
+        };
+
+        initIsotope();
+
+        return () => {
+            if (isoInstance) {
+                isoInstance.destroy();
+                isotope.current = null;
+            }
+        };
     }, []);
 
     useEffect(() => {
-        if (isotope) {
+        if (isotope.current) {
             var finalFilter = concatValues(filters);
-            isotope.arrange({ filter: finalFilter });
+            isotope.current.arrange({ filter: finalFilter });
         }
     }, [filters, isotope]);
 
@@ -77,7 +86,7 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
 
         const queryString = params.toString();
         const updatedPath = queryString ? `${pathname}?${queryString}` : pathname;
-        router.push(updatedPath);
+        router.push(updatedPath, { scroll: false });
     };
 
     return (
