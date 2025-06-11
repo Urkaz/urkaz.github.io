@@ -1,0 +1,10 @@
+[
+    {
+        "name": "All Games",
+        "selector": ""
+    },
+    {
+        "name": "Only Devlog",
+        "selector": ".category-devlog"
+    }
+]

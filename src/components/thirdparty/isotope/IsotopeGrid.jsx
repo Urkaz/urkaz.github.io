@@ -1,17 +1,28 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 
 import { IsotopeFilter } from "@components/thirdparty/isotope/IsotopeFilter";
 import { trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { concatValues } from "@src/components/functions";
 
-export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponent, FilterComponent }) => {
+export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent }) => {
+    const [searchQuery, setSearchQuery] = useState({});
+    const searchParams = useSearchParams();
+    const pathname = usePathname();
+    const router = useRouter();
+
+    let filterListState = new Array(filterList.length);
+    for (let index = 0; index < filterList.length; index++) {
+        let param = searchParams.get('filter' + index);
+        filterListState[index] = param ? `.category-${param}` : "";
+    }
+
     const gridRef = useRef(null);
     const [isotope, setIsotope] = useState(null);
-    const [mainfilter, setMainFilter] = useState("");
-    const [secondaryfilter, setSecondaryFilter] = useState("");
+    const [filters, setFilters] = useState(filterListState);
 
     useEffect(() => {
         if (gridRef.current) {
@@ -30,23 +41,55 @@ export const IsotopeGrid = ({ mainFilters, secondaryfilters, items, GridComponen
 
     useEffect(() => {
         if (isotope) {
-            var _mainFilter = mainFilters ? mainfilter : "";
-            var _secondaryfilter = secondaryfilters ? secondaryfilter : "";
-
-            var finalFilter = concatValues([_mainFilter, _secondaryfilter]);
-
+            var finalFilter = concatValues(filters);
             isotope.arrange({ filter: finalFilter });
+            console.log(finalFilter);
         }
-    }, [mainfilter, secondaryfilter, isotope]);
+    }, [filters, isotope]);
+
+    const setQuery = (queryName, queryValue) => {
+        const updatedQuery = { ...searchQuery };
+        updatedQuery[queryName] = queryValue.replace(".category-", "");
+
+        setSearchQuery(updatedQuery);
+        updateSearchQuery(updatedQuery);
+    }
+
+    const onClickFilter = (event, index) => {
+        let filterListState = new Array(filterList.length);
+        for (let index = 0; index < filterList.length; index++) {
+            filterListState[index] = filters[index];
+        }
+        filterListState[index] = event;
+
+        setFilters(filterListState);
+        setQuery(`f${index}`, event);
+    };
+
+    const updateSearchQuery = (updatedQuery) => {
+        const params = new URLSearchParams(searchParams);
+        Object.keys(updatedQuery).forEach((key) => {
+            if (updatedQuery[key]) {
+                params.set(key, updatedQuery[key]);
+            } else {
+                params.delete(key);
+            }
+        });
+
+        const queryString = params.toString();
+        const updatedPath = queryString ? `${pathname}?${queryString}` : pathname;
+        router.push(updatedPath);
+    };
 
     return (
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
             <div>
-                {/* Botones para filtrar */}
-                {mainFilters ? <IsotopeFilter filter={mainFilters} FilterItem={FilterComponent} onClick={setMainFilter} /> : null}
-                {secondaryfilters ? <IsotopeFilter filter={secondaryfilters} FilterItem={FilterComponent} onClick={setSecondaryFilter} /> : null}
+                {/* Filters */}
+                {filterList.map((filter, index) => (
+                    filter ? <IsotopeFilter key={index} filter={filter} activeFilter={filters[index]} FilterItem={FilterComponent} onClick={(e) => onClickFilter(e, index)} /> : null
+                ))}
 
-                {/* Grid de elementos con un componente dinámico */}
+                {/* Grid with dynamic component "GridComponent"*/}
                 <div ref={gridRef} className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                     {Object.entries(items).map(([key, game]) => (
                         <GridComponent {...game} key={key} keyName={key} />

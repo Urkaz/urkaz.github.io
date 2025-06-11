@@ -10,9 +10,16 @@ import { FilterItem } from "@src/components/pages/games/FilterItem";
 import GamesList from "@assets/data/games/lists/_list_games.json";
 import GameFilterList from "@assets/data/games/lists/_filter_games.json";
 import GameFilterPlatform from "@assets/data/games/lists/_filter_platforms.json";
+import GameFilterClickable from "@assets/data/games/lists/_filter_clickable.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+
+const FilterList = [
+    GameFilterList,
+    GameFilterPlatform,
+    GameFilterClickable
+]
 
 const Games = () => {
     return (
@@ -21,19 +28,15 @@ const Games = () => {
                 title="Games"
                 description={
                     <>
-                        Here you&apos;ll find a list of all the games I&apos;ve been involved in, from professional work and personal projects (e.g., game jams)
-                        to those created during my education.
+                        Here you&apos;ll find a list of all the games I&apos;ve worked on, professional, educational, or side projects (like game jams).
                         <br />
-                        Filter by my role in the creative process and by the platforms I&apos;ve worked on.
-                        <br />
-                        Click on any game marked with the <FontAwesomeIcon icon={faLink} /> icon to be redirected to a page with more details of the game, and a detailed explanation of everything I did during its development.
+                        Click on any game with the <FontAwesomeIcon icon={faLink} /> icon to open a page with a devlog of my contributions to that game.
                     </>
                 }
                 sectionId="games"
             >
                 <LazyIsotopeGrid
-                    mainFilters={GameFilterList}
-                    secondaryfilters={GameFilterPlatform}
+                    filterList={FilterList}
                     items={GamesList}
                     FilterComponent={FilterItem}
                     GridComponent={GameGridItem}

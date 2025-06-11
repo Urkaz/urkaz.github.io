@@ -5,8 +5,8 @@ import { useState } from "react";
 import styles from "@styles/components/Isotope.module.scss";
 import stylesGames from "@styles/pages/games.module.scss";
 
-export const IsotopeFilter = ({ filter, FilterItem, onClick }) => {
-    const [currentFilter, setFilter] = useState("");
+export const IsotopeFilter = ({ filter, FilterItem, onClick, activeFilter}) => {
+    const [currentFilter, setFilter] = useState(activeFilter);
     const [filterIDs] = useState(() => filter?.map(() => crypto.randomUUID()));
 
     return (

@@ -21,14 +21,17 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
         <>
             <div className={`${styles["game-content"]} h-100 ${hasSection ? styles["selectable"] : null}`}>
 
-                {/* FOLD LINK INDICATOR */}
+                {/* FOLD LINK INDICATOR
                 {hasSection || customRoute ? (
-                    <div className={styles["fold"]}>
-                        <div className={styles["fold-link"]}>
-                            <FontAwesomeIcon icon={customRoute ? faArrowTurnUp : faLink} />
+                    <>
+                        <div className={styles["fold"]}>
+                            <div className={styles["fold-link"]}>
+                                <FontAwesomeIcon icon={customRoute ? faArrowTurnUp : faLink} />
+                            </div>
                         </div>
-                    </div>
+                    </>
                 ) : null}
+                */}
 
                 <div className={styles["game-background"]}><LazyLoadImage src={`/img/games/tiles/${cleanText(name)}.png`} className="img-fluid" alt={name} effect="opacity" /></div>
 
@@ -39,14 +42,17 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
 
                 {/* FLOATING DETAILS (tags, platforms, etc) */}
                 <div className={styles["game-info"]}>
-                    <h4 className={styles["floating-left"]}>{tag}</h4>
-                    {platforms ? (
-                        <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
-                            {platforms.map((item, index) => (
-                                <CustomIcon key={index} img={`mini_${item}`} />
-                            ))}
-                        </h4>
-                    ) : null}
+                    {hasSection || customRoute ? <h4 className={styles["floating-bottom-right"]}><FontAwesomeIcon icon={customRoute ? faArrowTurnUp : faLink} /></h4> : null}
+                    <div className={styles["hidden"]}>
+                        <h4 className={styles["floating-left"]}>{tag}</h4>
+                        {platforms ? (
+                            <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
+                                {platforms.map((item, index) => (
+                                    <CustomIcon key={index} img={`mini_${item}`} />
+                                ))}
+                            </h4>
+                        ) : null}
+                    </div>
                 </div>
             </div>
         </>
@@ -55,7 +61,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
     return (
         <>
             <div
-                className={`col-lg-4 col-md-6 ${styles["small-grid-item"]} isotope-grid-item ${category?.map((cat) => `category-${cat}`).join(" ")} ${platforms?.map((platform) => `category-${platform}`).join(" ")}`}
+                className={`col-lg-4 col-md-6 ${styles["small-grid-item"]} isotope-grid-item ${category?.map((cat) => `category-${cat}`).join(" ")} ${platforms?.map((platform) => `category-${platform}`).join(" ")} ${hasSection ? `category-devlog` : ""}`}
             >
                 {hasSection || customRoute ? <Link href={customRoute ? customRoute : `${pathname}/${keyName}`}>{content}</Link> : content}
             </div>
