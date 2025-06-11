@@ -13,9 +13,7 @@ import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.jso
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 
-const FilterList = [
-    ProjectsFilterList
-]
+const FilterList = [ProjectsFilterList];
 
 const Projects = () => {
     return (

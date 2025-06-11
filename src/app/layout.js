@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
 import { Staatliches, Titillium_Web } from "next/font/google";
 
