@@ -56,7 +56,7 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
             var finalFilter = concatValues(filters);
             isotope.current.arrange({ filter: finalFilter });
         }
-    }, []);
+    }, [filters]);
 
     const setQuery = (queryName, queryValue) => {
         const updatedQuery = { ...searchQuery };
