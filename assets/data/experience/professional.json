@@ -6,6 +6,7 @@
         "endDate": "2025-03-31T00:00:00.000Z",
         "place": "Catelló de la Plana, Castelló, Spain",
         "remote": false,
+        "pointsTitle": "Responsibilities:",
         "bulletPoints": [
             "Game porting with Unreal Engine 4 and 5 to consoles (Xbox One, Xbox Series S|X, PS4, PS5, Switch, Steam Deck)",
             "Plugin and tool development to expand the engine base functionality: custom device profiles, mesh instancing editor tools, project analysis tools, custom blueprint nodes, async loading screen, right-click editor extensions with custom tasks, and more",
@@ -27,6 +28,7 @@
         "endDate": "2020-09-31T00:00:00.000Z",
         "place": "Vila-real, Castelló, Spain",
         "remote": false,
+        "pointsTitle": "Responsibilities:",
         "bulletPoints": [
             "Compliance and Playtesting for PS4, Xbox One, and Nintendo Switch",
             "Designer support of the porting development for the platforms above",
@@ -48,6 +50,7 @@
         "endDate": "2016-07-31T00:00:00.000Z",
         "place": "Vila-real, Castelló, Spain",
         "remote": false,
+        "pointsTitle": "Responsibilities:",
         "bulletPoints": [
             "Playtesting for console games"
         ],

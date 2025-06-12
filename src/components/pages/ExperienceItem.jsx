@@ -8,47 +8,54 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ name, site, startDate, endDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText, buttonExternal }) => {
+export const ExperienceItem = ({ name, site, startDate, endDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText, buttonExternal, pointsTitle }) => {
     const start_date = new Date(startDate);
     const end_date = new Date(endDate);
 
     const start_month = start_date.toLocaleString('en', { month: 'long' });
     const end_month = end_date.toLocaleString('en', { month: 'long' });
 
-    let text = " ";
-    text += `${start_month} `; // Start month
-    text += `${start_date.getFullYear()} `; // Start year
+    let timeText = "";
+    timeText += `${start_month} `; // Start month
+    timeText += `${start_date.getFullYear()} `; // Start year
 
-    text += hideEndDate ? "" : "- ";
-    text += hideEndDate ? "" : `${end_month} `; // End month
-    text += hideEndDate ? "" : `${end_date.getFullYear()} `; //End year
+    timeText += hideEndDate ? "" : "- ";
+    timeText += hideEndDate ? "" : `${end_month} `; // End month
+    timeText += hideEndDate ? "" : `${end_date.getFullYear()} `; //End year
 
     // hideEndDate also hides duration
-    text += hideFullTime && (hideEndDate || hideDuration) ? "" : "(";
-    text += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, end_date, true)}`;
-    text += hideEndDate || hideFullTime || hideDuration ? "" : " | ";
-    text += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
-    text += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
+    timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : "(";
+    timeText += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, end_date, true)}`;
+    timeText += hideEndDate || hideFullTime || hideDuration ? "" : " | ";
+    timeText += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
+    timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
 
     return (
         <>
             <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                 <div className={styles["experience-item"]}>
-                    <div className={styles["icon"]}>
-                        <img src={logo} alt=""></img>
-                    </div>
                     <div className={styles["experience-card"]}>
-                        <h4>{name}</h4>
-                        <h5>{site}</h5>
-                        <p>
-                            <FontAwesomeIcon icon={faCalendarDays} />{text}
-                        </p>
+                        <div className={styles["icon"]}>
+                            <img src={logo} alt=""></img>
+                        </div>
+                        <div className={`d-flex align-items-center ${styles["header"]}`}>
+                            <div>
+                                <h4>{name}</h4>
+                                <h5>{site}</h5>
+                            </div>
+                        </div>
 
-                        {place ?
-                            <p><FontAwesomeIcon icon={faLocationDot} /> {place} {remote ? "(Remote)" : "(On-site)"}</p>
-                            : null
-                        }
+                        <div className={`d-flex align-items-center ${styles["header-details"]}`}>
+                            <div>
+                                <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>{timeText}</p>
+                                {place ?
+                                    <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{place} {remote ? "(Remote)" : ""}</p>
+                                    : null
+                                }
+                            </div>
+                        </div>
 
+                        <p className={styles["no-margin"]}>{pointsTitle}</p>
                         {bulletPoints ?
                             <ul>{bulletPoints.map((point, index) => <li key={index}>{point}</li>)}</ul>
                             : null}

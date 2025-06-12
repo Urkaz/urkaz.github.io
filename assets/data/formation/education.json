@@ -8,6 +8,7 @@
         "hideDuration": true,
         "place": "Madrid, Spain",
         "remote": false,
+        "pointsTitle": "Topics covered:",
         "bulletPoints": [
             "Advanced C++ programming using Unreal Engine 4",
             "AI programming in C++",
@@ -31,6 +32,7 @@
         "hideDuration": true,
         "place": "Castelló de la Plana, Castelló, Spain",
         "remote": false,
+        "pointsTitle": "Topics covered:",
         "bulletPoints": [
             "Basic Unity 3D game development",
             "Algorithms and Data structures"
