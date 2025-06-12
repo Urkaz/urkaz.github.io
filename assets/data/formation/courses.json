@@ -1,4 +1,25 @@
 {
+    "udemy-cmake": {
+        "name": "CMake, Tests and Tooling for C/C++ Projects",
+        "site": "Udemy",
+        "startDate": "2025-06-01T00:00:00.000Z",
+        "hideEndDate": true,
+        "hideDuration": true,
+        "pointsTitle": "Topics covered:",
+        "bulletPoints": [
+            "CMake C++ development (libraries, targets, generators, configuration, and more)",
+            "Custom and third party package management (Git, CPM, Fetch, Conan, VCPKG)",
+            "Unit Testing with Catch2",
+            "Advanced tooling: LTO, Sanitizers",
+            "Documentation generation with Doxygen"
+        ],
+        "hasButton": true,
+        "buttonLink": "https://www.udemy.com/course/cmake-tests-and-tooling-for-cc-projects/",
+        "buttonText": "View Course",
+        "buttonExternal": true,
+        "logo": "/img/experience/icons/udemy_logo.png",
+        "hideFullTime": true
+    },
     "udemy-unity": {
         "name": "Complete C# Unity 6 Game Developer 3D",
         "site": "Udemy",
