@@ -1,4 +1,22 @@
 {
+    "udemy-chip8": {
+        "name": "Creating A Chip-8 Emulator In C",
+        "site": "Udemy",
+        "startDate": "2025-08-01T00:00:00.000Z",
+        "hideEndDate": true,
+        "hideDuration": true,
+        "pointsTitle": "Topics covered:",
+        "bulletPoints": [
+            "Fully emulate the Chip-8 machine, emulating all hardware components (display, input, memory, cpu, audio, etc)",
+            "Understand how instruction sets work"
+        ],
+        "hasButton": true,
+        "buttonLink": "https://www.udemy.com/course/creating-a-chip-8-emulator-in-c",
+        "buttonText": "View Course",
+        "buttonExternal": true,
+        "logo": "/img/experience/icons/udemy_logo.png",
+        "hideFullTime": true
+    },
     "udemy-cmake": {
         "name": "CMake, Tests and Tooling for C/C++ Projects",
         "site": "Udemy",
@@ -7,10 +25,10 @@
         "hideDuration": true,
         "pointsTitle": "Topics covered:",
         "bulletPoints": [
-            "CMake C++ development (libraries, targets, generators, configuration, and more)",
+            "CMake C++ development: libraries, targets, generators, configuration, and more",
             "Custom and third party package management (Git, CPM, Fetch, Conan, VCPKG)",
             "Unit Testing with Catch2",
-            "Advanced tooling: LTO, Sanitizers",
+            "Advanced tooling: LTO, Sanitizers, clang-tidy, clang-format, cmake-format, code coverage",
             "Documentation generation with Doxygen"
         ],
         "hasButton": true,
