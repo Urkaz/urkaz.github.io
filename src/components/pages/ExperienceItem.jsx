@@ -8,7 +8,7 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ name, site, startDate, endDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, hasButton, buttonLink, buttonText, buttonExternal, pointsTitle }) => {
+export const ExperienceItem = ({ name, site, startDate, endDate, hideDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
     const start_date = new Date(startDate);
     const end_date = new Date(endDate);
 
@@ -45,28 +45,36 @@ export const ExperienceItem = ({ name, site, startDate, endDate, hideEndDate, hi
                             </div>
                         </div>
 
-                        <div className={`d-flex align-items-center ${styles["header-details"]}`}>
-                            <div>
-                                <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>{timeText}</p>
-                                {place ?
-                                    <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{place} {remote ? "(Remote)" : ""}</p>
-                                    : null
-                                }
-                            </div>
-                        </div>
+                        {
+                            !hideDate ?
+                                <div className={`d-flex align-items-center ${styles["header-details"]}`}>
+                                    <div>
+                                        <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>{timeText}</p>
+                                        {place ?
+                                            <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{place} {remote ? "(Remote)" : ""}</p>
+                                            : null
+                                        }
+                                    </div>
+                                </div>
+                                : null
+                        }
 
                         <p className={styles["no-margin"]}>{pointsTitle}</p>
                         {bulletPoints ?
                             <ul>{bulletPoints.map((point, index) => <li key={index}>{point}</li>)}</ul>
                             : null}
 
-                        {hasButton ?
-                            (buttonExternal ?
-                                <Link href={buttonLink} className={styles["button"]} target="_blank" rel="noopener noreferrer">{buttonText}</Link> :
-                                <Link href={buttonLink} className={styles["button"]}>{buttonText}</Link>)
-                            : null
+                        {
+                            buttons?.map(((button, index) => {
+                                return <span key={index}>
+                                    {!button.hide ?
+                                        (button.externalLink ?
+                                            <Link href={button.link} className={styles["button"]} target="_blank" rel="noopener noreferrer">{button.text}</Link> :
+                                            <Link href={button.link} className={styles["button"]}>{button.text}</Link>)
+                                        : null}
+                                </span>;
+                            }))
                         }
-
                     </div>
                 </div>
             </div>

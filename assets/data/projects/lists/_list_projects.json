@@ -1,54 +1,77 @@
 {
     "personal-webpage": {
-        "category": ["other"],
+        "category": [
+            "other"
+        ],
         "name": "Personal Webpage",
         "tag": "Webpage",
         "hasSection": true,
         "noLogo": true
     },
     "unused-node-cleaner": {
-        "category": ["plugin"],
+        "category": [
+            "plugin"
+        ],
         "name": "Unused Node Cleaner",
         "tag": "Unreal Plugin",
         "hasSection": true,
         "noLogo": true
     },
     "quantum-fields": {
-        "category": ["development", "jams"],
+        "category": [
+            "development",
+            "jams"
+        ],
         "name": "Quantum Fields",
         "tag": "Game - 2023 Epic MegaJam",
-        "platforms": ["windows"],
+        "platforms": [
+            "windows"
+        ],
         "hasSection": true,
         "customRoute": "/games/quantum-fields"
     },
     "urkaz-moon-tools": {
-        "category": ["mcmods"],
+        "category": [
+            "mcmods"
+        ],
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Mod",
         "hasSection": true,
         "noLogo": true
     },
     "item-name-localized": {
-        "category": ["other"],
+        "category": [
+            "other"
+        ],
         "name": "Item Name Localized",
         "tag": "World of Warcraft Addon",
         "hasSection": true,
         "noLogo": true
     },
     "penguin": {
-        "category": ["development", "jams"],
+        "category": [
+            "development",
+            "jams"
+        ],
         "name": "Pengüin",
         "tag": "Game - I UJI Game Jam",
-        "platforms": ["windows"],
+        "platforms": [
+            "windows"
+        ],
         "hasSection": true,
         "noLogo": true,
         "customRoute": "/games/penguin"
     },
     "purramid": {
-        "category": ["development", "jams"],
+        "category": [
+            "development",
+            "jams"
+        ],
         "name": "Purramid",
         "tag": "Game - 2016 Global Game Jam",
-        "platforms": ["windows"],
+        "platforms": [
+            "windows"
+        ],
         "hasSection": true,
         "customRoute": "/games/purramid"
     }

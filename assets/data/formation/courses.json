@@ -3,24 +3,29 @@
         "name": "Creating A Chip-8 Emulator In C",
         "site": "Udemy",
         "startDate": "2025-08-01T00:00:00.000Z",
+        "hideDate": true,
         "hideEndDate": true,
         "hideDuration": true,
         "pointsTitle": "Topics covered:",
         "bulletPoints": [
-            "Fully emulate the Chip-8 machine, emulating all hardware components (display, input, memory, cpu, audio, etc)",
-            "Understand how instruction sets work"
+            "Fully emulate the Chip-8 machine, emulating all hardware components (display, input, memory, cpu, audio, etc) and the instruction set",
+            "Implemented using what I learnt in the CMake course using SDL"
         ],
-        "hasButton": true,
-        "buttonLink": "https://www.udemy.com/course/creating-a-chip-8-emulator-in-c",
-        "buttonText": "View Course",
-        "buttonExternal": true,
-        "logo": "/img/experience/icons/udemy_logo.png",
+        "buttons": [
+            {
+                "link": "https://www.udemy.com/course/creating-a-chip-8-emulator-in-c",
+                "text": "View Course",
+                "externalLink": true
+            }
+        ],
+        "logo": "/img/experience/icons/udemy_logo2.png",
         "hideFullTime": true
     },
     "udemy-cmake": {
         "name": "CMake, Tests and Tooling for C/C++ Projects",
         "site": "Udemy",
         "startDate": "2025-06-01T00:00:00.000Z",
+        "hideDate": true,
         "hideEndDate": true,
         "hideDuration": true,
         "pointsTitle": "Topics covered:",
@@ -31,28 +36,37 @@
             "Advanced tooling: LTO, Sanitizers, clang-tidy, clang-format, cmake-format, code coverage",
             "Documentation generation with Doxygen"
         ],
-        "hasButton": true,
-        "buttonLink": "https://www.udemy.com/course/cmake-tests-and-tooling-for-cc-projects/",
-        "buttonText": "View Course",
-        "buttonExternal": true,
-        "logo": "/img/experience/icons/udemy_logo.png",
+        "buttons": [
+            {
+                "link": "https://www.udemy.com/course/cmake-tests-and-tooling-for-cc-projects/",
+                "text": "View Course",
+                "externalLink": true,
+                "hide": false
+            }
+        ],
+        "logo": "/img/experience/icons/udemy_logo2.png",
         "hideFullTime": true
     },
     "udemy-unity": {
         "name": "Complete C# Unity 6 Game Development",
         "site": "Udemy",
         "startDate": "2025-04-01T00:00:00.000Z",
+        "hideDate": true,
         "hideEndDate": true,
         "hideDuration": true,
         "pointsTitle": "Topics covered:",
         "bulletPoints": [
             "Basic and intermediate game development with Unity 6"
         ],
-        "hasButton": true,
-        "buttonLink": "https://www.udemy.com/course/unitycourse2/",
-        "buttonText": "View Course",
-        "buttonExternal": true,
-        "logo": "/img/experience/icons/udemy_logo.png",
+        "buttons": [
+            {
+                "link": "https://www.udemy.com/course/unitycourse2/",
+                "text": "View Course",
+                "externalLink": true,
+                "hide": false
+            }
+        ],
+        "logo": "/img/experience/icons/udemy_logo2.png",
         "hideFullTime": true
     }
 }

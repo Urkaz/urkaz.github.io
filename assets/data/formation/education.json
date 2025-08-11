@@ -4,6 +4,7 @@
         "site": "U-tad",
         "startDate": "2020-10-01T00:00:00.000Z",
         "endDate": "2021-10-01T00:00:00.000Z",
+        "hideDate": false,
         "hideEndDate": false,
         "hideDuration": true,
         "place": "Madrid, Spain",
@@ -16,18 +17,23 @@
             "Audio programming using OpenAL in C++",
             "Advanced Unity game development"
         ],
-        "hasButton": false,
-        "buttonLink": "/formation/utadmaster",
-        "buttonText": "More details",
-        "buttonExternal": false,
+        "buttons": [
+            {
+                "link": "/formation/utadmaster",
+                "text": "More details",
+                "externalLink": false,
+                "hide": true
+            }
+        ],
         "logo": "/img/experience/icons/u_tad_logo.jpg",
         "hideFullTime": true
     },
-    "ujivideogames": {
+    "ujidegree": {
         "name": "Degree in Video game Design and Development",
         "site": "Universitat Jaume I",
         "startDate": "2012-09-01T00:00:00.000Z",
         "endDate": "2016-06-31T00:00:00.000Z",
+        "hideDate": false,
         "hideEndDate": false,
         "hideDuration": true,
         "place": "Castelló de la Plana, Castelló, Spain",
@@ -37,7 +43,14 @@
             "Basic Unity 3D game development",
             "Algorithms and Data structures"
         ],
-        "hasButton": false,
+        "buttons": [
+            {
+                "link": "/formation/ujidegree",
+                "text": "More details",
+                "externalLink": false,
+                "hide": true
+            }
+        ],
         "logo": "/img/experience/icons/uji_logo.jpg",
         "hideFullTime": true
     }
