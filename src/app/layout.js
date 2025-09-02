@@ -8,9 +8,7 @@ import { ScrollToTop } from "@components/common/ScrollToTop";
 import { DottedBackground } from "@components/common/DottedBackground";
 import { BootstrapClient } from "@components/thirdparty/BootstrapClient";
 import { AOSClient } from "@components/thirdparty/AOSClient";
-import ReactGA from "react-ga4";
-
-ReactGA.initialize("G-232NTM50DL");
+import { GoogleAnalytics, GoogleAnalyticsTAGScript } from "@components/thirdparty/GA4";
 
 // The following import prevents a Font Awesome icon server-side rendering bug,
 // where the icons flash from a very large icon down to a properly sized one:
@@ -49,6 +47,8 @@ export default function RootLayout({ children }) {
             <body>
                 <Suspense fallback={<Preloader />}>
                     <Header>{siteName}</Header>
+                    <GoogleAnalytics />
+                    <GoogleAnalyticsTAGScript />
                     <main className="main">
                         <DottedBackground />
                         {children}
