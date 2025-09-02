@@ -68,7 +68,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
             <div
                 className={`col-lg-4 col-md-6 ${styles["small-grid-item"]} isotope-grid-item ${category?.map((cat) => `category-${cat}`).join(" ")} ${platforms?.map((platform) => `category-${platform}`).join(" ")} ${hasSection ? `category-devlog` : ""}`}
             >
-                {hasSection || customRoute ? <Link href={`${parentSection}/${keyName}`}>{content}</Link> : content}
+                {hasSection ? <Link href={`${parentSection}/${keyName}`}>{content}</Link> : content}
             </div>
         </>
     );
