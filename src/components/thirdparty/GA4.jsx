@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import ReactGA from "react-ga4";
 
@@ -9,15 +9,18 @@ export const GA_TRACKING_ID = "G-232NTM50DL";
 
 export function GoogleAnalytics() {
     const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     useEffect(() => {
         ReactGA.initialize(GA_TRACKING_ID);
     }, []);
 
     useEffect(() => {
-        if (pathname) {
-            ReactGA.send({ hitType: "pageview", page: pathname });
-        }
+        if (!pathname) return;
+
+        const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
+
+        ReactGA.send({ hitType: "pageview", page: url });
     }, [pathname]);
 
     return null;
