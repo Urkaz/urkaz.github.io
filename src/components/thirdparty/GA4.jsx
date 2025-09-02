@@ -19,6 +19,7 @@ export function GoogleAnalytics() {
         if (!pathname) return;
 
         const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
+        console.log("[GA4] Sending pageview:", url);
 
         ReactGA.send({ hitType: "pageview", page: url });
     }, [pathname]);
