@@ -6,9 +6,11 @@ import { LazyIsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid"
 import { SectionContent } from "@components/common/SectionsContent";
 import { GameGridItem } from "@src/components/pages/games/GameGridItem";
 import { FilterItem } from "@src/components/pages/games/FilterItem";
+import { filterAndPrefixGameList } from "@src/components/functions";
 
-import ProjectsList from "@assets/data/projects/lists/_list_projects.json";
+import FullList from "@assets/data/lists/_list_games.json";
 import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.json";
+import ProjectTagPrefixes from "@assets/data/projects/lists/_tag_prefixes_filter.json";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +18,8 @@ import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 const FilterList = [ProjectsFilterList];
 
 const Projects = () => {
+    let ListFiltered = filterAndPrefixGameList(FullList, ProjectTagPrefixes);
+
     return (
         <>
             <SectionContent
@@ -30,7 +34,7 @@ const Projects = () => {
                 }
                 sectionId="projects"
             >
-                <LazyIsotopeGrid filterList={FilterList} items={ProjectsList} FilterComponent={FilterItem} GridComponent={GameGridItem} />
+                <LazyIsotopeGrid filterList={FilterList} items={ListFiltered} FilterComponent={FilterItem} GridComponent={GameGridItem} />
             </SectionContent>
         </>
     );

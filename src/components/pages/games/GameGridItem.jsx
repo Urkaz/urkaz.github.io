@@ -14,8 +14,13 @@ import { CustomIcon } from "@src/components/common/CustomIcon";
 import styles from "@styles/pages/games.module.scss";
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
-export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, customRoute }) => {
+export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, parentSection, hidden = false }) => {
+
+    if (hidden)
+        return <></>;
+
     const pathname = usePathname();
+    let customRoute = parentSection != pathname;
 
     const content = (
         <>
@@ -63,7 +68,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
             <div
                 className={`col-lg-4 col-md-6 ${styles["small-grid-item"]} isotope-grid-item ${category?.map((cat) => `category-${cat}`).join(" ")} ${platforms?.map((platform) => `category-${platform}`).join(" ")} ${hasSection ? `category-devlog` : ""}`}
             >
-                {hasSection || customRoute ? <Link href={customRoute ? customRoute : `${pathname}/${keyName}`}>{content}</Link> : content}
+                {hasSection || customRoute ? <Link href={`${parentSection}/${keyName}`}>{content}</Link> : content}
             </div>
         </>
     );

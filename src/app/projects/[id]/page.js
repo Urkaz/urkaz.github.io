@@ -1,15 +1,20 @@
 import React from "react";
 
-import ProjectsMetaData from "@assets/data/projects/lists/_list_projects.json";
+import FullList from "@assets/data/lists/_list_games.json";
+
+import { filterListByCategory } from "@src/components/functions";
 
 import ProjectDescriptionID, { _generateStaticParams } from "@components/pages/ProjectDescriptionID";
 
 const ProjectDescription = async ({ params }) => {
-    return <ProjectDescriptionID params={params} metaData={ProjectsMetaData} dataPath="assets/data/projects" />;
+    return <ProjectDescriptionID params={params} metaData={FullList} dataPath="assets/data/projects" />;
 };
 
 export async function generateStaticParams() {
-    return _generateStaticParams(ProjectsMetaData);
+    let ListFiltered = filterListByCategory(FullList, "personal");
+    const paths = _generateStaticParams(ListFiltered);
+    console.log("PROJECTS Static params:", paths);
+    return paths;
 }
 
 export default ProjectDescription;

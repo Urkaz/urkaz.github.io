@@ -102,8 +102,8 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
 
                 {/* Grid with dynamic component "GridComponent"*/}
                 <div ref={gridRef} className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                    {Object.entries(items).map(([key, game]) => (
-                        <GridComponent {...game} key={key} keyName={key} />
+                    {Object.entries(items).map(([key, item]) => (
+                        <GridComponent {...item} key={key} keyName={key} />
                     ))}
                 </div>
             </div>

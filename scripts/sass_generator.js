@@ -2,18 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const { cleanText } = require("../src/components/functions");
 
-const GamesList = require("../assets/data/games/lists/_list_games.json");
-const PersonalProjectsList = require("../assets/data/projects/lists/_list_projects.json");
+const GamesList = require("../assets/data/lists/_list_games.json");
 
 function generateCode() {
     const sassCodeGames = Object.entries(GamesList)
         .map(([key, game]) => `.${key} { background-image: url("/img/games/tiles/${cleanText(game.name)}.png"); }`)
         .join("\n");
-    const sassCodeProjects = Object.entries(PersonalProjectsList)
-        .map(([key, game]) => `.${key} { background-image: url("/img/games/tiles/${cleanText(game.name)}.png"); }`)
-        .join("\n");
 
-    var sassCode = sassCodeGames.concat("\n").concat(sassCodeProjects);
+    var sassCode = sassCodeGames;
     return sassCode;
 }
 

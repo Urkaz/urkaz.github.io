@@ -11,6 +11,11 @@
         "path": "/formation",
         "sectionName": "Formation"
     },
+    "skills": {
+        "path": "/skills",
+        "sectionName": "Skills",
+        "hidden": true
+    },
     "projects": {
         "path": "/projects",
         "sectionName": "Personal Projects"
@@ -18,5 +23,10 @@
     "games": {
         "path": "/games",
         "sectionName": "Games"
+    },
+    "contact": {
+        "path": "/contact",
+        "sectionName": "Contact",
+        "hidden": true
     }
 }

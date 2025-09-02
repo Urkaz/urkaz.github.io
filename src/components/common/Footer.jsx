@@ -5,6 +5,18 @@ import { LinkPills, LinkDot } from "@components/common/LinkPills";
 import styles from "@styles/components/Footer.module.scss";
 
 export function Footer({ name }) {
+    const buildDate = new Date(process.env.NEXT_PUBLIC_BUILD_DATE);
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: "UTC",
+        timeZoneName: "short"
+    });
+    const formattedDate = formatter.format(buildDate);
+
     return (
         <>
             {/*Footer*/}
@@ -23,6 +35,8 @@ export function Footer({ name }) {
                             Made with React+Next.js by <strong className="px-1 sitename">{name}</strong>.
                             <br />
                             All trademarks, logos, and brand names are the property of their respective owners. Their use on this website is for identification only and does not imply endorsement.
+                            <br />
+                            Last updated {formattedDate}
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,8 @@ import React from "react";
 
 import { Breadcrumb } from "@components/common/Breadcrumb";
 
+import styles from "@styles/components/SectionsContent.module.scss";
+
 export function Heading({ title, description }) {
     return (
         <>
@@ -11,7 +13,7 @@ export function Heading({ title, description }) {
                     <div className="row d-flex justify-content-center text-center">
                         <div className="col-lg-8">
                             {title ? <h1>{title}</h1> : null}
-                            {description ? <p className="mb-0">{description}</p> : null}
+                            {description ? <p className={`mb-0 ${styles["description"]}`}>{description}</p> : null}
                         </div>
                     </div>
                 </div>

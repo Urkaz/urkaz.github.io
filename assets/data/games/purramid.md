@@ -18,7 +18,7 @@ This was my first time participating in a game jam, as well as my first experien
 
 Beetle Stage: Right-click for instructions.
 
-Pyramid Stage: Place traps using keys 1, 2, and 3. When you press play, the traps remain inactive—activate them strategically to stop enemies with the right timing!
+Pyramid Stage: Place traps using keys 1, 2, and 3. When you press play, the traps remain inactive. Activate them strategically to stop enemies with the right timing!
 
 ## Diversifiers
 

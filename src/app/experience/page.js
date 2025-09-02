@@ -3,7 +3,7 @@ import React from "react";
 import { SectionContent } from "@components/common/SectionsContent";
 import { ExperienceItem, ExperienceSeparator } from "@components/pages/ExperienceItem";
 
-import ExperienceList from "@assets/data/experience/professional.json";
+import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
 
 import styles from "@styles/pages/experience.module.scss";
 

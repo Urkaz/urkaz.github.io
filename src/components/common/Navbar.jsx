@@ -49,6 +49,7 @@ export function Navbar() {
             <nav id={styles["navmenu"]} className={styles["navmenu"]}>
                 <ul>
                     {Object.entries(Sections).map(([key, section]) => (
+                        !section.hidden ?
                         <NavItem key={key} to={section.path} pathname={pathname} onClick={() => {
                             if (document.body.classList.contains(styles["mobile-nav-active"]))
                                 toggleMenu();
@@ -56,6 +57,7 @@ export function Navbar() {
                         }>
                             {section.sectionName}
                         </NavItem>
+                        : null
                     ))}
                     <li>
                         <a href="/CV_FrancescSanchezRodrigo.pdf" download>

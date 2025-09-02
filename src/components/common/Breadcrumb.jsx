@@ -8,12 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
 import Sections from "@assets/data/sections.json";
-import GamesList from "@assets/data/games/lists/_list_games.json";
-import ProjectsList from "@assets/data/projects/lists/_list_projects.json";
+import FullList from "@assets/data/lists/_list_games.json";
 
 const breadcrumbsData = {
-    "/projects": ProjectsList,
-    "/games": GamesList,
+    "/projects": FullList,
+    "/games": FullList,
 };
 
 const getBreadcrumbs = (pathname) => {

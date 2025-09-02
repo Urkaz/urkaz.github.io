@@ -12,6 +12,35 @@ function cleanText(text) {
     return cleanedText;
 }
 
+function filterListByCategory(GamesList, Category) {
+    let GamesListFiltered = Object.entries(GamesList).filter(([_, game]) => game.category.includes(Category));
+    GamesListFiltered = Object.fromEntries(GamesListFiltered);
+    return GamesListFiltered;
+}
+
+function filterAndPrefixGameList(GamesList, PrefixList) {
+    // Preprocess Games List
+    let GamesListFiltered = Object.entries(GamesList)
+        .filter(([_, game]) =>
+            // Filter using the PrefixList list
+            PrefixList.some((f) => game.category.includes(f.category))
+        )
+        .map(([key, game]) => {
+            const filter = PrefixList.find((f) => game.category.includes(f.category));
+
+            // Modify the taag with the prefix
+            return [
+                key,
+                {
+                    ...game,
+                    tag: filter && filter.prefix ? filter.prefix + (game.tag ? " - " + game.tag : "") : game.tag,
+                },
+            ];
+        });
+    GamesListFiltered = Object.fromEntries(GamesListFiltered);
+    return GamesListFiltered;
+}
+
 function getYearMonthDifference(startDate, endDate, roundUp = false) {
     if (endDate < startDate) {
         [startDate, endDate] = [endDate, startDate];
@@ -73,4 +102,4 @@ function getYearMonthDifference(startDate, endDate, roundUp = false) {
     return parts.length > 0 ? parts.join(" ") : "0 months";
 }
 
-module.exports = { concatValues, cleanText, getYearMonthDifference };
+module.exports = { concatValues, cleanText, getYearMonthDifference, filterAndPrefixGameList, filterListByCategory };

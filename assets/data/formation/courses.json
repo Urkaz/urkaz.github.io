@@ -8,8 +8,8 @@
         "hideDuration": true,
         "pointsTitle": "Topics covered:",
         "bulletPoints": [
-            "Fully emulate the Chip-8 machine, emulating all hardware components (display, input, memory, cpu, audio, etc) and the instruction set",
-            "Implemented using what I learnt in the CMake course using SDL"
+            "Fully emulated the Chip-8 system, including all hardware components (display, input, memory, CPU, audio, etc.) and its complete instruction set",
+            "Built applying concepts learned in the CMake course, with SDL3"
         ],
         "buttons": [
             {
