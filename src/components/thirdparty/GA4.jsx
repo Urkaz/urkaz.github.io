@@ -12,6 +12,7 @@ export function GoogleAnalytics() {
     const searchParams = useSearchParams();
 
     useEffect(() => {
+        //console.log("[GA4] Initializing");
         ReactGA.initialize(GA_TRACKING_ID);
     }, []);
 
@@ -19,7 +20,7 @@ export function GoogleAnalytics() {
         if (!pathname) return;
 
         const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
-        console.log("[GA4] Sending pageview:", url);
+        //console.log("[GA4] Sending pageview:", url);
 
         // ReactGA
         ReactGA.send({ hitType: "pageview", page: url });
