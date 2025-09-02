@@ -21,13 +21,15 @@ export function GoogleAnalytics() {
         const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
         console.log("[GA4] Sending pageview:", url);
 
+        // ReactGA
         ReactGA.send({ hitType: "pageview", page: url });
-    }, [pathname]);
 
-    return null;
-}
+        // native gtag
+        if (typeof window !== "undefined" && window.gtag) {
+            window.gtag("event", "page_view", { page_path: url });
+        }
+    }, [pathname, searchParams]);
 
-export function GoogleAnalyticsTAGScript() {
     return <>
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -36,7 +38,7 @@ export function GoogleAnalyticsTAGScript() {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', '${GA_TRACKING_ID}');
+                gtag('config', '${GA_TRACKING_ID}', { send_page_view: false });
             `}
         </Script></>
 }
