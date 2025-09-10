@@ -30,22 +30,22 @@
         ],
         "name": "Sons of Macabre",
         "tag": "Minecraft Mod",
-        "hasSection": true,
+        "hasSection": false,
         "parentSection": "/projects",
         "noLogo": true,
-        "hidden": true
+        "hidden": false
     },
-    "immersive-machine-alexs-caves": {
+    "immersive-machinery-alexs-caves": {
         "category": [
             "mcmods",
             "personal"
         ],
-        "name": "Immersive Machine + Alex's Caves",
+        "name": "Immersive Machinery x Alex's Caves",
         "tag": "Minecraft Mod",
-        "hasSection": true,
+        "hasSection": false,
         "parentSection": "/projects",
         "noLogo": true,
-        "hidden": true
+        "hidden": false
     },
     "personal-webpage": {
         "category": [
@@ -244,6 +244,18 @@
         "tag": "",
         "platforms": [
             "switch"
+        ]
+    },
+    "baldurs-gate-iii": {
+        "category": [
+            "qa",
+            "lollipop",
+            "game"
+        ],
+        "name": "Baldur's Gate III",
+        "tag": "",
+        "platforms": [
+            "stadia"
         ]
     },
     "spelunky-2": {
@@ -811,7 +823,7 @@
             "switch"
         ]
     },
-    "sunlesssea": {
+    "sunless-sea": {
         "category": [
             "qa",
             "lollipop",
@@ -908,7 +920,7 @@
             "switch"
         ]
     },
-    "pwlboy": {
+    "owlboy": {
         "category": [
             "qa",
             "lollipop",
