@@ -8,7 +8,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 
-import { cleanText } from "@src/components/functions";
 import { CustomIcon } from "@src/components/common/CustomIcon";
 
 import styles from "@styles/pages/games.module.scss";
@@ -38,11 +37,11 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                 ) : null}
                 */}
 
-                <div className={styles["game-background"]}><LazyLoadImage src={`/img/games/tiles/${cleanText(name)}.png`} className="img-fluid" alt={name} effect="opacity" /></div>
+                <div className={styles["game-background"]}><LazyLoadImage src={`/img/games/tiles/${keyName}.png`} className="img-fluid" alt={name} effect="opacity" /></div>
 
                 {/* OVERLAY WITH LOGO OR TITLE */}
                 <div className={styles["game-overlay"]}>
-                    {noLogo == true ? <p>{name}</p> : <div className={styles["game-logo"]}><LazyLoadImage src={`/img/games/logos/${cleanText(name)}.png`} className="img-fluid" alt={name} effect="opacity" /></div>}
+                    {noLogo == true ? <p>{name}</p> : <div className={styles["game-logo"]}><LazyLoadImage src={`/img/games/logos/${keyName}.png`} className="img-fluid" alt={name} effect="opacity" /></div>}
                 </div>
 
                 {/* FLOATING DETAILS (tags, platforms, etc) */}
