@@ -58,5 +58,9 @@
     {
         "img": "/img/icons/mini_win10.png",
         "selector": ".category-win10"
+    },
+    {
+        "img": "/img/icons/mini_stadia.png",
+        "selector": ".category-stadia"
     }
 ]
