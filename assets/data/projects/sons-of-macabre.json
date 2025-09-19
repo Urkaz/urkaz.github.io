@@ -1,0 +1,44 @@
+{
+    "description": "A small Minecraft Forge mod for 1.20.1 adding integration between the mods \"Sons Of Sins\" and \"Macabre - Call of False Prophets\".",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/mods/sons_portal.png",
+            "alt": "The new portal to access The Pit dimension from Macabre, crafted with items from Sons of Sins"
+        },
+        {
+            "src": "/img/projects/mods/macabre_portal.png",
+            "alt": "The new portal seen from The Pit dimension"
+        },
+        {
+            "src": "/img/projects/mods/ether.png",
+            "alt": "All monsters in The Pit drop Ether Ashes from Sons of Sins"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Mod"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        },
+        {
+            "left": "Project started",
+            "right": "2025"
+        },
+        {
+            "left": "Project status",
+            "right": "Currently maintained"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/SonsOfMacabre"
+        }
+    ]
+}

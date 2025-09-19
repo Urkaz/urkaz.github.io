@@ -1,0 +1,36 @@
+{
+    "description": "A small Minecraft Forge mod for 1.20.1 adding integration between the mods \"Immersive Machinery\" and \"Alex's Caves\".",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/mods/hullbreaker.png",
+            "alt": "A Hullbreaker noticing a player inside a Copper Fin"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Mod"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        },
+        {
+            "left": "Project started",
+            "right": "2025"
+        },
+        {
+            "left": "Project status",
+            "right": "Currently maintained"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/ImmersiveMachineryAlexsCaves"
+        }
+    ]
+}

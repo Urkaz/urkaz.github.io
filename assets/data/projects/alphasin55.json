@@ -1,0 +1,40 @@
+{
+    "description": "A Minecraft Java Edition mod that reimagines the old Galaxy 55 game from MotionTwin in Minecraft.",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/alphasin55/creative_tab.png",
+            "alt": "More than 200 new items and blocks"
+        },
+        {
+            "src": "/img/projects/alphasin55/crafting.png",
+            "alt": "New crafting system: Synthesis"
+        },
+        {
+            "src": "/img/projects/alphasin55/plants.png",
+            "alt": "Some of the new plants"
+        },
+        {
+            "src": "/img/projects/alphasin55/liquids.png",
+            "alt": "New fluids that can be frozen with the Freezer"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Mod"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        },
+        {
+            "left": "Project started",
+            "right": "2023"
+        },
+        {
+            "left": "Project status",
+            "right": "In development"
+        }
+    ]
+}

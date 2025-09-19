@@ -1,0 +1,35 @@
+{
+    "description": "A small Minecraft Forge mod for 1.20.1 adding integration between the mods \"Sons Of Sins\" and \"Macabre - Call of False Prophets\".",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/games/logos/urkaz-lib.png"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Mod"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        },
+        {
+            "left": "Project started",
+            "right": "2023"
+        },
+        {
+            "left": "Project status",
+            "right": "In development"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/UrkazLib"
+        }
+    ]
+}

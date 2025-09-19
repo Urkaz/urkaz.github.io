@@ -6,6 +6,8 @@ I joined the team after 1-2 months of development, focusing exclusively on optim
 
 ## Challenges
 
+<warning>Description in progress</warning>
+
 ### Polycount MinLOD behavior
 
 Changed MinLOD behaviour to allow early LOD transitions when MinLOD is set to something different to 0.

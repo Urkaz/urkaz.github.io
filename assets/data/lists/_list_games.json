@@ -5,11 +5,11 @@
             "personal"
         ],
         "name": "AlphaSIN 55",
-        "tag": "Minecraft Mod",
+        "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
         "parentSection": "/projects",
-        "noLogo": true,
-        "hidden": true
+        "noLogo": false,
+        "hidden": false
     },
     "urkaz-lib": {
         "category": [
@@ -17,11 +17,11 @@
             "personal"
         ],
         "name": "Urkaz Lib",
-        "tag": "Minecraft Mod",
+        "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
         "parentSection": "/projects",
-        "noLogo": true,
-        "hidden": true
+        "noLogo": false,
+        "hidden": false
     },
     "sons-of-macabre": {
         "category": [
@@ -29,8 +29,8 @@
             "personal"
         ],
         "name": "Sons of Macabre",
-        "tag": "Minecraft Mod",
-        "hasSection": false,
+        "tag": "Minecraft Java Edition Mod",
+        "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
         "hidden": false
@@ -41,8 +41,8 @@
             "personal"
         ],
         "name": "Immersive Machinery ˣ Alex's Caves",
-        "tag": "Minecraft Mod",
-        "hasSection": false,
+        "tag": "Minecraft Java Edition Mod",
+        "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
         "hidden": false
@@ -1215,7 +1215,7 @@
             "personal"
         ],
         "name": "Urkaz Moon Tools",
-        "tag": "Minecraft Mod",
+        "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true
