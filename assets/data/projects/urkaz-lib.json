@@ -1,5 +1,5 @@
 {
-    "description": "A small Minecraft Forge mod for 1.20.1 adding integration between the mods \"Sons Of Sins\" and \"Macabre - Call of False Prophets\".",
+    "description": "Companion library containing multiple utilities for multiplatform development of mods for Minecraft Java Edition.",
     "hasGallery": true,
     "gallery": [
         {

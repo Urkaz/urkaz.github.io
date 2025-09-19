@@ -1,7 +1,5 @@
 # Overview
 
-Companion library containing multiple utilities for multiplatform development of mods for Minecraft Java Edition.
-
 Features:
 
 * Multiplatform development for Fabric, NeoForge and Forge.
