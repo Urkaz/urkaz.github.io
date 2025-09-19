@@ -1,5 +1,5 @@
 {
-    "description": "Urkaz Moon Tools is a Minecraft mod that adds one item and one block that helps detecting the current Moon Phase.",
+    "description": "Urkaz Moon Tools is a Minecraft Java Edition mod that adds one item and one block that helps detecting the current Moon Phase.",
     "hasGallery": true,
     "gallery": [
         {
@@ -12,7 +12,7 @@
     "details": [
         {
             "left": "Type",
-            "right": "Minecraft Mod"
+            "right": "Minecraft Java Edition Mod"
         },
         {
             "left": "Language",
