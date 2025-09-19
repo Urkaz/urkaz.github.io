@@ -1,6 +1,6 @@
 # Overview
 
-With more than 35k downloads, Urkaz Moon Tools is a Minecraft mod that adds one item and one block that helps detecting the current Moon Phase. If other mods like Enhanced Celestials, Lunar or Bloodmoon are present, it offers compatibility ny showing the color of the current lunar event provided by those mods.
+With more than 50k downloads, Urkaz Moon Tools is a Minecraft mod that adds one item and one block that helps detecting the current Moon Phase. If other mods like Enhanced Celestials, Lunar or Bloodmoon are present, it offers compatibility ny showing the color of the current lunar event provided by those mods.
 
 # Challenges
 
