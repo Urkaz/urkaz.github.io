@@ -2,7 +2,7 @@
 
 ## Context of Galaxy 55
 
-Galaxy 55 was a Minecraft-like game developed by MotionTwin in 2012 before Minecraft's adventure mode was released. The game featured a customizable ship that you coud use to travel to procedural planets to gather resouces, and a 3D crafting system.
+Galaxy 55 was a Minecraft-like game developed by Motion Twin in 2012 before Minecraft's adventure mode was released. The game featured a customizable ship that you coud use to travel to procedural planets to gather resouces, and a 3D crafting system.
 
 The game was cancelled during it's beta phase after Minecraft's adventure mode was released.
 
