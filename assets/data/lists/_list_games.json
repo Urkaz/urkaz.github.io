@@ -85,7 +85,7 @@
         "platforms": [
             "meta"
         ],
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/games"
     },
     "unused-node-cleaner": {
