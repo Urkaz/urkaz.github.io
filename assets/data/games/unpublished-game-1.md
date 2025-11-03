@@ -8,7 +8,7 @@ We worked closely with the producer at Shiver Entertainment and a QA team that t
 
 ## Challenges
 
-### Multiplayer Xbox Engagement screen
+### Multiplayer Xbox User and Controller management
 
 For all our Xbox ports, we were required to implement an interactive engagement screen where the user selects their profile by pressing a button, and also handle controller and user disconnections or changes in real time. While we had existing code for this, it was designed with single-player experiences in mind.
 
