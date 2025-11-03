@@ -239,7 +239,7 @@ Destroy the city of Otakio to modify the battlefield or just because it's really
 - Alfonso Torres Sánchez
 - Diego Muñoz Martín
 - Diego Vázquez Garrido
-- Francesc Sánchez Rodrigo
+- Fran Sánchez Rodrigo
 - Jorge de Paz Cabañas
 - Marcos Pérez González
 - Sergio Jiménez Galiana

@@ -60,7 +60,7 @@ export function Navbar() {
                         : null
                     ))}
                     <li>
-                        <a href="/CV_FrancescSanchezRodrigo.pdf" download>
+                        <a href="/CV_FranSanchezRodrigo.pdf" download>
                             Download CV
                         </a>
                     </li>
