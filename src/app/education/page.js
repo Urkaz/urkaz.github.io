@@ -3,8 +3,8 @@ import React from "react";
 import { SectionContent } from "@components/common/SectionsContent";
 import { ExperienceItem, ExperienceSeparator } from "@components/pages/ExperienceItem";
 
-import EducationList from "@assets/data/formation/education.json";
-import CoursesList from "@assets/data/formation/courses.json";
+import EducationList from "@assets/data/education/education.json";
+import CoursesList from "@assets/data/education/courses.json";
 
 import styles from "@styles/pages/experience.module.scss";
 
@@ -12,7 +12,7 @@ const Education = () => {
     return (
         <>
             <SectionContent
-                title="Formation"
+                title="Education"
                 description={
                     <>
                         This section showcases my academic background, including degrees, certifications, courses, and any additional training or
@@ -22,7 +22,7 @@ const Education = () => {
                 sectionId={styles["experience"]}
             >
                 <div className="row">
-                    <h1>Education</h1>
+                    <h1>Academic Background</h1>
                     {Object.entries(EducationList).map(([key, item], index) => (
                         <div key={key}>
                             <ExperienceItem {...item} />

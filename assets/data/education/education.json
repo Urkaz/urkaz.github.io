@@ -19,7 +19,7 @@
         ],
         "buttons": [
             {
-                "link": "/formation/utadmaster",
+                "link": "/education/utadmaster",
                 "text": "More details",
                 "externalLink": false,
                 "hide": true
@@ -29,7 +29,7 @@
         "hideFullTime": true
     },
     "ujidegree": {
-        "name": "Degree in Video game Design and Development",
+        "name": "Bachelor's Degree in Video game Design and Development",
         "site": "Universitat Jaume I",
         "startDate": "2012-09-01T00:00:00.000Z",
         "endDate": "2016-06-31T00:00:00.000Z",
@@ -45,7 +45,7 @@
         ],
         "buttons": [
             {
-                "link": "/formation/ujidegree",
+                "link": "/education/ujidegree",
                 "text": "More details",
                 "externalLink": false,
                 "hide": true
