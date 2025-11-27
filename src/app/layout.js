@@ -38,7 +38,7 @@ const titilliumWeb = Titillium_Web({
 
 /* Metadata & App */
 export const metadata = {
-    title: "Fran Sánchez - Porfolio",
+    title: "Fran Sánchez Rodrigo - Portfolio",
 };
 export default function RootLayout({ children }) {
     const siteName = "Fran Sánchez Rodrigo";

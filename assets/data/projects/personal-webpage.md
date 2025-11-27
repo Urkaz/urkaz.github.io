@@ -1,6 +1,6 @@
 # Overview
 
-This webpage serves as a porfolio for all my personal projects, education, and professional experience.
+This webpage serves as a portfolio for all my personal projects, education, and professional experience.
 
 # Challenges
 
