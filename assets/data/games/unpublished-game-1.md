@@ -17,7 +17,7 @@ This game supported local co-op for up to four players, which meant the system h
 Implementing these changes was already a challenge, but things became even more complicated during certification and the QA team reported that Guest users (local users without linked accounts) weren't correctly supported. Addressing this required additional modifications to both the plugin and the engine, including backporting parts of the Xbox profile handling code from Unreal Engine 5.1 to Unreal Engine 4.27, and working directly with low-level SDK functions.
 
 <gallery>
-    /img/games/screenshots/unpublished1/xboxmenu.webp | Words can't express how much I hate user management in Xbox.
+    /img/games/screenshots/unpublished1/xboxmenu.webp | Words can't express how much I hate Xbox user management.
 </gallery>
 
 ### Multiplayer Switch controllers
