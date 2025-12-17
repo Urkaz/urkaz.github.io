@@ -23,7 +23,7 @@
         "react-ga4": "^2.1.0",
         "react-lazy-load-image-component": "^1.6.3",
         "react-markdown": "^10.1.0",
-        "react-syntax-highlighter": "^15.6.6",
+        "react-syntax-highlighter": "^16.1.0",
         "react-text-gradients": "^1.0.2",
         "rehype-raw": "^7.0.0",
         "remark-gfm": "^4.0.1",
