@@ -16,7 +16,7 @@ export default function Home() {
                 <div className="row">
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <h2>Fran Sánchez Rodrigo</h2>
-                        <p className={styles["sub-title"]}>Unreal Engine Tools, Engine & Optimization Engineer</p>
+                        <p className={styles["sub-title"]}>Tools, Engine & Optimization Engineer</p>
                         <div className={styles["description"]}>
                             <p>
                                 Hello and welcome to my portfolio!
