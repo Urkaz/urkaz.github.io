@@ -2,6 +2,7 @@
     "alphasin55": {
         "category": [
             "mcmods",
+            "mods",
             "personal"
         ],
         "name": "AlphaSIN 55",
@@ -14,6 +15,7 @@
     "urkaz-lib": {
         "category": [
             "mcmods",
+            "mods",
             "personal"
         ],
         "name": "Urkaz Lib",
@@ -26,6 +28,7 @@
     "sons-of-macabre": {
         "category": [
             "mcmods",
+            "mods",
             "personal"
         ],
         "name": "Sons of Macabre",
@@ -38,6 +41,7 @@
     "immersive-machinery-alexs-caves": {
         "category": [
             "mcmods",
+            "mods",
             "personal"
         ],
         "name": "Immersive Machinery ˣ Alex's Caves",
@@ -1212,6 +1216,7 @@
     "urkaz-moon-tools": {
         "category": [
             "mcmods",
+            "mods",
             "personal"
         ],
         "name": "Urkaz Moon Tools",
@@ -1223,6 +1228,7 @@
     "item-name-localized": {
         "category": [
             "other",
+            "mods",
             "personal"
         ],
         "name": "Item Name Localized",
