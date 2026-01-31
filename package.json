@@ -4,8 +4,8 @@
     "private": true,
     "scripts": {
         "prebuild": "node scripts/sass_generator.js",
-        "dev": "node scripts/sass_generator.js && next dev",
-        "build": "next build",
+        "dev": "npx next telemetry disable && node scripts/sass_generator.js && next dev",
+        "build": "npx next telemetry disable && next build",
         "start": "next start",
         "lint": "next lint"
     },
