@@ -24,8 +24,8 @@ export default function Home() {
                             <p>
                                 My name is Fran Sánchez Rodrigo, and I am currently{" "}
                                 <span className={styles["sub"]}>open to new opportunities and offers</span> for{" "}
-                                <span>Unreal Engine</span> <span>tools programmer</span>, <span>engine programmer</span>,{" "}
-                                <span>porting engineer</span>, and more!
+                                <span>Unreal Engine</span> <span>tools programmer</span>, <span>engine programmer</span>, and {" "}
+                                <span>porting engineer</span>.
                             </p>
                             <p>
                                 I hold a Bachelor&apos;s in Video Game Design and Development and a Master&apos;s in Video Game Programming.
