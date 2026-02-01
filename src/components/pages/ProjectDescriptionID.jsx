@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { GallerySwiper } from "@components/thirdparty/Swiper";
 import { SectionContent } from "@components/common/SectionsContent";
 import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
-import { CustomMarkdown } from "@components/thirdparty/CustomMarkdown";
+import { MarkdownRender } from "@components/thirdparty/MarkdownRender";
 import { MarkdownTOC } from "@src/components/thirdparty/markdown/MarkdownTOC";
 
 import { LinkPills, LinkPill } from "@components/common/LinkPills"
@@ -99,7 +99,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                     </div>
                     <div className="col-lg-8 mb-4">
                         <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
-                            <CustomMarkdown content={markdownContent} />
+                            <MarkdownRender content={markdownContent} />
                         </div>
                     </div>
                 </div>

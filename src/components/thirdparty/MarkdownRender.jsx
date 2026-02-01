@@ -16,7 +16,7 @@ const components = {
     code: MarkdownCodeBlock,
 }
 
-export const CustomMarkdown = ({ content }) => {
+export const MarkdownRender = ({ content }) => {
     return (
         <Markdown
             components={components}
