@@ -2,11 +2,10 @@ import React from "react";
 
 import ExperienceMetaData from "@assets/data/experience/lists/_list_professional.json";
 
-import /*ExperienceDescriptionID,*/ { _generateStaticParams } from "@components/pages/ExperienceDescriptionID";
+import ExperienceDescriptionID, { _generateStaticParams } from "@components/pages/ExperienceDescriptionID";
 
 const ExperienceDescription = async ({ params }) => {
-    return <></>;
-    // return <ExperienceDescriptionID params={params} metaData={ProjectsMetaData} dataPath="assets/data/projects" />;
+    return <ExperienceDescriptionID params={params} metaData={ExperienceMetaData} dataPath="assets/data/experience" />;
 };
 
 export async function generateStaticParams() {
