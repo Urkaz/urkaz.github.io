@@ -1,6 +1,7 @@
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from 'rehype-slug'
 
 import { MarkdownGallery } from "@components/thirdparty/markdown/MarkdownGallery";
 import { MarkdownLink } from "@components/thirdparty/markdown/MarkdownLink";
@@ -17,12 +18,12 @@ const components = {
 
 export const CustomMarkdown = ({ content }) => {
     return (
-        <ReactMarkdown
+        <Markdown
             components={components}
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeRaw, rehypeSlug]}
         >
             {content}
-        </ReactMarkdown>
+        </Markdown>
     );
 }

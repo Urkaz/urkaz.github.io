@@ -7,6 +7,7 @@ import { GallerySwiper } from "@components/thirdparty/Swiper";
 import { SectionContent } from "@components/common/SectionsContent";
 import { YoutubeVideo } from "@components/thirdparty/YoutubeVideo";
 import { CustomMarkdown } from "@components/thirdparty/CustomMarkdown";
+import { MarkdownTOC } from "@src/components/thirdparty/markdown/MarkdownTOC";
 
 import { LinkPills, LinkPill } from "@components/common/LinkPills"
 
@@ -34,18 +35,9 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
 
     return (
         <>
-            <SectionContent title={projectMetaData.name} description={projectData.description} sectionId="gamedetails">
+            <SectionContent title={projectMetaData.name} sectionId="gamedetails">
                 <div className="row">
-                    <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        {!projectData.hasGallery ? (
-                            <div className={styles["game-video"]}>
-                                <YoutubeVideo videoURL={projectData.video} />
-                            </div>
-                        ) : (
-                            <GallerySwiper imageList={projectData.gallery} />
-                        )}
-                    </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 mb-4">
                         <div className={styles["game-info"]} data-aos="fade-up" data-aos-delay="200">
                             <h3>Project Details</h3>
                             <ul>
@@ -79,7 +71,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                                             <LinkPills>
                                                 {projectData.links.map((link, index) => {
                                                     return (
-                                                        <LinkPill key={index} {...link}/>
+                                                        <LinkPill key={index} {...link} />
                                                     );
                                                 })}
                                             </LinkPills>
@@ -89,9 +81,23 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                             </ul>
                         </div>
                     </div>
+                    <div className="col-lg-8 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        {!projectData.hasGallery ? (
+                            <div className={styles["game-video"]}>
+                                <YoutubeVideo videoURL={projectData.video} />
+                            </div>
+                        ) : (
+                            <GallerySwiper imageList={projectData.gallery} />
+                        )}
+                    </div>
                 </div>
-                <div className="row mt-4">
-                    <div className="col">
+                <div className="row">
+                    <div className="col-lg-4 mb-4">
+                        <div className={styles["md-toc-table"]} data-aos="fade-up" data-aos-delay="200">
+                            <MarkdownTOC markdown={markdownContent} />
+                        </div>
+                    </div>
+                    <div className="col-lg-8 mb-4">
                         <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
                             <CustomMarkdown content={markdownContent} />
                         </div>
