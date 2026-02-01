@@ -14,9 +14,9 @@ On the technical side, I was responsible for:
 - Creating and integrating in-game props.
 - Implementing all UI elements related to costume selection, level selection, inventory, and the in-game HUD.
 
-## Challenges
+# Challenges
 
-### Game World
+## Game World
 
 I was responsible for designing and implementing the classes and structures that represented the game world, from the very beginning of development all the way through to the final version. This system was a core component of the game and evolved over time to incorporate additional functionality required by the other teams (Programming, Design, and Art).
 
@@ -28,13 +28,13 @@ The game world was built using a structure we referred to as "the Grid". This Gr
     /img/games/screenshots/rhs/tile.png | A single Tile
 </gallery>
 
-#### Optimizing Grid Rendering
+### Optimizing Grid Rendering
 
 Because ot this, we decided to change how the Grid was structured for the final game, making it a single Actor with multiple [Instanced Mesh Components](https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine) (one for each different mesh, rendering all identical meshes in a single pass). The Instanced Mesh Component approach made the game run at very conmfortable FPS, significantly improving performance in every aspect. The Tiles ended being UObjects that only stored data.
 
 To resolve this, we restructured the Grid for the final version of the game, implementing it as a single Actor containing multiple Instanced Mesh Components[Instanced Mesh Components](https://dev.epicgames.com/documentation/en-us/unreal-engine/instanced-static-mesh-component-in-unreal-engine). This allowed all identical meshes to be rendered in a single draw call per type, drastically improving performance and ensuring stable, high frame rates. As a result, Tiles were converted into lightweight UObjects that only stored data, completely separating rendering from logic.
 
-#### Tile Destruction System
+### Tile Destruction System
 
 Tile destruction introduced an additional layer of complexity to the Grid system, leading to two main challenges:
 
@@ -42,7 +42,7 @@ Tile destruction introduced an additional layer of complexity to the Grid system
 - As mentioned earlier, Tiles were implemented as data-only UObjects, and one of their stored properties was the index of their corresponding mesh instance in the Instanced Static Mesh Component. The issue arose when removing a single instance: doing so would shift the indices of the remaining instances (e.g., deleting the first tile in a list of five would invalidate the stored indices of all subsequent tiles). To address this, we developed a custom Instanced Mesh Component class capable of handling these index changes safely. Additionally, when a tile is destroyed, the resulting debris is spawned as a separate Actor that contains a copy of the original tile, but uses a Destructible Mesh generated with[Apex Destruction](https://dev.epicgames.com/documentation/en-us/unreal-engine/apex?application_version=4.27).
 - Destroying tiles required handling things like removing attached Props or making Entities fall if they were standing on them.
 
-#### Data-Driven Tiles
+### Data-Driven Tiles
 
 Tiles are entirely defined by data stored in a Data Table, with each row representing a different type of tile. This setup gave artists and designers full control over the visual customization of each tile.
 
@@ -56,7 +56,7 @@ Tiles could be destroyed, though some special ones were protected (at the design
     /img/games/screenshots/rhs/tiledt2.png | The configurable visual representation of a single Tile
 </gallery>
 
-#### Fog of War
+### Fog of War
 
 The final big challenge in the game world was implementing the Fog of War. After exploring several approaches, I went with a 2D system where each unit's vision was represented as a cylinder.
 
@@ -68,7 +68,7 @@ The system ended up being almost standalone, easily reusable in other projects w
     /img/games/screenshots/rhs/fogofwar.png | The discovered area in the game map is the same area with white pixels from the texture in the post-process material.
 </gallery>
 
-#### Props
+### Props
 
 Props were decorative but interactive objects attached to Tiles, capable of triggering abilities via our Ability System when destroyed. Props can be attached to any of the six sides of a Tile, so if the Tile is destroyed, the attached Props are destroyed as well.
 
@@ -79,7 +79,7 @@ Their implementation went through several iterations as requirements evolved, bu
     /img/games/screenshots/rhs/propcode.png | The blueprint code that managed the showing and hiding of the prop, made by the designers and art teams.
 </gallery>
 
-### Map tool
+## Map tool
 
 The Map Tool is an Engine module that includes all the code needed to give designers a way to build the different parts of the game world, called "Presets" in our project, which are essentially individual buildings composed of multiple chunks.
 
@@ -92,7 +92,7 @@ By clicking a custom button added to the editor toolbar, designers could open th
     /img/games/screenshots/rhs/maptool.png | Two new tabs are opened when using the Map Tool. One in the left with different tools and controls. One in the bottom panel with a list of all existing Tiles.
 </gallery>
 
-#### Editor Tiles
+### Editor Tiles
 
 The spawned Tiles are a special class of Tile that exists only within the Map Tool. They are programmed to snap to the grid when moved using the engine's standard actor manipulation tools and to respond dynamically to all property changes made by the designers.
 
@@ -105,7 +105,7 @@ All available properties for a Tile are accessible and editable from the Details
 
 Another feature I implemented for the Map Tool is full compatibility with the Undo/Redo system. All changes made to a Tile, regardless of how they are made, are transactional and fully support Undo/Redo. a functionality that the engine doesn't provide by default for custom actors like these.
 
-#### Helping the designers
+### Helping the designers
 
 Working closely with the design team, I developed and added new features based on their feedback.
 
@@ -118,7 +118,7 @@ After testing the first creations made with the tool, I also implemented a syste
     /img/games/screenshots/rhs/maptoolduplicatefinder.png | Detection of duplicate tiles when saving the Preset
 </gallery>
 
-#### Saving and loading
+### Saving and loading
 
 Finally, the tool allows Presets (the set of Tiles placed by the designers, along with all their properties) to be stored in the Chunks Data Table, which is used during gameplay to populate the grid with content.
 
@@ -129,13 +129,13 @@ When the Save button is pressed, and the Preset is valid (i.e. contains no dupli
     /img/games/screenshots/rhs/chunkstable.png | The Preset data is stored in a Data Table used by the Procedural Generator to feed the Grid with data.
 </gallery>
 
-### UI programming
+## UI programming
 
 I was responsible for programming most of the menus and UIs. This was my first time working with Unreal's UMG system, but I focused on creating small, reusable widgets for everything (tooltips, icons, character portraits, progress bars, etc). These widgets were spawned dynamically when needed, rather than being pre-placed in parent widgets, to avoid loading unnecessary elements.
 
 Below is a brief description of each menu along with some screenshots.
 
-#### Girl Costume Selection UI
+### Girl Costume Selection UI
 
 This menu was somewhat challenging to implement, as it required the girls to always be visible on screen with changeable costumes. Loading and spawning Skeletal Meshes each time a costume was selected took too long, so I created a special character that preloaded all costumes and kept them synced with the same animation. This way, selecting a costume simply involved hiding the previous one and showing the new one. The girls were displayed in the UI using a render target.
 
@@ -147,7 +147,7 @@ After the selection was confirmed, a transformation animation was played. This r
     /img/games/screenshots/rhs/tr2.png | Transformation sequence after confirming the costumes.
 </gallery>
 
-#### Level Selection UI
+### Level Selection UI
 
 The level selection UI was based on a metro network map. Missions were generated procedurally (by another programmer), so I had to read that data and generate the UI accordingly. The main challenge was figuring out how to spawn elements in the correct positions dynamically, since each game run had different missions and connections.
 
@@ -157,7 +157,7 @@ The level selection UI was based on a metro network map. Missions were generated
     /img/games/screenshots/rhs/metro3.png
 </gallery>
 
-#### Inventory UI
+### Inventory UI
 
 The inventory menu displayed each girl's stats and abilities, and allowed equipping gems that would alter those stats in real time. Gems were equipped using a simple drag-and-drop system from the "Inventory" area to the "Equipped Gems" section. The girl's image was shown via a render target of a spawned character placed somewhere in the background.
 
@@ -167,7 +167,7 @@ The inventory menu displayed each girl's stats and abilities, and allowed equipp
     /img/games/screenshots/rhs/inventory3.png | Insufficient magic points.
 </gallery>
 
-#### Game HUD
+### Game HUD
 
 The game HUD is the player's main source of information during gameplay. I created multiple widgets that I reused for other menus, including portraits, bars, tooltips, buttons, status icons, and more. The HUD also included buttons to interact with the Grid on the right side, allowing players to change its visualization.
 
@@ -179,7 +179,7 @@ One of the most challenging parts of the HUD was displaying the small health bar
     /img/games/screenshots/rhs/hud3.png | Start turn notice.
 </gallery>
 
-#### Results and Progression
+### Results and Progression
 
 After finishing a mission, the player received rewards and could level up the girls if they had earned enough experience during battle. At the end of a run, players also received items and unlocked new costumes for the girls through our progression system.
 

@@ -6,15 +6,15 @@ In Quantum Fields you have to find the exit from the office building to the free
 
 I was in charge of programming past/present logic tiggered by the sphere, and the generation of the dynamic meshes.
 
-## Challenges
+# Challenges
 
-### Past and present
+## Past and present
 
 To achieve the effect of bringing the past to the present, all actors inherit from an QuantumActor that makes them have the present or past status. All actors in the scene are duplicate children from QuantumActor, meaning that for an actor that represents a wall in the past there is another actor that represent a wall in the present.
 
 The created components also inherited from a QuantumComponent component interface, allowing the same kind of manipulation and state change.
 
-### Sphere Logic and Dynamic Meshes
+## Sphere logic and Dynamic Meshes
 
 We tried implementing the changing of the states with a simple logic of disabling/enabling collisions and meshes depending on their state, and displaying that with a material effect, but it caused multiple problems with the collisions.
 
@@ -98,7 +98,7 @@ If you take something from the past with you, it will disappear from the future 
 
 # Credits
 
-## Programming:
+## Programming
 
 - Fran Sánchez
 - Sergio Ferreras
@@ -112,7 +112,9 @@ If you take something from the past with you, it will disappear from the future 
 - ["Brutalist Architecture Office"](https://www.fab.com/listings/d9fe96a1-12e0-441f-897d-87311d8fbaea) meshes from Unreal Marketplace.
 - ["Orbitron"](https://fonts.google.com/specimen/Orbitron?query=orbitron) font from Google Fonts.
 
-## ArtSound/Music from [We Love Indies](https://www.weloveindies.com/en):
+## Sound & Music
+
+From [We Love Indies](https://www.weloveindies.com/en):
 
 - WEAPONS SCIENCE FICTION Electric Blast 01
 - WEAPONS SCIENCE FICTION Electric Blast 02

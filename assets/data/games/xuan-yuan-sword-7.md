@@ -6,11 +6,11 @@ My job was to get the game running smoothly on Switch, optimizing GPU, CPU, and 
 
 I worked on the project from start to finish. Eventually, a few coworkers joined in, and I had to coordinate with them and make sure we were all working towards the same goal.
 
-## Challenges
+# Challenges
 
-### CPU
+## CPU
 
-#### Cloth Physics
+### Cloth Physics
 
 One of the first issues we noticed was the use of cloth physics in some of the main characters' outfits. It hit the CPU hard as just two simulated cloth elements on screen could drop the framerate to 20 FPS.
 
@@ -20,7 +20,7 @@ I looked into what Unreal 4.24 was using for cloth physics and found it was base
 
 With those two changes, I managed to cut CPU usage enough to support up to five cloth elements on screen instead of two, freeing up CPU resources for the rest of the game.
 
-#### Tick Interval Manager plugin
+### Tick Interval Manager plugin
 
 Some scenes had tons of enemies patrolling or waiting for the player. All those actors were still ticking, even if they were far from the camera or off-screen.
 
@@ -31,7 +31,7 @@ So I created a plugin (which ended up being reused in other projects) that dynam
     /img/games/screenshots/xys7/tickmanager2.png | Tick optimization settings
 </gallery>
 
-#### Level streaming
+### Level streaming
 
 The game uses Unreal's World Composition system to stream levels seamlessly as the player moves through the world. But on Switch, that caused severe frame spikes, with constant hitches that interrupted gameplay.
 
@@ -39,15 +39,15 @@ We thought about adding a loading screen when streaming happened, but that would
 
 After digging into how the system worked, I managed to reduce those hitches to almost nothing by lowering the streaming time budget per frame, limiting how many actors could spawn at once, and disabling the automatic garbage collection after each level finished streaming (which did increase memory usage a bit, but was worth it).
 
-#### Other optimizations
+### Other optimizations
 
 We also used [Profile-Guided Optimizations (PGO)](https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170) via Unreal’s built-in tools, which helped us squeeze out a few extra milliseconds.
 
 On top of that, I analyzed CPU load using both Unreal's profiling tools and Nintendo's proprietary tools. That helped me reassign some thread affinties to improve overall performance, moving lighter tasks off the most loaded cores, for example.
 
-### GPU
+## GPU
 
-#### Poly count and drawcalls
+### Poly count and drawcalls
 
 One of the biggest GPU issues was the high poly count and number of draw calls in every scene. The first step was to generate LODs for the meshes and create proxy meshes using Unreal's HLOD (Hierarchical LOD) system.
 
@@ -57,7 +57,7 @@ One of the biggest GPU issues was the high poly count and number of draw calls i
 
 This took a lot of manual work as we had to go mesh by mesh to make sure everything still looked decent on Switch, aiming for a balance between visuals and performance. Even then, it wasn’t enough to prevent FPS drops in the heavier scenes.
 
-#### Optimization plugin
+### Optimization plugin
 
 During the project, I built a plugin to mass-process actors and tweak their settings for performance. It detects when a level (or sublevel) is loaded and launches an async task that processes all the actors based on the plugin's configuration.
 
@@ -78,7 +78,7 @@ All of this can be configured globally or per level, allowing more precise optim
     /img/games/screenshots/xys7/mddm3.png | Before and after applying the "Max Draw Distance"Manager calculations to a PointLight with the default settings.
 </gallery>
 
-#### DeviceProfile and CustomProfile plugin
+### DeviceProfile and CustomProfile plugin
 
 We tweaked the SwitchDeviceProfile a lot, disabling both major and minor features to get every bit of performance we could. But I wanted a more flexible system, so I made another plugin: the CustomProfile plugin.
 
@@ -105,7 +105,7 @@ BaseProfileName=
 +CVars=r.DynamicRes.OperationMode=1
 ```
 
-#### Other GPU optimizations
+### Other GPU optimizations
 
 Some of the original post-processing effects were removed due to their high performance cost.
 
@@ -115,7 +115,7 @@ To improve performance and visual quality, we replaced real-time Screen Space Re
 
 For further performance gains, we enabled Distance Field Shadows instead of relying on fully real-time Cascaded Shadow Maps. Additionally, we had to disable the foliage wind effect, as all the alternatives we tested to keep it active resulted in significant GPU overhead. Ultimately, removing it was the only viable solution.
 
-### Memory
+## Memory
 
 One of the main limitations we faced was the memory, since the Nintendo Switch only has 3GB available. The game used Unreal's World Composition system, which automatically loaded levels based on the player's distance. However, this ended up loading more levels than necessary, leading to out-of-memory crashes. To fix it, I adjusted several parameters and added custom conditions to the engine code to limit the number of levels loaded at once, significantly reducing memory usage.
 
@@ -123,7 +123,7 @@ I also analyzed memory consumption using tools like Memory Profiler 2, MemPro, a
 
 Additionally, I disabled Unreal's Memory Cache system. While it can help reduce fragmentation and system calls, in our case it consistently increased memory usage, pushing the game over the limit. Disabling it reduced overall memory usage and improved stability.
 
-### Compression
+## Compression
 
 The initial builds of the game for Nintendo Switch were over 36GB, while the client needed it to fit on a 16GB cartridge.
 
@@ -131,7 +131,7 @@ After analyzing the project, I removed unused assets that were being referenced 
 
 Additionally, I backported some of the latest Oodle compression improvements from Unreal Engine 4.27 to our version (4.25), ultimately bringing the final build size down to 9.5GB.
 
-### Engine version and Nintendo Switch SDK
+## Engine version and Nintendo Switch SDK
 
 The original project used Unreal Engine 4.24, which had limited support for Nintendo Switch and a different platform structure compared to what we were used to in other projects.
 

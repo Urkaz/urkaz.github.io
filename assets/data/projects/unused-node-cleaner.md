@@ -40,7 +40,7 @@ You can also press Ctrl+Shift+C to clean the graph.
 
 Engine Version  | Plugin<br>Version | Blueprint  | AnimBP | Anim<br>Graph | State<br>Machine       | Behavior<br>Tree  | EQS | Project-Wide<br>cleaning
 --------------- | -------------- |---- | ------ | --------- | ------------------ | --- | ---| ---
-UE 5.5          | v2.4           | ✅ | ✅     | ✅        | ✅<sub>1</sub>    | ✅ | ✅ | ✅
+UE 5.5-5.7      | v2.4           | ✅ | ✅     | ✅        | ✅<sub>1</sub>    | ✅ | ✅ | ✅
 UE 5.3-5.4      | v2.4           | ✅ | ✅     | ✅        | ✅<sub>1</sub>    | ✅ | ⚠️<sub>1</sub> | ✅
 UE 4.27-5.2     | v2.4           | ✅ | ✅     | ✅        | ✅<sub>1</sub>    | ⚠️<sub>2</sub> | ⚠️<sub>1</sub> | ✅
 UE 4.25-4.26    | v1.5           | ✅ | ✅     | ❌        | ❌                | ❌  | ❌ | ❌

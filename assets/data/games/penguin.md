@@ -6,9 +6,9 @@ This game was developed during the first UJI GameJam, completed in just under 40
 
 I was responsible for programming the pickable objects and coordinating the team to avoid conflicts in the Git repository.
 
-## Challenges
+# Challenges
 
-### Coordination and Git
+## Coordination and Git
 
 With a team of nine people, it was challenging to keep everyone in sync and merge all parts of the project without causing conflicts in the repository.
 

@@ -7,9 +7,9 @@ In the game, you are under siege in your castle, and the enemy is firing a barra
 
 I was responsible for programming the level selection menu, the arrow gameplay and combo system, and the level generation. I also handled the export to Android using Adobe AIR.
 
-## Challenges
+# Challenges
 
-### Data oriented levels
+## Data oriented levels
 
 One of our goals was to include multiple levels in the game, but we didn't want them hardcoded into the game logic. To solve this, I designed a custom XML format that allowed us to define level data externally, giving us the flexibility to create as many levels as we wanted with different properties.
 

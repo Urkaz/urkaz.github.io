@@ -6,9 +6,9 @@ Game developed during the 2016 Global Game Jam using Unity.
 
 I was responsible for programming the traps and their effects.
 
-## Challenges
+# Challenges
 
-### First game jam and team collaboration
+## First game jam and team collaboration
 
 This was my first time participating in a game jam, as well as my first experience working with a larger team. It helped me improve my ability to coordinate and collaborate more effectively with teammates.
 

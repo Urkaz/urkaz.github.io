@@ -2,9 +2,9 @@
 
 My job was to support the porting process by fixing the async scene loading on consoles and optimizing both GPU and CPU performance in the levels that needed it.
 
-## Challenges
+# Challenges
 
-### Seamless loading
+## Seamless loading
 
 The original game was designed to load scenes in the background as you played or during cinematic videos. This worked perfectly on modern PCs, but doing the same on older consoles like PS4, Xbox One, and Switch was a different story.
 
@@ -14,7 +14,7 @@ To fix this, I analyzed how the async loading system worked in the game and rewr
 
 Additionally, all videos were recompressed and downscaled from 4K to 1080p to save space and reduce loading times.
 
-### Optimization
+## Optimization
 
 We applied general optimization techniques to improve CPU performance, like limiting ticking based on distance and selectively enabling/disabling actors that were always active by default.
 

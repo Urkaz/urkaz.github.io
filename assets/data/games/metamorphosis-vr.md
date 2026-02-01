@@ -4,9 +4,9 @@ This was one of the most demanding projects in terms of optimization that we had
 
 I joined the team after 1-2 months of development, focusing exclusively on optimizing the different scenes.
 
-## Challenges
+# Challenges
 
-### Tricount and MinLOD behavior
+## Triangle count and MinLOD behavior
 
 One of the main issues the game faced on Oculus Quest 2 was the high triangle count in each scene, which caused the game to run at very low frame rates.
 
@@ -37,7 +37,7 @@ With my modification, the original Screen Size thresholds are preserved instead:
 
 This helped a lot reducing the number of triangles drawn in some scenes (in some cases the amount was reduced by almost 50%), as LOD changed more frequently and near the camera.
 
-### Drawcalls & Instancing
+## Drawcalls & Instancing
 
 After resolving the triangle count issue, we noticed that the game was still struggling due to a high number of draw calls.
 
@@ -45,11 +45,11 @@ After analyzing the scenes, I developed an Instancing Tool that processes them d
 
 Running this tool converted many static meshes into Instanced Mesh Components, which significantly reduced the overall draw call count and improved performance.
 
-### Sofware Occlusion
+## Sofware Occlusion
 
 Since the game was targeted for a mobile platform, we had to use the Forward Mobile Renderer, which required relying on Software Occlusion to cull distant meshes and reduce the number of rendered objects. However, this also had it's own challenges.
 
-#### Instanced Static Meshes
+### Instanced Static Meshes
 
 The first issue we encountered after instancing almost all meshes was directly related to how Instanced Static Meshes were handled by the Software Occlusion algorithm when sorting primitives.
 
@@ -62,13 +62,13 @@ To solve this, I modified the Software Occlusion algorithm to prioritize meshes 
 
 After several adjustments, I managed to achieve a stable solution that made Software Occlusion functional again, avoiding the default buggy behavior with Instanced Static Mesh Components.
 
-#### Spline Meshes
+### Spline Meshes
 
 Another issue with Software Occlusion was related to Spline Meshes. The meshes used by these components were not twisted or deformed to follow the spline during the occlusion process, which resulted in noticeable gaps in the occlusion. In other words, Spline Meshes aren't fully compatible with Software Occlusion, as they don't bend according to the spline shape.
 
 To address this, we developed a tool that bakes spline meshes into static meshes, effectively avoiding this problem.
 
-### Material optimization
+## Material optimization
 
 After applying all the previous optimizations, the game still needed one final boost to reach our target of 4K resolution at 90 FPS.
 
@@ -78,7 +78,7 @@ This required modifying the RHI and Material classes to support the new behavior
 
 As a result, many materials significantly reduced their complexity, leading to a noticeable and final performance improvement.
 
-### Final package size and multiple OBB
+## Final package size and multiple OBB
 
 The final APK was required to be smaller than 1 GB, which made it necessary to split the build into APK + OBB files. In addition, each OBB file also had to remain under 4 GB, adding another layer of complexity to the packaging process.
 

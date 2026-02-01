@@ -1,6 +1,8 @@
 # Overview
 
-Features:
+This is a small Minecraft Java Edition Mod that acts as an API for my other mods, as it makes multiplatform implementation easier.
+
+# Features
 
 * Multiplatform development for Fabric, NeoForge and Forge.
 * Deferred registries for all platforms.

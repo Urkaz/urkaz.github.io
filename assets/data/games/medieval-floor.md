@@ -8,9 +8,9 @@ Play cooperating with 3 more friends to defend the town against enemy waves of i
 
 I was in charge programming the Controller assignment screen, the wave generation during the gameplay, and storing the max score in the save data.
 
-## Challenges
+# Challenges
 
-### Controller assignment screen
+## Controller assignment screen
 
 The controller assignment screen allows the players to choose the controller used for each Player Controller, and so which player character is used during the gameplay.
 
@@ -22,7 +22,7 @@ I ended disabling the "RawInput" plugin and kept the original implementation mad
 
 Finally, to be able to play in singleplayer I added a hack that made all players ready except one at choice, allowing you to play with any character.
 
-### Wave generation
+## Wave generation
 
 I created an UWaveManager object used in the GameMode to control all waves and spawns. Each enemy has a *difficulty value* assigned, and each wave is represented by a *wave difficulty* number. The enemy pool for that wave is randomly generated trying to fit that *wave difficulty* number.
 

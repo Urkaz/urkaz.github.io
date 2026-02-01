@@ -4,13 +4,13 @@ This webpage serves as a portfolio for all my personal projects, education, and 
 
 # Challenges
 
-## Old page
+## Old static webpage
 
 My old webpage was a simple, static HTML site with a few sections, but it was far from responsive, breaking everywhere when accessed from mobile phones. It also contained duplicate code throughout, which I had to modify every time I wanted to update something. Initially, it was an okay way to do things, but as the site grew, it became increasingly unmanageable, and some sections were a bit confusing to understand.
 
-## New webpage (this one!)
+## New webpage in React and Next.js
 
-Keeping the problems from the old version in mind, I wanted to rewrite the entire site from scratch in a way that was responsive on mobile, allowed code reuse, and used modern tools.
+Keeping the problems from the old version in mind, I wanted to rewrite the entire site from scratch in a way that was responsive on mobile, allowed code reuse, and used modern tools. And from all of that, this website was born!
 
 The design is based on the [Personal](https://bootstrapmade.com/personal-free-resume-bootstrap-template/) static template from [BootstrapMade](https://bootstrapmade.com/), but heavily modified to fit my needs. Using it as a baseline, I started rewriting everything in React. It went smoothly until I needed more advanced features, like dynamic routes with pre-generated content from JSON and Markdown, since I didn't want the clients to handle all that work.
 

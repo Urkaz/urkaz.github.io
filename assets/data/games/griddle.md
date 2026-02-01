@@ -7,9 +7,9 @@ The objective is to fill in the board’s cells using the numbers shown on the t
 
 I was responsible for programming the level selection menu as well as the generation and gameplay of the puzzles.
 
-## Challenges
+# Challenges
 
-### Data oriented puzzles
+## Data oriented puzzles
 
 This type of game usually includes a large number of levels, each one representing a black-and-white pixel art puzzle.
 

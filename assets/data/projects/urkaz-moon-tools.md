@@ -10,7 +10,8 @@ I tend to support all "minor" releases from each major version (1.19.X, 1.20.X),
 
 # Description
 
-<h2>New items and blocks</h2>
+## New items and blocks
+
 <table width="100%">
     <tr>
         <td width="20%" align="center">
@@ -41,7 +42,7 @@ I tend to support all "minor" releases from each major version (1.19.X, 1.20.X),
     </tr>
 </table>
 
-<h2>Mod compatibility</h2>
+## Mod compatibility
 
 <table width="100%">
     <tr>
@@ -97,7 +98,7 @@ I tend to support all "minor" releases from each major version (1.19.X, 1.20.X),
     </tr>
 </table>
 
-<h2>Dependencies</h2>
+## Dependencies
 
 "Urkaz Moon Tools" requires the following mods to work:
 
@@ -116,7 +117,7 @@ I tend to support all "minor" releases from each major version (1.19.X, 1.20.X),
     </tr>
 </table>
 
-<h2>Compatibility table</h2>
+## Compatibility table
 
 <ul>
   <li>❗ = Required to work</li>

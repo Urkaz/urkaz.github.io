@@ -8,7 +8,7 @@ The game was cancelled during it's beta phase after Minecraft's adventure mode w
 
 [](https://www.youtube.com/embed/XRQ6XE6K-wQ)
 
-## AlphaSIN55 mod
+## AlphaSIN55 Mod
 
 This a reimagined recreation of Galaxy 55 made in Minecraft Java Edition as a mod. I've benn working on this for a long time in my spare time, but although progress is slow, it already contains some of the core features of Galaxy 55.
 
