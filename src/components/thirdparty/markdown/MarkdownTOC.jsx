@@ -4,8 +4,6 @@ import { useRouter } from 'next/navigation'
 import { fromMarkdown } from 'react-markdown-toc'
 import { TOC } from 'react-markdown-toc/client'
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@components/thirdparty/Collapsible'
-
 import styles from "@styles/components/thirdparty/markdown_toc.module.scss";
 
 export const MarkdownTOC = ({ markdown }) => {
