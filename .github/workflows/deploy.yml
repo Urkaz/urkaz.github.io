@@ -27,7 +27,7 @@ jobs:
         uses: ./.github/workflows/setup-node
 
       - name: 🏗️ Build project
-        run: npx next build
+        run: npx next telemetry disable && npx next build
 
       - name: 📡 Upload artifact
         uses: actions/upload-pages-artifact@v3
