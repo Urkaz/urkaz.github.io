@@ -36,6 +36,15 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
     return (
         <>
             <SectionContent title={projectMetaData.name} sectionId="gamedetails">
+                {/*<SectionContent title={projectMetaData.noLogo == true ? projectMetaData.name : ""} sectionId="gamedetails">
+                {projectMetaData.noLogo == true ? null :
+                    <div className="row">
+                        <div className="col mb-4">
+                            <div className={styles["game-logo"]}><img src={`/img/games/logos/${id}.png`} className="img-fluid" alt={projectMetaData.name} effect="opacity" /></div>
+                        </div>
+                    </div>
+                }*/}
+
                 <div className="row">
                     <div className="col-lg-4 mb-4">
                         <div className={styles["game-info"]} data-aos="fade-up" data-aos-delay="100">
