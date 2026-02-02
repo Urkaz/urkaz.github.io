@@ -8,7 +8,7 @@ import { GameGridItem } from "@src/components/pages/games/GameGridItem";
 import { FilterItem } from "@src/components/pages/games/FilterItem";
 import { filterAndPrefixGameList } from "@src/components/functions";
 
-import FullList from "@assets/data/lists/_list_games.json";
+import FullList from "@assets/data/lists/_list_projects_games.json";
 import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.json";
 import ProjectTagPrefixes from "@assets/data/projects/lists/_tag_prefixes_filter.json";
 

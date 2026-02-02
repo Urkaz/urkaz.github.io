@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { cleanText } = require("../src/components/functions");
 
-const GamesList = require("../assets/data/lists/_list_games.json");
+const GamesList = require("../assets/data/lists/_list_projects_games.json");
 
 function generateCode() {
     const sassCodeGames = Object.entries(GamesList)

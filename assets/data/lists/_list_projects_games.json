@@ -1,4 +1,15 @@
-{
+{    "orion-engine": {
+        "category": [
+            "personal",
+            "other"
+        ],
+        "name": "Orion Engine",
+        "tag": "Personal Game Engine",
+        "hasSection": false,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": true
+    },
     "alphasin55": {
         "category": [
             "mcmods",

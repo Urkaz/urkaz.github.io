@@ -1,6 +1,6 @@
 import React from "react";
 
-import FullList from "@assets/data/lists/_list_games.json";
+import FullList from "@assets/data/lists/_list_projects_games.json";
 
 import { filterListByCategory } from "@src/components/functions";
 

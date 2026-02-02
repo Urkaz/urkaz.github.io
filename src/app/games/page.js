@@ -8,7 +8,7 @@ import { GameGridItem } from "@src/components/pages/games/GameGridItem";
 import { FilterItem } from "@src/components/pages/games/FilterItem";
 import { filterAndPrefixGameList } from "@src/components/functions";
 
-import FullList from "@assets/data/lists/_list_games.json";
+import FullList from "@assets/data/lists/_list_projects_games.json";
 import GameFilterList from "@assets/data/games/lists/_filter_games.json";
 import GameFilterPlatform from "@assets/data/games/lists/_filter_platforms.json";
 import GameFilterClickable from "@assets/data/games/lists/_filter_clickable.json";
