@@ -31,7 +31,7 @@ So I created a plugin (which ended up being reused in other projects) that dynam
     /img/games/screenshots/xys7/tickmanager2.png | Tick optimization settings
 </gallery>
 
-### Level streaming
+### Level Streaming
 
 The game uses Unreal's World Composition system to stream levels seamlessly as the player moves through the world. But on Switch, that caused severe frame spikes, with constant hitches that interrupted gameplay.
 
