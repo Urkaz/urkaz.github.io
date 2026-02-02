@@ -1,7 +1,7 @@
 {
     "catnessgamestudios": {
-        "name": "Unreal Tools Programmer & Porting Engineer",
-        "site": "Catness Game Studios",
+        "role": "Unreal Tools Programmer & Porting Engineer",
+        "name": "Catness Game Studios",
         "startDate": "2021-12-01T00:00:00.000Z",
         "endDate": "2025-03-31T00:00:00.000Z",
         "place": "Castelló de la Plana, Castelló, Spain",
@@ -18,7 +18,7 @@
                 "link": "/experience/catnessgamestudios",
                 "text": "More details",
                 "externalLink": false,
-                "hide": true
+                "hide": false
             }
         ],
         "hasSection": true,
@@ -27,8 +27,8 @@
         "fullTime": true
     },
     "lollipoprobot": {
-        "name": "QA Technician",
-        "site": "Lollipop Robot",
+        "role": "QA Technician",
+        "name": "Lollipop Robot",
         "startDate": "2016-10-01T00:00:00.000Z",
         "endDate": "2020-09-31T00:00:00.000Z",
         "place": "Vila-real, Castelló, Spain",
@@ -45,7 +45,7 @@
                 "link": "/experience/lollipoprobot",
                 "text": "More details",
                 "externalLink": false,
-                "hide": true
+                "hide": false
             }
         ],
         "hasSection": true,
@@ -53,9 +53,9 @@
         "hideFullTime": false,
         "fullTime": true
     },
-    "lollipoprobot_intern": {
-        "name": "QA Tester Internship",
-        "site": "Lollipop Robot",
+    "lollipoprobot-internship": {
+        "role": "QA Tester Internship",
+        "name": "Lollipop Robot",
         "startDate": "2016-02-01T00:00:00.000Z",
         "endDate": "2016-07-31T00:00:00.000Z",
         "place": "Vila-real, Castelló, Spain",
@@ -64,7 +64,15 @@
         "bulletPoints": [
             "Playtesting for console games"
         ],
-        "hasSection": false,
+        "buttons": [
+            {
+                "link": "/experience/lollipoprobot-internship",
+                "text": "More details",
+                "externalLink": false,
+                "hide": false
+            }
+        ],
+        "hasSection": true,
         "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
         "hideFullTime": false,
         "fullTime": false

@@ -1,7 +1,7 @@
 {
     "udemy-cmake": {
-        "name": "CMake, Tests and Tooling for C/C++ Projects",
-        "site": "Udemy",
+        "role": "CMake, Tests and Tooling for C/C++ Projects",
+        "name": "Udemy",
         "startDate": "2025-06-01T00:00:00.000Z",
         "hideDate": false,
         "hideEndDate": true,
@@ -30,8 +30,8 @@
         "hideFullTime": true
     },
     "udemy-unity": {
-        "name": "Complete C# Unity 6 Game Development",
-        "site": "Udemy",
+        "role": "Complete C# Unity 6 Game Development",
+        "name": "Udemy",
         "startDate": "2025-04-01T00:00:00.000Z",
         "hideDate": false,
         "hideEndDate": true,
@@ -56,8 +56,8 @@
         "hideFullTime": true
     },
     "udemy-chip8": {
-        "name": "Creating A Chip-8 Emulator In C",
-        "site": "Udemy",
+        "role": "Creating A Chip-8 Emulator In C",
+        "name": "Udemy",
         "startDate": "2025-08-01T00:00:00.000Z",
         "hideDate": false,
         "hideEndDate": true,

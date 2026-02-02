@@ -8,7 +8,7 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 
 import styles from "@styles/pages/experience.module.scss";
 
-export const ExperienceItem = ({ name, site, startDate, endDate, hideDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
+export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
     const start_date = new Date(startDate);
     const end_date = new Date(endDate);
 
@@ -40,8 +40,8 @@ export const ExperienceItem = ({ name, site, startDate, endDate, hideDate, hideE
                         </div>
                         <div className={`d-flex align-items-center ${styles["header"]}`}>
                             <div>
-                                <h4>{name}</h4>
-                                <h5>{site}</h5>
+                                <h4>{role}</h4>
+                                <h5>{name}</h5>
                             </div>
                         </div>
 

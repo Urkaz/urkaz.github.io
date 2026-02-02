@@ -1,7 +1,7 @@
 {
     "utadmaster": {
-        "name": "Master's Degree in Video Game Programming",
-        "site": "U-tad",
+        "role": "Master's Degree in Video Game Programming",
+        "name": "U-tad",
         "startDate": "2020-10-01T00:00:00.000Z",
         "endDate": "2021-10-01T00:00:00.000Z",
         "hideDate": false,
@@ -29,8 +29,8 @@
         "hideFullTime": true
     },
     "ujidegree": {
-        "name": "Bachelor's Degree in Video game Design and Development",
-        "site": "Universitat Jaume I",
+        "role": "Bachelor's Degree in Video game Design and Development",
+        "name": "Universitat Jaume I",
         "startDate": "2012-09-01T00:00:00.000Z",
         "endDate": "2016-06-31T00:00:00.000Z",
         "hideDate": false,
