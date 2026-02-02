@@ -9,10 +9,12 @@ import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
 import Sections from "@assets/data/sections.json";
 import FullProjectsGamesList from "@assets/data/lists/_list_projects_games.json";
+import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
 
 const breadcrumbsData = {
     "/projects": FullProjectsGamesList,
     "/games": FullProjectsGamesList,
+    "/experience": ExperienceList,
 };
 
 const getBreadcrumbs = (pathname) => {
