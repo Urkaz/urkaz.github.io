@@ -22,14 +22,14 @@ const ExperienceDescriptionID = async ({ params, metaData, dataPath }) => {
 
     return (
         <>
-            <SectionContent title={projectMetaData.site} description={projectMetaData.name} sectionId="gamedetails">
+            <SectionContent title={projectMetaData.name} description={projectMetaData.role} sectionId="gamedetails">
                 <div className="row">
-                    <div className="col-lg-4 mb-4">
+                    <div className="col-lg-3 mb-4">
                         <div className={styles["md-toc-table"]} data-aos="fade-up" data-aos-delay="100">
                             <MarkdownTOC markdown={markdownContent} />
                         </div>
                     </div>
-                    <div className="col-lg-8 mb-4">
+                    <div className="col-lg-9 mb-4">
                         <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="200">
                             <MarkdownRender content={markdownContent} />
                         </div>
