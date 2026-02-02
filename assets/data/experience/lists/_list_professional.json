@@ -18,7 +18,7 @@
                 "link": "/experience/catnessgamestudios",
                 "text": "More details",
                 "externalLink": false,
-                "hide": false
+                "hide": true
             }
         ],
         "hasSection": true,
@@ -45,7 +45,7 @@
                 "link": "/experience/lollipoprobot",
                 "text": "More details",
                 "externalLink": false,
-                "hide": false
+                "hide": true
             }
         ],
         "hasSection": true,
@@ -69,7 +69,7 @@
                 "link": "/experience/lollipoprobot-internship",
                 "text": "More details",
                 "externalLink": false,
-                "hide": false
+                "hide": true
             }
         ],
         "hasSection": true,
