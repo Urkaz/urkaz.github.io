@@ -11,7 +11,7 @@ export function Heading({ title, description }) {
             <div className="heading">
                 <div className="container">
                     <div className="row d-flex justify-content-center text-center">
-                        <div className="col-lg-8">
+                        <div className="col-lg">
                             {title ? <h1>{title}</h1> : null}
                             {description ? <p className={`mb-0 ${styles["description"]}`}>{description}</p> : null}
                         </div>
