@@ -38,7 +38,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
             <SectionContent title={projectMetaData.name} sectionId="gamedetails">
                 <div className="row">
                     <div className="col-lg-4 mb-4">
-                        <div className={styles["game-info"]} data-aos="fade-up" data-aos-delay="200">
+                        <div className={styles["game-info"]} data-aos="fade-up" data-aos-delay="100">
                             <h3>Project Details</h3>
                             <ul>
                                 {projectData.details?.map((detail, index) => {
@@ -81,7 +81,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-8 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div className="col-lg-8 mb-4" data-aos="fade-up" data-aos-delay="200">
                         {!projectData.hasGallery ? (
                             <div className={styles["game-video"]}>
                                 <YoutubeVideo videoURL={projectData.video} />
@@ -93,12 +93,12 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                 </div>
                 <div className="row">
                     <div className="col-lg-4 mb-4">
-                        <div className={styles["md-toc-table"]} data-aos="fade-up" data-aos-delay="200">
+                        <div className={styles["md-toc-table"]} data-aos="fade-up" data-aos-delay="300">
                             <MarkdownTOC markdown={markdownContent} />
                         </div>
                     </div>
                     <div className="col-lg-8 mb-4">
-                        <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="300">
+                        <div className={`${styles["description-card"]}`} data-aos="fade-up" data-aos-delay="400">
                             <MarkdownRender content={markdownContent} />
                         </div>
                     </div>
