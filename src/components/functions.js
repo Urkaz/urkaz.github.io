@@ -18,17 +18,24 @@ function filterListByCategory(GamesList, Category) {
     return GamesListFiltered;
 }
 
-function filterAndPrefixGameList(GamesList, PrefixList) {
+function prefilterGameList(GamesList, PrefilterList) {
     // Preprocess Games List
     let GamesListFiltered = Object.entries(GamesList)
         .filter(([_, game]) =>
-            // Filter using the PrefixList list
-            PrefixList.some((f) => game.category.includes(f.category))
+            // Filter using the PrefilterList list
+            PrefilterList.some((f) => game.category.includes(f.category))
         )
+    GamesListFiltered = Object.fromEntries(GamesListFiltered);
+    return GamesListFiltered;
+}
+
+function prefixGameList(GamesList, PrefixList) {
+    // Preprocess Games List
+    let GamesListFiltered = Object.entries(GamesList)
         .map(([key, game]) => {
             const filter = PrefixList.find((f) => game.category.includes(f.category));
 
-            // Modify the taag with the prefix
+            // Modify the tag with the prefix
             return [
                 key,
                 {
@@ -102,4 +109,4 @@ function getYearMonthDifference(startDate, endDate, roundUp = false) {
     return parts.length > 0 ? parts.join(" ") : "0 months";
 }
 
-module.exports = { concatValues, cleanText, getYearMonthDifference, filterAndPrefixGameList, filterListByCategory };
+module.exports = { concatValues, cleanText, getYearMonthDifference, prefixGameList, prefilterGameList, filterListByCategory };

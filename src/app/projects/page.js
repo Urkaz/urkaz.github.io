@@ -4,7 +4,7 @@ import { LazyIsotopeGrid } from "@src/components/thirdparty/isotope/IsotopeGrid"
 import { SectionContent } from "@components/common/SectionsContent";
 import { GameGridItem } from "@src/components/pages/games/GameGridItem";
 import { FilterItem } from "@src/components/pages/games/FilterItem";
-import { filterAndPrefixGameList } from "@src/components/functions";
+import { prefilterGameList, prefixGameList } from "@src/components/functions";
 
 import FullList from "@assets/data/lists/_list_projects_games.json";
 import ProjectsFilterList from "@assets/data/projects/lists/_filter_projects.json";
@@ -16,7 +16,8 @@ import { faLink, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
 const FilterList = [ProjectsFilterList];
 
 const Projects = () => {
-    let ListFiltered = filterAndPrefixGameList(FullList, ProjectTagPrefixes);
+    let ListFiltered = prefilterGameList(FullList, ProjectTagPrefixes);
+    ListFiltered = prefixGameList(ListFiltered, ProjectTagPrefixes);
 
     return (
         <>
