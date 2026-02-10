@@ -52,6 +52,17 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
     }, []);
 
     useEffect(() => {
+        const handleResize = () => {
+            if (isotope.current) {
+                isotope.current.layout();
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
         if (isotope.current) {
             var finalFilter = concatValues(filters);
             isotope.current.arrange({ filter: finalFilter });
