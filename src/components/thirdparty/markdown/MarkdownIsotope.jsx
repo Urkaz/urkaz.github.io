@@ -16,24 +16,26 @@ export const MarkdownIsotope = ({ children }) => {
         try { config = JSON.parse(children); } catch (e) { }
     }
 
-    const itemsContent = loadJSON(config.items);
+    const { filters = [], items, prefixes, prefilter } = config;
+
+    const itemsContent = loadJSON(items);
 
     let ListFiltered = {};
-    if (config.prefilter != undefined) {
-        const prefilterContent = loadJSON(config.prefilter);
+    if (prefilter != undefined) {
+        const prefilterContent = loadJSON(prefilter);
         ListFiltered = prefilterGameList(itemsContent, prefilterContent);
     }
-    if (config.prefixes != undefined) {
-        const prefixesContent = loadJSON(config.prefixes);
+    if (prefixes != undefined) {
+        const prefixesContent = loadJSON(prefixes);
         ListFiltered = prefixGameList(ListFiltered, prefixesContent);
     }
 
-    const FilterList = [];
+    const FilterList = filters.map((path) => loadJSON(path));
 
     return (
         <span className="row">
             <span className={`col-lg-8 ${styles["centered-isotope"]}`}>
-                <LazyIsotopeGrid filterList={FilterList} items={ListFiltered} FilterComponent={FilterItem} GridComponent={GameGridItem} />
+                <LazyIsotopeGrid filterList={FilterList} items={ListFiltered} FilterComponent={FilterItem} GridComponent={GameGridItem} EnableQuery={false} />
             </span>
         </span>
     );

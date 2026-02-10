@@ -8,7 +8,7 @@ import { trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { concatValues } from "@src/components/functions";
 
-export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent }) => {
+export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent, EnableQuery = true }) => {
     const [searchQuery, setSearchQuery] = useState({});
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -85,7 +85,8 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent 
         filterListState[index] = event;
 
         setFilters(filterListState);
-        setQuery(`f${index}`, event);
+        if (EnableQuery)
+            setQuery(`f${index}`, event);
     };
 
     const updateSearchQuery = (updatedQuery) => {
