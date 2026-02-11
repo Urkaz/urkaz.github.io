@@ -2,17 +2,12 @@
 
 The porting process included:
 
-Game code and Blueprint analysis.
-
-Performance profiling and optimization.
-
-CPU optimization.
-
-GPU optimization.
-
-Bug fixing.
-
-Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
+* Game code and Blueprint analysis.
+* Performance profiling and optimization.
+* CPU optimization.
+* GPU optimization.
+* Bug fixing.
+* Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
 
 Most projects were developed by teams of 3 to 5 developers, maintaining close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Projects were version-controlled using Git or Perforce, depending on the project. In some cases, we worked in close collaboration with the client, incorporating their feedback throughout the development process.
 
