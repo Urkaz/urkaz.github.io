@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { CustomIcon } from "@components/common/CustomIcon";
+import { Icon } from "@components/common/Icon";
 
 import styles from "@styles/components/PillLinks.module.scss";
 
@@ -9,14 +8,12 @@ export function LinkPills({ children, className }) {
 
 export function LinkPill({link, iconType, icon, text}) {
     return <a className={styles["pill"]} target="_blank" href={link} rel="noopener noreferrer">
-        {iconType.includes("custom") ? <><CustomIcon className={styles["custom-icon"]} img={icon} /> {text}</> : null}
-        {iconType.includes("fontawesome") ? <><FontAwesomeIcon icon={icon} /> {text}</> : null}
+        <Icon iconType={iconType} icon={icon} /> {text}
     </a>
 }
 
 export function LinkDot({link, iconType, icon}) {
     return <a className={styles["dot"]} target="_blank" href={link} rel="noopener noreferrer">
-        {iconType.includes("custom") ? <CustomIcon className={styles["custom-icon"]} img={icon} /> : null}
-        {iconType.includes("fontawesome") ? <FontAwesomeIcon icon={icon} /> : null}
+        <Icon iconType={iconType} icon={icon} />
     </a>
 }
