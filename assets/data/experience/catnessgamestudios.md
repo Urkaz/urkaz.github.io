@@ -1,17 +1,22 @@
 # Porting
 
-Game porting of Unreal Engine 4 and 5 PC games to consoles (Xbox One, Xbox Series S|X, PS4, PS5, Switch, Steam Deck), and Meta Quest.
+The porting process included:
 
-The porting process involved:
+Game code and Blueprint analysis.
 
-* Analyzing the game code.
-* Performance analysis.
-* CPU optimization.
-* GPU optimization.
-* Bug fixing.
-* Implementing new features required on each console (controller management, engagement screen, activities, etc).
+Performance profiling and optimization.
 
-Please check the list below and click any game with the <icon>{"iconType": "fontawesome", "icon": "fa-brands fa-github"}</icon> symbol to see a detailed explanation of all my work on each game.
+CPU optimization.
+
+GPU optimization.
+
+Bug fixing.
+
+Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
+
+Most projects were developed by teams of 3 to 5 developers, maintaining close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Projects were version-controlled using Git or Perforce, depending on the project. In some cases, we worked in close collaboration with the client, incorporating their feedback throughout the development process.
+
+The list below shows all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
 
 <isotope>
 {
@@ -22,30 +27,3 @@ Please check the list below and click any game with the <icon>{"iconType": "font
 }
 </isotope>
 
-# Engine development
-
-Engine customizations with multiple bug fixes and improvements
-
-List of changes:
-
-<isotope>
-{
-  "items": "/assets/data/lists/_list_projects_games.json",
-  "prefilter": "/assets/data/experience/lists/_catness_tag_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/_catness_tag_prefixes.json"
-}
-</isotope>
-
-# Tools and Plugin development
-
-Plugin and tool development to expand the engine base functionality: custom device profiles, mesh instancing editor tools, project analysis tools, custom blueprint nodes, async loading screen, right-click editor extensions with custom tasks, and more
-
-Plugin and tool development to ease the porting process to consoles: Xbox user management, PS5 activities, Switch controller handling, and other optimization tools
-
-<isotope>
-{
-  "items": "/assets/data/lists/_list_projects_games.json",
-  "prefilter": "/assets/data/experience/lists/_catness_tag_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/_catness_tag_prefixes.json"
-}
-</isotope>
