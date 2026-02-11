@@ -1,0 +1,46 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "img": "/img/icons/mini_steam.png",
+        "selector": ".category-steam"
+    },
+    {
+        "img": "/img/icons/mini_ps4.png",
+        "selector": ".category-ps4"
+    },
+    {
+        "img": "/img/icons/mini_vita.png",
+        "selector": ".category-vita"
+    },
+    {
+        "img": "/img/icons/mini_xbo.png",
+        "selector": ".category-xbo"
+    },
+    {
+        "img": "/img/icons/mini_switch.png",
+        "selector": ".category-switch"
+    },
+    {
+        "img": "/img/icons/mini_wiiu.png",
+        "selector": ".category-wiiu"
+    },
+    {
+        "img": "/img/icons/mini_android.png",
+        "selector": ".category-android"
+    },
+    {
+        "img": "/img/icons/mini_apple.png",
+        "selector": ".category-apple"
+    },
+    {
+        "img": "/img/icons/mini_win10.png",
+        "selector": ".category-win10"
+    },
+    {
+        "img": "/img/icons/mini_stadia.png",
+        "selector": ".category-stadia"
+    }
+]

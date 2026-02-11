@@ -18,7 +18,7 @@
                 "link": "/experience/catnessgamestudios",
                 "text": "More details",
                 "externalLink": false,
-                "hide": true
+                "hide": false
             }
         ],
         "hasSection": true,
@@ -45,7 +45,7 @@
                 "link": "/experience/lollipoprobot",
                 "text": "More details",
                 "externalLink": false,
-                "hide": true
+                "hide": false
             }
         ],
         "hasSection": true,
@@ -64,15 +64,7 @@
         "bulletPoints": [
             "Playtesting for console games"
         ],
-        "buttons": [
-            {
-                "link": "/experience/lollipoprobot-internship",
-                "text": "More details",
-                "externalLink": false,
-                "hide": true
-            }
-        ],
-        "hasSection": true,
+        "hasSection": false,
         "logo": "/img/experience/icons/lollipop_robot_logo.jpg",
         "hideFullTime": false,
         "fullTime": false

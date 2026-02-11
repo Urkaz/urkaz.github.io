@@ -1,0 +1,10 @@
+[
+    {
+        "prefix": "Development",
+        "category": "development"
+    },
+    {
+        "prefix": "Porting",
+        "category": "porting"
+    }
+]

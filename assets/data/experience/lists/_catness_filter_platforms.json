@@ -1,0 +1,38 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "img": "/img/icons/mini_steam.png",
+        "selector": ".category-steam"
+    },
+    {
+        "img": "/img/icons/mini_deck.png",
+        "selector": ".category-deck"
+    },
+    {
+        "img": "/img/icons/mini_ps4.png",
+        "selector": ".category-ps4"
+    },
+    {
+        "img": "/img/icons/mini_ps5.png",
+        "selector": ".category-ps5"
+    },
+    {
+        "img": "/img/icons/mini_xbo.png",
+        "selector": ".category-xbo"
+    },
+    {
+        "img": "/img/icons/mini_xsx.png",
+        "selector": ".category-xsx"
+    },
+    {
+        "img": "/img/icons/mini_switch.png",
+        "selector": ".category-switch"
+    },
+    {
+        "img": "/img/icons/mini_meta.png",
+        "selector": ".category-meta"
+    }
+]
