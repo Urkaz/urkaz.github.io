@@ -17,3 +17,7 @@ export function AOSClient() {
 
     return null;
 }
+
+export function AOSRefresh() {
+    AOS.refresh();
+}

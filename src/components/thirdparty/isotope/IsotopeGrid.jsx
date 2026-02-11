@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 
+import { AOSRefresh } from "@components/thirdparty/AOSClient";
 import { IsotopeFilter } from "@components/thirdparty/isotope/IsotopeFilter";
 import { trackWindowScroll } from 'react-lazy-load-image-component';
 
@@ -83,6 +84,12 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent,
             filterListState[index] = filters[index];
         }
         filterListState[index] = event;
+
+        isotope.current.arrange({ filter: event });
+
+        isotope.current.once("arrangeComplete", () => {
+            AOSRefresh();
+        });
 
         setFilters(filterListState);
         if (EnableQuery)
