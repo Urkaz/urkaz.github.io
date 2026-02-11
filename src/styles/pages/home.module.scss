@@ -34,9 +34,9 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    min-width: fit-content; /* Asegura que el div no sea más pequeño que la imagen */
+    min-width: fit-content;
     min-height: fit-content;
-  }
+}
 
 .hero :global(.container) {
     position: relative;
@@ -62,6 +62,11 @@
     color: var(--accent-color);
     margin: 10px 0 0 0;
     text-shadow: var(--contrast-color) 3px 3px;
+}
+
+.hero .description {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .hero .description p {
@@ -408,4 +413,3 @@
         cursor: url("/img/home/spellbook/frame_05.gif"), auto;
     }
 }
-
