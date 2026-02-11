@@ -2,7 +2,7 @@ import React from "react";
 
 import FullList from "@assets/data/lists/_list_projects_games.json";
 
-import { filterListByCategory } from "@src/components/functions";
+import { filterGameListByCategory } from "@src/components/functions";
 
 import ProjectDescriptionID, { _generateStaticParams } from "@components/pages/ProjectDescriptionID";
 
@@ -11,7 +11,7 @@ const GameDescription = async ({ params }) => {
 };
 
 export async function generateStaticParams() {
-    let ListFiltered = filterListByCategory(FullList, "game");
+    let ListFiltered = filterGameListByCategory(FullList, "game");
     const paths = _generateStaticParams(ListFiltered);
     console.log("GAMES Static params:", paths);
     return paths;
