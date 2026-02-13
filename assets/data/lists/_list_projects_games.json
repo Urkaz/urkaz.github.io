@@ -1,7 +1,7 @@
 {    "orion-engine": {
         "category": [
             "personal",
-            "other"
+            "techdemos"
         ],
         "name": "Orion Engine",
         "tag": "Personal Game Engine",
@@ -1238,7 +1238,6 @@
     },
     "item-name-localized": {
         "category": [
-            "other",
             "mods",
             "personal"
         ],

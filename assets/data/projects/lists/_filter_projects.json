@@ -8,12 +8,12 @@
         "selector": ".category-plugin"
     },
     {
-        "name": "Minecraft Mods",
-        "selector": ".category-mcmods"
+        "name": "Game Mods & Addons",
+        "selector": ".category-mods"
     },
     {
-        "name": "Game Jams",
-        "selector": ".category-jams"
+        "name": "Games",
+        "selector": ".category-game"
     },
     {
         "name": "Other",

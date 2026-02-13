@@ -27,8 +27,8 @@ const Projects = () => {
                     <>
                         This section features all the personal and side projects I&apos;ve created, demonstrating my skills and creativity.
                         <br />
-                        Click on any project marked with the <FontAwesomeIcon icon={faLink} /> or <FontAwesomeIcon icon={faArrowTurnUp} /> icon to be
-                        redirected to a page with more details.
+                        Click on any project marked with the <FontAwesomeIcon icon={faLink} /> or <FontAwesomeIcon icon={faArrowTurnUp} /> icon to
+                        open a page with more details.
                     </>
                 }
                 sectionId="projects"
