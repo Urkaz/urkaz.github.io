@@ -11,7 +11,6 @@ export default function Home() {
 
     return (
         <section id={styles["hero"]} className={`${styles["hero"]} section dark-background`}>
-            {/*<img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />*/}
             <div className="container" data-aos="zoom-out" data-aos-delay="100">
                 <div className="row">
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
