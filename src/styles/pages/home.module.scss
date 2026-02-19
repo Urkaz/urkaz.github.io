@@ -47,7 +47,7 @@
     margin: 0;
     font-size: 64px;
     font-family: var(--sub-font-2);
-    color: var(--secondary-accent-color);
+    color: var(--hero-title);
 }
 
 .hero p {
@@ -59,7 +59,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: var(--sub-font-2);
-    color: var(--accent-color);
+    color: var(--hero-sub-title);
     margin: 10px 0 0 0;
     text-shadow: var(--contrast-color) 3px 3px;
 }
@@ -76,11 +76,11 @@
 }
 
 .hero .description p span {
-    color: var(--secondary-accent-color);
+    color: var(--hero-text-highlight-1);
 }
 
 .hero .description p span.sub {
-    color: var(--accent-color);
+    color: var( --hero-text-highlight-2);
 }
 
 .hero .pill-links {

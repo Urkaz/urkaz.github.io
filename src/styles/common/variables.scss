@@ -18,8 +18,8 @@
     --background-color: #151617;
     --default-color: #fafafa;
     --heading-color: #ffffff;
-    --accent-color: #ff005e;
-    --secondary-accent-color: #13fad7;
+    --accent-color: #17acff;
+    --secondary-accent-color: #0069a1;
     --surface-color: #1a1a1a;
     --contrast-color: #000000;
 }
@@ -27,8 +27,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
     --nav-color: #fafafa;
-    --nav-hover-color: #ff005e;
-    --nav-hover-secondary-color: #17acff;
+    --nav-hover-color: var(--accent-color);
     --nav-mobile-background-color: #1a1a1a;
 }
 
@@ -38,19 +37,18 @@
     --swiper-pagination-top: auto;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Items. */
 
-.light-background {
-    --background-color: #1a1a1a;
-    --surface-color: #343434;
-}
-
-.dark-background {
-    --background-color: rgba(15, 15, 15, 0.975);
-    --default-color: #ffffff;
-    --heading-color: #ffffff;
-    --surface-color: #292929f9;
-    --contrast-color: #000000;
+:root {
+    --page-title: var(--accent-color);
+    --button-color: var(--secondary-accent-color);
+    --button-hover: var(--accent-color);
+    --isotope-filter-selected: var(--accent-color);
+    --isotope-filter-hover: var(--accent-color);
+    --hero-title: var(--accent-color);
+    --hero-sub-title: var(--accent-color);
+    --hero-text-highlight-1: var(--accent-color);
+    --hero-text-highlight-2: var(--accent-color);
 }
 
 /* Smooth scroll */

@@ -8,7 +8,7 @@
     right: 15px;
     bottom: -15px;
     z-index: 99999;
-    background-color: var(--accent-color);
+    background-color: var(--button-color);
     width: 44px;
     height: 44px;
     border-radius: 50px;
@@ -20,7 +20,7 @@
 }
 
 .scroll-top:hover {
-    background-color: var(--secondary-accent-color);
+    background-color: var(--button-hover);
     color: var(--contrast-color);
 }
 

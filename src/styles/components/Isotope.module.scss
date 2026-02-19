@@ -19,15 +19,15 @@
         margin-bottom: 5px;
         transition: all 0.3s ease-in-out;
         display: inline-block;
-        background-color: var(--secondary-accent-color);
+        background-color: var(--isotope-filter-selected);
         padding: 5px 10px;
         box-shadow: 3px 3px 0 0 var(--contrast-color);
 
         &:hover {
-            color: var(--secondary-accent-color);
+            color: var(--isotope-filter-hover);
 
             img {
-                background: var(--secondary-accent-color);
+                background: var(--isotope-filter-hover);
             }
         }
 

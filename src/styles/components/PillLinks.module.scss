@@ -9,7 +9,7 @@
 }
 
 .pill-links a {
-    background: var(--accent-color);
+    background: var(--button-color);
     color: var(--default-color);
     border-radius: 50px;
     display: inline-flex;
@@ -41,7 +41,7 @@
 }
 
 .pill-links a:hover {
-    background: color-mix(in srgb, var(--secondary-accent-color), transparent 20%);
+    background: color-mix(in srgb, var(--button-hover), transparent 20%);
     color: var(--contrast-color);
 }
 
