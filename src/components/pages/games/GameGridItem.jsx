@@ -37,7 +37,9 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                 ) : null}
                 */}
 
-                <div className={styles["game-background"]}><LazyLoadImage src={`/img/games/tiles/${keyName}.png`} className="img-fluid" alt={name} effect="opacity" /></div>
+                <div className={styles["game-background"]}>
+                    <LazyLoadImage src={`/img/games/tiles/${keyName}.png`} className="img-fluid" alt={name} effect="opacity" />
+                </div>
 
                 {/* OVERLAY WITH LOGO OR TITLE */}
                 <div className={styles["game-overlay"]}>

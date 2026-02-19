@@ -80,7 +80,7 @@ const ProjectDescriptionID = async ({ params, metaData, dataPath }) => {
                                             <LinkPills>
                                                 {projectData.links.map((link, index) => {
                                                     return (
-                                                        <LinkPill key={index} {...link} />
+                                                        <LinkPill key={index} {...link} target="_blank" />
                                                     );
                                                 })}
                                             </LinkPills>

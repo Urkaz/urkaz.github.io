@@ -6,14 +6,14 @@ export function LinkPills({ children, className }) {
     return <div className={`${styles["pill-links"]} ${className}`}>{children}</div>;
 }
 
-export function LinkPill({link, iconType, icon, text}) {
-    return <a className={styles["pill"]} target="_blank" href={link} rel="noopener noreferrer">
-        <Icon iconType={iconType} icon={icon} /> {text}
+export function LinkPill({ link, iconType, icon, text, target }) {
+    return <a className={styles["pill"]} target={target} href={link} rel="noopener noreferrer">
+        {icon ? <Icon iconType={iconType} icon={icon} /> : null} {text}
     </a>
 }
 
-export function LinkDot({link, iconType, icon}) {
-    return <a className={styles["dot"]} target="_blank" href={link} rel="noopener noreferrer">
+export function LinkDot({ link, iconType, icon, target }) {
+    return <a className={styles["dot"]} target={target} href={link} rel="noopener noreferrer">
         <Icon iconType={iconType} icon={icon} />
     </a>
 }

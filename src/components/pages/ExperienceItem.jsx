@@ -1,12 +1,13 @@
 import React from "react";
-import Link from "next/link";
 
 import { getYearMonthDifference } from "@components/functions"
+import { LinkPills, LinkPill } from "@components/common/LinkPills";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@styles/pages/experience.module.scss";
+import pill_styles from "@styles/pages/home.module.scss";
 
 export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
     const start_date = new Date(startDate);
@@ -69,8 +70,20 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                                 return <span key={index}>
                                     {!button.hide ?
                                         (button.externalLink ?
-                                            <Link href={button.link} className={styles["button"]} target="_blank" rel="noopener noreferrer">{button.text}</Link> :
-                                            <Link href={button.link} className={styles["button"]}>{button.text}</Link>)
+                                            <LinkPills className={pill_styles["pill-links"]}>
+                                                <LinkPill
+                                                    link={button.link}
+                                                    text={button.text}
+                                                />
+                                            </LinkPills>
+                                            :
+                                            <LinkPills className={pill_styles["pill-links"]}>
+                                                <LinkPill
+                                                    link={button.link}
+                                                    text={button.text}
+                                                />
+                                            </LinkPills>
+                                        )
                                         : null}
                                 </span>;
                             }))
