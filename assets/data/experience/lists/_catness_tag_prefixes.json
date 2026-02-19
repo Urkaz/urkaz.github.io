@@ -1,10 +1,10 @@
 [
     {
-        "prefix": "Development",
+        "prefix": "",
         "category": "development"
     },
     {
-        "prefix": "Porting",
+        "prefix": "",
         "category": "porting"
     }
 ]

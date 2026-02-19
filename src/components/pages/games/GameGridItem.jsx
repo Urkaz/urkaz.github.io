@@ -50,7 +50,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                 <div className={styles["game-info"]}>
                     {hasSection ? <h4 className={styles["floating-bottom-right"]}><FontAwesomeIcon icon={customRoute ? faArrowTurnUp : faLink} /></h4> : null}
                     <div className={styles["hidden"]}>
-                        <h4 className={styles["floating-left"]}>{tag}</h4>
+                        {tag ? <h4 className={styles["floating-left"]}>{tag}</h4> : null }
                         {platforms ? (
                             <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
                                 {platforms.map((item, index) => (
