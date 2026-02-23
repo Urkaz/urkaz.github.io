@@ -12,8 +12,8 @@
         "selector": ".category-mods"
     },
     {
-        "name": "Games",
-        "selector": ".category-game"
+        "name": "Game Jams",
+        "selector": ".category-jams"
     },
     {
         "name": "Other",
