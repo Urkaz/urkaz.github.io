@@ -11,6 +11,8 @@ import Sections from "@assets/data/sections.json";
 import FullProjectsGamesList from "@assets/data/lists/_list_projects_games.json";
 import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
 
+import stlye from "@src/styles/components/Breadcumb.module.scss"
+
 const breadcrumbsData = {
     "/projects": FullProjectsGamesList,
     "/games": FullProjectsGamesList,
@@ -56,7 +58,7 @@ export function Breadcrumb() {
                 <div className="container">
                     <ol>
                         <li>
-                            <Link href="/">
+                            <Link href="/" className={stlye["breadcrumb-link"]}>
                                 <FontAwesomeIcon icon={faHouseChimney} /> Home
                             </Link>
                         </li>
@@ -64,7 +66,7 @@ export function Breadcrumb() {
                             crumb.current ? (
                                 <li key={index} className="current"> {crumb.name}</li>
                             ) : (
-                                <li key={index} className="current"><Link href={crumb.path}> {crumb.name}</Link></li>
+                                <li key={index} className="current"><Link href={crumb.path} className={stlye["breadcrumb-link"]}> {crumb.name}</Link></li>
                             )
                         )}
                     </ol>
