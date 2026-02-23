@@ -13,6 +13,10 @@
         scrollbar-width: thin;
         scrollbar-color: #444 transparent;
 
+        h4 {
+            border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        }
+
         /* Chrome, Edge, Safari */
         &::-webkit-scrollbar {
             width: 8px;
@@ -36,21 +40,21 @@
 
             &[open] {
                 > .toc-item {
-                    border-color: var(--accent-color);
-                    color: var(--accent-color);
+                    border-color: var(--markdown-toc-border-open);
+                    color: var(--markdown-toc-text-open);
                 }
             }
 
             .toc-item {
-                border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-                color: color-mix(in srgb, var(--default-color), transparent 20%);
+                border-left: 3px solid color-mix(in srgb, var(--markdown-toc-border), transparent 70%);
+                color: color-mix(in srgb, var(--markdown-toc-text), transparent 20%);
                 transition: 0.3s;
                 padding: 8px 0 8px 10px;
                 line-height: 1;
                 display: block;
 
                 &:hover {
-                    border-color: var(--accent-color);
+                    border-color: var(--markdown-toc-border-hover);
                 }
 
                 .toc-content[data-state="open"] {

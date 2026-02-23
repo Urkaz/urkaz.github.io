@@ -41,7 +41,7 @@
         white-space: nowrap;
         transition: 0.3s;
         position: relative;
-        text-shadow: var(--contrast-color) 3px 3px;
+        text-shadow: var(--shadow-color) 3px 3px;
     }
 
     .navmenu a i,
@@ -74,7 +74,7 @@
     .navmenu li:hover > a,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--nav-hover-color);
+        color: var(--nav-selected-color);
     }
 }
 
@@ -123,41 +123,7 @@
         white-space: nowrap;
         transition: 0.3s;
     }
-
-    .navmenu a i,
-    .navmenu a:focus i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: 0.3s;
-        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-    }
-
-    .navmenu a i:hover,
-    .navmenu a:focus i:hover {
-        background-color: var(--accent-color);
-        color: var(--contrast-color);
-    }
-
-    .navmenu a:hover,
-    .navmenu .active,
-    .navmenu .active:focus {
-        color: var(--accent-color);
-    }
-
-    .navmenu .active i,
-    .navmenu .active:focus i {
-        background-color: var(--accent-color);
-        color: var(--contrast-color);
-        transform: rotate(180deg);
-    }
-
+    
     .mobile-nav-active {
         overflow: hidden;
     }
@@ -201,68 +167,10 @@
         z-index: 9997;
     }
 
-    .navmenu ul {
-        display: none;
-        list-style: none;
-        position: absolute;
-        inset: 60px 20px 20px 20px;
-        padding: 10px 0;
-        margin: 0;
-        border-radius: 6px;
-        background-color: var(--nav-mobile-background-color);
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-        box-shadow: none;
-        overflow-y: auto;
-        transition: 0.3s;
-        z-index: 9998;
-    }
-
-    .navmenu a,
-    .navmenu a:focus {
-        color: var(--nav-dropdown-color);
-        padding: 10px 20px;
-        font-family: var(--nav-font);
-        font-size: 17px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        white-space: nowrap;
-        transition: 0.3s;
-    }
-
-    .navmenu a i,
-    .navmenu a:focus i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: 0.3s;
-        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-    }
-
-    .navmenu a i:hover,
-    .navmenu a:focus i:hover {
-        background-color: var(--accent-color);
-        color: var(--contrast-color);
-    }
-
     .navmenu a:hover,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--accent-color);
-    }
-
-    .navmenu .active i,
-    .navmenu .active:focus i {
-        background-color: var(--accent-color);
-        color: var(--contrast-color);
-        transform: rotate(180deg);
+        color: var(--nav-hover-color);
     }
 
     .mobile-nav-active {

@@ -22,9 +22,9 @@
 .header .logo h1 {
     font-size: 30px;
     margin: 0;
-    color: var(---page-title);
+    color: var(--page-title);
     font-family: var(--sub-font-2);
-    text-shadow: var(--contrast-color) 3px 3px;
+    text-shadow: var(--shadow-color) 3px 3px;
 }
 
 .scrolled .header {

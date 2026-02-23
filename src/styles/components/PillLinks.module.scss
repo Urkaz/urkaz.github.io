@@ -10,7 +10,7 @@
 
 .pill-links a {
     background: var(--button-color);
-    color: var(--default-color);
+    color: var(--button-text-color);
     border-radius: 50px;
     display: inline-flex;
     align-items: center;
@@ -41,17 +41,17 @@
 }
 
 .pill-links a:hover {
-    background: color-mix(in srgb, var(--button-hover), transparent 20%);
-    color: var(--contrast-color);
+    background: var(--button-hover);
+    color: var(--button-text-hover);
 }
 
 .pill-links a .custom-icon {
     transition: 0.3s;
-    background: var(--default-color);
+    background: var(--button-text-color);
 }
 
 .pill-links a:hover .custom-icon {
-    background: var(--contrast-color);
+    background: var(--button-text-hover);
 }
 .pill-links .pill .custom-icon {
     margin-right: 5px;

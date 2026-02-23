@@ -19,7 +19,7 @@
     box-shadow: 3px 3px var(--contrast-color);
 
     &:hover {
-        border-color: var(--accent-color);
+        border-color: var(--hero-img-hover);
         cursor: pointer;
         transform: scale(1.05, 1.05);
     }
@@ -61,7 +61,7 @@
     font-family: var(--sub-font-2);
     color: var(--hero-sub-title);
     margin: 10px 0 0 0;
-    text-shadow: var(--contrast-color) 3px 3px;
+    text-shadow: var(--shadow-color) 3px 3px;
 }
 
 .hero .description {

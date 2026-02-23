@@ -12,7 +12,7 @@
     .experience-item {
         margin-top: -2px;
         margin-left: 25px;
-        border-left: 2px solid var(--accent-color);
+        border-left: 2px solid var(--primary-color);
         position: relative;
         display: flex;
 
@@ -51,29 +51,6 @@
             }
         }
 
-        .button {
-            cursor: pointer;
-            text-align: center;
-            display: inline-block;
-            padding: 0;
-            font-size: 16px;
-            font-weight: 500;
-            margin: 0 10px;
-            line-height: 1;
-            transition: 0.3s;
-            display: inline-block;
-            background-color: var(--accent-color);
-            padding: 8px 10px;
-            color: var(--default-color);
-            box-shadow: 3px 3px 0 0 var(--contrast-color);
-            margin-bottom: 0.5em;
-
-            &:hover {
-                background-color: var(--secondary-accent-color);
-                color: var(--surface-color);
-            }
-        }
-
         .icon {
             content: "";
             position: absolute;
@@ -83,7 +60,7 @@
             left: -26px;
             top: 0;
             background: var(--background-color);
-            border: 2px solid var(--accent-color);
+            border: 2px solid var(--primary-color);
             overflow: hidden;
 
             img {
@@ -120,7 +97,7 @@
         height: 20px;
         margin-top: -2px;
         margin-left: 25px;
-        border-left: 2px dotted var(--accent-color);
+        border-left: 2px dotted var(--primary-color);
         position: relative;
         display: flex;
     }

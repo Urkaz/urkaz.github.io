@@ -26,7 +26,7 @@
     }
 
     .game-logo {
-        width: 70%;
+        width: 90%;
         height: 100%;
         margin: auto;
 
@@ -135,7 +135,7 @@
             color: #ffffff;
             display: inline-block;
             background-color: var(--contrast-color);
-            text-shadow: var(--contrast-color) 0px 0px;
+            text-shadow: var(--shadow-color) 0px 0px;
             line-height: 1;
             transition: all ease 0.5s;
             margin: 0px;
@@ -171,7 +171,7 @@
             transform: translateY(0%);
             pointer-events: none;
             box-shadow: 0px 0px var(--contrast-color);
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
         }
 
         p {
@@ -193,7 +193,7 @@
         right: 0px;
         border-style: solid;
         border-width: 0 0 30px 30px;
-        border-color: var(--accent-color) #0000;
+        border-color: var(--primary-color) #0000;
         transition: all ease 0.5s;
         color: var(--default-color);
         font-size: 14px;
@@ -217,10 +217,10 @@
     &.selectable:hover {
         cursor: pointer;
         transform: scale(1.05, 1.05);
-        border-color: var(--accent-color);
+        border-color: var(--primary-color);
 
         h4 {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
         }
 
         img {
@@ -268,7 +268,7 @@
                 transform: translateY(0%);
                 pointer-events: none;
                 box-shadow: 0px 0px var(--contrast-color);
-                background-color: var(--accent-color);
+                background-color: var(--primary-color);
             }
 
             p {

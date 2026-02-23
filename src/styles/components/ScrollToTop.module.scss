@@ -14,14 +14,14 @@
     border-radius: 50px;
     transition: all 0.4s;
     font-size: 24px;
-    color: var(--default-color);
+    color: var(--button-text-color);
     line-height: 0;
     box-shadow: 3px 3px 0 0 var(--contrast-color);
 }
 
 .scroll-top:hover {
     background-color: var(--button-hover);
-    color: var(--contrast-color);
+    color: var(--button-text-hover);
 }
 
 .scroll-top.active {
