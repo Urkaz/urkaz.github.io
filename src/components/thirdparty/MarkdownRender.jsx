@@ -1,7 +1,8 @@
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import rehypeSlug from 'rehype-slug'
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 import { MarkdownGallery } from "@components/thirdparty/markdown/MarkdownGallery";
 import { MarkdownLink } from "@components/thirdparty/markdown/MarkdownLink";
@@ -25,7 +26,20 @@ export const MarkdownRender = ({ content }) => {
         <Markdown
             components={components}
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypeSlug]}
+            rehypePlugins={[rehypeRaw, rehypeSlug,
+                [rehypeAutolinkHeadings, {
+                    behavior: "prepend",
+                    properties: {
+                        className: "anchor-link"
+                    },
+                    content: {
+                        type: "element",
+                        tagName: "span",
+                        properties: { "aria-hidden": "true" },
+                        children: [{ type: "text", value: "# " }]
+                    }
+                }]
+            ]}
         >
             {content}
         </Markdown>
