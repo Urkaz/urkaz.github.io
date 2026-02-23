@@ -8,7 +8,7 @@ export function Heading({ title, description }) {
     return (
         <>
             {/*Heading container*/}
-            <div className="heading">
+            <div className="heading" data-aos="fade">
                 <div className="container">
                     <div className="row d-flex justify-content-center text-center">
                         <div className="col-lg">
@@ -25,10 +25,10 @@ export function Heading({ title, description }) {
 export function SectionContent({ title, description, sectionId, children }) {
     return (
         <>
-            <div className="page-title" data-aos="fade">
+            <div className="page-title">
                 <Breadcrumb />
-                <Heading title={title} description={description} />
-                <section id={sectionId} className={`${sectionId} section`}>
+                <Heading title={title} description={description}/>
+                <section id={sectionId} className={`${sectionId} section`} data-aos="fade">
                     <div className="container">{children}</div>
                 </section>
             </div>

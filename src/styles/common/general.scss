@@ -45,3 +45,7 @@ h6 {
     overflow: hidden;
     filter: opacity(0.8);
 }
+
+[data-aos="fade-up"] {
+    transform: translate3d(0, 0px, 0);
+}

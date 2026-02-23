@@ -43,7 +43,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     const siteName = "Fran Sánchez Rodrigo";
     return (
-        <html lang="en">
+        <html lang="en" data-scroll-behavior="smooth">
             <body>
                 <Suspense fallback={<Preloader />}>
                     <Header>{siteName}</Header>
