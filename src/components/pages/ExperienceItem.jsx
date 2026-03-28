@@ -69,21 +69,13 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                             buttons?.map(((button, index) => {
                                 return <span key={index}>
                                     {!button.hide ?
-                                        (button.externalLink ?
-                                            <LinkPills className={pill_styles["pill-links"]}>
-                                                <LinkPill
-                                                    link={button.link}
-                                                    text={button.text}
-                                                />
-                                            </LinkPills>
-                                            :
-                                            <LinkPills className={pill_styles["pill-links"]}>
-                                                <LinkPill
-                                                    link={button.link}
-                                                    text={button.text}
-                                                />
-                                            </LinkPills>
-                                        )
+                                        <LinkPills className={pill_styles["pill-links"]}>
+                                            <LinkPill
+                                                link={button.link}
+                                                text={button.text}
+                                                target={button.externalLink ? "_blank" : ""}
+                                            />
+                                        </LinkPills>
                                         : null}
                                 </span>;
                             }))
