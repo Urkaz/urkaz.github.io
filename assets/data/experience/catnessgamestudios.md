@@ -1,6 +1,10 @@
 # Porting
 
-Most projects were developed by teams of 3 to 5 developers, maintaining close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Projects were version-controlled using Git or Perforce, depending on the project. In some cases, we worked in close collaboration with the client, incorporating their feedback throughout the porting process.
+The role involved porting games to console platforms using Unreal Engine 4 and 5.
+
+Most projects were developed by teams of 3 to 5 developers, with close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Version control was handled using Git or Perforce, depending on the needs of the project. In some cases, we worked closely with the client, incorporating their feedback throughout the porting process.
+
+My philosophy during porting was to always respect the original work, avoiding drastic changes unless strictly necessary, while ensuring strong performance across all areas of the game.
 
 The porting process included:
 
@@ -11,7 +15,9 @@ The porting process included:
 * Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
 * Bug fixing.
 
-In the list below there are all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
+## Games ported
+
+In the list below are all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
 
 <isotope>
 {
@@ -24,7 +30,7 @@ In the list below there are all the games I worked on at Catness Game Studios. C
 
 # Engine development
 
-<warning>The section is Work In Progress. This will be expanded in the future with more information.</warning>
+<warning>This section is a work in progress. It will be expanded in the future with more information.</warning>
 
 Engine development and customization with multiple bug fixes and improvements.
 
@@ -44,7 +50,7 @@ UnrealBuildTool:
 
 # Tools and Plugin development
 
-<warning>The section is Work In Progress. This will be expanded in the future with more information.</warning>
+<warning>This section is a work in progress. It will be expanded in the future with more information.</warning>
 
 Plugin and tool development to expand the engine base functionality, and ease the porting process to consoles.
 
