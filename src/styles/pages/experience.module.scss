@@ -19,6 +19,7 @@
         .experience-card {
             padding: 0 0 0 15px;
             background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
+            backdrop-filter: blur(4px);
             width: 100%;
             box-shadow: 3px 3px 0 0 var(--contrast-color);
         }

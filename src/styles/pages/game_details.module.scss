@@ -18,6 +18,7 @@
 
 .game-info {
     background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
+    backdrop-filter: blur(4px);
     box-shadow: 3px 3px 0 0 var(--contrast-color);
     height: 100%;
     width: 100%;
@@ -61,6 +62,7 @@
 .description-card {
     padding: 20px 20px 20px 20px;
     background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
+    backdrop-filter: blur(4px);
     box-shadow: 3px 3px 0 0 var(--contrast-color);
 
     table {
