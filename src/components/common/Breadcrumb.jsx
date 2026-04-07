@@ -54,7 +54,7 @@ export function Breadcrumb() {
 
     return (
         <>
-            <nav className="breadcrumbs">
+            <nav className={stlye["breadcrumbs"]}>
                 <div className="container">
                     <ol>
                         <li>
