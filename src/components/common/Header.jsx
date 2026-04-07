@@ -21,7 +21,7 @@ export function Header({ children }) {
                 !selectHeader.classList.contains("fixed-top")
             )
                 return;
-            window.scrollY > 25 ? selectBody.classList.add(styles["scrolled"]) : selectBody.classList.remove(styles["scrolled"]);
+            window.scrollY > 5 ? selectBody.classList.add(styles["scrolled"]) : selectBody.classList.remove(styles["scrolled"]);
         };
         document.addEventListener("scroll", toggleScrolled);
         window.addEventListener("load", toggleScrolled);
