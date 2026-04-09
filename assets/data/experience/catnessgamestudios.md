@@ -23,8 +23,8 @@ In the list below are all the games I worked on at Catness Game Studios. Click o
 {
   "items": "/assets/data/lists/_list_projects_games.json",
   "filters": ["/assets/data/experience/lists/_catness_filter_platforms.json"],
-  "prefilter": "/assets/data/experience/lists/_catness_tag_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/_catness_tag_prefixes.json"
+  "prefilter": "/assets/data/experience/lists/_catness_tag_games_prefilter.json",
+  "prefixes": "/assets/data/experience/lists/_catness_tag_games_prefixes.json"
 }
 </isotope>
 
@@ -35,6 +35,7 @@ In the list below are all the games I worked on at Catness Game Studios. Click o
 Engine development and customization with multiple bug fixes and improvements.
 
 Engine:
+
 * Indexed Actor tags: Optimizes Actor Tag search by indexing them in a TMap.
 * Alternative LOD screensize auto-calculation: Override and auto-calculate screen size of each LOD Level according to the MinLOD set for each platform, allowing more progressive LOD transitions.
 * Implemented a toggle in Material Instances to allow setting them to Fully Rough (which was only available in parent Materials).
@@ -44,9 +45,18 @@ Engine:
 * Improved Switch controller management code.
 * Other smaller fixes to platforms and engine code.
 
-UnrealBuildTool: 
+UnrealBuildTool:
+
 * Changed the build path folder in UnrealBuildTool to include the current date and master versions
 * Added calls to all platform SDKs to create a digest/hash of the generated build.
+
+<isotope>
+{
+  "items": "/assets/data/experience/lists/_catness_list_engine.json",
+  "filters": ["/assets/data/experience/lists/_catness_filter_engine.json"],
+  "prefilter": "/assets/data/experience/lists/_catness_tag_engine_prefilter.json"
+}
+</isotope>
 
 # Tools and Plugin development
 

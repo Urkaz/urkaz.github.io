@@ -1,0 +1,82 @@
+{
+    "indexed-actor-tags": {
+        "category": [
+            "engine",
+            "unreal",
+            "optimization"
+        ],
+        "name": "Indexed Actor Tags",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    },
+    "alternalte-lod-auto-calc": {
+        "category": [
+            "engine",
+            "unreal",
+            "optimization",
+            "enhancement"
+        ],
+        "name": "Alternate LOD Auto Calc",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    },
+    "fully-rough-material-instances": {
+        "category": [
+            "engine",
+            "unreal",
+            "enhancement"
+        ],
+        "name": "Fully Rough Material Instances",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    },
+    "ismc-in-mso": {
+        "category": [
+            "engine",
+            "unreal",
+            "enhancement"
+        ],
+        "name": "ISMC in Mobile Occlusion",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    },
+    "cloth-physics-optimization": {
+        "category": [
+            "engine",
+            "unreal",
+            "optimization"
+        ],
+        "name": "Cloth Physics Optimization",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    },
+    "build-path-folder": {
+        "category": [
+            "engine",
+            "buildtool",
+            "unreal",
+            "enhancement"
+        ],
+        "name": "Build Path Folder",
+        "tag": "Unreal Build Tool",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": false
+    }
+}

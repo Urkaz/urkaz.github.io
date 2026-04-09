@@ -1,0 +1,14 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "name": "Optimization",
+        "selector": ".category-optimization"
+    },
+    {
+        "name": "Enhancement",
+        "selector": ".category-enhancement"
+    }
+]
