@@ -8,7 +8,7 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
-        "hidden": false
+        "hidden": true
     },
     "no-bed-respawn": {
         "category": [
@@ -24,7 +24,7 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
-        "hidden": false
+        "hidden": true
     },
     "cobblemon-shiny-charm": {
         "category": [
@@ -40,7 +40,7 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
-        "hidden": false
+        "hidden": true
     },
     "more-cobblemon-stats": {
         "category": [
@@ -56,7 +56,7 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
-        "hidden": false
+        "hidden": true
     },
     "minecraft-mods-collaborations": {
         "category": [
@@ -71,7 +71,8 @@
         "name": "Minecraft Mods Collaborations",
         "hasSection": true,
         "parentSection": "/projects",
-        "noLogo": true
+        "noLogo": true,
+        "hidden": true
     },
     "alphasin55": {
         "category": [
@@ -203,7 +204,8 @@
         "name": "Unreal Engine Pull Requests",
         "hasSection": true,
         "parentSection": "/projects",
-        "noLogo": true
+        "noLogo": true,
+        "hidden": true
     },
     "xuan-yuan-sword-7": {
         "category": [
