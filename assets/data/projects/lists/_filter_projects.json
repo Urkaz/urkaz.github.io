@@ -4,16 +4,20 @@
         "selector": ""
     },
     {
-        "name": "Unreal Plugins",
-        "selector": ".category-plugin"
+        "name": "Unreal Engine",
+        "selector": ".category-unreal"
     },
     {
-        "name": "Game Mods & Addons",
+        "name": "Tech Demos",
+        "selector": ".category-techdemos"
+    },
+    {
+        "name": "Mods & Addons",
         "selector": ".category-mods"
     },
     {
-        "name": "Game Jams",
-        "selector": ".category-jams"
+        "name": "Games",
+        "selector": ".category-game"
     },
     {
         "name": "Other",
