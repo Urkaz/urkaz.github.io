@@ -40,7 +40,7 @@
 * [Cobblemon Ultra-Beasts (3.1)](https://www.curseforge.com/minecraft/mc-mods/cobblemon-ultra-beasts) (Fabric Only)
   * Ultra Wormholes Entered
 
-## Fixes/Enhancements
+## Fixes/enhancements
 
 * [Cobblemon Quick Battle (1.3.8)](https://modrinth.com/mod/cobblemon-quick-battle)
   * **[Fixed]**: Now triggers BATTLE_FAINTED events so other mods could handle the defeat.

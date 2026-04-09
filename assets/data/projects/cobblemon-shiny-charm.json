@@ -6,18 +6,18 @@
             "src": "/img/projects/mods/hullbreaker2.png"
         }
     ],
-    "details": [
+        "details": [
         {
             "left": "Type",
-            "right": "Game Engine"
+            "right": "Minecraft Java Edition Mod"
         },
         {
             "left": "Language",
-            "right": "C++"
+            "right": "Java"
         },
         {
             "left": "Project started",
-            "right": "2025"
+            "right": "2026"
         },
         {
             "left": "Project status",
@@ -26,10 +26,22 @@
     ],
     "links": [
         {
+            "iconType": "custom",
+            "icon": "modrinth",
+            "text": "Modrinth",
+            "link": "https://modrinth.com/mod/more-cobblemon-stats"
+        },
+        {
+            "iconType": "custom",
+            "icon": "curseforge",
+            "text": "CurseForge",
+            "link": "https://www.curseforge.com/minecraft/mc-mods/more-cobblemon-stats"
+        },
+        {
             "iconType": "fontawesome",
             "icon": "fa-brands fa-github",
             "text": "Github",
-            "link": "https://github.com/Urkaz/OrionEngine"
+            "link": "https://github.com/Urkaz/MoreCobblemonStats"
         }
     ]
 }
