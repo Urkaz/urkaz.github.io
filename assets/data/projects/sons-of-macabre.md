@@ -6,9 +6,12 @@ It changes the following (all configurable in the mod config):
 
 * Adds a new portal made of flesh blocks from Sons Of Sins to access the Macabre dimension.
 * Disables the teleport to the Macabre dimension using CrystalizedBlood. It is used to light the portal.
-* Ether Ashes are only dropped in the Macabre dimension, and it's always dropped.
-* Simplifies the Flesh Block recipe.
+* Ether Ashes are only dropped in the Macabre dimension, and they are always dropped.
+* Flesh Block recipe simplified.
 * "IsOsseous" item tag used as blacklist, allowing all weapons to drop Ether.
+
+Other changes:
+
 * Fixes the minimap block colors for Macabre blocks.
 
 # Mods required
