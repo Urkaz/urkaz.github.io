@@ -7,8 +7,71 @@
         "tag": "Personal Game Engine",
         "hasSection": true,
         "parentSection": "/projects",
+        "noLogo": false,
+        "hidden": false
+    },
+    "no-bed-respawn": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "No Bed Respawn",
+        "tag": "Minecraft Java Edition Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
         "noLogo": true,
         "hidden": false
+    },
+    "cobblemon-shiny-charm": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "Cobblemon Shiny Charm",
+        "tag": "Minecraft Java Edition Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": false
+    },
+    "more-cobblemon-stats": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "More Cobblemon Stats",
+        "tag": "Minecraft Java Edition Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": false
+    },
+    "minecraft-mods-collaborations": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "tag": "Minecraft Mods Collaborations",
+        "name": "Minecraft Mods Collaborations",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true
     },
     "alphasin55": {
         "category": [

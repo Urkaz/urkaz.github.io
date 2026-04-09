@@ -1,0 +1,47 @@
+{
+    "description": "More Cobblemon Stats",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/mods/hullbreaker2.png"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Java Edition Mod"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        },
+        {
+            "left": "Project started",
+            "right": "2026"
+        },
+        {
+            "left": "Project status",
+            "right": "Currently maintained"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "custom",
+            "icon": "modrinth",
+            "text": "Modrinth",
+            "link": "https://modrinth.com/mod/more-cobblemon-stats"
+        },
+        {
+            "iconType": "custom",
+            "icon": "curseforge",
+            "text": "CurseForge",
+            "link": "https://www.curseforge.com/minecraft/mc-mods/more-cobblemon-stats"
+        },
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/MoreCobblemonStats"
+        }
+    ]
+}

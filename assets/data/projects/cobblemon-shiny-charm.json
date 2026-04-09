@@ -1,0 +1,35 @@
+{
+    "description": "Personal Game Engine",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/mods/hullbreaker2.png"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Game Engine"
+        },
+        {
+            "left": "Language",
+            "right": "C++"
+        },
+        {
+            "left": "Project started",
+            "right": "2025"
+        },
+        {
+            "left": "Project status",
+            "right": "Currently maintained"
+        }
+    ],
+    "links": [
+        {
+            "iconType": "fontawesome",
+            "icon": "fa-brands fa-github",
+            "text": "Github",
+            "link": "https://github.com/Urkaz/OrionEngine"
+        }
+    ]
+}
