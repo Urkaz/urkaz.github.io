@@ -16,6 +16,9 @@
             "mods",
             "personal"
         ],
+        "platforms": [
+            "minecraft"
+        ],
         "name": "AlphaSIN 55",
         "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
@@ -28,6 +31,9 @@
             "mcmods",
             "mods",
             "personal"
+        ],
+        "platforms": [
+            "minecraft"
         ],
         "name": "Urkaz Lib",
         "tag": "Minecraft Java Edition Mod",
@@ -42,6 +48,9 @@
             "mods",
             "personal"
         ],
+        "platforms": [
+            "minecraft"
+        ],
         "name": "Sons of Macabre",
         "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
@@ -54,6 +63,9 @@
             "mcmods",
             "mods",
             "personal"
+        ],
+        "platforms": [
+            "minecraft"
         ],
         "name": "Immersive Machinery ˣ Alex's Caves",
         "tag": "Minecraft Java Edition Mod",
@@ -107,6 +119,9 @@
         "category": [
             "plugin",
             "personal"
+        ],
+        "platforms": [
+            "unreal"
         ],
         "name": "Unused Node Cleaner",
         "tag": "Unreal Plugin",
@@ -1230,6 +1245,9 @@
             "mods",
             "personal"
         ],
+        "platforms": [
+            "minecraft"
+        ],
         "name": "Urkaz Moon Tools",
         "tag": "Minecraft Java Edition Mod",
         "hasSection": true,
@@ -1240,6 +1258,9 @@
         "category": [
             "mods",
             "personal"
+        ],
+        "platforms": [
+            "worldofwarcraft"
         ],
         "name": "Item Name Localized",
         "tag": "World of Warcraft Addon",

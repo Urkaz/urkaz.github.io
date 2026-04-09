@@ -31,13 +31,13 @@
     "links": [
         {
             "iconType": "custom",
-            "icon": "mini_switch",
+            "icon": "switch",
             "text": "Nintendo eShop",
             "link": "https://www.nintendo.com/us/store/products/american-arcadia-switch/"
         },
         {
             "iconType": "custom",
-            "icon": "mini_ps5",
+            "icon": "ps5",
             "text": "PlayStation Store",
             "link": "https://store.playstation.com/es-es/product/UP2320-PPSA25653_00-AMERICANARCADIA0"
         }

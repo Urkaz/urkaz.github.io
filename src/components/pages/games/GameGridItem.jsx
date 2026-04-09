@@ -54,7 +54,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                         {platforms ? (
                             <h4 className={`${styles["floating-right"]} ${styles["miniplatforms"]}`}>
                                 {platforms.map((item, index) => (
-                                    <CustomIcon key={index} img={`mini_${item}`} />
+                                    <CustomIcon key={index} img={`${item}`} />
                                 ))}
                             </h4>
                         ) : null}
