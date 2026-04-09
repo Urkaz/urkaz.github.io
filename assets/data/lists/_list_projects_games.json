@@ -192,6 +192,19 @@
         "parentSection": "/projects",
         "noLogo": true
     },
+    "unreal-engine-prs": {
+        "category": [
+            "unreal",
+            "personal"
+        ],
+        "platforms": [
+            "unreal"
+        ],
+        "name": "Unreal Engine Pull Requests",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true
+    },
     "xuan-yuan-sword-7": {
         "category": [
             "porting",
