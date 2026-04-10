@@ -8,7 +8,7 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
-        "hidden": true
+        "hidden": false
     },
     "no-bed-respawn": {
         "category": [
@@ -20,7 +20,7 @@
             "minecraft"
         ],
         "name": "No Bed Respawn",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -36,7 +36,7 @@
             "minecraft"
         ],
         "name": "Cobblemon Shiny Charm",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -52,11 +52,11 @@
             "minecraft"
         ],
         "name": "More Cobblemon Stats",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
-        "noLogo": true,
-        "hidden": true
+        "noLogo": false,
+        "hidden": false
     },
     "minecraft-mods-collaborations": {
         "category": [
@@ -84,7 +84,7 @@
             "minecraft"
         ],
         "name": "AlphaSIN 55",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
@@ -100,7 +100,7 @@
             "minecraft"
         ],
         "name": "Urkaz Lib",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
@@ -116,7 +116,7 @@
             "minecraft"
         ],
         "name": "Sons of Macabre",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -132,7 +132,7 @@
             "minecraft"
         ],
         "name": "Immersive Machinery ˣ Alex's Caves",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -1327,7 +1327,7 @@
             "minecraft"
         ],
         "name": "Urkaz Moon Tools",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true
