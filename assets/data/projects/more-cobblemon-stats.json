@@ -31,6 +31,18 @@
     ],
     "links": [
         {
+            "iconType": "custom",
+            "icon": "modrinth",
+            "text": "Modrinth",
+            "link": "https://modrinth.com/mod/more-cobblemon-stats"
+        },
+        {
+            "iconType": "custom",
+            "icon": "curseforge",
+            "text": "CurseForge",
+            "link": "https://www.curseforge.com/minecraft/mc-mods/more-cobblemon-stats"
+        },
+        {
             "iconType": "fontawesome",
             "icon": "fa-brands fa-github",
             "text": "Github",
