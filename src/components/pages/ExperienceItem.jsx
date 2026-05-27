@@ -9,7 +9,7 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 import styles from "@styles/pages/experience.module.scss";
 import pill_styles from "@styles/pages/home.module.scss";
 
-export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, current, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
+export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, current, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle, isFirst = false, isLast = false }) => {
     const start_date = new Date(startDate);
     const end_date = new Date(endDate);
 
@@ -35,10 +35,16 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
     timeText += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
     timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
 
+    const itemClass = [
+        styles["experience-item"],
+        isFirst ? (current ? styles["dotted-top-line"] : styles["hide-top-line"]) : "",
+        isLast ? styles["hide-bottom-line"] : "",
+    ].filter(Boolean).join(" ");
+
     return (
         <>
             <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
-                <div className={styles["experience-item"]}>
+                <div className={itemClass}>
                     <div className={styles["experience-card"]}>
                         <div className={`d-flex align-items-center ${styles["header"]}`}>
                             <div className={styles["icon"]}>

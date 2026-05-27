@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SectionContent } from "@components/common/SectionsContent";
-import { ExperienceItem, ExperienceSeparator } from "@components/pages/ExperienceItem";
+import { ExperienceItem } from "@components/pages/ExperienceItem";
 
 import EducationList from "@assets/data/education/education.json";
 import CoursesList from "@assets/data/education/courses.json";
@@ -24,19 +24,17 @@ const Education = () => {
             >
                 <div className="row">
                     <h1>Academic Background</h1>
-                    {Object.entries(EducationList).map(([key, item], index) => (
+                    {Object.entries(EducationList).map(([key, item], index, arr) => (
                         <div key={key}>
-                            <ExperienceItem {...item} />
-                            {index != Object.keys(EducationList).length - 1 ? <ExperienceSeparator /> : null}
+                            <ExperienceItem {...item} isFirst={index === 0} isLast={index === arr.length - 1} />
                         </div>
                     ))}
                 </div>
                 <div className="row mt-4">
                     <h1>Courses</h1>
-                    {Object.entries(CoursesList).map(([key, item], index) => (
+                    {Object.entries(CoursesList).map(([key, item], index, arr) => (
                         <div key={key}>
-                            <ExperienceItem {...item} />
-                            {index != Object.keys(CoursesList).length - 1 ? <ExperienceSeparator /> : null}
+                            <ExperienceItem {...item} isFirst={index === 0} isLast={index === arr.length - 1} />
                         </div>
                     ))}
                 </div>

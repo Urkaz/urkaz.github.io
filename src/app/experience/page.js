@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SectionContent } from "@components/common/SectionsContent";
-import { ExperienceItem, ExperienceSeparator } from "@components/pages/ExperienceItem";
+import { ExperienceItem } from "@components/pages/ExperienceItem";
 
 import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
 
@@ -17,10 +17,9 @@ const Experience = () => {
                 sectionClass={styles["experience"]}
             >
                 <div className="row">
-                    {Object.entries(ExperienceList).map(([key, item], index) => (
+                    {Object.entries(ExperienceList).map(([key, item], index, arr) => (
                         <div key={key}>
-                            <ExperienceItem {...item} />
-                            {index != Object.keys(ExperienceList).length - 1 ? <ExperienceSeparator /> : null}
+                            <ExperienceItem {...item} isFirst={index === 0} isLast={index === arr.length - 1} />
                         </div>
                     ))}
                 </div>
