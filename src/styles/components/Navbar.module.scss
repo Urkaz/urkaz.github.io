@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
 @media (min-width: 1200px) {
     .navmenu {
@@ -44,14 +45,6 @@
         text-shadow: var(--shadow-color) 3px 3px;
     }
 
-    .navmenu a i,
-    .navmenu a:focus i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
-        transition: 0.3s;
-    }
-
     .navmenu > ul > li > a:before {
         content: "";
         position: absolute;
@@ -80,6 +73,17 @@
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+    .navmenu {
+        padding: 0;
+    }
+
+    .navmenu ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
     .mobile-nav-toggle {
         color: var(--nav-color);
         font-size: 28px;
@@ -91,85 +95,77 @@
         border: none;
         padding: 0;
     }
-
-    .navmenu {
-        padding: 0;
-        z-index: 9997;
-    }
-
-    .navmenu ul {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-nav-active {
-        overflow: hidden;
-    }
-
-    .navmenu a:hover,
-    .navmenu .active,
-    .navmenu .active:focus {
-        color: var(--nav-hover-color);
-    }
 }
 
 /*
- * Mobile nav overlay — rendered via React portal directly on <body> to avoid
- * being clipped by the header's backdrop-filter containing block.
+ * Mobile dropdown rendered via React portal on <body> to avoid being clipped
+ * by the header's backdrop-filter containing block.
  */
+
+/* Invisible full-screen layer behind the dropdown that captures outside clicks */
+.mobile-nav-backdrop {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9997;
+}
+
+/* The dropdown panel itself */
 .mobile-nav-overlay {
     position: fixed;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    top: var(--header-height);
+    left: 0;
+    right: 0;
     z-index: 9998;
-    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--header-footer-background), transparent 10%);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 4px 0 0 var(--primary-color);
+    animation: dropdown-open 0.2s ease-out;
 
     ul {
-        display: block;
         list-style: none;
-        position: absolute;
-        inset: 60px 20px 20px 20px;
-        padding: 10px 0;
         margin: 0;
-        border-radius: 6px;
-        background-color: var(--nav-mobile-background-color);
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-        overflow-y: auto;
+        padding: 6px 0;
+    }
+
+    li + li {
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     }
 
     a,
     a:focus {
-        color: var(--nav-dropdown-color);
-        padding: 10px 20px;
+        color: var(--nav-color);
+        padding: 12px 20px;
         font-family: var(--nav-font);
         font-size: 17px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        white-space: nowrap;
-        transition: 0.3s;
+        font-weight: 600;
+        display: block;
+        transition: color 0.2s, background-color 0.2s;
+        text-shadow: var(--shadow-color) 2px 2px;
     }
 
-    a:hover,
+    a:hover {
+        color: var(--nav-hover-color);
+        background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
+    }
+
     .active,
     .active:focus {
-        color: var(--nav-hover-color);
+        color: var(--nav-selected-color);
     }
 }
 
-.mobile-nav-close {
-    color: #fff;
-    position: fixed;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    z-index: 9999;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    line-height: 0;
+@keyframes dropdown-open {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

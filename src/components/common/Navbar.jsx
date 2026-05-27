@@ -32,32 +32,22 @@ export function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    useEffect(() => { setMounted(true); }, []);
 
+    // Close on route change
+    useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+    // Close when viewport reaches desktop breakpoint
     useEffect(() => {
-        return () => {
-            document.body.classList.remove(styles["mobile-nav-active"]);
+        const handleResize = () => {
+            if (window.innerWidth >= 1200) setMenuOpen(false);
         };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const closeMenu = () => {
-        setMenuOpen(false);
-        document.body.classList.remove(styles["mobile-nav-active"]);
-    };
-
-    const toggleMenu = () => {
-        setMenuOpen((prev) => {
-            const newState = !prev;
-            if (newState) {
-                document.body.classList.add(styles["mobile-nav-active"]);
-            } else {
-                document.body.classList.remove(styles["mobile-nav-active"]);
-            }
-            return newState;
-        });
-    };
+    const closeMenu = () => setMenuOpen(false);
+    const toggleMenu = () => setMenuOpen((prev) => !prev);
 
     const navLinks = (onLinkClick) => (
         <>
@@ -86,26 +76,23 @@ export function Navbar() {
                 <button
                     className={`${styles["mobile-nav-toggle"]} d-xl-none`}
                     onClick={toggleMenu}
-                    aria-label="Open menu"
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={menuOpen}
                 >
-                    <FontAwesomeIcon icon={faBars} />
+                    {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
                 </button>
             </nav>
 
-            {/* Mobile overlay - portaled to body to bypass header's backdrop-filter containing block */}
+            {/* Mobile dropdown portaled to body to bypass header's backdrop-filter containing block */}
             {mounted && menuOpen && createPortal(
-                <div className={styles["mobile-nav-overlay"]}>
-                    <button
-                        className={styles["mobile-nav-close"]}
-                        onClick={closeMenu}
-                        aria-label="Close menu"
-                    >
-                        <FontAwesomeIcon icon={faXmark} />
-                    </button>
-                    <ul>
-                        {navLinks(closeMenu)}
-                    </ul>
-                </div>,
+                <>
+                    <div className={styles["mobile-nav-backdrop"]} onClick={closeMenu} />
+                    <nav className={styles["mobile-nav-overlay"]}>
+                        <ul>
+                            {navLinks(closeMenu)}
+                        </ul>
+                    </nav>
+                </>,
                 document.body
             )}
         </>
