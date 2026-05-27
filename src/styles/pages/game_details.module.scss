@@ -40,25 +40,6 @@
     }
 }
 
-.portfolio-description {
-    padding-top: 30px;
-
-    h2 {
-        font-size: 26px;
-        margin-bottom: 20px;
-    }
-
-    p {
-        padding: 0;
-        color: color-mix(in srgb, var(--default-color), transparent 30%);
-    }
-}
-
-.description-card-container {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-}
-
 .description-card {
     padding: 20px 20px 20px 20px;
     background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
