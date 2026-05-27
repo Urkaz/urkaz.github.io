@@ -34,18 +34,19 @@ Engine development and customization with multiple bug fixes and improvements.
 
 Engine:
 
-* Indexed Actor tags: Optimizes Actor Tag search by indexing them in a TMap.
-* Alternative LOD screensize auto-calculation: Override and auto-calculate screen size of each LOD Level according to the MinLOD set for each platform, allowing more progressive LOD transitions.
-* Implemented a toggle in Material Instances to allow setting them to Fully Rough (which was only available in parent Materials).
-* Modified and implemented a way to handle Instanced Static Meshes in Mobile Software Occlusion.
-* Fix Negative transform in Instanced Mesh previews.
-* Optimization of cloth physics by allowing reducing the cloth tick rate by distance to the player.
-* Improved Switch controller management code.
-* Other smaller fixes to platforms and engine code.
+* **Indexed Actor tags**: Optimizes Actor Tag search by indexing them in a TMap.
+* **Alternate LOD screensize auto-calculation**: Override and auto-calculate screen size of each LOD Level according to the MinLOD set for each platform, allowing more progressive LOD transitions.
+* **Fully Rough Material Instances**: Implemented a toggle in Material Instances to allow setting them to Fully Rough (which was only available in parent Materials).
+* **ISMC in Mobile Occlusion**: Modified and implemented a way to handle Instanced Static Mesh Components in Mobile Software Occlusion.
+* **Cloth Physics Optimization**: Optimization of cloth physics by allowing reducing the cloth tick rate by distance to the player.
+* Other Fixes:
+  * Fix Negative transform in Instanced Mesh previews.
+  * Improved Switch controller management code.
+  * Other smaller fixes to platforms and engine code.
 
 UnrealBuildTool:
 
-* Changed the build path folder in UnrealBuildTool to include the current date and master versions
+* **Build Path Folder**: Changed the build path folder in UnrealBuildTool to include the current date and master versions
 * Added calls to all platform SDKs to create a digest/hash of the generated build.
 
 <isotope>

@@ -13,7 +13,7 @@ import { CustomIcon } from "@src/components/common/CustomIcon";
 import styles from "@styles/pages/games.module.scss";
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
-export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, parentSection, hidden = false }) => {
+export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, background, parentSection, hidden = false }) => {
 
     const pathname = usePathname();
 
@@ -38,7 +38,7 @@ export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, h
                 */}
 
                 <div className={styles["game-background"]}>
-                    <LazyLoadImage src={`/img/games/tiles/${keyName}.png`} className="img-fluid" alt={name} effect="opacity" />
+                    <LazyLoadImage src={`/img/games/tiles/${background ? background : keyName}.png`} className="img-fluid" alt={name} effect="opacity" />
                 </div>
 
                 {/* OVERLAY WITH LOGO OR TITLE */}
