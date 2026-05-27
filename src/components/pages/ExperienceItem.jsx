@@ -40,10 +40,10 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
             <div className={styles["experience-timeline-item"]} data-aos="fade-up" data-aos-delay="100">
                 <div className={styles["experience-item"]}>
                     <div className={styles["experience-card"]}>
-                        <div className={styles["icon"]}>
-                            <img src={logo} alt=""></img>
-                        </div>
                         <div className={`d-flex align-items-center ${styles["header"]}`}>
+                            <div className={styles["icon"]}>
+                                <img src={logo} alt=""></img>
+                            </div>
                             <div>
                                 <h4>{role}</h4>
                                 <h5>{name}</h5>
@@ -70,19 +70,20 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                             : null}
 
                         {
-                            buttons?.map(((button, index) => {
-                                return <span key={index}>
-                                    {!button.hide ?
-                                        <LinkPills className={pill_styles["pill-links"]}>
+                            buttons?.some(b => !b.hide) &&
+                            <div className={styles["buttons"]}>
+                                {buttons.map((button, index) => (
+                                    !button.hide ?
+                                        <LinkPills key={index} className={pill_styles["pill-links"]}>
                                             <LinkPill
                                                 link={button.link}
                                                 text={button.text}
                                                 target={button.externalLink ? "_blank" : ""}
                                             />
                                         </LinkPills>
-                                        : null}
-                                </span>;
-                            }))
+                                        : null
+                                ))}
+                            </div>
                         }
                     </div>
                 </div>

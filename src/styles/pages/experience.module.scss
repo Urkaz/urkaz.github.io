@@ -16,16 +16,31 @@
         position: relative;
         display: flex;
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            left: -6px;
+            top: 22px;
+            z-index: 1;
+        }
+
         .experience-card {
-            padding: 0 0 0 15px;
+            flex: 1;
+            margin-left: 20px;
+            padding: 0 0 12px 0;
             background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
             backdrop-filter: blur(4px);
-            width: 100%;
             box-shadow: 3px 3px 0 0 var(--contrast-color);
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         h4 {
-            line-height: 18px;
+            line-height: 20px;
             font-size: 18px;
             font-weight: 600;
             font-family: var(--sub-font-1);
@@ -53,15 +68,14 @@
         }
 
         .icon {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-            left: -26px;
-            top: 0;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin-right: 12px;
             background: var(--background-color);
-            border: 2px solid var(--primary-color);
+            border: 0px solid var(--primary-color);
+            box-shadow: 0 0 10px color-mix(in srgb, var(--primary-color), transparent 40%);
             overflow: hidden;
 
             img {
@@ -71,18 +85,27 @@
         }
 
         .header {
-            height: 50px;
-            margin-left: 20px;
-            margin-bottom: 0.5rem;
+            padding: 12px 15px;
+            margin-bottom: 0;
+            border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 80%);
         }
 
         .header-details {
+            padding: 8px 0 0;
             margin-bottom: 0.5rem;
+            //border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 80%);
 
             .fa-icon-bullet{
                 width: 20px;
                 display: inline-flex;
+                padding-right: 22px;
             }
+        }
+
+        .buttons {
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .no-margin {
@@ -91,6 +114,12 @@
 
         p, ul {
             margin-bottom: 0.5rem;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        ul {
+            padding-left: 35px;
         }
     }
 
