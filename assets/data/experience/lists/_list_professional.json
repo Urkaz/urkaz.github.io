@@ -18,7 +18,7 @@
                 "hide": true
             }
         ],
-        "hasSection": true,
+        "hasSection": false,
         "logo": "/img/experience/icons/making_port_logo.png",
         "hideFullTime": false,
         "fullTime": true
