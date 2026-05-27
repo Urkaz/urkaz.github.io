@@ -1,0 +1,19 @@
+{
+    "description": "Minecraft Mod Collaborations",
+    "hasGallery": true,
+    "gallery": [
+        {
+            "src": "/img/projects/mods/hullbreaker2.png"
+        }
+    ],
+    "details": [
+        {
+            "left": "Type",
+            "right": "Minecraft Java Edition Mod Collaborations"
+        },
+        {
+            "left": "Language",
+            "right": "Java"
+        }
+    ]
+}

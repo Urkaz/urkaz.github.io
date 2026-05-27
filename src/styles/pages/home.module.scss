@@ -1,3 +1,5 @@
+@use '../common/mixins' as *;
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -12,11 +14,8 @@
 }
 
 .hero img {
+    @include pixel-border;
     transition: all ease-in-out 0.2s;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--contrast-color);
-    box-shadow: 3px 3px var(--contrast-color);
 
     &:hover {
         border-color: var(--hero-img-hover);
@@ -106,7 +105,7 @@
 }
 
 .digimon:before {
-    content: "DigiDestinied";
+    content: "DigiDestined";
     background: #000;
     background-size: 100% 100%;
     -webkit-background-clip: text;
@@ -310,10 +309,10 @@
     70% {
         cursor: url("/img/home/agumon/frame_10.gif"), auto;
     }
-    76% {
+    72% {
         cursor: url("/img/home/agumon/frame_11.gif"), auto;
     }
-    72% {
+    76% {
         cursor: url("/img/home/agumon/frame_12.gif"), auto;
     }
     82% {

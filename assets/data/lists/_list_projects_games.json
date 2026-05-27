@@ -7,6 +7,70 @@
         "tag": "Personal Game Engine",
         "hasSection": false,
         "parentSection": "/projects",
+        "noLogo": false,
+        "hidden": false
+    },
+    "no-bed-respawn": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "No Bed Respawn",
+        "tag": "Minecraft Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": true
+    },
+    "cobblemon-shiny-charm": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "Cobblemon Shiny Charm",
+        "tag": "Minecraft Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": true
+    },
+    "more-cobblemon-stats": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "name": "More Cobblemon Stats",
+        "tag": "Minecraft Mod",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": false,
+        "hidden": false
+    },
+    "minecraft-mods-collaborations": {
+        "category": [
+            "mcmods",
+            "mods",
+            "personal"
+        ],
+        "platforms": [
+            "minecraft"
+        ],
+        "tag": "Minecraft Mods Collaborations",
+        "name": "Minecraft Mods Collaborations",
+        "hasSection": true,
+        "parentSection": "/projects",
         "noLogo": true,
         "hidden": true
     },
@@ -20,7 +84,7 @@
             "minecraft"
         ],
         "name": "AlphaSIN 55",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
@@ -36,7 +100,7 @@
             "minecraft"
         ],
         "name": "Urkaz Lib",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
@@ -52,7 +116,7 @@
             "minecraft"
         ],
         "name": "Sons of Macabre",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -68,7 +132,7 @@
             "minecraft"
         ],
         "name": "Immersive Machinery ˣ Alex's Caves",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true,
@@ -128,6 +192,20 @@
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true
+    },
+    "unreal-engine-prs": {
+        "category": [
+            "unreal",
+            "personal"
+        ],
+        "platforms": [
+            "unreal"
+        ],
+        "name": "Unreal Engine Pull Requests",
+        "hasSection": true,
+        "parentSection": "/projects",
+        "noLogo": true,
+        "hidden": true
     },
     "xuan-yuan-sword-7": {
         "category": [
@@ -1249,7 +1327,7 @@
             "minecraft"
         ],
         "name": "Urkaz Moon Tools",
-        "tag": "Minecraft Java Edition Mod",
+        "tag": "Minecraft Mod",
         "hasSection": true,
         "parentSection": "/projects",
         "noLogo": true

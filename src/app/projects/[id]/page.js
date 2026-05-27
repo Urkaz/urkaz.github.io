@@ -13,7 +13,7 @@ const ProjectDescription = async ({ params }) => {
 export async function generateStaticParams() {
     let ListFiltered = filterGameListByCategory(FullList, "personal");
     const paths = _generateStaticParams(ListFiltered);
-    console.log("PROJECTS Static params:", paths);
+    if (process.env.NODE_ENV === "development") console.log("PROJECTS Static params:", paths);
     return paths;
 }
 

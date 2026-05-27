@@ -22,13 +22,13 @@ export function Heading({ title, description }) {
     );
 }
 
-export function SectionContent({ title, description, sectionId, children }) {
+export function SectionContent({ title, description, sectionId, sectionClass, children }) {
     return (
         <>
             <div className="page-title">
                 <Breadcrumb />
                 <Heading title={title} description={description}/>
-                <section id={sectionId} className={`${sectionId} section`} data-aos="fade">
+                <section id={sectionId} className={`section${sectionClass ? ` ${sectionClass}` : ""}`} data-aos="fade">
                     <div className="container">{children}</div>
                 </section>
             </div>

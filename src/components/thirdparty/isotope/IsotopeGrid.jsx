@@ -9,7 +9,7 @@ import { trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { concatValues } from "@src/components/functions";
 
-export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent, EnableQuery = true }) => {
+export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent, EnableQuery = true, gutterClass = "gy-4" }) => {
     const [searchQuery, setSearchQuery] = useState({});
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -80,8 +80,8 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent,
 
     const onClickFilter = (event, index) => {
         let filterListState = new Array(filterList.length);
-        for (let index = 0; index < filterList.length; index++) {
-            filterListState[index] = filters[index];
+        for (let i = 0; i < filterList.length; i++) {
+            filterListState[i] = filters[i];
         }
         filterListState[index] = event;
 
@@ -120,7 +120,7 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent,
                 ))}
 
                 {/* Grid with dynamic component "GridComponent"*/}
-                <div ref={gridRef} className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                <div ref={gridRef} className={`row ${gutterClass} isotope-container`} data-aos="fade-up" data-aos-delay="200">
                     {Object.entries(items).map(([key, item]) => (
                         <GridComponent {...item} key={key} keyName={key} />
                     ))}

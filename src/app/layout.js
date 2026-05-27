@@ -30,20 +30,35 @@ import { Preloader } from "@src/components/common/Preloader";
 const staatliches = Staatliches({
     subsets: ["latin"],
     weight: "400",
+    variable: "--font-staatliches",
 });
 const titilliumWeb = Titillium_Web({
     subsets: ["latin"],
     weight: "400",
+    variable: "--font-titilliumweb",
 });
 
 /* Metadata & App */
 export const metadata = {
     title: "Fran Sánchez Rodrigo - Portfolio",
+    description:
+        "Portfolio of Fran Sánchez Rodrigo, Tools, Engine & Optimization Engineer with 3+ years of professional experience in videogame programming. Specializing in Unreal Engine tools, engine programming, and porting.",
+    openGraph: {
+        title: "Fran Sánchez Rodrigo - Portfolio",
+        description: "Tools, Engine & Optimization Engineer specializing in Unreal Engine tools, engine programming, and porting.",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Fran Sánchez Rodrigo - Portfolio",
+        description: "Tools, Engine & Optimization Engineer specializing in Unreal Engine tools, engine programming, and porting.",
+    },
+    robots: { index: true, follow: true },
 };
 export default function RootLayout({ children }) {
     const siteName = "Fran Sánchez Rodrigo";
     return (
-        <html lang="en" data-scroll-behavior="smooth">
+        <html lang="en" className={`${staatliches.variable} ${titilliumWeb.variable}`}>
             <body>
                 <Suspense fallback={<Preloader />}>
                     <Header>{siteName}</Header>

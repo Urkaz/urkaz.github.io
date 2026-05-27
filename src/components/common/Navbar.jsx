@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -18,57 +19,82 @@ function isActive(currentPath, sectionPath) {
 
 export function NavItem({ to, children, pathname, onClick }) {
     return (
-        <>
-            <li>
-                <Link href={to} className={isActive(pathname, to) ? styles["active"] : ""} onClick={onClick}>
-                    {children}
-                </Link>
-            </li>
-        </>
+        <li>
+            <Link href={to} className={isActive(pathname, to) ? styles["active"] : ""} onClick={onClick}>
+                {children}
+            </Link>
+        </li>
     );
 }
 
 export function Navbar() {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen((prev) => {
-            const newState = !prev;
-            if (newState) {
-                document.body.classList.add(styles["mobile-nav-active"]);
-            } else {
-                document.body.classList.remove(styles["mobile-nav-active"]);
-            }
-            return newState;
-        });
-    };
+    useEffect(() => { setMounted(true); }, []);
+
+    // Close on route change
+    useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+    // Close when viewport reaches desktop breakpoint
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1200) setMenuOpen(false);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const closeMenu = () => setMenuOpen(false);
+    const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+    const navLinks = (onLinkClick) => (
+        <>
+            {Object.entries(Sections).map(([key, section]) => (
+                !section.hidden ?
+                <NavItem key={key} to={section.path} pathname={pathname} onClick={onLinkClick}>
+                    {section.sectionName}
+                </NavItem>
+                : null
+            ))}
+            <li>
+                <a href="/CV_FranSanchezRodrigo.pdf" download onClick={onLinkClick}>
+                    Download CV
+                </a>
+            </li>
+        </>
+    );
 
     return (
         <>
+            {/* Desktop nav */}
             <nav id={styles["navmenu"]} className={styles["navmenu"]}>
                 <ul>
-                    {Object.entries(Sections).map(([key, section]) => (
-                        !section.hidden ?
-                        <NavItem key={key} to={section.path} pathname={pathname} onClick={() => {
-                            if (document.body.classList.contains(styles["mobile-nav-active"]))
-                                toggleMenu();
-                        }
-                        }>
-                            {section.sectionName}
-                        </NavItem>
-                        : null
-                    ))}
-                    <li>
-                        <a href="/CV_FranSanchezRodrigo.pdf" download>
-                            Download CV
-                        </a>
-                    </li>
+                    {navLinks(null)}
                 </ul>
-                <i className={`${styles["mobile-nav-toggle"]} d-xl-none`} onClick={toggleMenu}>
+                <button
+                    className={`${styles["mobile-nav-toggle"]} d-xl-none`}
+                    onClick={toggleMenu}
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={menuOpen}
+                >
                     {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
-                </i>
+                </button>
             </nav>
+
+            {/* Mobile dropdown portaled to body to bypass header's backdrop-filter containing block */}
+            {mounted && menuOpen && createPortal(
+                <>
+                    <div className={styles["mobile-nav-backdrop"]} onClick={closeMenu} />
+                    <nav className={styles["mobile-nav-overlay"]}>
+                        <ul>
+                            {navLinks(closeMenu)}
+                        </ul>
+                    </nav>
+                </>,
+                document.body
+            )}
         </>
     );
 }

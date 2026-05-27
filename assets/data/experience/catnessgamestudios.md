@@ -30,8 +30,6 @@ In the list below are all the games I worked on at Catness Game Studios. Click o
 
 # Engine development
 
-<warning>This section is a work in progress. It will be expanded in the future with more information.</warning>
-
 Engine development and customization with multiple bug fixes and improvements.
 
 Engine:
@@ -59,8 +57,6 @@ UnrealBuildTool:
 </isotope>
 
 # Tools and Plugin development
-
-<warning>This section is a work in progress. It will be expanded in the future with more information.</warning>
 
 Plugin and tool development to expand the engine base functionality, and ease the porting process to consoles.
 

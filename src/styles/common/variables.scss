@@ -7,10 +7,10 @@
     --default-font:
         "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --heading-font: "Staatliches", sans-serif;
-    --nav-font: "Titillium Web", sans-serif;
-    --sub-font-1: "Titillium Web", sans-serif;
-    --sub-font-2: "Staatliches", sans-serif;
+    --heading-font: var(--font-staatliches), sans-serif;
+    --nav-font: var(--font-titilliumweb), sans-serif;
+    --sub-font-1: var(--font-titilliumweb), sans-serif;
+    --sub-font-2: var(--font-staatliches), sans-serif;
     --header-footer-background: #0f0f0f;
 }
 
@@ -79,4 +79,18 @@
 /* Smooth scroll */
 :root {
     scroll-behavior: smooth;
+}
+
+/* Design tokens */
+:root {
+    --card-radius: 4px;
+    --nav-dropdown-color: var(--nav-color);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --header-height: 60px;
+}
+
+/* Markdown notice block colors */
+:root {
+    --notice-color: rgb(54, 51, 255);
+    --notice-warning-color: rgb(215, 58, 73);
 }

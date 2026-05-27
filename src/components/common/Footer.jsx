@@ -29,6 +29,7 @@ export function Footer({ name }) {
                         <LinkDot link="https://github.com/Urkaz" iconType="fontawesome" icon="fa-brands fa-github" target="_blank" />
                         <LinkDot link="https://urkaz.itch.io/" iconType="fontawesome" icon="fa-brands fa-itch-io" target="_blank" />
                         <LinkDot link="https://www.devuego.es/bd/fpersona/francesc-sanchez-rodrigo" iconType="custom" icon="devuego" target="_blank" />
+                        <LinkDot link="https://ko-fi.com/urkaz" iconType="custom" icon="kofi" target="_blank" />
                     </LinkPills>
                     <div className="container">
                         <div className={styles["credits"]}>

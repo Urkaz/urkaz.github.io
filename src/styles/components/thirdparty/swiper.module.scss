@@ -42,6 +42,7 @@
     width: 100%;
     text-align: center;
     background-color: #000c;
+    backdrop-filter: blur(4px);
 
     &.padded {
         padding-bottom: 30px;
