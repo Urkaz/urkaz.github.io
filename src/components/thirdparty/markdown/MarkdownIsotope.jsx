@@ -35,7 +35,7 @@ export const MarkdownIsotope = ({ children }) => {
     return (
         <span className="row">
             <span className={`col-lg-8 ${styles["centered-isotope"]}`}>
-                <LazyIsotopeGrid filterList={FilterList} items={ListFiltered} FilterComponent={FilterItem} GridComponent={GameGridItem} EnableQuery={false} />
+                <LazyIsotopeGrid filterList={FilterList} items={ListFiltered} FilterComponent={FilterItem} GridComponent={GameGridItem} EnableQuery={false} gutterClass="gx-3 gy-3" />
             </span>
         </span>
     );

@@ -1,17 +1,16 @@
+@use '../common/mixins' as *;
+
 .small-grid-item {
     --isotope-grid-height: 90px;
     height: var(--isotope-grid-height);
 }
 
 .game-content {
+    @include pixel-border;
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
     transition: all ease-in-out 0.2s;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--contrast-color);
-    box-shadow: 3px 3px var(--contrast-color);
     background-size: cover;
 
     &:hover {
@@ -72,6 +71,7 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+            border-radius: var(--card-radius);
         }
     }
 
@@ -146,6 +146,7 @@
             left: -2px;
             top: -1;
             //transform: translateY(-100%);
+            border-radius: var(--card-radius) 0 var(--card-radius) 0;
         }
 
         .floating-right {
@@ -154,16 +155,9 @@
             top: -1;
             //transform: translateY(-100%);
             pointer-events: none;
+            border-radius: 0 var(--card-radius) 0 var(--card-radius);
         }
 
-        .floating-bottom-right {
-            position: absolute;
-            right: -2px;
-            bottom: 0;
-            transform: translateY(100%);
-            pointer-events: none;
-            box-shadow: 3px 3px var(--contrast-color);
-        }
         .floating-bottom-right {
             position: absolute;
             right: 0px;
@@ -172,6 +166,7 @@
             pointer-events: none;
             box-shadow: 0px 0px var(--contrast-color);
             background-color: var(--primary-color);
+            border-radius: var(--card-radius) 0 var(--card-radius) 0;
         }
 
         p {

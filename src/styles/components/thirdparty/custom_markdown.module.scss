@@ -14,38 +14,85 @@
     margin-bottom: 20px;
 }
 
+.details {
+    margin: 4px 0 12px;
+    padding: 0 12px 10px;
+    border: 1px solid rgba(197, 200, 198, 0.2);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+
+    &:not([open]) {
+        padding-bottom: 0;
+    }
+
+    :global(summary) {
+        list-style: none;
+        &::-webkit-details-marker { display: none; }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -12px;
+        padding: 7px 12px;
+        background: rgb(29, 31, 33);
+        color: rgb(197, 200, 198);
+        font-weight: 600;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.2s;
+
+        &::after {
+            content: "+";
+            color: rgb(197, 200, 198);
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        &:hover {
+            background: rgb(40, 43, 45);
+        }
+    }
+
+    &[open] > :global(summary) {
+        border-bottom: 1px solid rgba(197, 200, 198, 0.2);
+        margin-bottom: 10px;
+
+        &::after {
+            content: "−";
+        }
+    }
+}
+
 .notice-block {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    background: rgba(54, 51, 255, 0.1);
-    border-left: 4px solid rgb(54, 51, 255);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
+    background: color-mix(in srgb, var(--notice-color), transparent 90%);
+    border-left: 4px solid var(--notice-color);
+    color: var(--default-color);
+    border-radius: var(--card-radius);
     padding: 8px 10px 8px 8px;
     margin: 8px 0px;
+
+    &.warning {
+        background: color-mix(in srgb, var(--notice-warning-color), transparent 90%);
+        border-left-color: var(--notice-warning-color);
+
+        .icon {
+            color: var(--notice-warning-color);
+        }
+    }
 
     .icon {
         width: 24px;
         height: 24px;
         align-self: flex-start;
         margin-right: 4px;
-        color: rgb(54, 51, 255);
+        color: var(--notice-color);
     }
-}
 
-.notice-block.warning {
-    background: rgba(215, 58, 73, 0.1);
-    border-left: 4px solid rgb(215, 58, 73);
-    color: rgb(255, 255, 255);
-
-    .icon {
-        color: rgb(215, 58, 73);
+    .content {
+        flex-grow: 1;
+        min-width: 0px;
     }
-}
-
-.notice-block .content {
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    min-width: 0px;
 }

@@ -1,3 +1,5 @@
+@use '../common/mixins' as *;
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -12,11 +14,8 @@
 }
 
 .hero img {
+    @include pixel-border;
     transition: all ease-in-out 0.2s;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--contrast-color);
-    box-shadow: 3px 3px var(--contrast-color);
 
     &:hover {
         border-color: var(--hero-img-hover);

@@ -10,6 +10,7 @@ import { MarkdownNoticeBlock, MarkdownWarningBlock } from "@components/thirdpart
 import { MarkdownCodeBlock } from "@components/thirdparty/markdown/MarkdownCodeBlock";
 import { MarkdownIsotope } from "@components/thirdparty/markdown/MarkdownIsotope";
 import { MarkdownIcon } from "@components/thirdparty/markdown/MarkdownIcon";
+import { MarkdownDetails } from "@components/thirdparty/markdown/MarkdownDetails";
 
 const components = {
     a: MarkdownLink,
@@ -19,6 +20,7 @@ const components = {
     code: MarkdownCodeBlock,
     isotope: MarkdownIsotope,
     icon: MarkdownIcon,
+    details: MarkdownDetails,
 }
 
 export const MarkdownRender = ({ content }) => {

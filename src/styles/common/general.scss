@@ -8,13 +8,13 @@ body {
 }
 
 a {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: color-mix(in srgb, var(--secondary-color), transparent 0%);
+    color: var(--primary-color);
     text-decoration: none;
 }
 

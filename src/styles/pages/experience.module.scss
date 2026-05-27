@@ -1,3 +1,5 @@
+@use "../common/mixins" as *;
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -29,14 +31,10 @@
         }
 
         .experience-card {
+            @include card-base;
             flex: 1;
             margin-left: 20px;
             padding: 0 0 12px 0;
-            background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
-            backdrop-filter: blur(4px);
-            box-shadow: 3px 3px 0 0 var(--contrast-color);
-            border-radius: 4px;
-            overflow: hidden;
         }
 
         h4 {
@@ -74,8 +72,9 @@
             border-radius: 50%;
             margin-right: 12px;
             background: var(--background-color);
-            border: 0px solid var(--primary-color);
-            box-shadow: 0 0 10px color-mix(in srgb, var(--primary-color), transparent 40%);
+            //border: 1px solid var(--primary-color);
+            //box-shadow: 0 0 10px color-mix(in srgb, var(--primary-color), transparent 40%);
+            box-shadow: 0 0 0 2px var(--primary-color);
             overflow: hidden;
 
             img {
@@ -95,7 +94,7 @@
             margin-bottom: 0.5rem;
             //border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 80%);
 
-            .fa-icon-bullet{
+            .fa-icon-bullet {
                 width: 20px;
                 display: inline-flex;
                 padding-right: 22px;
@@ -112,7 +111,8 @@
             margin-bottom: 0;
         }
 
-        p, ul {
+        p,
+        ul {
             margin-bottom: 0.5rem;
             padding-left: 15px;
             padding-right: 15px;

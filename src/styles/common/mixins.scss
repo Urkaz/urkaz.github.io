@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Shared SCSS Mixins
+--------------------------------------------------------------*/
+
+// Base style for dark semi-transparent cards with hard offset shadow.
+// Uses --card-radius from variables.scss so border-radius is changed in one place.
+@mixin card-base {
+    background-color: color-mix(in srgb, var(--contrast-color), transparent 50%);
+    backdrop-filter: blur(4px);
+    box-shadow: 3px 3px 0 0 var(--contrast-color);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+}
+
+// Hard pixel border + offset shadow, for images and interactive grid items.
+// Border color can be overridden (e.g. on hover) without affecting the shadow.
+@mixin pixel-border {
+    border: 2px solid var(--contrast-color);
+    box-shadow: 3px 3px 0 0 var(--contrast-color);
+    border-radius: var(--card-radius);
+}
