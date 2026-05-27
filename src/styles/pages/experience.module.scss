@@ -55,8 +55,8 @@
         }
 
         &.dotted-top-line::after {
-            background: #FF005E;
-            background: linear-gradient(180deg,rgba(255, 0, 94, 0) 0%, rgba(255, 0, 94, 1) 10%, rgba(255, 0, 94, 1) 100%)
+            background: #ff005e;
+            background: linear-gradient(180deg,rgba(19, 250, 215, 0) 0%, rgba(19, 250, 215, 1) 34px, rgba(255, 0, 94, 1) 100px, rgba(255, 0, 94, 1) 100%);
         }
 
         .experience-card {
@@ -64,6 +64,21 @@
             flex: 1;
             margin-left: 20px;
             padding: 0 0 12px 0;
+        }
+
+        &.current {
+            & .icon {
+                box-shadow:
+                    0 0 0 2px var(--secondary-color),
+                    0 0 15px color-mix(in srgb, var(--secondary-color), transparent 10%);
+            }
+            .header {
+                border-bottom: 1px solid color-mix(in srgb, var(--secondary-color), transparent 80%);
+            }
+            &::before {
+                background: var(--secondary-color);
+                animation: pulse 2s infinite;
+            }
         }
 
         h4 {
@@ -160,4 +175,19 @@
         position: relative;
         display: flex;
     }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--secondary-color), transparent 40%);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px color-mix(in srgb, var(--secondary-color), transparent 100%); /* Expand shadow and fade */
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--secondary-color), transparent 100%);
+  }
 }

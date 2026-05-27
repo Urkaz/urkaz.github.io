@@ -39,6 +39,7 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
         styles["experience-item"],
         isFirst ? (current ? styles["dotted-top-line"] : styles["hide-top-line"]) : "",
         isLast ? styles["hide-bottom-line"] : "",
+        current ? styles["current"] : ""
     ].filter(Boolean).join(" ");
 
     return (
