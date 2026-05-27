@@ -9,24 +9,28 @@ import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons
 import styles from "@styles/pages/experience.module.scss";
 import pill_styles from "@styles/pages/home.module.scss";
 
-export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
+export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideEndDate, hideDuration, current, fullTime, hideFullTime, place, remote, logo, bulletPoints, buttons, pointsTitle }) => {
     const start_date = new Date(startDate);
     const end_date = new Date(endDate);
 
     const start_month = start_date.toLocaleString('en', { month: 'long' });
     const end_month = end_date.toLocaleString('en', { month: 'long' });
 
+    // timeText: "{start_month} {start_year} [- {end} ][(duration)[ | Full-time/Part-time)]"
+    //   End section:  hidden if hideEndDate | "(Current)" if current | "- {end_month} {end_year}"
+    //   Duration:     skipped if hideEndDate or hideDuration; uses today as end if current
+    //   Parens:       omitted entirely when both duration and full-time type are hidden
     let timeText = "";
     timeText += `${start_month} `; // Start month
     timeText += `${start_date.getFullYear()} `; // Start year
 
     timeText += hideEndDate ? "" : "- ";
-    timeText += hideEndDate ? "" : `${end_month} `; // End month
-    timeText += hideEndDate ? "" : `${end_date.getFullYear()} `; //End year
+    timeText += hideEndDate ? "" : (current ? "Present " : `${end_month} ${end_date.getFullYear()} `);
 
     // hideEndDate also hides duration
+    const effective_end = current ? new Date() : end_date;
     timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : "(";
-    timeText += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, end_date, true)}`;
+    timeText += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, effective_end, true)}`;
     timeText += hideEndDate || hideFullTime || hideDuration ? "" : " | ";
     timeText += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
     timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
