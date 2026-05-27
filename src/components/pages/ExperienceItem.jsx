@@ -42,7 +42,7 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                     <div className={styles["experience-card"]}>
                         <div className={`d-flex align-items-center ${styles["header"]}`}>
                             <div className={styles["icon"]}>
-                                <img src={logo} alt=""></img>
+                                <img src={logo} alt={name}></img>
                             </div>
                             <div>
                                 <h4>{role}</h4>

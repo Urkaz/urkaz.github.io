@@ -144,7 +144,7 @@
         .floating-left {
             position: absolute;
             left: -2px;
-            top: -1;
+            top: -1px;
             //transform: translateY(-100%);
             border-radius: var(--card-radius) 0 var(--card-radius) 0;
         }
@@ -152,7 +152,7 @@
         .floating-right {
             position: absolute;
             right: -2px;
-            top: -1;
+            top: -1px;
             //transform: translateY(-100%);
             pointer-events: none;
             border-radius: 0 var(--card-radius) 0 var(--card-radius);

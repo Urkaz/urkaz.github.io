@@ -13,10 +13,10 @@ const Experience = () => {
             <SectionContent
                 title="Professional Experience"
                 description={<>This section highlights my professional experience, detailing the responsibilities and key tasks of each job role.</>}
-                sectionId={styles["experience"]}
+                sectionId="experience"
+                sectionClass={styles["experience"]}
             >
                 <div className="row">
-                    <h1></h1>
                     {Object.entries(ExperienceList).map(([key, item], index) => (
                         <div key={key}>
                             <ExperienceItem {...item} />

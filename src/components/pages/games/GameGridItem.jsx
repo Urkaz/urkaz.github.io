@@ -15,10 +15,10 @@ import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 export const GameGridItem = ({ category, name, tag, noLogo = false, platforms, hasSection = false, keyName, parentSection, hidden = false }) => {
 
+    const pathname = usePathname();
+
     if (hidden)
         return <></>;
-
-    const pathname = usePathname();
     let customRoute = parentSection != pathname;
 
     const content = (

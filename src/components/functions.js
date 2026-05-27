@@ -103,4 +103,4 @@ function getYearMonthDifference(startDate, endDate, roundUp = false) {
     return parts.length > 0 ? parts.join(" ") : "0 months";
 }
 
-module.exports = { concatValues, cleanText, getYearMonthDifference, prefixGameList, prefilterGameList, filterGameListByCategory };
+export { concatValues, cleanText, getYearMonthDifference, prefixGameList, prefilterGameList, filterGameListByCategory };

@@ -80,8 +80,8 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent,
 
     const onClickFilter = (event, index) => {
         let filterListState = new Array(filterList.length);
-        for (let index = 0; index < filterList.length; index++) {
-            filterListState[index] = filters[index];
+        for (let i = 0; i < filterList.length; i++) {
+            filterListState[i] = filters[i];
         }
         filterListState[index] = event;
 

@@ -6,6 +6,9 @@ const nextConfig = {
     env: {
         NEXT_PUBLIC_BUILD_DATE: buildDate,
     },
+    images: {
+        unoptimized: true,
+    },
 };
 
 export default nextConfig;

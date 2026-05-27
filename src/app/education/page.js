@@ -19,7 +19,8 @@ const Education = () => {
                         qualifications I&apos;ve completed.
                     </>
                 }
-                sectionId={styles["experience"]}
+                sectionId="education"
+                sectionClass={styles["experience"]}
             >
                 <div className="row">
                     <h1>Academic Background</h1>

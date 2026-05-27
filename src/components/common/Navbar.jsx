@@ -65,9 +65,13 @@ export function Navbar() {
                         </a>
                     </li>
                 </ul>
-                <i className={`${styles["mobile-nav-toggle"]} d-xl-none`} onClick={toggleMenu}>
+                <button
+                    className={`${styles["mobile-nav-toggle"]} d-xl-none`}
+                    onClick={toggleMenu}
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
+                >
                     {menuOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
-                </i>
+                </button>
             </nav>
         </>
     );

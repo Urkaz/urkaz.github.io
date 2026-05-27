@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { LinearGradient } from "react-text-gradients";
 
 import { LinkPills, LinkPill } from "@components/common/LinkPills";
@@ -34,7 +36,7 @@ export default function Home() {
                             </p>
                             <p>
                                 <LinearGradient gradient={["to bottom", "#fff100 ,#d96b17"]} className={styles["digimon"]}>
-                                    DigiDestinied
+                                    DigiDestined
                                 </LinearGradient>{" "}
                                 and <span className={styles["pokemon"]}>Pokémon trainer</span>.
                             </p>
@@ -42,7 +44,7 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["img-container"]}>
-                            <img src="/img/home/photo.png" alt="My photo" />
+                            <Image src="/img/home/photo.png" alt="Fran Sánchez Rodrigo" width={400} height={400} />
                         </div>
                     </div>
                 </div>
