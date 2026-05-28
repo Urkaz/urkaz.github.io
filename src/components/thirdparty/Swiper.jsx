@@ -39,7 +39,7 @@ export function GallerySwiper({ swiperExtraClasses, imageList, autoplayEnabled }
     return (
         <Swiper
             modules={[Autoplay, Navigation, Pagination, A11y]}
-            loop={true}
+            loop={imageList?.length > 2}
             speed={600}
             autoplay={autoplayEnabled ? { delay: 5000, disableOnInteraction: true } : false}
             slidesPerView={"auto"}

@@ -44,7 +44,7 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div className={styles["img-container"]}>
-                            <Image src="/img/home/photo.png" alt="Fran Sánchez Rodrigo" width={400} height={400} />
+                            <Image src="/img/home/photo.png" alt="Fran Sánchez Rodrigo" width={400} height={400} loading="eager" priority />
                         </div>
                     </div>
                 </div>

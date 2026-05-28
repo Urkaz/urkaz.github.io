@@ -58,7 +58,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     const siteName = "Fran Sánchez Rodrigo";
     return (
-        <html lang="en" className={`${staatliches.variable} ${titilliumWeb.variable}`}>
+        <html lang="en" className={`${staatliches.variable} ${titilliumWeb.variable}`} data-scroll-behavior="smooth">
             <body>
                 <Suspense fallback={<Preloader />}>
                     <Header>{siteName}</Header>
