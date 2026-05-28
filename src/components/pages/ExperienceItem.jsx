@@ -3,6 +3,7 @@ import React from "react";
 import { getYearMonthDifference } from "@components/functions"
 import { LinkPills, LinkPill } from "@components/common/LinkPills";
 
+import { TiltIcon } from "@components/pages/TiltIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
@@ -48,9 +49,7 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                 <div className={itemClass}>
                     <div className={styles["experience-card"]}>
                         <div className={`d-flex align-items-center ${styles["header"]}`}>
-                            <div className={styles["icon"]}>
-                                <img src={logo} alt={name}></img>
-                            </div>
+                            <TiltIcon logo={logo} name={name} />
                             <div>
                                 <h4>{role}</h4>
                                 <h5>{name}</h5>
