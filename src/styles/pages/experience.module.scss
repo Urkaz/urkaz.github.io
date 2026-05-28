@@ -30,6 +30,7 @@
             left: -6px;
             top: 29px;
             z-index: 1;
+            transition: scale 0.2s ease;
         }
 
         // The timeline line, drawn as a pseudo-element for precise top/bottom control
@@ -135,6 +136,11 @@
             //box-shadow: 0 0 10px color-mix(in srgb, var(--primary-color), transparent 40%);
             box-shadow: 0 0 0 2px var(--primary-color);
             overflow: hidden;
+            transition: transform 0.1s ease;
+
+            &.icon-pressed {
+                transform: scale(0.9);
+            }
 
             .icon-tilt:hover & {
                 box-shadow:
@@ -186,6 +192,10 @@
         ul {
             padding-left: 35px;
         }
+    }
+
+    .experience-timeline-item:hover .experience-item::before {
+        scale: 1.6;
     }
 
     .experience-item-spacer {

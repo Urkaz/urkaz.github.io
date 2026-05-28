@@ -5,6 +5,7 @@ import styles from "@styles/pages/experience.module.scss";
 
 export const TiltIcon = ({ logo, name }) => {
     const iconRef = useRef(null);
+    const pressRef = useRef(null);
 
     const handleMouseMove = (e) => {
         const el = iconRef.current;
@@ -21,7 +22,11 @@ export const TiltIcon = ({ logo, name }) => {
         if (!el) return;
         el.style.transition = 'transform 0.35s ease, box-shadow 0.25s ease';
         el.style.transform = '';
+        pressRef.current?.classList.remove(styles['icon-pressed']);
     };
+
+    const handleMouseDown = () => pressRef.current?.classList.add(styles['icon-pressed']);
+    const handleMouseUp = () => pressRef.current?.classList.remove(styles['icon-pressed']);
 
     return (
         <div
@@ -29,8 +34,10 @@ export const TiltIcon = ({ logo, name }) => {
             className={styles["icon-tilt"]}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
         >
-            <div className={styles["icon"]}>
+            <div ref={pressRef} className={styles["icon"]}>
                 <img src={logo} alt={name} />
             </div>
         </div>
