@@ -91,18 +91,15 @@ The consequence is that `GetAllActorsWithTag` will return an incomplete list for
 
 ## Assessment
 
-The approach is solid for a project with a Blueprint-heavy workflow. The trade-offs are:
-
 ### Pros
 
-- The performance gain is substantial and measurable. `GetAllActorsWithTag` goes from a full world scan to a near-instant lookup regardless of actor count.
+- `GetAllActorsWithTag` goes from a full world scan to a near-instant lookup regardless of actor count.
+- In a Blueprint-only codebase the index stays accurate automatically, with no manual maintenance required.
 
 ### Cons / Risks
 
-- Tags added directly from C++ code after `BeginPlay` do not update the index, which can cause query results to be silently incomplete. This is not a problem in a Blueprint-only codebase, but becomes a risk the moment any C++ code touches the `Tags` array at runtime without going through `World->AddActorTag`.
-- The interception in `KismetArrayLibrary` ties index maintenance to property naming conventions (`Tags` on `AActor`), which makes it slightly fragile if the property were ever renamed or accessed through a non-standard path.
-
-Overall, for a console porting context where `GetAllActorsWithTag` is called frequently and the codebase is 100% Blueprint, the optimization delivers a clear and measurable CPU win with known, manageable limitations.
+- Only works with Tags added from Blueprints. Any C++ code that modifies the `Tags` array directly after `BeginPlay` without calling the new method `World->AddActorTag` will leave the index out of sync, causing `GetAllActorsWithTag` to return incomplete results with no error or warning.
+- The interception in `KismetArrayLibrary` ties index maintenance to property naming conventions (`Tags` on `AActor`), which makes it slightly fragile.
 
 ## Code
 

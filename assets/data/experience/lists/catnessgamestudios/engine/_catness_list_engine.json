@@ -20,7 +20,7 @@
             "optimization",
             "enhancement"
         ],
-        "name": "Alternate LOD ScreenSize Calc",
+        "name": "Alternate LOD ScreenSize Auto Calculation",
         "tag": "Engine",
         "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
@@ -36,10 +36,10 @@
         ],
         "name": "Fully Rough Material Instances",
         "tag": "Engine",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": true,
+        "hidden": false,
         "background": "unreal-topic"
     },
     "ismc-in-mso": {
@@ -48,12 +48,12 @@
             "unreal",
             "enhancement"
         ],
-        "name": "ISMC in Mobile Occlusion",
+        "name": "Instanced Static Mesh Component Support in Mobile Occlusion",
         "tag": "Engine",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": true,
+        "hidden": false,
         "background": "unreal-topic"
     },
     "cloth-physics-optimization": {
@@ -64,24 +64,10 @@
         ],
         "name": "Cloth Physics Optimization",
         "tag": "Engine",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": true,
-        "background": "unreal-topic"
-    },
-    "improved-struct-category-metadata": {
-        "category": [
-            "engine",
-            "unreal",
-            "enhancement"
-        ],
-        "name": "Improved Struct Category Metadata",
-        "tag": "Engine",
-        "hasSection": false,
-        "parentSection": "/experience/catnessgamestudios",
-        "noLogo": true,
-        "hidden": true,
+        "hidden": false,
         "background": "unreal-topic"
     },
     "build-path-folder": {

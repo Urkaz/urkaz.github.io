@@ -1,55 +1,22 @@
-# Porting
-
-The role involved porting games to console platforms using Unreal Engine 4 and 5.
-
-Most projects were developed by teams of 3 to 5 developers, with close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Version control was handled using Git or Perforce, depending on the needs of the project. In some cases, we worked closely with the client, incorporating their feedback throughout the porting process.
-
-My philosophy during porting was to always respect the original work, avoiding drastic changes unless strictly necessary, while ensuring strong performance across all areas of the game.
-
-The porting process included:
-
-* Game code and Blueprint analysis.
-* Performance profiling and optimization.
-* CPU optimization.
-* GPU optimization.
-* Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
-* Bug fixing.
-
-## Games ported
-
-In the list below are all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
-
-<isotope>
-{
-  "items": "/assets/data/lists/_list_projects_games.json",
-  "filters": ["/assets/data/experience/lists/catnessgamestudios/games/_catness_filter_platforms.json"],
-  "prefilter": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefixes.json"
-}
-</isotope>
-
 # Engine development
 
-Engine development and customization with multiple bug fixes and improvements.
-
-Engine:
+Engine development and customization with multiple bug fixes and improvements:
 
 * **Indexed Actor tags**: Optimizes Actor Tag search by indexing them in a TMap.
 * **Alternate LOD screensize auto-calculation**: Override and auto-calculate screen size of each LOD Level according to the MinLOD set for each platform, allowing more progressive LOD transitions.
 * **Fully Rough Material Instances**: Implemented a toggle in Material Instances to allow setting them to Fully Rough (which was only available in parent Materials).
-* **ISMC in Mobile Occlusion**: Modified and implemented a way to handle Instanced Static Mesh Components in Mobile Software Occlusion.
+* **Suport Instanced Static Mesh Components (ISMC) in Mobile Occlusion**: Modified and implemented a way to handle Instanced Static Mesh Components in Mobile Software Occlusion.
 * **Cloth Physics Optimization**: Optimization of cloth physics by allowing reducing the cloth tick rate by distance to the player.
-* **Improved Struct Category Metadata**: Fixes Unreal Engine display of metadata categories in nested structs.
-* Other Fixes:
-  * Fix Negative transform in Instanced Mesh previews.
-  * Improved Switch controller management code.
-  * Other smaller fixes to platforms and engine code.
-  * Automatic LOD generation by default in HLODs.
-
-UnrealBuildTool:
-
 * **Build Path Folder**: Changed the build path folder in UnrealBuildTool to include the current date and master versions
-* Added calls to all platform SDKs to create a digest/hash of the generated build.
+* Other Fixes:
+  * Improved Switch controller management code.
+  * Automatic LOD generation by default in HLODs.
+  * Fixed Unreal Engine display of metadata categories in nested structs.
+  * Other smaller fixes to platforms and engine code.
+
+## Detailed changes
+
+In the list below there is a selection of some of the Engine changes. Click on any entry with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-link"}</icon> icon to view its description and implementation details.
 
 <isotope>
 {
@@ -85,3 +52,33 @@ Plugins:
   * Localization statistics.
 * TickIntervalManager: Plugin to optimized the Tick Interval of Actors and Components when they were far from the player or outside the player view.
 * Activities: Plugin for easily create and manage PS5 Activities from a settings menu, allowing triggering other actions from the results of anothers.
+
+# Porting
+
+The role involved porting games to console platforms using Unreal Engine 4 and 5.
+
+Most projects were developed by teams of 3 to 5 developers, with close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Version control was handled using Git or Perforce, depending on the needs of the project. In some cases, we worked closely with the client, incorporating their feedback throughout the porting process.
+
+My philosophy during porting was to always respect the original work, avoiding drastic changes unless strictly necessary, while ensuring strong performance across all areas of the game.
+
+The porting process included:
+
+* Game code and Blueprint analysis.
+* Performance profiling and optimization.
+* CPU optimization.
+* GPU optimization.
+* Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
+* Bug fixing.
+
+## Games ported
+
+In the list below are all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
+
+<isotope>
+{
+  "items": "/assets/data/lists/_list_projects_games.json",
+  "filters": ["/assets/data/experience/lists/catnessgamestudios/games/_catness_filter_platforms.json"],
+  "prefilter": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefilter.json",
+  "prefixes": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefixes.json"
+}
+</isotope>

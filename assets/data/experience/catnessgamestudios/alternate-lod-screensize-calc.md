@@ -58,9 +58,15 @@ The override is also consumed inside `FStaticMeshRenderData::ResolveSectionInfo`
 
 ## Assessment
 
-The approach addresses a real and common porting problem in a clean, non-destructive way. Per-platform screen size overrides are stored alongside the default values, so PC and high-end platforms are entirely unaffected. The `bOverrideAutoComputeLODScreenSize` flag gives artists explicit control over which meshes use the feature, and `DisableScreenSizeOverride` provides a clean undo path.
+### Pros
 
-Beyond visual correctness, the fix also has a direct GPU benefit: because transitions now happen at higher screen size values, lower-detail LODs kick in earlier, meaning fewer polygons are drawn on screen at any given distance. This was one of the original goals of setting MinLOD in the first place, and without this fix that benefit is partially lost.
+- Per-platform screen size overrides are stored alongside the default values, so PC and high-end platforms are entirely unaffected.
+- The `bOverrideAutoComputeLODScreenSize` flag gives artists explicit control over which meshes use the feature, and `DisableScreenSizeOverride` provides a clean undo path.
+- Beyond visual correctness, the fix also has a direct GPU benefit: because transitions now happen at higher screen size values, lower-detail LODs kick in earlier, meaning fewer polygons are drawn on screen at any given distance. This was one of the original goals of setting MinLOD in the first place, and without this fix that benefit is partially lost.
+
+### Cons / Risks
+
+- If a mesh has poorly generated LODs or LODs with too few polygons, applying this fix causes those levels to appear on screen earlier and at larger sizes than before. Transitions that were previously subtle may become more noticeable, or a LOD level that was acceptable at a small screen size may look visually inadequate when it kicks in earlier.
 
 ## Code
 
