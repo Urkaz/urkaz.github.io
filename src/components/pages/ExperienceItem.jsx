@@ -61,8 +61,8 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                                 <div className={`d-flex align-items-center ${styles["header-details"]}`}>
                                     <div>
                                         <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>{timeText}</p>
-                                        {place ?
-                                            <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{place} {remote ? "(Remote)" : ""}</p>
+                                        {(place || remote) ?
+                                            <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{remote ? "Remote" : place}</p>
                                             : null
                                         }
                                     </div>
