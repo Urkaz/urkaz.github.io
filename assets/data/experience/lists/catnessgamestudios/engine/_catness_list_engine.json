@@ -73,7 +73,8 @@
     "improved-struct-category-metadata": {
         "category": [
             "engine",
-            "unreal"
+            "unreal",
+            "enhancement"
         ],
         "name": "Improved Struct Category Metadata",
         "tag": "Engine",
