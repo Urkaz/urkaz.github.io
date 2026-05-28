@@ -22,9 +22,9 @@ In the list below are all the games I worked on at Catness Game Studios. Click o
 <isotope>
 {
   "items": "/assets/data/lists/_list_projects_games.json",
-  "filters": ["/assets/data/experience/lists/_catness_filter_platforms.json"],
-  "prefilter": "/assets/data/experience/lists/_catness_tag_games_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/_catness_tag_games_prefixes.json"
+  "filters": ["/assets/data/experience/lists/catnessgamestudios/games/_catness_filter_platforms.json"],
+  "prefilter": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefilter.json",
+  "prefixes": "/assets/data/experience/lists/catnessgamestudios/games/_catness_tag_games_prefixes.json"
 }
 </isotope>
 
@@ -51,9 +51,9 @@ UnrealBuildTool:
 
 <isotope>
 {
-  "items": "/assets/data/experience/lists/_catness_list_engine.json",
-  "filters": ["/assets/data/experience/lists/_catness_filter_engine.json"],
-  "prefilter": "/assets/data/experience/lists/_catness_tag_engine_prefilter.json"
+  "items": "/assets/data/experience/lists/catnessgamestudios/engine/_catness_list_engine.json",
+  "filters": ["/assets/data/experience/lists/catnessgamestudios/engine/_catness_filter_engine.json"],
+  "prefilter": "/assets/data/experience/lists/catnessgamestudios/engine/_catness_tag_engine_prefilter.json"
 }
 </isotope>
 

@@ -17,8 +17,8 @@ Developed and maintained automation tools to streamline testing tasks using cust
 <isotope>
 {
   "items": "/assets/data/lists/_list_projects_games.json",
-  "filters": ["/assets/data/experience/lists/_lollipop_filter_platforms.json"],
-  "prefilter": "/assets/data/experience/lists/_lollipop_tag_prefilter.json",
-  "prefixes": "/assets/data/experience/lists/_lollipop_tag_prefixes.json"
+  "filters": ["/assets/data/experience/lists/lollipoprobot/_lollipop_filter_platforms.json"],
+  "prefilter": "/assets/data/experience/lists/lollipoprobot/_lollipop_tag_prefilter.json",
+  "prefixes": "/assets/data/experience/lists/lollipoprobot/_lollipop_tag_prefixes.json"
 }
 </isotope>

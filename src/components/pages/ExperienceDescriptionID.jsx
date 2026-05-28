@@ -9,11 +9,12 @@ import { MarkdownTOC } from "@components/thirdparty/markdown/MarkdownTOC";
 
 import styles from "@styles/pages/game_details.module.scss";
 
-const ExperienceDescriptionID = async ({ params, metaData, dataPath }) => {
-    const { id } = await params;
+const ExperienceDescriptionID = async ({ params, metaData, dataPath, paramKey = "id" }) => {
+    const resolvedParams = await params;
+    const itemId = resolvedParams[paramKey];
 
-    const mdFilePath = path.join(process.cwd(), dataPath, `${id}.md`);
-    const projectMetaData = metaData[id];
+    const mdFilePath = path.join(process.cwd(), dataPath, `${itemId}.md`);
+    const projectMetaData = metaData[itemId];
     const markdownContent = fs.readFileSync(mdFilePath, "utf-8");
 
     if (!projectMetaData.hasSection) {

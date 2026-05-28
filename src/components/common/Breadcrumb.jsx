@@ -10,6 +10,7 @@ import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import Sections from "@assets/data/sections.json";
 import FullProjectsGamesList from "@assets/data/lists/_list_projects_games.json";
 import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
+import CatnessEngineList from "@assets/data/experience/lists/catnessgamestudios/engine/_catness_list_engine.json";
 
 import styles from "@src/styles/components/Breadcrumb.module.scss"
 
@@ -17,6 +18,7 @@ const breadcrumbsData = {
     "/projects": FullProjectsGamesList,
     "/games": FullProjectsGamesList,
     "/experience": ExperienceList,
+    "/catnessgamestudios": CatnessEngineList,
 };
 
 const getBreadcrumbs = (pathname) => {
@@ -34,7 +36,7 @@ const getBreadcrumbs = (pathname) => {
                 current: index === parts.length - 1,
             });
         } else {
-            const parentPath = `/${parts[0]}`;
+            const parentPath = `/${parts[index - 1]}`;
             if (breadcrumbsData[parentPath] && breadcrumbsData[parentPath][part]) {
                 breadcrumbs.push({
                     name: breadcrumbsData[parentPath][part].name,
