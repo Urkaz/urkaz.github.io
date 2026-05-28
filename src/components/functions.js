@@ -100,7 +100,7 @@ function getYearMonthDifference(startDate, endDate, roundUp = false) {
     if (yearDiff > 0) parts.push(`${yearDiff} year${yearDiff > 1 ? "s" : ""}`);
     if (monthDiff > 0) parts.push(`${monthDiff} month${monthDiff > 1 ? "s" : ""}`);
 
-    return parts.length > 0 ? parts.join(" ") : "0 months";
+    return parts.join(" ");
 }
 
 export { concatValues, cleanText, getYearMonthDifference, prefixGameList, prefilterGameList, filterGameListByCategory };

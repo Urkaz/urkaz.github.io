@@ -30,11 +30,13 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
 
     // hideEndDate also hides duration
     const effective_end = current ? new Date() : end_date;
-    timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : "(";
-    timeText += hideEndDate || hideDuration ? "" : `${getYearMonthDifference(start_date, effective_end, true)}`;
-    timeText += hideEndDate || hideFullTime || hideDuration ? "" : " | ";
+    const durationText = getYearMonthDifference(start_date, effective_end, true);
+    const effectiveHideDuration = hideDuration || !durationText;
+    timeText += hideFullTime && (hideEndDate || effectiveHideDuration) ? "" : "(";
+    timeText += hideEndDate || effectiveHideDuration ? "" : durationText;
+    timeText += hideEndDate || hideFullTime || effectiveHideDuration ? "" : " | ";
     timeText += hideFullTime ? "" : (fullTime ? "Full-time" : "Part-time");
-    timeText += hideFullTime && (hideEndDate || hideDuration) ? "" : ")";
+    timeText += hideFullTime && (hideEndDate || effectiveHideDuration) ? "" : ")";
 
     const itemClass = [
         styles["experience-item"],
