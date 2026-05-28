@@ -94,5 +94,9 @@
     .content {
         flex-grow: 1;
         min-width: 0px;
+
+        :global(p) {
+            margin: 0;
+        }
     }
 }

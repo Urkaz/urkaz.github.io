@@ -39,7 +39,7 @@
         "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": false,
+        "hidden": true,
         "background": "unreal-topic"
     },
     "ismc-in-mso": {
@@ -53,7 +53,7 @@
         "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": false,
+        "hidden": true,
         "background": "unreal-topic"
     },
     "cloth-physics-optimization": {
@@ -67,7 +67,20 @@
         "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": false,
+        "hidden": true,
+        "background": "unreal-topic"
+    },
+    "improved-struct-category-metadata": {
+        "category": [
+            "engine",
+            "unreal"
+        ],
+        "name": "Improved Struct Category Metadata",
+        "tag": "Engine",
+        "hasSection": true,
+        "parentSection": "/experience/catnessgamestudios",
+        "noLogo": true,
+        "hidden": true,
         "background": "unreal-topic"
     },
     "build-path-folder": {
@@ -82,7 +95,7 @@
         "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": false,
+        "hidden": true,
         "background": "visual-studio-topic"
     }
 }

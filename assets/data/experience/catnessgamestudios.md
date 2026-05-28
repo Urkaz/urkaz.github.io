@@ -39,10 +39,12 @@ Engine:
 * **Fully Rough Material Instances**: Implemented a toggle in Material Instances to allow setting them to Fully Rough (which was only available in parent Materials).
 * **ISMC in Mobile Occlusion**: Modified and implemented a way to handle Instanced Static Mesh Components in Mobile Software Occlusion.
 * **Cloth Physics Optimization**: Optimization of cloth physics by allowing reducing the cloth tick rate by distance to the player.
+* **Improved Struct Category Metadata**: Fixes Unreal Engine display of metadata categories in nested structs.
 * Other Fixes:
   * Fix Negative transform in Instanced Mesh previews.
   * Improved Switch controller management code.
   * Other smaller fixes to platforms and engine code.
+  * Automatic LOD generation by default in HLODs.
 
 UnrealBuildTool:
 
