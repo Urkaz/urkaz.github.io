@@ -79,10 +79,10 @@
         ],
         "name": "Build Path Folder",
         "tag": "Unreal Build Tool",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
-        "hidden": true,
+        "hidden": false,
         "background": "visual-studio-topic"
     }
 }
