@@ -85,15 +85,14 @@
         "hidden": false,
         "background": "visual-studio-topic"
     },
-    "catness-core": {
+    "catness-suite": {
         "category": [
             "plugin",
-            "editor-tool",
-            "tool"
+            "framework"
         ],
-        "name": "Catness Core",
+        "name": "Catness Suite",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
@@ -102,7 +101,6 @@
     "asset-replacer": {
         "category": [
             "plugin",
-            "tool",
             "editor-tool"
         ],
         "name": "Asset Replacer",
@@ -116,7 +114,6 @@
     "custom-device-profiles": {
         "category": [
             "plugin",
-            "tool",
             "optimization"
         ],
         "name": "Custom Device Profiles",
@@ -127,12 +124,12 @@
         "hidden": false,
         "background": "visual-studio-topic"
     },
-    "engagement-screen": {
+    "platform-integrations": {
         "category": [
             "plugin",
-            "tool"
+            "platform"
         ],
-        "name": "Engagement Screen",
+        "name": "Platform Integrations",
         "tag": "Plugin",
         "hasSection": false,
         "parentSection": "/experience/catnessgamestudios",
@@ -156,8 +153,7 @@
     "max-draw-distance-manager": {
         "category": [
             "plugin",
-            "optimization",
-            "tool"
+            "optimization"
         ],
         "name": "Max Draw Distance Manager",
         "tag": "Plugin",
@@ -183,7 +179,6 @@
     "tick-interval-manager": {
         "category": [
             "plugin",
-            "tool",
             "optimization"
         ],
         "name": "Tick Interval Manager",

@@ -4,11 +4,15 @@
         "selector": ""
     },
     {
-        "name": "Runtime Tool",
-        "selector": ".category-tool"
+        "name": "Optimization",
+        "selector": ".category-optimization"
     },
     {
         "name": "Editor Tool",
         "selector": ".category-editor-tool"
+    },
+    {
+        "name": "Platform",
+        "selector": ".category-platform"
     }
 ]
