@@ -10,7 +10,7 @@ import { faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 import Sections from "@assets/data/sections.json";
 import FullProjectsGamesList from "@assets/data/lists/_list_projects_games.json";
 import ExperienceList from "@assets/data/experience/lists/_list_professional.json";
-import CatnessEngineList from "@assets/data/experience/lists/catnessgamestudios/engine/_catness_list_engine.json";
+import CatnessEngineList from "@assets/data/experience/lists/catnessgamestudios/_catness_list.json";
 
 import styles from "@src/styles/components/Breadcrumb.module.scss"
 

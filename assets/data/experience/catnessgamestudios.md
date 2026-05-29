@@ -20,13 +20,13 @@ In the list below there is a selection of some of the Engine changes. Click on a
 
 <isotope>
 {
-  "items": "/assets/data/experience/lists/catnessgamestudios/engine/_catness_list_engine.json",
+  "items": "/assets/data/experience/lists/catnessgamestudios/_catness_list.json",
   "filters": ["/assets/data/experience/lists/catnessgamestudios/engine/_catness_filter_engine.json"],
   "prefilter": "/assets/data/experience/lists/catnessgamestudios/engine/_catness_tag_engine_prefilter.json"
 }
 </isotope>
 
-# Tools and Plugin development
+# Plugin Tools development
 
 Plugin and tool development to expand the engine base functionality, and ease the porting process to consoles.
 
@@ -52,6 +52,14 @@ Plugins:
   * Localization statistics.
 * TickIntervalManager: Plugin to optimized the Tick Interval of Actors and Components when they were far from the player or outside the player view.
 * Activities: Plugin for easily create and manage PS5 Activities from a settings menu, allowing triggering other actions from the results of anothers.
+
+<isotope>
+{
+  "items": "/assets/data/experience/lists/catnessgamestudios/_catness_list.json",
+  "filters": ["/assets/data/experience/lists/catnessgamestudios/plugins/_catness_filter_plugins.json"],
+  "prefilter": "/assets/data/experience/lists/catnessgamestudios/plugins/_catness_tag_plugins_prefilter.json"
+}
+</isotope>
 
 # Porting
 

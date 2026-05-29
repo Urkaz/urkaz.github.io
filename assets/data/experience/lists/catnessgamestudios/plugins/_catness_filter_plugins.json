@@ -1,0 +1,14 @@
+[
+    {
+        "name": "All",
+        "selector": ""
+    },
+    {
+        "name": "Runtime Tool",
+        "selector": ".category-tool"
+    },
+    {
+        "name": "Editor Tool",
+        "selector": ".category-editor-tool"
+    }
+]

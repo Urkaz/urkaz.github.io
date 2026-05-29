@@ -1,7 +1,7 @@
 import React from "react";
 
 import ExperienceDescriptionID from "@components/pages/ExperienceDescriptionID";
-import CatnessEngineList from "@assets/data/experience/lists/catnessgamestudios/engine/_catness_list_engine.json";
+import CatnessEngineList from "@assets/data/experience/lists/catnessgamestudios/_catness_list.json";
 
 const subListMap = {
     catnessgamestudios: CatnessEngineList,
