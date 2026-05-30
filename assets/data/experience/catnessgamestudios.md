@@ -33,6 +33,8 @@ Development of internal plugins and tools to extend the engine, streamline the p
 * **TickIntervalManager**: Actor and component tick interval optimization based on player distance and visibility.
 * **Platform integrations** (PS5 & Xbox): PS5 Activities management and Xbox Engagement Screen handling, including profile management and controller assignment.
 
+Click any entry below with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-link"}</icon> icon for more details about the plugin.
+
 <isotope>
 {
   "items": "/assets/data/experience/lists/catnessgamestudios/_catness_list.json",
