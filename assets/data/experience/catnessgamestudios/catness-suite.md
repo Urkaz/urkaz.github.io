@@ -108,8 +108,8 @@ The full pipeline is: `OnPreExecuteAction()` > parameter dialog (if any) > `OnEx
 ### Gallery
 
 <gallery>
-    /img/experience/catness/editor_context_menu.png|Example of CatnessEditor Content Browser actions. The menu displays only the actions that apply to all assets or the selected asset type.
-    /img/experience/catness/action_parameters.png|The parameters of an action, shown in a custom Slate widget.
+    /img/experience/catness/suite/editor_context_menu.png|Example of CatnessEditor Content Browser actions. The menu displays only the actions that apply to all assets or the selected asset type.
+    /img/experience/catness/suite/action_parameters.png|The parameters of an action, shown in a custom Slate widget.
 </gallery>
 
 ## CatnessUtilities
@@ -123,6 +123,6 @@ CatnessUtilities provides the runtime and editor utility layer shared across pro
 ### Gallery
 
 <gallery>
-    /img/experience/catness/soft_reference.png|The new Blueprint node to load soft references, automatically detecting the asset type.
-    /img/experience/catness/statavg.png|stat AvgUnit info displayed on the screen.
+    /img/experience/catness/suite/soft_reference.png|The new Blueprint node to load soft references, automatically detecting the asset type.
+    /img/experience/catness/suite/statavg.png|stat AvgUnit info displayed on the screen.
 </gallery>

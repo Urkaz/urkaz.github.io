@@ -105,11 +105,11 @@
         ],
         "name": "Asset Replacer",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-asset-replacer"
     },
     "custom-device-profiles": {
         "category": [
@@ -144,11 +144,11 @@
         ],
         "name": "Instancing Tools",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-mesh"
     },
     "max-draw-distance-manager": {
         "category": [
