@@ -26,7 +26,7 @@ Three conversion modes are available, all registered as Level Editor context men
 - **Instance All**: Converts every static mesh actor in the loaded level.
 - **Instance Volume**: Takes a volume actor (trigger, blocking, etc.) and instances all static mesh actors within its bounds, determined via a box overlap trace.
 
-All three converge on `InstanceActors()`, which groups actors by matching properties like mesh, materials, shadow flags, collision settings, virtual textures and custom depth, and for each group either reuses a compatible existing `ACatIns_InstancedMeshActor` in the world or spawns a new one. Original actors are destroyed after their transforms are transferred. The instanced actor auto-renames itself as instances are added or removed (`SM_Rock_42_instances`), making the level outliner easier to read.
+All three converge on `InstanceActors()`, which groups actors by matching properties like mesh, materials, shadow flags, collision settings, virtual textures and custom depth, and for each group either reuses a compatible existing `AInstancedMeshActor` in the world or spawns a new one. Original actors are destroyed after their transforms are transferred. The instanced actor auto-renames itself as instances are added or removed (`SM_Rock_42_instances`), making the level outliner easier to read.
 
 <gallery>
     /img/experience/catness/instancing/menu_options.png|Contextual options using the Level Editor context menu via CatnessEditor's framework.
@@ -35,12 +35,12 @@ All three converge on `InstanceActors()`, which groups actors by matching proper
 
 ### Per-instance editing
 
-The key feature of the plugin is the ability to edit individual instances inside an ISMC. `UCatEd_InstancingManager` (a world subsystem) manages this via a **temporary proxy actor pattern**: instead of editing instances directly inside the component, which Unreal does not support, the plugin temporarily converts a clicked instance into a regular `AStaticMeshActor`, lets the editor handle it normally, and re-integrates it into the ISMC on deselection.
+The key feature of the plugin is the ability to edit individual instances inside an ISMC. `UInstancingManager` (a world subsystem) manages this via a **temporary proxy actor pattern**: instead of editing instances directly inside the component, which Unreal does not support, the plugin temporarily converts a clicked instance into a regular `AStaticMeshActor`, lets the editor handle it normally, and re-integrates it into the ISMC on deselection.
 
-**Enabling Edit Mode** toggles a flag on `UCatEd_InstancingManager` via a context menu action. While active, clicking on an `ACatIns_InstancedMeshActor` in the viewport triggers the following:
+**Enabling Edit Mode** toggles a flag on `UInstancingManager` via a context menu action. While active, clicking on an `AInstancedMeshActor` in the viewport triggers the following:
 
 ```cpp
-void UCatEd_InstancingManager::OnObjectSelected(UObject* Object)
+void UInstancingManager::OnObjectSelected(UObject* Object)
 {
     if (!GetEditModeEnabled()) return;
 
@@ -54,7 +54,7 @@ void UCatEd_InstancingManager::OnObjectSelected(UObject* Object)
         InstancedActor->RemoveInstance(HitResult.Item);
 
         // Spawn a transient editable actor in its place
-        ACatEd_TempActorInstance* TempActor = SpawnTempActorInstanceFromComponent(...);
+        ATempActorInstance* TempActor = SpawnTempActorInstanceFromComponent(...);
         SpawnedActorsWithOwner.Add(TempActor, InstancedActor);
     }
 }
@@ -65,8 +65,8 @@ The temporary actor is marked `RF_Transient` so it is never saved to disk, and a
 When the user deselects the temp actor, `OnSelectionChanged()` detects it is no longer selected and calls `RestoreMeshActorToInstanced()`, which reads the (potentially modified) transform and properties and re-adds it to the ISMC:
 
 ```cpp
-void UCatEd_InstancingManager::RestoreMeshActorToInstanced(
-    ACatIns_InstancedMeshActor* Owner, ACatEd_TempActorInstance* TempActor)
+void UInstancingManager::RestoreMeshActorToInstanced(
+    AInstancedMeshActor* Owner, ATempActorInstance* TempActor)
 {
     if (CompareComponentProperties(TempActor->Mesh, Owner->ISMC))
         Owner->AddInstanceFromComponent(TempActor->Mesh);

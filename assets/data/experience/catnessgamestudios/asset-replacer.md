@@ -32,14 +32,14 @@ Replacement mappings are stored in a UObject-based config class persisted to `Ca
 
 ```cpp
 UCLASS(Config = CatnessAssetReplacer, DefaultConfig)
-class UCatARep_Config : public UCatCore_BaseConfig
+class UConfig : public UCatCore_BaseConfig
 {
     UPROPERTY(Config)
-    TMap<FName, FCatARep_ReplacedAsset> ReplacedAssets;
+    TMap<FName, FReplacedAsset> ReplacedAssets;
 };
 
 USTRUCT()
-struct FCatARep_ReplacedAsset
+struct FReplacedAsset
 {
     UPROPERTY()
     TArray<ECatCore_Platforms> TargetPlatforms;
@@ -50,10 +50,10 @@ Each entry maps an original package path to the list of platforms for which it s
 
 ### Redirect application
 
-On startup, `FCatEd_AssetReplacerSystem` reads the config, determines the current or target platform, and registers `FCoreRedirect` objects for all matching entries:
+On startup, `FAssetReplacerSystem` reads the config, determines the current or target platform, and registers `FCoreRedirect` objects for all matching entries:
 
 ```cpp
-void FCatEd_AssetReplacerSystem::ApplyRedirects()
+void FAssetReplacerSystem::ApplyRedirects()
 {
     TArray<FCoreRedirect> Redirects;
     for (const auto& Entry : Config->ReplacedAssets)
@@ -73,10 +73,10 @@ When running as a cook commandlet, the target platform is parsed from the `-Targ
 
 ### Cook pipeline
 
-A custom `UAssetManager` subclass (`UCatARep_AssetManager`) hooks into the cook pipeline via `ModifyCook()`. For each platform being cooked, it adds the matching substitute packages to the cook list and excludes the originals, ensuring that only one version of each asset ends up in the final package:
+A custom `UAssetManager` subclass (`UAssetManager`) hooks into the cook pipeline via `ModifyCook()`. For each platform being cooked, it adds the matching substitute packages to the cook list and excludes the originals, ensuring that only one version of each asset ends up in the final package:
 
 ```cpp
-void UCatARep_AssetManager::ModifyCook(/* ... */)
+void UAssetManager::ModifyCook(/* ... */)
 {
     // Add substitute packages for matching platform
     PackagesToCook.Add(SubstitutePath);
@@ -98,7 +98,7 @@ The plugin extends the Content Browser with two context menu actions registered 
     /img/experience/catness/asset_replacer/add_dialog.png|Dialog displayed after selecting "Replace by Platform".
 </gallery>
 
-A Slate asset view widget extension (`FCatEd_AssetViewWidgetExtender`) overlays a status icon on every asset in the Content Browser:
+A Slate asset view widget extension (`FAssetViewWidgetExtender`) overlays a status icon on every asset in the Content Browser:
 
 - **Green icon** on originals that are being replaced.
 - **Platform-colored icon** on substitute assets.

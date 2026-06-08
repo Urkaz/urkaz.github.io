@@ -45,24 +45,17 @@ Click any entry below with the <icon>{"iconType": "fontawesome", "icon": "fa-sol
 
 # Porting
 
-The role involved porting games to console platforms using Unreal Engine 4 and 5.
+Console porting using Unreal Engine 4 and 5, in teams of 3 to 5 developers. Projects were managed through weekly sprints and Jira, with version control in Git or Perforce depending on the project. Some projects involved direct collaboration with the client throughout the process.
 
-Most projects were developed by teams of 3 to 5 developers, with close communication through weekly sprints and status meetings to track progress and manage tasks in Jira. Version control was handled using Git or Perforce, depending on the needs of the project. In some cases, we worked closely with the client, incorporating their feedback throughout the porting process.
+My approach during the porting process prioritized respecting the original work, avoiding unnecessary changes while ensuring solid performance across the game.
 
-My philosophy during porting was to always respect the original work, avoiding drastic changes unless strictly necessary, while ensuring strong performance across all areas of the game.
+* **Code and Blueprint analysis**: compatibility and performance review before porting begins.
+* **CPU optimization**: tick management, async processing, Blueprint-to-C++ migration where needed.
+* **GPU optimization**: draw call reduction, material complexity, shadow and culling configuration.
+* **Platform features**: controller support, engagement screens, platform activities, and certification requirements.
+* **Bug fixing**: reproduction, root cause analysis, and fixes across gameplay, rendering, and platform layers.
 
-The porting process included:
-
-* Game code and Blueprint analysis.
-* Performance profiling and optimization.
-* CPU optimization.
-* GPU optimization.
-* Implementation of platform-specific features (controller support, engagement screens, activities, etc.).
-* Bug fixing.
-
-## Games ported
-
-In the list below are all the games I worked on at Catness Game Studios. Click on any game with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon to see a detailed description of my contributions to that project.
+Click any game below with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon for more details about my work in that game.
 
 <isotope>
 {

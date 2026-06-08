@@ -118,11 +118,11 @@
         ],
         "name": "Custom Device Profiles",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-device-profiles"
     },
     "platform-integrations": {
         "category": [
@@ -131,7 +131,7 @@
         ],
         "name": "Platform Integrations",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
@@ -157,11 +157,11 @@
         ],
         "name": "Max Draw Distance Manager",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-cloth"
     },
     "project-analyzer": {
         "category": [
@@ -170,11 +170,11 @@
         ],
         "name": "Project Analyzer",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-slate"
     },
     "tick-interval-manager": {
         "category": [
@@ -183,10 +183,10 @@
         ],
         "name": "Tick Interval Manager",
         "tag": "Plugin",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/experience/catnessgamestudios",
         "noLogo": true,
         "hidden": false,
-        "background": "topic-unreal"
+        "background": "topic-actors"
     }
 }
