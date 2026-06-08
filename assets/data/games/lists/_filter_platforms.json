@@ -16,6 +16,10 @@
         "selector": ".category-windows"
     },
     {
+        "img": "/img/icons/switch.png",
+        "selector": ".category-switch"
+    },
+    {
         "img": "/img/icons/ps4.png",
         "selector": ".category-ps4"
     },
@@ -34,10 +38,6 @@
     {
         "img": "/img/icons/xsx.png",
         "selector": ".category-xsx"
-    },
-    {
-        "img": "/img/icons/switch.png",
-        "selector": ".category-switch"
     },
     {
         "img": "/img/icons/wiiu.png",
