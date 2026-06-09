@@ -5,7 +5,7 @@
         ],
         "name": "Orion Engine",
         "tag": "Personal Game Engine",
-        "hasSection": false,
+        "hasSection": true,
         "parentSection": "/projects",
         "noLogo": false,
         "hidden": false
