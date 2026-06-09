@@ -26,8 +26,7 @@
                 "externalLink": true
             }
         ],
-        "logo": "/img/experience/icons/udemy_logo2.png",
-        "hideFullTime": true
+        "logo": "/img/experience/icons/udemy_logo2.png"
     },
     "udemy-unity": {
         "role": "Complete C# Unity 6 Game Development",
@@ -52,8 +51,7 @@
                 "externalLink": true
             }
         ],
-        "logo": "/img/experience/icons/udemy_logo2.png",
-        "hideFullTime": true
+        "logo": "/img/experience/icons/udemy_logo2.png"
     },
     "udemy-chip8": {
         "role": "Creating A Chip-8 Emulator In C",
@@ -79,7 +77,6 @@
                 "externalLink": true
             }
         ],
-        "logo": "/img/experience/icons/udemy_logo2.png",
-        "hideFullTime": true
+        "logo": "/img/experience/icons/udemy_logo2.png"
     }
 }

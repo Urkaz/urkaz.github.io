@@ -7,7 +7,7 @@ import { faLocationDot, faCalendarDays, faBriefcase, faClock } from "@fortawesom
 import styles from "@styles/pages/game_details.module.scss";
 
 const ExperienceInfoBlock = ({ data }) => {
-    const { startDate, endDate, current, fullTime, hideFullTime, place, remote } = data;
+    const { startDate, endDate, current, contractType, place, remote } = data;
 
     const start_date = new Date(startDate);
     const end_date = endDate ? new Date(endDate) : null;
@@ -32,10 +32,10 @@ const ExperienceInfoBlock = ({ data }) => {
                         {durationText}
                     </li>
                 )}
-                {!hideFullTime && (
+                {contractType && (
                     <li>
                         <span className={styles["info-icon"]}><FontAwesomeIcon icon={faBriefcase} /></span>
-                        {fullTime ? "Full-time" : "Part-time"}
+                        {contractType}
                     </li>
                 )}
                 {(place || remote) && (

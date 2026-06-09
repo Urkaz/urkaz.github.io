@@ -25,8 +25,7 @@
                 "hide": true
             }
         ],
-        "logo": "/img/experience/icons/u_tad_logo.jpg",
-        "hideFullTime": true
+        "logo": "/img/experience/icons/u_tad_logo.jpg"
     },
     "ujidegree": {
         "role": "Bachelor's Degree in Video game Design and Development",
@@ -51,7 +50,6 @@
                 "hide": true
             }
         ],
-        "logo": "/img/experience/icons/uji_logo.jpg",
-        "hideFullTime": true
+        "logo": "/img/experience/icons/uji_logo.jpg"
     }
 }
