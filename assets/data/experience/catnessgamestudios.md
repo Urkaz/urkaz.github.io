@@ -22,7 +22,7 @@ Click any entry below with the <icon>{"iconType": "fontawesome", "icon": "fa-sol
 
 # Plugin Tools development
 
-Development of internal plugins and tools to extend the engine, streamline the porting pipeline, and integrate platform-specific features for PS5 and Xbox.
+Development of internal plugins and tools to extend the engine, streamline the porting pipeline, and integrate platform-specific features.
 
 * **Catness Suite** (Core + Editor + Utilities plugins): Internal framework providing platform identification utilities, a system for creating parameterized editor tools with actor and asset type filtering, and Blueprint libraries for Steam and Switch.
 * **AssetReplacer**: Runtime asset replacement by platform using Unreal's Redirector system, with Content Browser integration and context menu actions.
