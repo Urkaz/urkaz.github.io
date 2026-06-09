@@ -20,6 +20,10 @@
         "selector": ".category-switch"
     },
     {
+        "img": "/img/icons/switch2.png",
+        "selector": ".category-switch2"
+    },
+    {
         "img": "/img/icons/ps4.png",
         "selector": ".category-ps4"
     },

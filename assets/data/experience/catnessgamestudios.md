@@ -50,8 +50,8 @@ Console porting using Unreal Engine 4 and 5, in teams of 3 to 5 developers. Proj
 My approach during the porting process prioritized respecting the original work, avoiding unnecessary changes while ensuring solid performance across the game.
 
 * **Code and Blueprint analysis**: compatibility and performance review before porting begins.
-* **CPU optimization**: tick management, async processing, Blueprint-to-C++ migration where needed.
-* **GPU optimization**: draw call reduction, material complexity, shadow and culling configuration.
+* **CPU optimization**: tick management, async processing, thread load analysis and profiling.
+* **GPU optimization**: draw call reduction, light cost optimization, render complexity tuning via device profiles, LODs.
 * **Platform features**: controller support, engagement screens, platform activities, and certification requirements.
 * **Bug fixing**: reproduction, root cause analysis, and fixes across gameplay, rendering, and platform layers.
 
