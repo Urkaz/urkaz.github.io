@@ -8,7 +8,7 @@ export const MarkdownLink = ({ children, href, className }) => {
         return <a href={href} className={className}>{children}</a>;
     }
 
-    if (href.includes("youtube.com") || href.includes("youtu.be")) {
+    if ((href.includes("youtube.com") || href.includes("youtu.be")) && (!children || children === href)) {
         return <span className="row">
             <span className={`col-lg-8 ${styles["centered-gallery"]} ${className}`}>
                 <YoutubeVideo videoURL={href} />
