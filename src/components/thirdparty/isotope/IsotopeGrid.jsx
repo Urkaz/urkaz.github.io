@@ -8,6 +8,7 @@ import { IsotopeFilter } from "@components/thirdparty/isotope/IsotopeFilter";
 import { trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { concatValues } from "@src/components/functions";
+import { registerFitRowsCentered } from "@components/thirdparty/isotope/fitRowsCentered";
 
 export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent, EnableQuery = true, gutterClass = "gy-4" }) => {
     const [searchQuery, setSearchQuery] = useState({});
@@ -30,10 +31,11 @@ export const IsotopeGrid = ({ filterList, items, GridComponent, FilterComponent,
 
         const initIsotope = async () => {
             const Isotope = (await import("isotope-layout")).default;
+            await registerFitRowsCentered();
             if (gridRef.current) {
                 isoInstance = new Isotope(gridRef.current, {
                     itemSelector: ".isotope-grid-item",
-                    layoutMode: "fitRows",
+                    layoutMode: "fitRowsCentered",
                 });
                 isotope.current = isoInstance;
 
