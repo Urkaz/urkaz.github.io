@@ -31,7 +31,7 @@ const Education = () => {
                     ))}
                 </div>
                 <div className="row mt-4">
-                    <h1>Courses</h1>
+                    <h1>Learning & Training</h1>
                     {Object.entries(CoursesList).map(([key, item], index, arr) => (
                         <div key={key}>
                             <ExperienceItem {...item} isFirst={index === 0} isLast={index === arr.length - 1} />

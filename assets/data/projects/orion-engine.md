@@ -1,8 +1,9 @@
 # Overview
 
-Orion Engine is a game engine written in C++20, developed by following [The Cherno's Hazel Engine tutorial series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) on YouTube. The goal of the project is to build a fully featured 3D engine from scratch, using the series as a foundation to understand the core systems involved: rendering, event handling, input, and the build infrastructure that comes with a modern C++ project.
+Orion Engine is a C++20 game engine built from scratch, using [The Cherno's Hazel series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) as a starting point to understand how a real engine is structured.
 
 The current implementation covers the 2D layer, built on top of **OpenGL** (via **GLFW** and **GLAD**), with **GLM** for math, **spdlog** for logging, and **Dear ImGui** for debug overlays. The build system is CMake, with support for CPM, Conan, and vcpkg as package managers.
+
 
 # Architecture
 
@@ -11,7 +12,6 @@ The engine is organized into four main layers:
 * **Core**: Application loop, layer stack, event system, input abstraction, timestep, and logging.
 * **Renderer**: Graphics API abstraction, 2D quad renderer, shader library, texture management, orthographic camera, and a deferred render command queue.
 * **Platform**: Platform-specific implementations behind abstract interfaces. Currently supports Windows and OpenGL 4.x.
-* **ImGui integration**: Debug overlay layer built on top of the layer system.
 
 Client applications are a subclass of `Application` and attach `Layer` objects to hook into the update and event loops, keeping engine and application logic fully separated.
 
