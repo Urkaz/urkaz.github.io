@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 import { fromMarkdown } from 'react-markdown-toc'
@@ -9,6 +10,18 @@ import styles from "@styles/components/thirdparty/markdown_toc.module.scss";
 export const MarkdownTOC = ({ markdown }) => {
 
     const router = useRouter()
+
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (!hash) return;
+        const timer = setTimeout(() => {
+            const target = document.querySelector(hash);
+            if (!target) return;
+            const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: elementPosition - 100, behavior: 'smooth' });
+        }, 300);
+        return () => clearTimeout(timer);
+    }, []);
     const toc = fromMarkdown(markdown)
 
     return (
