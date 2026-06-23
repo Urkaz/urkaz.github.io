@@ -1,6 +1,6 @@
 {
     "makingport": {
-        "role": "Unreal Porting Engineer",
+        "role": "Unreal Console Porting Specialist",
         "name": "Making Port",
         "startDate": "2026-05-04T00:00:00.000Z",
         "current": true,
@@ -22,7 +22,7 @@
         "contractType": "Contract"
     },
     "catnessgamestudios": {
-        "role": "Unreal Tools Programmer & Porting Engineer",
+        "role": "Unreal Tools & Engine Programmer + Unreal Console Porting Specialist",
         "name": "Catness Game Studios",
         "startDate": "2021-12-01T00:00:00.000Z",
         "endDate": "2025-03-31T00:00:00.000Z",
