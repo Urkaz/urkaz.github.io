@@ -1,4 +1,21 @@
-{    "orion-engine": {
+{
+    "the-relic": {
+        "category": [
+            "porting",
+            "makingport"
+        ],
+        "platforms": [
+            "xsx",
+            "switch2"
+        ],
+        "name": "The Relic: The First Guardian",
+        "tag": "",
+        "hasSection": false,
+        "parentSection": "/games",
+        "noLogo": false,
+        "hidden": false
+    },
+    "orion-engine": {
         "category": [
             "personal",
             "techdemos"
