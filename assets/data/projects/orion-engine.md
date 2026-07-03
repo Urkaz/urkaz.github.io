@@ -2,8 +2,7 @@
 
 Orion Engine is a C++20 game engine built from scratch, using [The Cherno's Hazel series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) as a starting point to understand how a real engine is structured.
 
-The current implementation covers the 2D layer, built on top of **OpenGL** (via **GLFW** and **GLAD**), with **GLM** for math, **spdlog** for logging, and **Dear ImGui** for debug overlays. The build system is CMake, with support for CPM, Conan, and vcpkg as package managers.
-
+The current implementation covers the 2D layer, built on top of **OpenGL** (via **GLFW** and **GLAD**), with **GLM** for math, **spdlog** for logging, and **Dear ImGui** for debug overlays. The build system is CMake, using **CPM** as the package manager, with CMake Presets for common configurations.
 
 # Architecture
 
@@ -35,6 +34,14 @@ Events are dispatched synchronously through the layer stack, with each layer abl
 * Platform-abstracted `Window` and `Input` interfaces, currently implemented for Windows.
 * Logging via spdlog with separate engine and client loggers and file output.
 * Debug-only assertions and compile-time platform detection macros.
+
+# Profiling
+
+Integrated with **Tracy** for real-time CPU and memory profiling, enabled through an opt-in build flag:
+
+* Frame and scope markers across the core loop and rendering path to visualize per-frame CPU cost.
+* Global `new`/`delete` overrides so every allocation across the engine, sandbox, and third-party code shows up in Tracy's memory profiler.
+* Log messages forwarded to Tracy alongside spdlog output, so engine logs are visible directly in the profiler timeline.
 
 # Tooling
 
