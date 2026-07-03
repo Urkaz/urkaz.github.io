@@ -3,6 +3,7 @@ import Image from "next/image";
 import { LinearGradient } from "react-text-gradients";
 
 import { LinkPills, LinkPill } from "@components/common/LinkPills";
+import LiveDate from "@components/common/LiveDate";
 
 import styles from "@styles/pages/home.module.scss";
 
@@ -31,7 +32,7 @@ export default function Home() {
                                 <span>QA Technician</span>, I bring 7 years of experience in the video game industry.
                             </p>
                             <p>
-                                I&apos;m {age} years old, a passionate, adaptable, and detail-oriented programmer, lifelong video game enthusiast, and
+                                I&apos;m <LiveDate type="age" args={{ birthDateISO: "1994-02-12T00:00:00Z" }} initialValue={age} /> years old, a passionate, adaptable, and detail-oriented programmer, lifelong video game enthusiast, and
                                 always and am ready to face any challenge!
                             </p>
                             <p>

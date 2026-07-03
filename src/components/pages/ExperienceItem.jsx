@@ -2,6 +2,7 @@ import React from "react";
 
 import { getYearMonthDifference } from "@components/functions"
 import { LinkPills, LinkPill } from "@components/common/LinkPills";
+import LiveDate from "@components/common/LiveDate";
 
 import { TiltIcon } from "@components/pages/TiltIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,11 +30,10 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
     const effectiveHideDuration = hideDuration || !durationText;
     const hasDuration = !hideEndDate && !effectiveHideDuration;
     const hasParens = contractType || hasDuration;
-    timeText += hasParens ? "(" : "";
-    timeText += hasDuration ? durationText : "";
-    timeText += hasDuration && contractType ? " | " : "";
-    timeText += contractType ?? "";
-    timeText += hasParens ? ")" : "";
+
+    let suffixText = "";
+    suffixText += hasDuration && contractType ? " | " : "";
+    suffixText += contractType ?? "";
 
     const itemClass = [
         styles["experience-item"],
@@ -59,7 +59,18 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                             !hideDate ?
                                 <div className={`d-flex align-items-center ${styles["header-details"]}`}>
                                     <div>
-                                        <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>{timeText}</p>
+                                        <p className={styles["no-margin"]}>
+                                            <span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>
+                                            {timeText}
+                                            {hasParens ? "(" : ""}
+                                            {hasDuration ? (
+                                                current ?
+                                                    <LiveDate type="duration" args={{ startISO: start_date.toISOString(), endISO: null, roundUp: true }} initialValue={durationText} /> :
+                                                    durationText
+                                            ) : ""}
+                                            {suffixText}
+                                            {hasParens ? ")" : ""}
+                                        </p>
                                         {(place || remote) ?
                                             <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{remote ? "Remote" : place}</p>
                                             : null
