@@ -18,18 +18,18 @@ export default function Home() {
                 <div className="row">
                     <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <h2>Fran Sánchez Rodrigo</h2>
-                        <p className={styles["sub-title"]}>Tools, Engine & Optimization Engineer</p>
+                        {/* <p className={styles["sub-title"]}>Tools, Engine & Optimization Engineer</p> */}
                         <div className={styles["description"]}>
                             <p>Hello and welcome to my portfolio!</p>
                             <p>
-                                My name is Fran S&aacute;nchez Rodrigo, and I&apos;m currently{" "}
-                                <span className={styles["sub"]}>open to new opportunities and offers</span> for <span>Unreal Engine</span>{" "}
-                                <span>tools programmer</span>, <span>engine programmer</span>, and <span>porting engineer</span>.
+                                My name is Fran S&aacute;nchez Rodrigo, and I&apos;m {" "}
+                                <span className={styles["sub"]}>open to new opportunities and offers</span> for {" "}
+                                <span>tools programmer</span>, <span>engine programmer</span>, and <span>console porting specialist</span> with <span>Unreal Engine</span>.
                             </p>
                             <p>
-                                With <span className={styles["sub"]}>more than 3 years of professional experience</span> in{" "}
-                                <span>videogame programming</span> and <span className={styles["sub"]}>4 years of experience</span> as{" "}
-                                <span>QA Technician</span>, I bring 7 years of experience in the video game industry.
+                                With <span className={styles["sub"]}>almost 4 years of professional experience</span> in {" "}
+                                <span>videogame programming</span> and <span className={styles["sub"]}>4 years of experience</span> as {" "}
+                                <span>QA Technician</span>, I bring 8 years of experience in the video game industry.
                             </p>
                             <p>
                                 I&apos;m <LiveDate type="age" args={{ birthDateISO: "1994-02-12T00:00:00Z" }} initialValue={age} /> years old, a passionate, adaptable, and detail-oriented programmer, lifelong video game enthusiast, and
