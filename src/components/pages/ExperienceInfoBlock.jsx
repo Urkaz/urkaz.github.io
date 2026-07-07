@@ -1,6 +1,7 @@
 import React from "react";
 
 import { getYearMonthDifference } from "@components/functions";
+import LiveDate from "@components/common/LiveDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faCalendarDays, faBriefcase, faClock } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,7 +30,9 @@ const ExperienceInfoBlock = ({ data }) => {
                 {durationText && (
                     <li>
                         <span className={styles["info-icon"]}><FontAwesomeIcon icon={faClock} /></span>
-                        {durationText}
+                        {current ?
+                            <LiveDate type="duration" args={{ startISO: start_date.toISOString(), endISO: null, roundUp: true }} initialValue={durationText} /> :
+                            durationText}
                     </li>
                 )}
                 {contractType && (
