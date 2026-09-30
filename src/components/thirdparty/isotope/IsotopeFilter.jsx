@@ -7,7 +7,6 @@ import stylesGames from "@styles/pages/games.module.scss";
 
 export const IsotopeFilter = ({ filter, FilterItem, onClick, activeFilter}) => {
     const [currentFilter, setFilter] = useState(activeFilter);
-    const [filterIDs] = useState(() => filter?.map(() => crypto.randomUUID()));
 
     return (
         <>
@@ -15,7 +14,7 @@ export const IsotopeFilter = ({ filter, FilterItem, onClick, activeFilter}) => {
                 <ul className={styles["isotope-filters"]} data-aos="fade-up" data-aos-delay="100">
                     {filter.map((f, index) => (
                         <FilterItem
-                            key={filterIDs[index]}
+                            key={`${f.selector}-${index}`}
                             onClick={() => {
                                 onClick(f.selector);
                                 setFilter(f.selector);
