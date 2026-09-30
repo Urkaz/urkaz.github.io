@@ -51,34 +51,33 @@ export const ExperienceItem = ({ name, role, startDate, endDate, hideDate, hideE
                             <TiltIcon logo={logo} name={name} />
                             <div>
                                 <h4>{role}</h4>
-                                <h5>{name}</h5>
+                                <div className={styles["company-line"]}>
+                                    <h5>{name}</h5>
+                                    {
+                                        !hideDate ?
+                                            <>
+                                                <p className={`${styles["no-margin"]} ${styles["header-details"]}`}>
+                                                    <span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>
+                                                    {timeText}
+                                                    {hasParens ? "(" : ""}
+                                                    {hasDuration ? (
+                                                        current ?
+                                                            <LiveDate type="duration" args={{ startISO: start_date.toISOString(), endISO: null, roundUp: true }} initialValue={durationText} /> :
+                                                            durationText
+                                                    ) : ""}
+                                                    {suffixText}
+                                                    {hasParens ? ")" : ""}
+                                                </p>
+                                                {(place || remote) ?
+                                                    <p className={`${styles["no-margin"]} ${styles["header-details"]}`}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{remote ? "Remote" : place}</p>
+                                                    : null
+                                                }
+                                            </>
+                                            : null
+                                    }
+                                </div>
                             </div>
                         </div>
-
-                        {
-                            !hideDate ?
-                                <div className={`d-flex align-items-center ${styles["header-details"]}`}>
-                                    <div>
-                                        <p className={styles["no-margin"]}>
-                                            <span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faCalendarDays} /></span>
-                                            {timeText}
-                                            {hasParens ? "(" : ""}
-                                            {hasDuration ? (
-                                                current ?
-                                                    <LiveDate type="duration" args={{ startISO: start_date.toISOString(), endISO: null, roundUp: true }} initialValue={durationText} /> :
-                                                    durationText
-                                            ) : ""}
-                                            {suffixText}
-                                            {hasParens ? ")" : ""}
-                                        </p>
-                                        {(place || remote) ?
-                                            <p className={styles["no-margin"]}><span className={styles["fa-icon-bullet"]}><FontAwesomeIcon icon={faLocationDot} /></span>{remote ? "Remote" : place}</p>
-                                            : null
-                                        }
-                                    </div>
-                                </div>
-                                : null
-                        }
 
                         <p className={styles["no-margin"]}>{pointsTitle}</p>
                         {bulletPoints ?

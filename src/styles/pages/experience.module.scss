@@ -160,15 +160,35 @@
             border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 80%);
         }
 
+        .company-line {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 1.25rem;
+            row-gap: 0.25rem;
+
+            @media (max-width: 767px) {
+                margin-top: 0.4rem;
+            }
+        }
+
         .header-details {
-            padding: 8px 0 0;
-            margin-bottom: 0.5rem;
-            //border-bottom: 1px solid color-mix(in srgb, var(--primary-color), transparent 80%);
+            padding: 0;
+            font-size: 16px;
+            font-family: var(--sub-font-1);
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
 
             .fa-icon-bullet {
-                width: 20px;
                 display: inline-flex;
-                padding-right: 22px;
+                align-items: center;
+                vertical-align: middle;
+                transform: translateY(-2px);
+                line-height: 1;
+                padding-right: 4px;
+            }
+
+            @media (max-width: 767px) {
+                flex-basis: 100%;
             }
         }
 
