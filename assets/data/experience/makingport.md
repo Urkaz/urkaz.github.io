@@ -7,7 +7,7 @@ My approach during the porting process prioritized respecting the original work,
 * **Code and Blueprint analysis**: compatibility and performance review before porting begins.
 * **CPU optimization**: tick management, async processing, thread load analysis and profiling.
 * **GPU optimization**: draw call reduction, light cost optimization, render complexity tuning via device profiles, LODs.
-* **Platform features**: controller support, engagement screens, platform activities, and certification requirements.
+* **Platform features**: controller support, input adaptation, and certification requirements.
 * **Bug fixing**: reproduction, root cause analysis, and fixes across gameplay, rendering, and platform layers.
 
 Click any game below with the <icon>{"iconType": "fontawesome", "icon": "fa-solid fa-arrow-turn-up"}</icon> icon for more details about my work in that game.
