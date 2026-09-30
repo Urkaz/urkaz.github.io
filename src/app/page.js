@@ -27,7 +27,7 @@ export default function Home() {
                                 <span>tools programmer</span>, <span>engine programmer</span>, and <span>console porting specialist</span> with <span>Unreal Engine</span>.
                             </p>
                             <p>
-                                With <span className={styles["sub"]}>almost 4 years of professional experience</span> in {" "}
+                                With <span className={styles["sub"]}>4 years of professional experience</span> in {" "}
                                 <span>videogame programming</span> and <span className={styles["sub"]}>4 years of experience</span> as {" "}
                                 <span>QA Technician</span>, I bring 8 years of experience in the video game industry.
                             </p>
