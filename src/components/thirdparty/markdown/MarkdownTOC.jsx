@@ -1,6 +1,6 @@
 'use client'
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 import { fromMarkdown } from 'react-markdown-toc'
 import { TOC } from 'react-markdown-toc/client'
@@ -10,6 +10,7 @@ import styles from "@styles/components/thirdparty/markdown_toc.module.scss";
 export const MarkdownTOC = ({ markdown }) => {
 
     const router = useRouter()
+    const pathname = usePathname()
 
     useEffect(() => {
         const hash = window.location.hash;
@@ -44,7 +45,7 @@ export const MarkdownTOC = ({ markdown }) => {
                                     data-active={active}
                                     role='button'
                                     onClick={() => {
-                                        router.push(href, { scroll: false })
+                                        router.push(`${pathname}${href}`, { scroll: false })
                                         const target = document.querySelector(href)
                                         if (target) {
                                             const headerOffset = 100;
