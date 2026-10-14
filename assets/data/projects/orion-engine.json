@@ -3,7 +3,12 @@
     "hasGallery": true,
     "gallery": [
         {
-            "src": "/img/projects/orionengine/3dcubes.png"
+            "src": "/img/projects/orionengine/3dcubes.png",
+            "alt": "A simple scene made of cubes"
+        },
+        {
+            "src": "/img/projects/orionengine/3dmodel.png",
+            "alt": "A scene using the Sponza model, loaded with Assimp"
         }
     ],
     "details": [

@@ -1,5 +1,11 @@
 # Overview
 
+<warning>
+The engine is now 3D and includes more features, so this page is outdated as of October 14, 2026.<br>
+Check the screenshots for a better idea of its current state. The description will be updated soon.
+</warning>
+
+
 Orion Engine is a C++20 game engine built from scratch, using [The Cherno's Hazel series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT) as a starting point to understand how a real engine is structured.
 
 The current implementation covers the 2D layer, built on top of **OpenGL** (via **GLFW** and **GLAD**), with **GLM** for math, **spdlog** for logging, and **Dear ImGui** for debug overlays. The build system is CMake, using **CPM** as the package manager, with CMake Presets for common configurations.
